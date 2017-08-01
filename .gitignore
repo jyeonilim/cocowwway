@@ -1,0 +1,5 @@
+# Edit Project Files
+.idea
+*.iml
+out
+gen
