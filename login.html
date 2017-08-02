@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>로그인</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./js/custom.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <div class="login">
+            <h1 class="brand-logo"><span class="sr-only">COWAY</span></h1>
+            <div class="login-box">
+                <ul class="login-input">
+                    <li>
+                        <label for="companyCode" class="form-label"><i class="icon-company"></i></label>
+                        <div class="selectbox">
+                            <strong class="selectbox-value">코웨이</strong>
+                            <select id="companyCode" onchange="selectboxEvent(this);">
+                                <option>코웨이</option>
+                                <option>코웨이엔텍</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="userID" class="form-label"><i class="icon-user"></i></label>
+                        <input type="text" id="userID" class="form-control" placeholder="아이디를 입력하세요">
+                    </li>
+                    <li>
+                        <label for="userPassword" class="form-label"><i class="icon-lock"></i></label>
+                        <input type="password" id="userPassword" class="form-control" placeholder="비밀번호를 입력하세요">
+                    </li>
+                </ul>
+                <div class="login-help clearfix">
+                    <div class="checkbox">
+                        <input type="checkbox" id="saveID" name="saveID">
+                        <label for="saveID" class="checkbox-display"></label>
+                        <label for="saveID" class="checkbox-label">ID저장하기</label>
+                    </div>
+                    <div class="btn-box">
+                        <button class="btn btn-password-reset">비밀번호초기화</button>
+                        <button class="btn btn-help">로그인도움말</button>
+                    </div>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block">로그인</button>
+            </div>
+            <div class="login-bottom">
+                <div class="slogan">
+                    <div class="slogan-text">
+                        <p>환경을 건강하게, 사람을 행복하게</p>
+                        <span>Cordial Life Care Science & Solution Company</span>
+                    </div>
+                </div>
+                <div class="setup-file">
+                    <span class="title">설치파일</span>
+                    <div class="btn-box">
+                        <button class="btn">Active Square<i class="icon-download"></i></button>
+                        <button class="btn">Co끼리톡UC<i class="icon-download"></i></button>
+                        <button class="btn">보안프로그램<i class="icon-download"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
