@@ -189,8 +189,12 @@ table {
     display: block;
     width: 100%;
 }
-.btn [class^="icon-"] {
-    margin-left: 2px;
+.btn-icon-left [class^="icon-"] {
+    margin-right: 3px;
+    vertical-align: -1px;
+}
+.btn-icon-right [class^="icon-"] {
+    margin-left: 3px;
     vertical-align: -1px;
 }
 
@@ -276,13 +280,24 @@ button {
     Login
     *******************************************/
 .login {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-width: 386px;
+}
+.login-in {
+    display: table-cell;
+    padding-top: 10px;
     text-align: center;
+    vertical-align: middle;
 }
 .login-box {
     display: inline-block;
     width: 100%;
-    max-width: 460px;
+    max-width: 480px;
     margin: 12px 0 11px;
+    padding: 0 10px;
     text-align: left;
 }
 .login .brand-logo {
@@ -396,25 +411,30 @@ button {
     content: '';
 }
 .slogan {
-    padding: 24px 0 20px
-}
-.slogan:before {
-    display: inline-block;
-    width: 45px;
-    height: 63px;
-    background: url("../images/sprite-icon.png") no-repeat 0 -40px;
-    vertical-align: middle;
-    content: '';
+    padding: 24px 10px 20px;
 }
 .slogan-text {
+    position: relative;
     display: inline-block;
-    margin-left: 6px;
+    padding-left: 51px;
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
     letter-spacing: -1px;
     text-align: left;
     vertical-align: middle;
+}
+.slogan-text:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 45px;
+    height: 63px;
+    margin-top: -10px;
+    background: url("../images/sprite-icon.png") no-repeat 0 -40px;
+    vertical-align: middle;
+    content: '';
 }
 .slogan p {
     color: #7c7b81;
@@ -429,14 +449,15 @@ button {
 .setup-file .title {
     display: inline-block;
     width: 100%;
-    max-width: 365px;
+    max-width: 385px;
+    padding-left: 10px;
     font-size: 15px;
     color: #575757;
     text-align: left;
 }
 .setup-file .btn-box {
     width: 100%;
-    padding: 6px 0;
+    padding: 6px 10px;
     background-color: #eff1f4;
 }
 .setup-file .btn-box .btn {
