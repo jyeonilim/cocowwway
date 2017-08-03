@@ -249,6 +249,26 @@ table {
 /*}*/
 
 /**********************************************
+    Tab
+    *******************************************/
+.tabs {
+    display: table;
+    width: 100%;
+}
+.tabs .tab {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    cursor: pointer;
+}
+.tabs .tab.active {
+    border-bottom: 3px solid #00a7e4;
+}
+.tab-pane {
+    display: none;
+}
+
+/**********************************************
     Scaffolding
     *******************************************/
 body {
@@ -273,7 +293,10 @@ button {
 /**********************************************
     Layout
     *******************************************/
-.wrap {}
+.wrap {
+    width: 100%;
+    max-width: 1276px;
+}
 .content {}
 
 /**********************************************
@@ -462,6 +485,13 @@ button {
 }
 .setup-file .btn-box .btn {
     background-color: transparent;
+}
+
+/**********************************************
+    Portal
+    *******************************************/
+.portal {
+    background-color: #f2f4f7;
 }
 
 /**********************************************
