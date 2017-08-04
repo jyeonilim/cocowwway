@@ -122,9 +122,9 @@ table {
     font-family: 'HelveticaRounded';
     font-style: normal;
     font-weight: 700;
-    src: url(../font/HelveticaRounded-Bold.woff2) format('woff2'),
-    url(../font/HelveticaRounded-Bold.woff) format('woff'),
-    url(../font/HelveticaRounded-Bold.otf) format('opentype');
+    src: url(../font/HelveticaRounded-bold.woff2) format('woff2'),
+    url(../font/HelveticaRounded-bold.woff) format('woff'),
+    url(../font/HelveticaRounded-bold.otf) format('opentype');
 }
 
 /**********************************************
@@ -170,8 +170,9 @@ table {
     font-size: 14px;
     line-height: 2.29;
     color: #444;
+    text-align: center;
     vertical-align: middle;
-    cursor: pointer;
+    text-decoration: none;
 }
 .btn-sm {
 }
@@ -252,20 +253,15 @@ table {
     Tab
     *******************************************/
 .tabs {
-    display: table;
+    /*display: table;*/
     width: 100%;
 }
 .tabs .tab {
-    position: relative;
-    display: table-cell;
-    text-align: center;
+    display: inline-block;
     cursor: pointer;
 }
-.tabs .tab.active {
+.tabs .tab a.active {
     border-bottom: 3px solid #00a7e4;
-}
-.tab-pane {
-    display: none;
 }
 
 /**********************************************
@@ -276,10 +272,10 @@ body {
     font: 400 13px 'NotoSansKR', sans-serif;
     /*letter-spacing: -1px;*/
 }
-/*a, a:hover {*/
+a, a:hover {
     /*color: #000;*/
-    /*text-decoration: none;*/
-/*}*/
+    text-decoration: none;
+}
 /*img, .image img {*/
     /*width: 100%;*/
 /*}*/
@@ -298,6 +294,70 @@ button {
     max-width: 1276px;
 }
 .content {}
+
+/**********************************************
+    Header
+    *******************************************/
+.header {
+    border-bottom: 2px solid #00a7e4;
+    background-color: #fff;
+}
+.header-top:before, .header-top:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.brand-slogan {
+    float: left;
+}
+.brand-slogan a {
+    display: block;
+    width: 214px;
+    height: 31px;
+    background: url("../images/brand-slogan.png") no-repeat 0 0;
+}
+.quick-access {
+    float: right;
+}
+.quick-access li {
+    float: left;
+}
+.quick-access li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url("../images/sprite-icon.png") no-repeat 0 0;
+}
+.quick-access li.quick-search a {
+    background-position: -280px 0;
+}
+.quick-access li.quick-folder a {
+    background-position: -320px 0;
+}
+.quick-access li.quick-help a {
+    background-position: -360px 0;
+}
+.quick-access li.quick-configuration a {
+    background-position: -400px 0;
+}
+.quick-access li.quick-user a {
+    border-radius: 50%;
+    background-color: #dee3eb;
+    background-size: cover;
+}
+/* 메인메뉴 */
+.magamenu {
+    text-align: center;
+}
+.menu {
+    display: inline-block;
+}
+.menu li {
+    display: inline-block;
+}
+.menu li .depth2 {
+    display: none;
+}
 
 /**********************************************
     Login
