@@ -19,7 +19,7 @@ time, mark, audio, video, input, select, option {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /*font: inherit;*/
     vertical-align: baseline;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -352,11 +352,19 @@ button {
 .menu {
     display: inline-block;
 }
-.menu li {
+.menu > li {
+    position: relative;
     display: inline-block;
 }
-.menu li .depth2 {
+.menu > li > a {
+    color: #000;
+}
+.menu li .menu-child {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid red;
 }
 
 /**********************************************
@@ -545,6 +553,45 @@ button {
 }
 .setup-file .btn-box .btn {
     background-color: transparent;
+}
+.uc-setup-wrap {
+    position: relative;
+    display: inline-block;
+}
+.uc-setup {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    width: 160px;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 11px;
+    text-align: left;
+}
+.uc-setup .btn-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0 3px;
+    border: 1px solid #000;
+    font-weight: 700;
+    color: #000;
+}
+.uc-setup ul li:before {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    vertical-align: 3px;
+    content: '';
+}
+.uc-setup ul li a {
+    color: #009fdb;
+    text-decoration: underline;
 }
 
 /**********************************************
