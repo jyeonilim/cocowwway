@@ -19,7 +19,7 @@ time, mark, audio, video, input, select, option {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+    /*font: inherit;*/
     vertical-align: baseline;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -157,6 +157,21 @@ table {
     height: 14px;
     background-position: -120px 0;
 }
+.icon-home {
+    width: 13px;
+    height: 13px;
+    background-position: -200px 0;
+}
+.icon-monitor {
+    width: 14px;
+    height: 12px;
+    background-position: -240px 0;
+}
+.icon-set {
+    width: 19px;
+    height: 19px;
+    background-position: -320px -80px;
+}
 
 /**********************************************
     Button
@@ -184,6 +199,11 @@ table {
 .btn-primary {
     border-color: #009ddc;
     background-color: #009ddc;
+    color: #fff;
+}
+.btn-gray {
+    border-color: #959595;
+    background-color: #959595;
     color: #fff;
 }
 .btn-block {
@@ -253,15 +273,25 @@ table {
     Tab
     *******************************************/
 .tabs {
-    /*display: table;*/
     width: 100%;
+    padding: 15px 25px 10px;
+    border-bottom: 1px solid #dee3eb;
 }
 .tabs .tab {
     display: inline-block;
     cursor: pointer;
 }
+.tabs .tab a {
+    font-size: 15px;
+    color: #7c7c7c;
+}
 .tabs .tab a.active {
+    padding-bottom: 7px;
     border-bottom: 3px solid #00a7e4;
+    color: #00a7e4;
+}
+.tab-panel {
+    padding: 18px 26px;
 }
 
 /**********************************************
@@ -270,6 +300,7 @@ table {
 body {
     background-color: #fff;
     font: 400 13px 'NotoSansKR', sans-serif;
+    color: #666;
     /*letter-spacing: -1px;*/
 }
 a, a:hover {
@@ -291,7 +322,7 @@ button {
     *******************************************/
 .wrap {
     width: 100%;
-    max-width: 1276px;
+    min-width: 1200px;
 }
 .content {}
 
@@ -301,6 +332,9 @@ button {
 .header {
     border-bottom: 2px solid #00a7e4;
     background-color: #fff;
+}
+.header-top {
+    padding: 11px 17px 13px;
 }
 .header-top:before, .header-top:after {
     content: "";
@@ -321,6 +355,10 @@ button {
 }
 .quick-access li {
     float: left;
+    margin-right: 10px;
+}
+.quick-access li.quick-user {
+    margin-left: 5px;
 }
 .quick-access li a {
     display: block;
@@ -345,6 +383,20 @@ button {
     background-color: #dee3eb;
     background-size: cover;
 }
+.header-bottom {
+    position: relative;
+    padding: 16px 0 17px;
+    border-top: 1px solid #e6e9f0;
+}
+.quick-link {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+}
+.quick-link .btn {
+    font-size: 13px;
+    line-height: 2.16;
+}
 /* 메인메뉴 */
 .magamenu {
     text-align: center;
@@ -352,11 +404,28 @@ button {
 .menu {
     display: inline-block;
 }
-.menu li {
+.menu > li {
+    position: relative;
     display: inline-block;
 }
-.menu li .depth2 {
+.menu > li > a {
+    padding: 0 30px;
+    font-weight: 300;
+    font-size: 16px;
+    color: #000;
+}
+.menu > li:hover > a, .menu > li.current > a {
+    color: #00a7e4;
+}
+.menu li .menu-child {
     display: none;
+    position: absolute;
+    top: 41px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid;
+    background-color: #fff;
 }
 
 /**********************************************
@@ -552,6 +621,145 @@ button {
     *******************************************/
 .portal {
     background-color: #f2f4f7;
+}
+.portal-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.portal-content:before,.portal-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column-left {
+    float: left;
+    width: 100%;
+    padding-left: 334px;
+    margin-left: -334px;
+}
+.column-right {
+    float: right;
+    width: 320px;
+    margin-left: 14px;
+}
+.board-box {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fff;
+    border: 1px solid #dee3eb;
+}
+.portal-board > .tabs {
+    border-bottom: 1px solid #dee3eb;
+}
+.portal-board > .tabs .tab a.active {
+    border-bottom: 0;
+    color: #000;
+}
+.portal-board > .tab-content > .tab-panel {
+    padding: 0;
+}
+.tab-panel .tabs {
+    padding: 5px 25px 8px;
+    background-color: #f7f7f9;
+}
+.tab-panel .tabs .tab a {
+    font-weight: 300;
+    font-size: 14px;
+}
+.tab-panel .tabs .tab a.active {
+    border-bottom: 0;
+}
+.tab-panel .tab-panel {
+    padding: 20px 25px;
+}
+.board-list {}
+.board-list li {
+    display: table;
+    width: 100%;
+    padding: 7px 0;
+}
+.board-list li .subject:before {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin-right: 7px;
+    background-color: #918f8f;
+    vertical-align: 3px;
+    content: '';
+}
+.board-list li > * {
+    display: table-cell;
+}
+.board-list li .category {
+    color: #ee761d;
+}
+.board-list li a {
+    color: #737373;
+}
+.board-list li .author {
+    width: 70px;
+    text-align: right;
+}
+.board-list li .date {
+    width: 100px;
+    text-align: right;
+}
+.portal-theme iframe {
+    width: 100%;
+    height: 370px;
+}
+/* MY QUICK */
+.my-quick-list {
+    margin: -18px -26px;
+}
+.my-quick-list li {
+    position: relative;
+    float: left;
+    width: 25%;
+    border-bottom: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    text-align: center;
+}
+.my-quick-list li:nth-child(4n+1) {
+    border-left: 0;
+}
+.my-quick-list li a {
+    font-size: 12px;
+    font-family: 'NanumGothic', sans-serif;
+    color: #505050;
+}
+.my-quick-list li a:before {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #e7eaf0 url("../images/sprite-icon.png") no-repeat 0 0;
+    content: '';
+}
+.my-quick-list li.quick01 a:before {
+     background-position: 5px -155px;
+}
+.my-quick-list li.quick02 a:before {
+    background-position: -35px -155px;
+}
+.my-quick-list li.quick03 a:before {
+    background-position: -75px -155px;
+}
+.my-quick-list li.quick04 a:before {
+    background-position: -115px -155px;
+}
+.my-quick-list li.quick05 a:before {
+    background-position: -155px -155px;
+}
+.my-quick-list li.quick06 a:before {
+    background-position: -195px -155px;
+}
+.my-quick-list li.quick07 a:before {
+    background-position: -235px -155px;
+}
+.my-quick-list li.quick08 a:before {
+    background-position: -275px -155px;
 }
 
 /**********************************************
