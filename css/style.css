@@ -654,6 +654,29 @@ button {
     color: #009fdb;
     text-decoration: underline;
 }
+/* 로그아웃 */
+.logout {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 80px 0;
+    border-top: 1px solid #e8e8e8;
+}
+.logout strong {
+    padding-left: 35px;
+    background: url("../images/sprite-icon.png") no-repeat -440px -75px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #4d4d4f;
+}
+.logout p {
+    margin-top: 4px;
+    font-size: 16px;
+    color: #6d6e71;
+}
+.logout p.site-help-text {
+    margin-top: 35px;
+    color: #a7a9ac;
+}
 
 /**********************************************
     Portal
