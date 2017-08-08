@@ -172,6 +172,48 @@ table {
     height: 19px;
     background-position: -320px -80px;
 }
+[class^="badge-"] {
+    display: inline-block;
+    width: 22px;
+    height: 15px;
+    background: url("../images/sprite-icon.png") repeat 0 0;
+    line-height: 0;
+    font-style: normal;
+    color: transparent;
+    vertical-align: middle;
+}
+.badge-new {
+    width: 14px;
+    height: 14px;
+    background-position: -440px -120px;
+    vertical-align: 7px;
+}
+/*.badge-new {*/
+    /*width: 14px;*/
+    /*height: 14px;*/
+    /*border-radius: 50%;*/
+    /*background: #ee761d;*/
+    /*font-weight: 700;*/
+    /*font-size: 10px;*/
+    /*line-height: 14px;*/
+    /*color: #fff;*/
+    /*text-align: center;*/
+/*}*/
+.badge-report {
+    background-position: -240px -120px;
+}
+.badge-pendency {
+    background-position: -280px -120px;
+}
+.badge-return {
+    background-position: -320px -120px;
+}
+.badge-approve {
+    background-position: -360px -120px;
+}
+.badge-progress {
+    background-position: -400px -120px;
+}
 
 /**********************************************
     Button
@@ -232,6 +274,45 @@ table {
 .form-control::placeholder {
     color: #a7a9ac;
 }
+/*Selectbox*/
+.selectbox {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    text-align: left;
+}
+.selectbox select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 26px;
+    opacity: 0;
+    cursor: pointer;
+}
+.selectbox .selectbox-value {
+    display: block;
+    padding: 0 35px 0 15px;
+    background-color: #fff;
+    font-weight: 400;
+    line-height: 1.85;
+}
+.selectbox .selectbox-value:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    background: url("../images/sprite-icon.png") no-repeat -152px 9px;
+    line-height: 0;
+    color: transparent;
+    vertical-align: middle;
+    width: 27px;
+    height: 24px;
+    content: '';
+}
+/*Checkbox*/
 .checkbox{
     display: inline-block;
 }
@@ -290,8 +371,67 @@ table {
     border-bottom: 3px solid #00a7e4;
     color: #00a7e4;
 }
-.tab-panel {
-    padding: 18px 26px;
+/*.tab-panel {*/
+    /*padding: 18px 26px;*/
+/*}*/
+
+/**********************************************
+    Slick Slider
+    *******************************************/
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus {
+    outline: none;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after {
+    display: table;
+    content: '';
+}
+.slick-track:after {
+    clear: both;
+}
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-initialized .slick-slide {
+    display: block;
 }
 
 /**********************************************
@@ -479,43 +619,22 @@ button {
     background-image: url(../images/form-checkbox-checked.png);
 }
 .login .selectbox {
-    position: relative;
-    display: inline-block;
     width: 100%;
     border: 0;
-    background-color: #fff;
-    text-align: left;
 }
 .login .selectbox select {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     min-height: 30px;
-    opacity: 0;
-    cursor: pointer;
 }
 .login .selectbox .selectbox-value {
-    display: block;
-    padding: 0 35px 0 0;
-    background-color: #fff;
+    padding-left: 0;
     font-size: 15px;
     line-height: 3.26;
     color: #a7a9ac;
 }
 .login .selectbox .selectbox-value:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    background: url("../images/sprite-icon.png") no-repeat -148px 23px;
-    line-height: 0;
-    color: transparent;
-    vertical-align: middle;
     width: 35px;
     height: 49px;
-    content: '';
+    background-position: -148px 23px;
 }
 .login-input {
     padding: 0 12px;
@@ -663,9 +782,9 @@ button {
 }
 .logout strong {
     padding-left: 35px;
-    background: url("../images/sprite-icon.png") no-repeat -440px -75px;
+    background: url("../images/sprite-icon.png") no-repeat -440px -72px;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
     color: #4d4d4f;
 }
 .logout p {
@@ -685,8 +804,9 @@ button {
     background-color: #f2f4f7;
 }
 .portal-content {
-    max-width: 1280px;
+    max-width: 1250px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 .portal-content:before,.portal-content:after {
     content: "";
@@ -717,21 +837,18 @@ button {
     border-bottom: 0;
     color: #000;
 }
-.portal-board > .tab-content > .tab-panel {
-    padding: 0;
-}
-.tab-panel .tabs {
+.portal-board .tab-panel .tabs {
     padding: 5px 25px 8px;
     background-color: #f7f7f9;
 }
-.tab-panel .tabs .tab a {
+.portal-board .tab-panel .tabs .tab a {
     font-weight: 300;
     font-size: 14px;
 }
-.tab-panel .tabs .tab a.active {
+.portal-board .tab-panel .tabs .tab a.active {
     border-bottom: 0;
 }
-.tab-panel .tab-panel {
+.portal-board .tab-panel .tab-panel {
     padding: 20px 25px;
 }
 .board-list {}
@@ -739,6 +856,9 @@ button {
     display: table;
     width: 100%;
     padding: 7px 0;
+}
+.board-list li > * {
+    display: table-cell;
 }
 .board-list li .subject:before {
     display: inline-block;
@@ -748,9 +868,6 @@ button {
     background-color: #918f8f;
     vertical-align: 3px;
     content: '';
-}
-.board-list li > * {
-    display: table-cell;
 }
 .board-list li .category {
     color: #ee761d;
@@ -770,9 +887,52 @@ button {
     width: 100%;
     height: 370px;
 }
+.portal-story .tab-panel {
+    padding: 18px 26px;
+}
+/* 전자결재 */
+.approval-list {
+    padding: 7px 10px;
+    font-weight: 200;
+    font-size: 12px;
+}
+.approval-list li {
+    position: relative;
+    margin: 5px 0;
+}
+.approval-list li i {
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+.approval-list a {
+    display: block;
+    margin-left: 3px;
+    padding-left: 25px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal !important;
+}
+.approval-list p {
+    overflow: hidden;
+    padding-left: 28px;
+    color: #7d7d7d;
+}
+.approval-list p span {
+    float: left;
+}
+.approval-list p small {
+    float: right;
+    font-size: 11px;
+}
 /* MY QUICK */
-.my-quick-list {
-    margin: -18px -26px;
+.my-quick-list:before, .my-quick-list:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 .my-quick-list li {
     position: relative;
@@ -786,6 +946,8 @@ button {
     border-left: 0;
 }
 .my-quick-list li a {
+    display: block;
+    padding: 12px 0 6px;
     font-size: 12px;
     font-family: 'NanumGothic', sans-serif;
     color: #505050;
@@ -794,34 +956,102 @@ button {
     display: block;
     width: 40px;
     height: 40px;
-    margin: 0 auto;
+    margin: 0 auto 6px;
     border-radius: 50%;
     background: #e7eaf0 url("../images/sprite-icon.png") no-repeat 0 0;
     content: '';
 }
-.my-quick-list li.quick01 a:before {
+.my-quick-list li.quick-icon1 a:before { /*영업*/
      background-position: 5px -155px;
 }
-.my-quick-list li.quick02 a:before {
+.my-quick-list li.quick-icon2 a:before { /*경영지원*/
     background-position: -35px -155px;
 }
-.my-quick-list li.quick03 a:before {
+.my-quick-list li.quick-icon3 a:before { /*혁신포탈*/
     background-position: -75px -155px;
 }
-.my-quick-list li.quick04 a:before {
+.my-quick-list li.quick-icon4 a:before { /*웹전표*/
     background-position: -115px -155px;
 }
-.my-quick-list li.quick05 a:before {
+.my-quick-list li.quick-icon5 a:before { /*법무서비스*/
     background-position: -155px -155px;
 }
-.my-quick-list li.quick06 a:before {
+.my-quick-list li.quick-icon6 a:before { /*출장*/
     background-position: -195px -155px;
 }
-.my-quick-list li.quick07 a:before {
+.my-quick-list li.quick-icon7 a:before { /*총무*/
     background-position: -235px -155px;
 }
-.my-quick-list li.quick08 a:before {
+.my-quick-list li.quick-icon8 a:before { /*규정관리*/
     background-position: -275px -155px;
+}
+.my-quick-option {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 15px;
+}
+.my-quick-option span {
+    float: left;
+    color: #f57f35;
+}
+.my-quick-option .btn-set {
+    float: right;
+}
+/*CEO 및 본부 일정*/
+.schedule-box {}
+.schedule-box .tabs {
+    overflow: hidden;
+    padding: 8px 9px;
+    background-color: #f7f7f9;
+}
+.schedule-box .tab {
+    float: left;
+    width: 14.28%;
+    text-align: center;
+}
+.schedule-box .tabs .tab a {
+    font-size: 12px;
+}
+.schedule-box .tab small {
+    display: block;
+}
+.schedule-box .tabs .tab a.active {
+    border-bottom: 0;
+    color: #f57f35;
+}
+.schedule-box .tab-panel {
+    padding: 7px 15px;
+}
+.schedule-board-list {
+    font-size: 12px;
+}
+.schedule-board-list li {
+    padding: 5px 0;
+    cursor: pointer;
+}
+.schedule-board-list li:before {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin-right: 5px;
+    background-color: #918f8f;
+    vertical-align: 3px;
+    content: '';
+}
+.schedule-option {
+    overflow: hidden;
+    width: 100%;
+    padding: 7px 10px 7px 12px;
+    border-top: 1px solid #e8e8e8;
+}
+.schedule-option span {
+    float: left;
+    padding-top: 2px;
+    color: #6c6c6c;
+}
+.schedule-option .selectbox {
+    float: right;
+    width: 150px;
 }
 
 /**********************************************

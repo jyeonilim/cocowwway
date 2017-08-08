@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    // Menu
     $(".menu > li > a").on({
         'mouseenter focusin': function() {
             $(this).closest("li").siblings().find('.open').stop().stop().stop().fadeTo(50, 0, function() {
@@ -39,6 +40,14 @@ $(document).ready(function() {
             $content.show();
             e.preventDefault();
         });
+    });
+
+    //편의정보 슬라이드 탭
+    $(".convenience-tab").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1
     });
 
 });
