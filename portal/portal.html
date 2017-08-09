@@ -7,8 +7,8 @@
     <meta name="keywords" content="">
     <title>포탈</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../js/slick.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
 </head>
 <body class="portal">
@@ -65,7 +65,7 @@
         <div class="portal-content">
             <div class="column-left">
                 <!-- 공지/알림형 게시판 -->
-                <div class="board-box portal-board">
+                <div class="portlet-box portal-board">
                     <ul class="tabs">
                         <li class="tab"><a href="#board-tab1">공지사항</a></li>
                         <li class="tab"><a href="#board-tab2">집안통신</a></li>
@@ -232,7 +232,7 @@
                 </div>
                 <!-- 공지/알림형 게시판 //end -->
                 <!-- 테마형 게시판 -->
-                <div class="board-box portal-theme">
+                <div class="portlet-box portal-theme">
                     <ul class="tabs">
                         <li class="tab"><a href="#theme-tab1">코러스</a></li>
                         <li class="tab"><a href="#theme-tab2">상상오션</a></li>
@@ -264,7 +264,7 @@
                 </div>
                 <!-- 테마형 게시판 //end -->
                 <!-- 스토리형 게시판 -->
-                <div class="board-box portal-story">
+                <div class="portlet-box portal-story">
                     <ul class="tabs">
                         <li class="tab"><a href="#story-tab1">최근게시판</a></li>
                         <li class="tab"><a href="#story-tab2">법봉이마을</a></li>
@@ -355,7 +355,7 @@
             </div>
             <div class="column-right">
                 <!-- 편리정보 -->
-                <div class="board-box user-information">
+                <div class="portlet-box user-information">
                     <div class="profile">
                         <div class="private">
                             <span class="user-name">
@@ -364,30 +364,51 @@
                             <span>기술연구소/연구개발팀</span>
                         </div>
                         <div class="my-information">
-                            <a href="#">내정보</a>
-                            <a href="#" class="btn">로그아웃</a>
+                            <a href="#" class="link-my-info">내정보 <i class="icon-lock-sm"></i></a>
+                            <a href="#" class="btn btn-sm">로그아웃</a>
                         </div>
                     </div>
-                    <div class="user-service">
-                        <ul>
-                            <li><a href="#">메일</a></li>
-                            <li><a href="#">결재</a></li>
-                            <li><a href="#">수발신</a></li>
-                            <li><a href="#">E-HR</a></li>
-                            <li><a href="#">연차</a></li>
-                            <li><a href="#">사회공헌</a></li>
-                        </ul>
-                    </div>
+                    <ul class="user-service">
+                        <li class="service-item1">
+                            <a href="#">메일</a>
+                            <span class="item-count"><em>24</em></span>
+                        </li>
+                        <li class="service-item2">
+                            <a href="#">결재</a>
+                            <span class="item-count"><em>8</em></span>
+                        </li>
+                        <li class="service-item3">
+                            <a href="#">수발신</a>
+                            <span class="item-count"><em>11</em></span>
+                        </li>
+                        <li class="service-item4">
+                            <a href="#">E-HR</a>
+                            <span class="item-count"><em>7</em></span>
+                        </li>
+                        <li class="service-item5">
+                            <a href="#">연차</a>
+                            <span class="item-count"><em>NaN</em></span>
+                        </li>
+                        <li class="service-item6">
+                            <a href="#">사회공헌</a>
+                            <span class="item-count"><em>999</em></span>
+                        </li>
+                    </ul>
                     <div class="user-convenience">
-                        <ul class="convenience-tab tabs">
-                            <li class="tab"><a href="#convenience-tab1">전자결재</a></li>
-                            <li class="tab"><a href="#convenience-tab2">일정</a></li>
-                            <li class="tab"><a href="#convenience-tab3">담당검색</a></li>
-                            <li class="tab"><a href="#convenience-tab4">Co-Work</a></li>
-                            <li class="tab"><a href="#convenience-tab5">주식</a></li>
-                            <li class="tab"><a href="#convenience-tab6">환율</a></li>
-                        </ul>
-                        <div class="tab-content">
+						<div class="convenience-head">
+							<ul class="convenience-tab tabs">
+								<li class="tab"><a href="#convenience-tab1">전자결재</a></li>
+								<li class="tab"><a href="#convenience-tab2">일정</a></li>
+								<li class="tab"><a href="#convenience-tab3">담당검색</a></li>
+								<li class="tab"><a href="#convenience-tab4">Co-Work</a></li>
+								<li class="tab"><a href="#convenience-tab5">주식</a></li>
+								<li class="tab"><a href="#convenience-tab6">환율</a></li>
+							</ul>
+							<a class="slide-arrow slide-prev" href="#">&lt;</a>
+							<a class="slide-arrow slide-next" href="#">&gt;</a>
+						</div>
+						<div class="tab-content">
+							<!-- 전자결재 -->
                             <div class="tab-panel" id="convenience-tab1">
                                 <ul class="approval-list">
                                     <li>
@@ -432,17 +453,32 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="tab-panel" id="convenience-tab2">일정</div>
+                            <!-- 전자결재 //end -->
+                            <!-- 일정 -->
+							<div class="tab-panel" id="convenience-tab2">일정</div>
+                            <!-- 일정 //end -->
+                            <!-- 담당검색 -->
                             <div class="tab-panel" id="convenience-tab3">담당검색</div>
+                            <!-- 담당검색 //end -->
+                            <!-- Co-Work -->
                             <div class="tab-panel" id="convenience-tab4">Co-Work</div>
-                            <div class="tab-panel" id="convenience-tab5">주식</div>
-                            <div class="tab-panel" id="convenience-tab6">환율</div>
+                            <!-- Co-Work //end -->
+                            <!-- 주식 -->
+                            <div class="tab-panel" id="convenience-tab5">
+								<div class="stock">주식</div>
+							</div>
+                            <!-- 주식 //end -->
+                            <!-- 환율 -->
+                            <div class="tab-panel" id="convenience-tab6">
+								<div class="exchange">환율</div>
+							</div>
+                            <!-- 환율 //end -->
                         </div>
                     </div>
                 </div>
                 <!-- 편리정보 //end -->
                 <!-- 업무지원 -->
-                <div class="board-box">
+                <div class="portlet-box work-support">
                     <ul class="tabs">
                         <li class="tab"><a href="#work-tab1">MY QUICK</a></li>
                         <li class="tab"><a href="#work-tab2">업무지원</a></li>
@@ -483,7 +519,7 @@
                 </div>
                 <!-- 업무지원 //end -->
                 <!-- 일정정보 -->
-                <div class="board-box">
+                <div class="portlet-box schedule-information">
                     <ul class="tabs">
                         <li class="tab"><a href="#schedule-tab1">CEO 일정</a></li>
                         <li class="tab"><a href="#schedule-tab2">본부 일정</a></li>

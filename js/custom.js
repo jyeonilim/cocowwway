@@ -29,9 +29,9 @@ $(document).ready(function() {
         $active.addClass('active');
         $content = $($active[0].hash);
         $links.not($active).each(function () {
-            jQuery(this.hash).hide();
+            $(this.hash).hide();
         });
-        jQuery(this).on('click', 'a', function(e){
+        $(this).on('click', 'a', function(e){
             $active.removeClass('active');
             $content.hide();
             $active = jQuery(this);
@@ -43,11 +43,19 @@ $(document).ready(function() {
     });
 
     //편의정보 슬라이드 탭
-    $(".convenience-tab").slick({
-        dots: false,
-        infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 1
+    $('.convenience-tab.tabs').carouFredSel({
+        scroll: {
+            items: 1,
+            duration: 300
+        },
+        items: {
+            visible: {
+                max: 4
+            }
+        },
+        prev: '.slide-prev',
+        next: '.slide-next',
+        auto: false
     });
 
 });
