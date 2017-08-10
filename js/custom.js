@@ -58,9 +58,20 @@ $(document).ready(function() {
         auto: false
     });
 
+    $('.footer-notice').carouFredSel({
+        direction: 'up',
+        align: 'center',
+        visible: 1,
+        play: true, // play automatically
+        scroll: {
+            pauseOnHover: true,
+            easing: 'swing' // linear, swing, quadratic, cubic or elastic
+        }
+    });
+
 });
 
-// Select Box
+// Select Bo
 function selectboxEvent(target) {
     var $this = $(target),
         str = $this.val();
