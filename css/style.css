@@ -395,12 +395,15 @@ button {
 /**********************************************
     Layout
     *******************************************/
+body {
+    overflow-y: hidden;
+}
 .wrap {
     width: 100%;
     min-width: 1200px;
 }
 .content {
-    padding-bottom: 27px;
+    overflow-y: auto;
 }
 
 /**********************************************
@@ -508,26 +511,47 @@ button {
 .all-menu {
     position: relative;
     display: inline-block;
+}
+.btn-all-menu {
+    position: relative;
+    display: inline-block;
     width: 20px;
     height: 16px;
     margin-left: 25px;
     background: url("../images/sprite-icon.png") no-repeat -440px 0;
     vertical-align: text-top;
 }
-.all-menu:before {
+.btn-all-menu:before {
     position: absolute;
-    top: -2px;
+    top: -1px;
     left: -29px;
     width: 1px;
     height: 20px;
     background-color: #dfdfdf;
     content: '';
 }
+.all-menu-box {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: auto;
+    width: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+}
 
     /**********************************************
         Footer
         *******************************************/
 .footer {
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*bottom: 0;*/
+    /*width: 100%;*/
+    /*min-width: 1200px;*/
     padding: 17px 25px 13px 20px;
     border-top: 1px solid #e8e8e8;
     background-color: #fff;
@@ -812,9 +836,9 @@ button {
     background-color: #f2f4f7;
 }
 .portal-content {
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 10px;
+    /*max-width: 1250px;*/
+    /*margin: 0 auto;*/
+    padding: 0 10px 27px;
 }
 .portal-content:before,.portal-content:after {
     content: "";
@@ -1025,6 +1049,7 @@ button {
     margin: auto;
 }
 .user-service li .item-count em {
+    position: relative;
     display: inline-block;
     width: auto;
     min-width: 20px;
@@ -1039,10 +1064,9 @@ button {
 .user-service li .item-count em:after {
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -4px;
     right: 0;
     margin: auto;
-    display: inline-block;
     width: 0;
     height: 0;
     border-left: 4px solid transparent;

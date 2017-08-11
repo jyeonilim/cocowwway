@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+    // Content Scroll
+    var contentScroll = (function () {
+        var windowHeight = $(window).height();
+        var headerHeight = $('.header').outerHeight();
+        var footerHeight = $('.footer').outerHeight();
+        $('.content').height(windowHeight-(headerHeight+footerHeight));
+    });
+    $(document).ready(contentScroll);
+    $(window).resize(contentScroll);
+
     // Menu
     $(".menu > li > a").on({
         'mouseenter focusin': function() {
@@ -22,6 +32,10 @@ $(document).ready(function() {
             $(this).fadeTo(50, 0, function(){ $(this).hide().removeClass('open');});
         });
 
+    $('.all-menu').on('click',function () {
+        $('.all-menu-box').toggle();
+    });
+
     // Tab
     $('.tabs').each(function() {
         var $active, $content, $links = $(this).find('a');
@@ -42,7 +56,7 @@ $(document).ready(function() {
         });
     });
 
-    //편의정보 슬라이드 탭
+    //편의정보 탭
     $('.convenience-tab.tabs').carouFredSel({
         scroll: {
             items: 1,
@@ -58,14 +72,15 @@ $(document).ready(function() {
         auto: false
     });
 
+    // 하단 공지사항
     $('.footer-notice').carouFredSel({
         direction: 'up',
         align: 'center',
         visible: 1,
-        play: true, // play automatically
+        play: true,
         scroll: {
             pauseOnHover: true,
-            easing: 'swing' // linear, swing, quadratic, cubic or elastic
+            easing: 'swing'
         }
     });
 
