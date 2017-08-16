@@ -13,15 +13,22 @@ $(document).ready(function() {
     // Menu
     $(".menu > li > a").on({
         'mouseenter focusin': function() {
-            $(this).closest("li").siblings().find('.open').stop().stop().stop().fadeTo(50, 0, function() {
-                $(this).hide().removeClass('open');
-            });
-            $(this).siblings('.menu-child').show().addClass('open').stop().stop().fadeTo(100, 1);
+            var hasMenu = $(this).next().hasClass('menu-child');
+            if(hasMenu === true) {
+                $(this).closest("li").siblings().find('.open').stop().stop().stop().fadeTo(50, 0, function() {
+                    $(this).hide().removeClass('open');
+                    $(this).parent().removeClass('menu-child-after');
+                });
+                $(this).siblings('.menu-child').show().addClass('open').stop().stop().fadeTo(100, 1);
+                $(this).parent().addClass('menu-child-after');
+            }
         },
         'focusout mouseleave': function() {
             $(this).siblings('.menu-child').fadeTo(50, 0, function() {
                 $(this).hide().removeClass('open');
+                $(this).parent().removeClass('menu-child-after');
             });
+
         }
     });
     $(document)
@@ -30,10 +37,23 @@ $(document).ready(function() {
         })
         .on('mouseleave', '.menu-child.open', function(){
             $(this).fadeTo(50, 0, function(){ $(this).hide().removeClass('open');});
+            $(this).parent().removeClass('menu-child-after');
         });
-
-    $('.all-menu').on('click',function () {
-        $('.all-menu-box').toggle();
+    $('.btn-all-menu').on('click',function () {
+        $('.all-menu-box').toggleClass('open');
+        return false;
+    });
+    $('.all-menu .btn-close').on('click',function () {
+        $('.all-menu-box').removeClass('open');
+        return false;
+    });
+    $('.quick-user a').on('click',function () {
+        $('.user-box').toggleClass('open');
+        return false;
+    });
+    $('.user-box .btn-close').on('click',function () {
+        $('.user-box').removeClass('open');
+        return false;
     });
 
     // Tab
@@ -91,4 +111,17 @@ function selectboxEvent(target) {
     var $this = $(target),
         str = $this.val();
     $this.parent().children('.selectbox-value').text(str);
+}
+
+// Layer
+function layerOpen(layer) {
+    var $this = $(layer);
+    // $this.css("top", Math.max(0, $(window).scrollTop() + 50) + "px").show();
+    $this.show();
+    return false;
+}
+function layerClose(layer) {
+    var $this = $(layer);
+    $this.parent().parent('.modalWrap').hide();
+    return false;
 }
