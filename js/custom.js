@@ -110,7 +110,18 @@ $(document).ready(function() {
         }
     });
 
-    $('.schedule-board-list a').tooltip();
+    $('.schedule-board-list a').tooltip({
+        content: function() {
+            return $(this).attr('title');
+        },
+        position: {my: 'left-14 top+8'},
+        show: {duration: 500}
+    });
+        // .off( "mouseover" )
+        // .on( "click", function(){
+        //     $( this ).tooltip( "open" );
+        //     return false;
+        // });
 
 });
 
