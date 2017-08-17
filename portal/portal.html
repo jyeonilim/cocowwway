@@ -7,632 +7,555 @@
     <meta name="keywords" content="">
     <title>포탈</title>
     <link rel="stylesheet" href="../css/style.css">
-	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
 </head>
 <body class="portal">
-<div class="wrap">
-    <!-- Header -->
-    <div class="header">
-        <div class="header-top">
-            <h1 class="brand-slogan"><a href="#"><span class="sr-only">착한믿음/환경을 건강하게, 사람을 행복하게/The Life Care Company</span></a></h1>
-            <ul class="quick-access">
-                <li class="quick-search"><a href="#"><span class="sr-only">검색</span></a></li>
-                <li class="quick-folder"><a href="#"><span class="sr-only">폴더</span></a></li>
-                <li class="quick-help"><a href="#"><span class="sr-only">도움말</span></a></li>
-                <li class="quick-configuration"><a href="#"><span class="sr-only">환경설정</span></a></li>
-                <li class="quick-user"><a href="#" style="background-image:url('../images/temp/user.jpg')"></a></li>
-            </ul>
-        </div>
-        <div class="header-bottom">
-            <div class="quick-link">
-                <a href="#" class="btn btn-gray btn-icon-left"><i class="icon-home"></i>HOME</a>
-                <a href="#" class="btn btn-gray btn-icon-left"><i class="icon-monitor"></i>WORK</a>
-            </div>
-            <div class="magamenu">
-                <h2 class="sr-only">메인메뉴</h2>
-                <!-- [D] 해당 메뉴 선택시 .menu > li 에 current 클래스 추가 -->
-                <ul class="menu">
-                    <li class="current">
-                        <a href="#">메일</a>
-                        <ul class="menu-child">
-                            <li><a href="#">수신메일</a></li>
-                            <li><a href="#">발신메일</a></li>
-                            <li><a href="#">안읽은메일</a></li>
-                            <li><a href="#">중요메일</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">전자결재</a>
-                        <ul class="menu-child">
-                            <li><a href="#">개인결재</a></li>
-                            <li><a href="#">문서수발신</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">게시판</a></li>
-                    <li><a href="#">팀룸</a></li>
-                    <li><a href="#">업무지원</a></li>
-                    <li><a href="#">통합문서</a></li>
-                    <li><a href="#">Co-Work</a></li>
+<div class="content">
+
+    <div class="portal-content">
+        <div class="column-left">
+            <!-- 공지/알림형 게시판 -->
+            <div class="portlet-box portal-board">
+                <ul class="tabs">
+                    <li class="tab"><a href="#board-tab1">공지사항</a></li>
+                    <li class="tab"><a href="#board-tab2">집안통신</a></li>
+                    <li class="tab"><a href="#board-tab3">이벤트</a></li>
                 </ul>
-                <div class="all-menu">
-                    <a href="#" class="btn-all-menu"><span class="sr-only">전체메뉴</span></a>
-                    <div class="all-menu-box">
-                        <ul>
-                            <li><a href="#">메뉴</a></li>
-                            <li><a href="#">메뉴</a></li>
-                            <li><a href="#">메뉴</a></li>
-                            <li><a href="#">메뉴</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header //end -->
-    <div class="content">
-        <div class="portal-content">
-            <div class="column-left">
-                <!-- 공지/알림형 게시판 -->
-                <div class="portlet-box portal-board">
-                    <ul class="tabs">
-                        <li class="tab"><a href="#board-tab1">공지사항</a></li>
-                        <li class="tab"><a href="#board-tab2">집안통신</a></li>
-                        <li class="tab"><a href="#board-tab3">이벤트</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- 공지사항 -->
-                        <div class="tab-panel" id="board-tab1">
-                            <div class="portal-notice">
-                                <ul class="tabs">
-                                    <li class="tab"><a href="#board-tab1-1">전체</a></li>
-                                    <li class="tab"><a href="#board-tab1-2">CEO</a></li>
-                                    <li class="tab"><a href="#board-tab1-3">일반</a></li>
-                                    <li class="tab"><a href="#board-tab1-4">영업</a></li>
-                                    <li class="tab"><a href="#board-tab1-5">인사</a></li>
-                                    <li class="tab"><a href="#board-tab1-6">교육</a></li>
-                                    <li class="tab"><a href="#board-tab1-7">기타</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-panel" id="board-tab1-1">
-                                        <ul class="board-list">
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">안내</small>
-                                                    <a href="#">[총무팀] 2017년 콘도 여름성수기 추첨접수 일정 안내</a>
-                                                    <i class="badge-new">N</i>
-                                                </p>
-                                                <span class="author">오정은</span>
-                                                <span class="date">2017.07.04</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">안내</small>
-                                                    <a href="#">2017년 경영전략회의 연간 일정 안내</a>
-                                                </p>
-                                                <span class="author">문석환</span>
-                                                <span class="date">2017.07.04</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">기업문화</small>
-                                                    <a href="#">[상상Day이벤트] '추천 받을 아이디어는 나야나!' 매월 2,4번째 수요일은 상상Day 입니다!</a>
-                                                </p>
-                                                <span class="author">강준규</span>
-                                                <span class="date">2017.07.04</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">안내</small>
-                                                    <a href="#">매트리스 외주업체별 7월 배송 휴무 지역 안내의 건</a>
-                                                </p>
-                                                <span class="author">전예진</span>
-                                                <span class="date">2017.07.03</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">안내</small>
-                                                    <a href="#">2017년 경영전략회의 연간 일정 안내</a>
-                                                </p>
-                                                <span class="author">오정은</span>
-                                                <span class="date">2017.07.03</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">기업문화</small>
-                                                    <a href="#">[상상Day이벤트] '추천 받을 아이디어는 나야나!' 매월 2,4번째 수요일은 상상Day 상상Day 상상Day상상Day 상상Day 입니다!</a>
-                                                </p>
-                                                <span class="author">문석환</span>
-                                                <span class="date">2017.06.30</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">안내</small>
-                                                    <a href="#">매트리스 외주업체별 7월 배송 휴무 지역 안내의 건</a>
-                                                </p>
-                                                <span class="author">강준규</span>
-                                                <span class="date">2017.06.29</span>
-                                            </li>
-                                            <li>
-                                                <p class="subject">
-                                                    <small class="category">기업문화</small>
-                                                    <a href="#">[상상Day이벤트] '추천 받을 아이디어는 나야나!' 매월 2,4번째 수요일은 상상Day 입니다!</a>
-                                                </p>
-                                                <span class="author">전예진</span>
-                                                <span class="date">2017.06.26</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-panel" id="board-tab1-2">
-                                        CEO 공지사항
-                                    </div>
-                                    <div class="tab-panel" id="board-tab1-3">
-                                        일반 공지사항
-                                    </div>
-                                    <div class="tab-panel" id="board-tab1-4">
-                                        영업 공지사항
-                                    </div>
-                                    <div class="tab-panel" id="board-tab1-5">
-                                        인사 공지사항
-                                    </div>
-                                    <div class="tab-panel" id="board-tab1-6">
-                                        교육 공지사항
-                                    </div>
-                                    <div class="tab-panel" id="board-tab1-7">
-                                        기타 공지사항
-                                    </div>
-                                </div>
-                                <div class="btn-board-more">
-                                    <a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
-                                    <a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
-                                    <a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 공지사항 //end -->
-                        <!-- 집안통신 -->
-                        <div class="tab-panel" id="board-tab2">
-                            <div class="portal-notice">
-                                <ul class="tabs">
-                                    <li class="tab"><a href="#board-tab2-1">전체</a></li>
-                                    <li class="tab"><a href="#board-tab2-2">일반</a></li>
-                                    <li class="tab"><a href="#board-tab2-3">영업</a></li>
-                                    <li class="tab"><a href="#board-tab2-4">규정</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-panel" id="board-tab2-1">
-                                        전체 집안통신
-                                    </div>
-                                    <div class="tab-panel" id="board-tab2-2">
-                                        일반 집안통신
-                                    </div>
-                                    <div class="tab-panel" id="board-tab2-3">
-                                        영업 집안통신
-                                    </div>
-                                    <div class="tab-panel" id="board-tab2-4">
-                                        규정 집안통신
-                                    </div>
-                                </div>
-                                <div class="btn-board-more">
-                                    <a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
-                                    <a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
-                                    <a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 집안통신 //end -->
-                        <!-- 이벤트 -->
-                        <div class="tab-panel" id="board-tab3">
-                            <div class="portal-notice">
-                                <ul class="tabs">
-                                    <li class="tab"><a href="#board-tab3-1">전체</a></li>
-                                    <li class="tab"><a href="#board-tab3-2">행사</a></li>
-                                    <li class="tab"><a href="#board-tab3-3">교육</a></li>
-                                    <li class="tab"><a href="#board-tab3-4">회의</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-panel" id="board-tab3-1">
-                                        전체 이벤트
-                                    </div>
-                                    <div class="tab-panel" id="board-tab3-2">
-                                        행사 이벤트
-                                    </div>
-                                    <div class="tab-panel" id="board-tab3-3">
-                                        교육 이벤트
-                                    </div>
-                                    <div class="tab-panel" id="board-tab3-4">
-                                        회의 이벤트
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 이벤트 //end -->
-                    </div>
-                </div>
-                <!-- 공지/알림형 게시판 //end -->
-                <!-- 테마형 게시판 -->
-                <div class="portlet-box portal-theme">
-                    <ul class="tabs">
-                        <li class="tab theme1"><a href="#theme-tab1">코러스</a></li>
-                        <li class="tab theme2"><a href="#theme-tab2">상상오션</a></li>
-                        <li class="tab theme3"><a href="#theme-tab3">사회공헌</a></li>
-                        <li class="tab theme4"><a href="#theme-tab4">분양중</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- 코러스 -->
-                        <div class="tab-panel" id="theme-tab1">
-                            <iframe src="http://chorus.coway.co.kr/Home/NewPortal?"></iframe>
-                        </div>
-                        <!-- 코러스 //end -->
-                        <!-- 상상오션 -->
-                        <div class="tab-panel" id="theme-tab2">
-                            <iframe src="http://sangsang.coway.com/Home/Portal?"></iframe>
-                        </div>
-                        <!-- 상상오션 //end -->
-                        <!-- 사회공헌 -->
-                        <div class="tab-panel" id="theme-tab3">
-                            사회공헌
-                        </div>
-                        <!-- 사회공헌 //end -->
-                        <!-- 분양중 -->
-                        <div class="tab-panel" id="theme-tab4">
-                            분양중
-                        </div>
-                        <!-- 분양중 //end -->
-                    </div>
-                </div>
-                <!-- 테마형 게시판 //end -->
-                <!-- 스토리형 게시판 -->
-                <div class="portlet-box portal-story">
-                    <ul class="tabs">
-                        <li class="tab"><a href="#story-tab1">최근게시판</a></li>
-                        <li class="tab"><a href="#story-tab2">법봉이마을</a></li>
-                        <li class="tab"><a href="#story-tab3">C Library</a></li>
-                        <li class="tab"><a href="#story-tab4">팀룸</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- 최근게시판 -->
-                        <div class="tab-panel" id="story-tab1">
-                            <ul class="board-list">
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">2017년 대한민국 혁신대상 신기술혁신상 수상_코웨이 아이스(AIS)</a>
-                                    </p>
-                                    <span class="author">김륜환</span>
-                                    <span class="date">2017.07.04</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">[디자인연구소] 2017년 디자인 어워드 수상 정리(6/19수정)</a>
-                                    </p>
-                                    <span class="author">박정은</span>
-                                    <span class="date">2017.07.04</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">(공기청정기) AP-2510EH, 한국공기청정협회 CA인증서(재인증)</a>
-                                    </p>
-                                    <span class="author">윤현준</span>
-                                    <span class="date">2017.07.04</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">(공기청정기) APMS-1516E/F, 한국공기청정협회 HH인증서</a>
-                                    </p>
-                                    <span class="author">윤현준</span>
-                                    <span class="date">2017.07.03</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">(공기청정기) APMS-1516E/F, 한국공기청정협회 CA인증서</a>
-                                    </p>
-                                    <span class="author">윤현준</span>
-                                    <span class="date">2017.07.03</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">하이브리드 매트리스(CMK-PRo1(M)외 5품목) 환경마크 인증서 환경마크 인증서 환경마크 인증서 환경마크 인증서 환경마크 인증서 환경마크 인증서</a>
-                                    </p>
-                                    <span class="author">강민규</span>
-                                    <span class="date">2017.06.30</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">고객 중심경영(CCM 운영메뉴얼)2017-1-31 개정</a>
-                                    </p>
-                                    <span class="author">양희진</span>
-                                    <span class="date">2017.06.29</span>
-                                </li>
-                                <li>
-                                    <p class="subject">
-                                        <a href="#">산업혁신 3차년도 우수기업 표창장</a>
-                                    </p>
-                                    <span class="author">박황수</span>
-                                    <span class="date">2017.06.26</span>
-                                </li>
+                <div class="tab-content">
+                    <!-- 공지사항 -->
+                    <div class="tab-panel" id="board-tab1">
+                        <div class="portal-notice">
+                            <ul class="tabs">
+                                <li class="tab"><a href="#board-tab1-1">전체</a></li>
+                                <li class="tab"><a href="#board-tab1-2">CEO</a></li>
+                                <li class="tab"><a href="#board-tab1-3">일반</a></li>
+                                <li class="tab"><a href="#board-tab1-4">영업</a></li>
+                                <li class="tab"><a href="#board-tab1-5">인사</a></li>
+                                <li class="tab"><a href="#board-tab1-6">교육</a></li>
+                                <li class="tab"><a href="#board-tab1-7">기타</a></li>
                             </ul>
+                            <div class="tab-content">
+                                <div class="tab-panel" id="board-tab1-1">
+                                    <ul class="board-list">
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">안내</small>
+                                                <a href="#">[총무팀] 2017년 콘도 여름성수기 추첨접수 일정 안내</a>
+                                                <i class="badge-new">N</i>
+                                            </p>
+                                            <span class="author">오정은</span>
+                                            <span class="date">2017.07.04</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">안내</small>
+                                                <a href="#">2017년 경영전략회의 연간 일정 안내</a>
+                                            </p>
+                                            <span class="author">문석환</span>
+                                            <span class="date">2017.07.04</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">기업문화</small>
+                                                <a href="#">[상상Day이벤트] '추천 받을 아이디어는 나야나!' 매월 2,4번째 수요일은 상상Day 입니다!</a>
+                                            </p>
+                                            <span class="author">강준규</span>
+                                            <span class="date">2017.07.04</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">안내</small>
+                                                <a href="#">매트리스 외주업체별 7월 배송 휴무 지역 안내의 건</a>
+                                            </p>
+                                            <span class="author">전예진</span>
+                                            <span class="date">2017.07.03</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">안내</small>
+                                                <a href="#">2017년 경영전략회의 연간 일정 안내</a>
+                                            </p>
+                                            <span class="author">오정은</span>
+                                            <span class="date">2017.07.03</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">기업문화</small>
+                                                <a href="#">[상상Day이벤트] '추천 받을 아이디어는 나야나!' 매월 2,4번째 수요일은 상상Day 상상Day 상상Day상상Day 상상Day 입니다!</a>
+                                            </p>
+                                            <span class="author">문석환</span>
+                                            <span class="date">2017.06.30</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">안내</small>
+                                                <a href="#">매트리스 외주업체별 7월 배송 휴무 지역 안내의 건</a>
+                                            </p>
+                                            <span class="author">강준규</span>
+                                            <span class="date">2017.06.29</span>
+                                        </li>
+                                        <li>
+                                            <p class="subject">
+                                                <small class="category">기업문화</small>
+                                                <a href="#">[상상Day이벤트] '추천 받을 아이디어는 나야나!' 매월 2,4번째 수요일은 상상Day 입니다!</a>
+                                            </p>
+                                            <span class="author">전예진</span>
+                                            <span class="date">2017.06.26</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-panel" id="board-tab1-2">
+                                    CEO 공지사항
+                                </div>
+                                <div class="tab-panel" id="board-tab1-3">
+                                    일반 공지사항
+                                </div>
+                                <div class="tab-panel" id="board-tab1-4">
+                                    영업 공지사항
+                                </div>
+                                <div class="tab-panel" id="board-tab1-5">
+                                    인사 공지사항
+                                </div>
+                                <div class="tab-panel" id="board-tab1-6">
+                                    교육 공지사항
+                                </div>
+                                <div class="tab-panel" id="board-tab1-7">
+                                    기타 공지사항
+                                </div>
+                            </div>
                             <div class="btn-board-more">
                                 <a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
                                 <a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
                                 <a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
                             </div>
                         </div>
-                        <!-- 최근게시판 //end -->
-                        <!-- 법봉이마을 -->
-                        <div class="tab-panel" id="story-tab2">
-                            법봉이마을
-                        </div>
-                        <!-- 법봉이마을 //end -->
-                        <!-- C Library -->
-                        <div class="tab-panel" id="story-tab3">
-                            C Library
-                        </div>
-                        <!-- C Library //end -->
-                        <!-- 팀룸 -->
-                        <div class="tab-panel" id="story-tab4">
-                            팀룸
-                        </div>
-                        <!-- 팀룸 //end -->
                     </div>
-                </div>
-                <!-- 스토리형 게시판 //end -->
-            </div>
-            <div class="column-right">
-                <!-- 편리정보 -->
-                <div class="portlet-box user-information">
-                    <div class="profile">
-                        <div class="private">
-                            <span class="user-name">
-                                <strong>전지현</strong>책임
-                            </span>
-                            <span>기술연구소/연구개발팀</span>
-                        </div>
-                        <div class="my-information">
-                            <a href="#" class="link-my-info">내정보 <i class="icon-lock-sm"></i></a>
-                            <a href="#" class="btn btn-sm">로그아웃</a>
-                        </div>
-                    </div>
-                    <ul class="user-service">
-                        <li class="service-item1">
-                            <a href="#">메일</a>
-                            <span class="item-count"><em>24</em></span>
-                        </li>
-                        <li class="service-item2">
-                            <a href="#">결재</a>
-                            <span class="item-count"><em>8</em></span>
-                        </li>
-                        <li class="service-item3">
-                            <a href="#">수발신</a>
-                            <span class="item-count"><em>11</em></span>
-                        </li>
-                        <li class="service-item4">
-                            <a href="#">E-HR</a>
-                            <span class="item-count"><em>7</em></span>
-                        </li>
-                        <li class="service-item5">
-                            <a href="#">연차</a>
-                            <span class="item-count"><em>NaN</em></span>
-                        </li>
-                        <li class="service-item6">
-                            <a href="#">사회공헌</a>
-                            <span class="item-count"><em>999</em></span>
-                        </li>
-                    </ul>
-                    <div class="user-convenience">
-						<div class="convenience-head">
-							<ul class="convenience-tab tabs">
-								<li class="tab"><a href="#convenience-tab1">전자결재</a></li>
-								<li class="tab"><a href="#convenience-tab2">일정</a></li>
-								<li class="tab"><a href="#convenience-tab3">담당검색</a></li>
-								<li class="tab"><a href="#convenience-tab4">Co-Work</a></li>
-								<li class="tab"><a href="#convenience-tab5">주식</a></li>
-								<li class="tab"><a href="#convenience-tab6">환율</a></li>
-							</ul>
-							<a class="slide-arrow slide-prev" href="#">&lt;</a>
-							<a class="slide-arrow slide-next" href="#">&gt;</a>
-						</div>
-						<div class="tab-content">
-							<!-- 전자결재 -->
-                            <div class="tab-panel" id="convenience-tab1">
-                                <ul class="approval-list">
-                                    <li>
-                                        <i class="badge-report">상신</i>
-                                        <a href="#">STAF Fallow Up 교육 결재</a>
-                                        <p>
-                                            <span>기안 유수영/환경경영팀</span>
-                                            <small>07/04</small>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <i class="badge-pendency">미결</i>
-                                        <a href="#">자기선언문 발행의 건</a>
-                                        <p>
-                                            <span>기안 유수영/환경경영팀</span>
-                                            <small>06/30</small>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <i class="badge-return">반려</i>
-                                        <a href="#">HP-06EN 자기선언문 발행의건 발행의건 발행의건 발행의건 발행의건</a>
-                                        <p>
-                                            <span>기안 유수영/환경경영팀</span>
-                                            <small>06/23</small>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <i class="badge-approve">승인</i>
-                                        <a href="#">예산변동 : 부서</a>
-                                        <p>
-                                            <span>기안 유수영/환경경영팀</span>
-                                            <small>06/23</small>
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <i class="badge-progress">진행</i>
-                                        <a href="#">결재문서입니다.</a>
-                                        <p>
-                                            <span>기안 유수영/환경경영팀</span>
-                                            <small>06/23</small>
-                                        </p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- 전자결재 //end -->
-                            <!-- 일정 -->
-							<div class="tab-panel" id="convenience-tab2">일정</div>
-                            <!-- 일정 //end -->
-                            <!-- 담당검색 -->
-                            <div class="tab-panel" id="convenience-tab3">담당검색</div>
-                            <!-- 담당검색 //end -->
-                            <!-- Co-Work -->
-                            <div class="tab-panel" id="convenience-tab4">Co-Work</div>
-                            <!-- Co-Work //end -->
-                            <!-- 주식 -->
-                            <div class="tab-panel" id="convenience-tab5">
-								<div class="stock">주식</div>
-							</div>
-                            <!-- 주식 //end -->
-                            <!-- 환율 -->
-                            <div class="tab-panel" id="convenience-tab6">
-								<div class="exchange">환율</div>
-							</div>
-                            <!-- 환율 //end -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 편리정보 //end -->
-                <!-- 업무지원 -->
-                <div class="portlet-box work-support">
-                    <ul class="tabs">
-                        <li class="tab"><a href="#work-tab1">MY QUICK</a></li>
-                        <li class="tab"><a href="#work-tab2">업무지원</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- MY QUICK -->
-                        <div class="tab-panel" id="work-tab1">
-                            <ul class="my-quick-list">
-                                <li class="work-quick1"><a href="#">영업S</a></li>
-                                <li class="work-quick2"><a href="#">경영지원S</a></li>
-                                <li class="work-quick3"><a href="#">혁신포탈</a></li>
-                                <li class="work-quick4"><a href="#">웹전표S</a></li>
-                                <li class="work-quick5"><a href="#">법무서비스</a></li>
-                                <li class="work-quick6"><a href="#">출장S</a></li>
-                                <li class="work-quick7"><a href="#">총무S</a></li>
-                                <li class="work-quick8"><a href="#">규정관리S</a></li>
-                                <li class="work-quick1"><a href="#">영업S</a></li>
-                                <li class="work-quick2"><a href="#">경영지원S</a></li>
-                                <li class="work-quick3"><a href="#">혁신포탈</a></li>
-                                <li class="work-quick4"><a href="#">웹전표S</a></li>
-                                <li class="work-quick5"><a href="#">법무서비스법무서비스</a></li>
-                                <li class="work-quick6"><a href="#">출장S</a></li>
-                                <li class="work-quick7"><a href="#">총무S</a></li>
-                                <li class="work-quick8"><a href="#">규정관리S</a></li>
+                    <!-- 공지사항 //end -->
+                    <!-- 집안통신 -->
+                    <div class="tab-panel" id="board-tab2">
+                        <div class="portal-notice">
+                            <ul class="tabs">
+                                <li class="tab"><a href="#board-tab2-1">전체</a></li>
+                                <li class="tab"><a href="#board-tab2-2">일반</a></li>
+                                <li class="tab"><a href="#board-tab2-3">영업</a></li>
+                                <li class="tab"><a href="#board-tab2-4">규정</a></li>
                             </ul>
-                            <div class="my-quick-option">
-                                <span>로그인필요</span>
-                                <a href="#" class="btn-set"><i class="icon-set"></i></a>
+                            <div class="tab-content">
+                                <div class="tab-panel" id="board-tab2-1">
+                                    전체 집안통신
+                                </div>
+                                <div class="tab-panel" id="board-tab2-2">
+                                    일반 집안통신
+                                </div>
+                                <div class="tab-panel" id="board-tab2-3">
+                                    영업 집안통신
+                                </div>
+                                <div class="tab-panel" id="board-tab2-4">
+                                    규정 집안통신
+                                </div>
+                            </div>
+                            <div class="btn-board-more">
+                                <a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
+                                <a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
+                                <a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
                             </div>
                         </div>
-                        <!-- MY QUICK //end -->
-                        <!-- 업무지원 -->
-                        <div class="tab-panel" id="work-tab2">
-                            업무지원
-                        </div>
-                        <!-- 업무지원 //end -->
                     </div>
-                </div>
-                <!-- 업무지원 //end -->
-                <!-- 일정정보 -->
-                <div class="portlet-box schedule-information">
-                    <ul class="tabs">
-                        <li class="tab"><a href="#schedule-tab1">CEO 일정</a></li>
-                        <li class="tab"><a href="#schedule-tab2">본부 일정</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <!-- CEO 일정 -->
-                        <div class="tab-panel" id="schedule-tab1">
-                            <div class="schedule-box">
-                                <ul class="tabs">
-                                    <li class="tab"><a href="#schedule-tab1-1">23<small>일</small></a></li>
-                                    <li class="tab"><a href="#schedule-tab1-2">24<small>월</small></a></li>
-                                    <li class="tab"><a href="#schedule-tab1-3">25<small>화</small></a></li>
-                                    <li class="tab"><a href="#schedule-tab1-4">26<small>수</small></a></li>
-                                    <li class="tab"><a href="#schedule-tab1-5">27<small>목</small></a></li>
-                                    <li class="tab"><a href="#schedule-tab1-6">28<small>금</small></a></li>
-                                    <li class="tab"><a href="#schedule-tab1-7">29<small>토</small></a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-panel" id="schedule-tab1-1">
-                                        <ul class="schedule-board-list">
-                                            <li><span>08:00~08:30</span> 중국어</li>
-                                            <li><span>09:30~10:30</span> 업체미팅</li>
-                                            <li><span>11:00~11:30</span> 상품기획1팀보고</li>
-                                            <li><span>14:00~15:00</span> 지사방문</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-panel" id="schedule-tab1-2"></div>
-                                    <div class="tab-panel" id="schedule-tab1-3"></div>
-                                    <div class="tab-panel" id="schedule-tab1-4"></div>
-                                    <div class="tab-panel" id="schedule-tab1-5"></div>
-                                    <div class="tab-panel" id="schedule-tab1-6"></div>
-                                    <div class="tab-panel" id="schedule-tab1-7"></div>
+                    <!-- 집안통신 //end -->
+                    <!-- 이벤트 -->
+                    <div class="tab-panel" id="board-tab3">
+                        <div class="portal-notice">
+                            <ul class="tabs">
+                                <li class="tab"><a href="#board-tab3-1">전체</a></li>
+                                <li class="tab"><a href="#board-tab3-2">행사</a></li>
+                                <li class="tab"><a href="#board-tab3-3">교육</a></li>
+                                <li class="tab"><a href="#board-tab3-4">회의</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-panel" id="board-tab3-1">
+                                    전체 이벤트
                                 </div>
-                            </div>
-                            <div class="btn-schedule">
-                                <a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
-                                <a href="#" class="schedule-more"><span class="sr-only">일정 더보기</span></a>
-                            </div>
-                            <div class="schedule-option">
-                                <span>본부장/팀장 일정</span>
-                                <div class="selectbox">
-                                    <strong class="selectbox-value">선택</strong>
-                                    <select onchange="selectboxEvent(this);">
-                                        <option>선택</option>
-                                        <option>선택2</option>
-                                    </select>
+                                <div class="tab-panel" id="board-tab3-2">
+                                    행사 이벤트
+                                </div>
+                                <div class="tab-panel" id="board-tab3-3">
+                                    교육 이벤트
+                                </div>
+                                <div class="tab-panel" id="board-tab3-4">
+                                    회의 이벤트
                                 </div>
                             </div>
                         </div>
-                        <!-- CEO 일정 //end -->
-                        <!-- 본부 일정 -->
-                        <div class="tab-panel" id="schedule-tab2">
-                            <div class="schedule-option">
-                                <span>본부장/팀장 일정</span>
-                                <div class="selectbox">
-                                    <strong class="selectbox-value">선택</strong>
-                                    <select onchange="selectboxEvent(this);">
-                                        <option>선택</option>
-                                        <option>선택2</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 본부 일정 //end -->
                     </div>
+                    <!-- 이벤트 //end -->
                 </div>
-                <!-- 일정정보 //end -->
             </div>
+            <!-- 공지/알림형 게시판 //end -->
+            <!-- 테마형 게시판 -->
+            <div class="portlet-box portal-theme">
+                <ul class="tabs">
+                    <li class="tab theme1"><a href="#theme-tab1">코러스</a></li>
+                    <li class="tab theme2"><a href="#theme-tab2">상상오션</a></li>
+                    <li class="tab theme3"><a href="#theme-tab3">사회공헌</a></li>
+                    <li class="tab theme4"><a href="#theme-tab4">분양중</a></li>
+                </ul>
+                <div class="tab-content">
+                    <!-- 코러스 -->
+                    <div class="tab-panel" id="theme-tab1">
+                        <iframe src="http://chorus.coway.co.kr/Home/NewPortal?"></iframe>
+                    </div>
+                    <!-- 코러스 //end -->
+                    <!-- 상상오션 -->
+                    <div class="tab-panel" id="theme-tab2">
+                        <iframe src="http://sangsang.coway.com/Home/Portal?"></iframe>
+                    </div>
+                    <!-- 상상오션 //end -->
+                    <!-- 사회공헌 -->
+                    <div class="tab-panel" id="theme-tab3">
+                        사회공헌
+                    </div>
+                    <!-- 사회공헌 //end -->
+                    <!-- 분양중 -->
+                    <div class="tab-panel" id="theme-tab4">
+                        분양중
+                    </div>
+                    <!-- 분양중 //end -->
+                </div>
+            </div>
+            <!-- 테마형 게시판 //end -->
+            <!-- 스토리형 게시판 -->
+            <div class="portlet-box portal-story">
+                <ul class="tabs">
+                    <li class="tab"><a href="#story-tab1">최근게시판</a></li>
+                    <li class="tab"><a href="#story-tab2">법봉이마을</a></li>
+                    <li class="tab"><a href="#story-tab3">C Library</a></li>
+                    <li class="tab"><a href="#story-tab4">팀룸</a></li>
+                </ul>
+                <div class="tab-content">
+                    <!-- 최근게시판 -->
+                    <div class="tab-panel" id="story-tab1">
+                        <ul class="board-list">
+                            <li>
+                                <p class="subject">
+                                    <a href="#">2017년 대한민국 혁신대상 신기술혁신상 수상_코웨이 아이스(AIS)</a>
+                                </p>
+                                <span class="author">김륜환</span>
+                                <span class="date">2017.07.04</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">[디자인연구소] 2017년 디자인 어워드 수상 정리(6/19수정)</a>
+                                </p>
+                                <span class="author">박정은</span>
+                                <span class="date">2017.07.04</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">(공기청정기) AP-2510EH, 한국공기청정협회 CA인증서(재인증)</a>
+                                </p>
+                                <span class="author">윤현준</span>
+                                <span class="date">2017.07.04</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">(공기청정기) APMS-1516E/F, 한국공기청정협회 HH인증서</a>
+                                </p>
+                                <span class="author">윤현준</span>
+                                <span class="date">2017.07.03</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">(공기청정기) APMS-1516E/F, 한국공기청정협회 CA인증서</a>
+                                </p>
+                                <span class="author">윤현준</span>
+                                <span class="date">2017.07.03</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">하이브리드 매트리스(CMK-PRo1(M)외 5품목) 환경마크 인증서 환경마크 인증서 환경마크 인증서 환경마크 인증서 환경마크 인증서 환경마크 인증서</a>
+                                </p>
+                                <span class="author">강민규</span>
+                                <span class="date">2017.06.30</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">고객 중심경영(CCM 운영메뉴얼)2017-1-31 개정</a>
+                                </p>
+                                <span class="author">양희진</span>
+                                <span class="date">2017.06.29</span>
+                            </li>
+                            <li>
+                                <p class="subject">
+                                    <a href="#">산업혁신 3차년도 우수기업 표창장</a>
+                                </p>
+                                <span class="author">박황수</span>
+                                <span class="date">2017.06.26</span>
+                            </li>
+                        </ul>
+                        <div class="btn-board-more">
+                            <a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
+                            <a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
+                            <a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
+                        </div>
+                    </div>
+                    <!-- 최근게시판 //end -->
+                    <!-- 법봉이마을 -->
+                    <div class="tab-panel" id="story-tab2">
+                        법봉이마을
+                    </div>
+                    <!-- 법봉이마을 //end -->
+                    <!-- C Library -->
+                    <div class="tab-panel" id="story-tab3">
+                        C Library
+                    </div>
+                    <!-- C Library //end -->
+                    <!-- 팀룸 -->
+                    <div class="tab-panel" id="story-tab4">
+                        팀룸
+                    </div>
+                    <!-- 팀룸 //end -->
+                </div>
+            </div>
+            <!-- 스토리형 게시판 //end -->
+        </div>
+        <div class="column-right">
+            <!-- 편리정보 -->
+            <div class="portlet-box user-information">
+                <div class="profile">
+                    <div class="private">
+                        <span class="user-name">
+                            <strong>전지현</strong>책임
+                        </span>
+                        <span>기술연구소/연구개발팀</span>
+                    </div>
+                    <div class="my-information">
+                        <a href="#" class="link-my-info">내정보 <i class="icon-lock-sm"></i></a>
+                        <a href="#" class="btn btn-sm">로그아웃</a>
+                    </div>
+                </div>
+                <ul class="user-service">
+                    <li class="service-item1">
+                        <a href="#">메일</a>
+                        <span class="item-count"><em>24</em></span>
+                    </li>
+                    <li class="service-item2">
+                        <a href="#">결재</a>
+                        <span class="item-count"><em>8</em></span>
+                    </li>
+                    <li class="service-item3">
+                        <a href="#">수발신</a>
+                        <span class="item-count"><em>11</em></span>
+                    </li>
+                    <li class="service-item4">
+                        <a href="#">E-HR</a>
+                        <span class="item-count"><em>7</em></span>
+                    </li>
+                    <li class="service-item5">
+                        <a href="#">연차</a>
+                        <span class="item-count"><em>NaN</em></span>
+                    </li>
+                    <li class="service-item6">
+                        <a href="#">사회공헌</a>
+                        <span class="item-count"><em>999</em></span>
+                    </li>
+                </ul>
+                <div class="user-convenience">
+                    <div class="convenience-head">
+                        <ul class="convenience-tab tabs">
+                            <li class="tab"><a href="#convenience-tab1">전자결재</a></li>
+                            <li class="tab"><a href="#convenience-tab2">일정</a></li>
+                            <li class="tab"><a href="#convenience-tab3">담당검색</a></li>
+                            <li class="tab"><a href="#convenience-tab4">Co-Work</a></li>
+                            <li class="tab"><a href="#convenience-tab5">주식</a></li>
+                            <li class="tab"><a href="#convenience-tab6">환율</a></li>
+                        </ul>
+                        <a class="slide-arrow slide-prev" href="#">&lt;</a>
+                        <a class="slide-arrow slide-next" href="#">&gt;</a>
+                    </div>
+                    <div class="tab-content">
+                        <!-- 전자결재 -->
+                        <div class="tab-panel" id="convenience-tab1">
+                            <ul class="approval-list">
+                                <li>
+                                    <i class="badge-report">상신</i>
+                                    <a href="#">STAF Fallow Up 교육 결재</a>
+                                    <p>
+                                        <span>기안 유수영/환경경영팀</span>
+                                        <small>07/04</small>
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="badge-pendency">미결</i>
+                                    <a href="#">자기선언문 발행의 건</a>
+                                    <p>
+                                        <span>기안 유수영/환경경영팀</span>
+                                        <small>06/30</small>
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="badge-return">반려</i>
+                                    <a href="#">HP-06EN 자기선언문 발행의건 발행의건 발행의건 발행의건 발행의건</a>
+                                    <p>
+                                        <span>기안 유수영/환경경영팀</span>
+                                        <small>06/23</small>
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="badge-approve">승인</i>
+                                    <a href="#">예산변동 : 부서</a>
+                                    <p>
+                                        <span>기안 유수영/환경경영팀</span>
+                                        <small>06/23</small>
+                                    </p>
+                                </li>
+                                <li>
+                                    <i class="badge-progress">진행</i>
+                                    <a href="#">결재문서입니다.</a>
+                                    <p>
+                                        <span>기안 유수영/환경경영팀</span>
+                                        <small>06/23</small>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 전자결재 //end -->
+                        <!-- 일정 -->
+                        <div class="tab-panel" id="convenience-tab2">일정</div>
+                        <!-- 일정 //end -->
+                        <!-- 담당검색 -->
+                        <div class="tab-panel" id="convenience-tab3">담당검색</div>
+                        <!-- 담당검색 //end -->
+                        <!-- Co-Work -->
+                        <div class="tab-panel" id="convenience-tab4">Co-Work</div>
+                        <!-- Co-Work //end -->
+                        <!-- 주식 -->
+                        <div class="tab-panel" id="convenience-tab5">
+                            <div class="stock">주식</div>
+                        </div>
+                        <!-- 주식 //end -->
+                        <!-- 환율 -->
+                        <div class="tab-panel" id="convenience-tab6">
+                            <div class="exchange">환율</div>
+                        </div>
+                        <!-- 환율 //end -->
+                    </div>
+                </div>
+            </div>
+            <!-- 편리정보 //end -->
+            <!-- 업무지원 -->
+            <div class="portlet-box work-support">
+                <ul class="tabs">
+                    <li class="tab"><a href="#work-tab1">MY QUICK</a></li>
+                    <li class="tab"><a href="#work-tab2">업무지원</a></li>
+                </ul>
+                <div class="tab-content">
+                    <!-- MY QUICK -->
+                    <div class="tab-panel" id="work-tab1">
+                        <ul class="my-quick-list">
+                            <li class="work-quick1"><a href="#">영업S</a></li>
+                            <li class="work-quick2"><a href="#">경영지원S</a></li>
+                            <li class="work-quick3"><a href="#">혁신포탈</a></li>
+                            <li class="work-quick4"><a href="#">웹전표S</a></li>
+                            <li class="work-quick5"><a href="#">법무서비스</a></li>
+                            <li class="work-quick6"><a href="#">출장S</a></li>
+                            <li class="work-quick7"><a href="#">총무S</a></li>
+                            <li class="work-quick8"><a href="#">규정관리S</a></li>
+                            <li class="work-quick1"><a href="#">영업S</a></li>
+                            <li class="work-quick2"><a href="#">경영지원S</a></li>
+                            <li class="work-quick3"><a href="#">혁신포탈</a></li>
+                            <li class="work-quick4"><a href="#">웹전표S</a></li>
+                            <li class="work-quick5"><a href="#">법무서비스법무서비스</a></li>
+                            <li class="work-quick6"><a href="#">출장S</a></li>
+                            <li class="work-quick7"><a href="#">총무S</a></li>
+                            <li class="work-quick8"><a href="#">규정관리S</a></li>
+                        </ul>
+                        <div class="my-quick-option">
+                            <span>로그인필요</span>
+                            <a href="#" class="btn-set"><i class="icon-set"></i></a>
+                        </div>
+                    </div>
+                    <!-- MY QUICK //end -->
+                    <!-- 업무지원 -->
+                    <div class="tab-panel" id="work-tab2">
+                        업무지원
+                    </div>
+                    <!-- 업무지원 //end -->
+                </div>
+            </div>
+            <!-- 업무지원 //end -->
+            <!-- 일정정보 -->
+            <div class="portlet-box schedule-information">
+                <ul class="tabs">
+                    <li class="tab"><a href="#schedule-tab1">CEO 일정</a></li>
+                    <li class="tab"><a href="#schedule-tab2">본부 일정</a></li>
+                </ul>
+                <div class="tab-content">
+                    <!-- CEO 일정 -->
+                    <div class="tab-panel" id="schedule-tab1">
+                        <div class="schedule-box">
+                            <ul class="tabs">
+                                <li class="tab"><a href="#schedule-tab1-1">23<small>일</small></a></li>
+                                <li class="tab"><a href="#schedule-tab1-2">24<small>월</small></a></li>
+                                <li class="tab"><a href="#schedule-tab1-3">25<small>화</small></a></li>
+                                <li class="tab"><a href="#schedule-tab1-4">26<small>수</small></a></li>
+                                <li class="tab"><a href="#schedule-tab1-5">27<small>목</small></a></li>
+                                <li class="tab"><a href="#schedule-tab1-6">28<small>금</small></a></li>
+                                <li class="tab"><a href="#schedule-tab1-7">29<small>토</small></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-panel" id="schedule-tab1-1">
+                                    <ul class="schedule-board-list">
+                                        <li><span>08:00~08:30</span> 중국어</li>
+                                        <li><span>09:30~10:30</span> 업체미팅</li>
+                                        <li><span>11:00~11:30</span> 상품기획1팀보고</li>
+                                        <li><span>14:00~15:00</span> 지사방문</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-panel" id="schedule-tab1-2"></div>
+                                <div class="tab-panel" id="schedule-tab1-3"></div>
+                                <div class="tab-panel" id="schedule-tab1-4"></div>
+                                <div class="tab-panel" id="schedule-tab1-5"></div>
+                                <div class="tab-panel" id="schedule-tab1-6"></div>
+                                <div class="tab-panel" id="schedule-tab1-7"></div>
+                            </div>
+                        </div>
+                        <div class="btn-schedule">
+                            <a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+                            <a href="#" class="schedule-more"><span class="sr-only">일정 더보기</span></a>
+                        </div>
+                        <div class="schedule-option">
+                            <span>본부장/팀장 일정</span>
+                            <div class="selectbox">
+                                <strong class="selectbox-value">선택</strong>
+                                <select onchange="selectboxEvent(this);">
+                                    <option>선택</option>
+                                    <option>선택2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CEO 일정 //end -->
+                    <!-- 본부 일정 -->
+                    <div class="tab-panel" id="schedule-tab2">
+                        <div class="schedule-option">
+                            <span>본부장/팀장 일정</span>
+                            <div class="selectbox">
+                                <strong class="selectbox-value">선택</strong>
+                                <select onchange="selectboxEvent(this);">
+                                    <option>선택</option>
+                                    <option>선택2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 본부 일정 //end -->
+                </div>
+            </div>
+            <!-- 일정정보 //end -->
         </div>
     </div>
-    <!-- Footer -->
-    <div class="footer">
-        <a href="#" class="footer-brand-logo"><span class="sr-only">COWAY</span></a>
-        <ul class="footer-notice">
-            <li><span class="category">[새소식]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
-            <li><span class="category">[2]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
-            <li><span class="category">[3]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
-        </ul>
-        <ul class="footer-menu">
-            <li><a href="#">메일쓰기</a></li>
-            <li><a href="#">결재작성</a></li>
-            <li><a href="#">언론제보</a></li>
-            <li><a href="#">회사정보</a></li>
-            <li><a href="#">조직정보</a></li>
-            <li><a href="#">윤리제보</a></li>
-        </ul>
-    </div>
-    <!-- Footer //end -->
 </div>
 </body>
 </html>
