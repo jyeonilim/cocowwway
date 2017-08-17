@@ -6,8 +6,11 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>포탈</title>
+    <!--<link rel="stylesheet" href="http;//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script><!-- 추가 20170818 -->
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
 </head>
@@ -17,9 +20,23 @@
     <div class="header">
         <div class="header-top">
             <h1 class="brand-slogan"><a href="#"><span class="sr-only">착한믿음/환경을 건강하게, 사람을 행복하게/The Life Care Company</span></a></h1>
-            <ul class="quick-access">
-                <li class="quick-search"><a href="#"><span class="sr-only">검색</span></a></li>
-                <li class="quick-folder"><a href="#"><span class="sr-only">폴더</span></a></li>
+            <ul class="quick-access"><!-- 추가 20170818 -->
+                <li class="quick-search">
+                    <a href="#"><span class="sr-only">검색</span></a>
+                    <div class="search-box">
+                        <div class="selectbox">
+                            <strong class="selectbox-value">통합검색</strong>
+                            <select id="companyCode" onchange="selectboxEvent(this);">
+                                <option>통합검색</option>
+                                <option>직원검색</option>
+                            </select>
+                        </div>
+                        <div class="search-input">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </li>
+                <li class="quick-folder"><a href="#"><span class="sr-only">팝업관리</span><span class="badge-unit">1</span></a></li>
                 <li class="quick-help"><a href="#"><span class="sr-only">도움말</span></a></li>
                 <li class="quick-configuration"><a href="#"><span class="sr-only">환경설정</span></a></li>
                 <li class="quick-user">
@@ -37,7 +54,7 @@
                         <a href="#" class="btn-close"></a>
                     </div>
                 </li>
-            </ul>
+            </ul><!-- 추가 //end -->
         </div>
         <div class="header-bottom">
             <div class="quick-link">
@@ -84,7 +101,7 @@
                     <li><a href="#">통합문서</a></li>
                     <li><a href="#">Co-Work</a></li>
                 </ul>
-                <div class="all-menu"><!-- 추가 -->
+                <div class="all-menu"><!-- 추가 20170818 -->
                     <a href="#" class="btn-all-menu"><span class="sr-only">전체메뉴</span></a>
                     <div class="all-menu-box">
                         <ul class="all-menu-list">
@@ -112,7 +129,7 @@
                         </ul>
                         <a href="#" class="btn-close"></a>
                     </div>
-                </div><!-- 추가 -->
+                </div><!-- 추가 //end -->
             </div>
         </div>
     </div>
@@ -428,16 +445,16 @@
                 <!-- 편리정보 -->
                 <div class="portlet-box user-information">
                     <div class="profile">
-                        <div class="private">
+                        <div class="private"><!-- 수정 20170818 -->
                             <span class="user-name">
-                                <strong>전지현</strong>책임
+                                <strong>강태성</strong>님
                             </span>
-                            <span>기술연구소/연구개발팀</span>
-                        </div>
-                        <div class="my-information">
+                            <span>ICT전략실 정보관리팀</span>
+                        </div><!-- 수정 //end -->
+                        <!-- div class="my-information">
                             <a href="#" class="link-my-info">내정보 <i class="icon-lock-sm"></i></a>
                             <a href="#" class="btn btn-sm">로그아웃</a>
-                        </div>
+                        </div 삭제 20170818 -->
                     </div>
                     <ul class="user-service">
                         <li class="service-item1">
@@ -557,9 +574,10 @@
                     <div class="tab-content">
                         <!-- MY QUICK -->
                         <div class="tab-panel" id="work-tab1">
+                            <!-- [D] 로그인 필요 아이콘 추가시 need-login 클래스 추가 -->
                             <ul class="my-quick-list">
                                 <li class="work-quick1"><a href="#">영업S</a></li>
-                                <li class="work-quick2"><a href="#">경영지원S</a></li>
+                                <li class="work-quick2 need-login"><a href="#">경영지원S</a></li><!-- 추가 20170818 -->
                                 <li class="work-quick3"><a href="#">혁신포탈</a></li>
                                 <li class="work-quick4"><a href="#">웹전표S</a></li>
                                 <li class="work-quick5"><a href="#">법무서비스</a></li>
@@ -611,10 +629,10 @@
                                 <div class="tab-content">
                                     <div class="tab-panel" id="schedule-tab1-1">
                                         <ul class="schedule-board-list">
-                                            <li><span>08:00~08:30</span> 중국어</li>
-                                            <li><span>09:30~10:30</span> 업체미팅</li>
-                                            <li><span>11:00~11:30</span> 상품기획1팀보고</li>
-                                            <li><span>14:00~15:00</span> 지사방문</li>
+                                            <li><span>08:00~08:30</span> <a href="#" title="- 제목 : 중국어<br>- 시간 : 08:00~08:30<br>- 내용 : 내용없음">중국어</a></li>
+                                            <li><span>09:30~10:30</span> <a href="#" title="- 제목 : 업체미팅<br>- 시간 : 09:30~10:30<br>- 내용 : 내용없음">업체미팅</a></li>
+                                            <li><span>11:00~11:30</span> <a href="#" title="- 제목 : 상품기획1팀보고<br>- 시간 : 11:00~11:30<br>- 내용 : 내용없음">상품기획1팀보고</a></li>
+                                            <li><span>14:00~15:00</span> <a href="#" title="- 제목 : 지사방문<br>- 시간 : 14:00~15:00<br>- 내용 : 내용없음">지사방문</a></li>
                                         </ul>
                                     </div>
                                     <div class="tab-panel" id="schedule-tab1-2"></div>

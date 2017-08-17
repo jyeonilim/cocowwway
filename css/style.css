@@ -209,6 +209,23 @@ table {
     background-position: -440px -120px;
     vertical-align: 7px;
 }
+.badge-unit {
+    position: absolute;
+    top: 1px;
+    right: -7px;
+    width: auto;
+    min-width: 20px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 8px;
+    background: #ff7575;
+    font: 700 11px/16px 'Arial';
+    /*font-weight: 700;*/
+    /*font-size: 10px;*/
+    /*line-height: 15px;*/
+    color: #fff;
+    text-align: center;
+}
 
 /**********************************************
     Button
@@ -266,8 +283,8 @@ table {
     width: 100%;
     padding: 0 20px;
     border: 1px solid #e8e8e8;
-    font: 15px 'NotoSansKR', sans-serif;
-    color: #a7a9ac;
+    font: 13px 'NotoSansKR', sans-serif;
+    color: #666;
 }
 .form-control::placeholder {
     color: #a7a9ac;
@@ -300,14 +317,16 @@ table {
 .selectbox .selectbox-value:after {
     position: absolute;
     top: 0;
+    bottom: 0;
     right: 0;
     display: inline-block;
+    width: 27px;
+    height: 24px;
+    margin: auto;
     background: url("../images/sprite-icon.png") no-repeat -152px 9px;
     line-height: 0;
     color: transparent;
     vertical-align: middle;
-    width: 27px;
-    height: 24px;
     content: '';
 }
 /*Checkbox*/
@@ -379,7 +398,7 @@ body {
     /*letter-spacing: -1px;*/
 }
 a, a:hover {
-    /*color: #000;*/
+    color: #666;
     text-decoration: none;
 }
 /*img, .image img {*/
@@ -451,7 +470,13 @@ body {
 .quick-access li.quick-search a {
     background-position: -280px 0;
 }
+.quick-access li.quick-search a.active {
+    position: inherit;
+    z-index: 11;
+    background-position: -360px -160px;
+}
 .quick-access li.quick-folder a {
+    position: relative;
     background-position: -320px 0;
 }
 .quick-access li.quick-help a {
@@ -466,6 +491,36 @@ body {
     border-radius: 50%;
     background-color: #dee3eb;
     background-size: cover;
+}
+.quick-search {
+    position: relative;
+}
+.search-box {
+    display: none;
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    width: 360px;
+    height: 40px;
+    border: 1px solid #e6e9f0;
+}
+.search-box .selectbox {
+    float: left;
+    border: 0;
+    border-right: 1px solid #e6e9f0;
+}
+.search-box .selectbox .selectbox-value {
+    padding: 0 27px 0 6px;
+    font-size: 14px;
+    line-height: 2.72;
+}
+.search-box .search-input {
+    float: left;
+}
+.search-box .search-input .form-control {
+    width: 235px;
+    height: 38px;
+    border: 0;
 }
 .user-box {
     display: none;
@@ -696,9 +751,9 @@ body {
     color: #00a7e4;
 }
 
-    /**********************************************
-        Footer
-        *******************************************/
+/**********************************************
+    Footer
+    *******************************************/
 .footer {
     /*position: absolute;*/
     /*left: 0;*/
@@ -785,8 +840,10 @@ body {
 .login .form-control {
     height: 49px;
     padding: 0;
-    line-height: 3.26;
     border: 0;
+    font-size: 15px;
+    line-height: 3.26;
+    color: #a7a9ac;
 }
 .login .checkbox .checkbox-label {
     font: 14px 'NotoSansKR', sans-serif;
@@ -1154,9 +1211,6 @@ body {
     overflow: hidden;
     padding: 17px 12px 15px 15px;
 }
-.profile .private {
-    float: left;
-}
 .profile .private span {
     display: block;
     font-weight: 300;
@@ -1169,15 +1223,6 @@ body {
     font-weight: 400;
     font-size: 14px;
     color: #00a7e4;
-}
-.profile .my-information {
-    float: right;
-}
-.profile .my-information .link-my-info {
-    display: block;
-    font-size: 12px;
-    color: #666;
-    text-align: center;
 }
 .user-service {
     overflow: hidden;
@@ -1437,6 +1482,11 @@ body {
 .my-quick-list li.work-quick8 a:before { /*규정관리*/
     background-position: -275px -155px;
 }
+.my-quick-list .need-login:after {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
 .my-quick-option {
     overflow: hidden;
     width: 100%;
@@ -1444,7 +1494,15 @@ body {
 }
 .my-quick-option span {
     float: left;
-    color: #f57f35;
+}
+.my-quick-list .need-login:after, .my-quick-option span:before {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    margin-right: 4px;
+    background: url("../images/sprite-icon.png") no-repeat -40px -120px;
+    vertical-align: bottom;
+    content: '';
 }
 .my-quick-option .btn-set {
     float: right;

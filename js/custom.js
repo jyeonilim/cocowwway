@@ -10,6 +10,20 @@ $(document).ready(function() {
     $(document).ready(contentScroll);
     $(window).resize(contentScroll);
 
+    $('.quick-search a').on('click',function () {
+        $(this).toggleClass('active');
+        $('.search-box').toggleClass('show');
+        return false;
+    });
+    $('.quick-user a').on('click',function () {
+        $('.user-box').toggleClass('open');
+        return false;
+    });
+    $('.user-box .btn-close').on('click',function () {
+        $('.user-box').removeClass('open');
+        return false;
+    });
+
     // Menu
     $(".menu > li > a").on({
         'mouseenter focusin': function() {
@@ -45,14 +59,6 @@ $(document).ready(function() {
     });
     $('.all-menu .btn-close').on('click',function () {
         $('.all-menu-box').removeClass('open');
-        return false;
-    });
-    $('.quick-user a').on('click',function () {
-        $('.user-box').toggleClass('open');
-        return false;
-    });
-    $('.user-box .btn-close').on('click',function () {
-        $('.user-box').removeClass('open');
         return false;
     });
 
@@ -103,6 +109,8 @@ $(document).ready(function() {
             easing: 'swing'
         }
     });
+
+    $('.schedule-board-list a').tooltip();
 
 });
 
