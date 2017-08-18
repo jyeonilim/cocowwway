@@ -5,7 +5,8 @@ $(document).ready(function() {
         var windowHeight = $(window).height();
         var headerHeight = $('.header').outerHeight();
         var footerHeight = $('.footer').outerHeight();
-        $('.content').height(windowHeight-(headerHeight+footerHeight));
+        $('.iframe-content').height(windowHeight-(headerHeight+footerHeight));
+        $('.content').height(windowHeight);
     });
     $(document).ready(contentScroll);
     $(window).resize(contentScroll);
