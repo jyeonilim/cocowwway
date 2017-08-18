@@ -115,17 +115,13 @@ $(document).ready(function() {
             return $(this).attr('title');
         },
         position: {my: 'left-14 top+8'},
-        show: {duration: 500}
+        show: {duration: 100},
+        hide: {duration: 100}
     });
-        // .off( "mouseover" )
-        // .on( "click", function(){
-        //     $( this ).tooltip( "open" );
-        //     return false;
-        // });
 
 });
 
-// Select Bo
+// Select Box
 function selectboxEvent(target) {
     var $this = $(target),
         str = $this.val();
@@ -133,14 +129,14 @@ function selectboxEvent(target) {
 }
 
 // Layer
-function layerOpen(layer) {
-    var $this = $(layer);
-    // $this.css("top", Math.max(0, $(window).scrollTop() + 50) + "px").show();
-    $this.show();
-    return false;
-}
-function layerClose(layer) {
-    var $this = $(layer);
-    $this.parent().parent('.modalWrap').hide();
-    return false;
-}
+// function layerOpen(layer) {
+//     var $this = $(layer);
+//     // $this.css("top", Math.max(0, $(window).scrollTop() + 50) + "px").show();
+//     $this.show();
+//     return false;
+// }
+// function layerClose(layer) {
+//     var $this = $(layer);
+//     $this.parent().parent('.modalWrap').hide();
+//     return false;
+// }

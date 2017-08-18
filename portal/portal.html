@@ -6,10 +6,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>포탈</title>
-    <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
     <link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-	<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
 	<script type="text/javascript" src="../js/jquery-ui.min.js"></script><!-- 추가 20170818 -->
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
@@ -295,9 +293,166 @@
                                     <li class="tab"><a href="#board-tab3-4">회의</a></li>
                                 </ul>
                                 <div class="tab-content">
-                                    <div class="tab-panel" id="board-tab3-1">
-                                        전체 이벤트
-                                    </div>
+                                    <div class="tab-panel" id="board-tab3-1"><!-- 추가 20180818 -->
+										<div class="schedule-wrap">
+											<!-- [D] 기존 달력에서 추가된 사항
+											일정갯수 표시 <span class="badge-unit">1</span>
+											공휴일 컬러 (.sun/.sat) -->
+											<div class="calendar">
+												<div class="calendar-head">
+													<strong><span id="dispyear">2017</span>.<span id="dispmonth">8</span></strong>
+													<a id="btn_prev" href="#" class="btn_prev"><span class="sr-only">이전</span></a>
+													<a id="btn_next" href="#" class="btn_next"><span class="sr-only">다음</span></a>
+												</div>
+												<table class="calendar-body">
+													<thead>
+													<tr>
+														<th class="sun">일</th>
+														<th>월</th>
+														<th>화</th>
+														<th>수</th>
+														<th>목</th>
+														<th>금</th>
+														<th class="sat">토</th>
+													</tr>
+													</thead>
+													<tbody id="dispcalendar">
+													<tr>
+														<td class="not sun" style="cursor: pointer;">
+															<span class="day">30</span>
+														</td>
+														<td class="not" style="cursor: pointer;">
+															<span class="day">31</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">1</span>
+															<span class="badge-unit">1</span>
+														</td>
+														<td class="todo" style="cursor: pointer;">
+															<span class="day">2</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">3</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">4</span>
+															<span class="badge-unit">11</span>
+														</td>
+														<td class="sat" style="cursor: pointer;">
+															<span class="day">5</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="sun" style="cursor: pointer;">
+															<span class="day">6</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">7</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">8</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">9</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">10</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">11</span>
+														</td>
+														<td class="sat" style="cursor: pointer;">
+															<span class="day">12</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="sun" style="cursor: pointer;">
+															<span class="day">13</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">14</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">15</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">16</span>
+															<span class="badge-unit">1</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">17</span>
+														</td>
+														<td class="today" style="cursor: pointer;">
+															<span class="day">18</span>
+															<span class="badge-unit">5</span>
+														</td>
+														<td class="sat" style="cursor: pointer;">
+															<span class="day">19</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="sun" style="cursor: pointer;">
+															<span class="day">20</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">21</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">22</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">23</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">24</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">25</span>
+														</td>
+														<td class="sat" style="cursor: pointer;">
+															<span class="day">26</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="sun" style="cursor: pointer;">
+															<span class="day">27</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">28</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">29</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">30</span>
+														</td>
+														<td class="" style="cursor: pointer;">
+															<span class="day">31</span>
+														</td>
+														<td class="not" style="cursor: pointer;">
+															<span class="day">1</span>
+														</td>
+														<td class="not sat" style="cursor: pointer;">
+															<span class="day">2</span>
+														</td>
+													</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="schedule-content">
+												<strong class="selected-date" id="dispDate">2017.08.18 (금)</strong>
+												<ul id="disptodo" class="selected-schedule-list">
+													<li><a href="#">10:00~11:00<span>[회의]</span>신상품 제품 리뷰</a></li>
+													<li><a href="#">10:00~11:00<span>[미팅]</span>대구 지사장 본사 내방</a></li>
+													<li><a href="#">10:00~11:00<span>[미팅]</span>1회용품 안쓰기 캠페인 관계자 미팅</a></li>
+													<li><a href="#">10:00~11:00<span>[미팅]</span>대구 지사장 본사 내방</a></li>
+													<li><a href="#">10:00~11:00<span>[세미나]</span>상품 제작 발표회 코엑스 참석</a></li>
+													<li><a href="#">10:00~11:00<span>[미팅]</span>1회용품 안쓰기 캠페인 관계자 미팅</a></li>
+												</ul>
+											</div>
+											<a href="#" class="schedule-registration"><span class="sr-only">일정 등록</span></a>
+										</div>
+									</div><!-- 추가 //end -->
                                     <div class="tab-panel" id="board-tab3-2">
                                         행사 이벤트
                                     </div>
@@ -540,27 +695,128 @@
                                         </p>
                                     </li>
                                 </ul>
+								<!-- [D] 등록된 문서가 없을 경우 -->
+								<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
                             </div>
                             <!-- 전자결재 //end -->
-                            <!-- 일정 -->
-							<div class="tab-panel" id="convenience-tab2">일정</div>
+                            <!-- 일정 --><!-- 추가 20170818 -->
+							<div class="tab-panel" id="convenience-tab2">
+								<div class="convenience-schedule-head">
+									<strong>2017.08.18 (금)</strong>
+									<a href="#" class="btn-prev"><span class="sr-only">이전</span></a>
+									<a href="#" class="btn-next"><span class="sr-only">다음</span></a>
+									<a href="#" class="btn-register"><span class="sr-only">등록</span></a>
+								</div>
+								<ul class="dot-list convenience-schedule-list">
+									<li><a href="#">10:00~11:00 신상품 제품 리뷰</a></li>
+									<li><a href="#">13:00~14:00 대구 지사장 본사 내방</a></li>
+									<li><a href="#">15:30~16:30 1회용품 안쓰기 캠페인 관계자 미팅</a></li>
+									<li><a href="#">17:00~18:00 대구 지사장 본사 내방</a></li>
+								</ul>
+								<!-- [D] 일정이 없을 경우 -->
+								<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
+								<div class="convenience-search schedule-search">
+									<div class="selectbox">
+										<strong class="selectbox-value">13</strong>
+										<select onchange="selectboxEvent(this);">
+											<option>13</option>
+											<option>14</option>
+										</select>
+									</div>
+									<input type="text" class="form-control">
+									<a href="#" class="btn-search"><span class="sr-only">일정 검색</span></a>
+								</div>
+							</div>
                             <!-- 일정 //end -->
                             <!-- 담당검색 -->
-                            <div class="tab-panel" id="convenience-tab3">담당검색</div>
+                            <div class="tab-panel" id="convenience-tab3">
+								<div class="convenience-search worker-search">
+									<input type="text" class="form-control">
+									<a href="#" class="btn-search"><span class="sr-only">담당 검색</span></a>
+								</div>
+								<p class="convenience-search-result-text">총 <span>16</span>명이 검색 되었습니다.</p>
+								<ul class="convenience-search-result-list">
+									<li>
+										<a href="#">
+											<span>김이현</span>
+											<span>043-250-0251</span>
+											<span><em>전산</em>업무</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>김창준</span>
+											<span>059-0000</span>
+											<span><em>전산</em>지원</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>도현주</span>
+											<span>054-473-7301</span>
+											<span><em>전산</em>업무</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>박진영</span>
+											<span>062-710-6519</span>
+											<span><em>전산</em>,행정,교육,회계</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>박현진</span>
+											<span>031-294-4188</span>
+											<span>행정/<em>전산</em>업무</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span>김이현</span>
+											<span>043-250-0251</span>
+											<span><em>전산</em>업무</span>
+										</a>
+									</li>
+								</ul>
+								<!-- [D] 등록된 문서가 없을 경우 -->
+								<!--<p class="no-content">검색결과가 없습니다.</p>-->
+							</div>
                             <!-- 담당검색 //end -->
                             <!-- Co-Work -->
-                            <div class="tab-panel" id="convenience-tab4">Co-Work</div>
+                            <div class="tab-panel" id="convenience-tab4">
+								<ul class="dot-list convenience-cowork-list">
+									<li>
+										<a href="#">
+											<span class="work-title">그룹웨어 고도화</span>
+											<p class="worker">나민욱</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="work-title">결제시스템 업데이트</span>
+											<p class="worker">문현일, 강태성</p>
+										</a>
+									</li>
+								</ul>
+								<!-- [D] 등록된 문서가 없을 경우 -->
+								<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
+							</div>
                             <!-- Co-Work //end -->
                             <!-- 주식 -->
                             <div class="tab-panel" id="convenience-tab5">
-								<div class="stock">주식</div>
+								<div class="stock">
+									<div class="stock-inner">주식</div>
+								</div>
 							</div>
                             <!-- 주식 //end -->
                             <!-- 환율 -->
                             <div class="tab-panel" id="convenience-tab6">
-								<div class="exchange">환율</div>
+								<div class="exchange">
+									<iframe src="http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/16959_0.html" scrolling="no"></iframe>
+								</div>
 							</div>
-                            <!-- 환율 //end -->
+                            <!-- 환율 //end --><!-- 추가 //end -->
                         </div>
                     </div>
                 </div>
@@ -628,12 +884,12 @@
                                 </ul>
                                 <div class="tab-content">
                                     <div class="tab-panel" id="schedule-tab1-1">
-                                        <ul class="schedule-board-list">
+                                        <ul class="schedule-board-list"><!-- 추가 20170818 -->
                                             <li><a href="#" title="<span>중국어</span>시간 : 08:00~08:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>08:00~08:30</span> 중국어</a></li>
                                             <li><a href="#" title="<span>업체미팅</span>시간 : 09:30~10:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>09:30~10:30</span> 업체미팅</a></li>
                                             <li><a href="#" title="<span>상품기획1팀보고</span>시간 : 11:00~11:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
                                             <li><a href="#" title="<span>지사방문</span>시간 : 14:00~15:00<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>14:00~15:00</span> 지사방문</a></li>
-                                        </ul>
+                                        </ul><!-- 추가 //end -->
                                     </div>
                                     <div class="tab-panel" id="schedule-tab1-2"></div>
                                     <div class="tab-panel" id="schedule-tab1-3"></div>
