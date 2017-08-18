@@ -1871,15 +1871,15 @@ body {
 }
 .btn-schedule {
     position: absolute;
-    top: -39px;
+    top: -40px;
     right: 0;
 }
 .btn-schedule a {
     display: inline-block;
     width: 38px;
-    height: 38px;
+    height: 39px;
     border-left: 1px solid #ebeef3;
-    line-height: 42px;
+    line-height: 45px;
     text-align: center;
 }
 .btn-schedule a:after {

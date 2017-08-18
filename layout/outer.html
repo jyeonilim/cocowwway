@@ -8,6 +8,7 @@
 	<title>코웨이</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script><!-- 추가 20170818 -->
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
 	<script type="text/javascript" src="../js/custom.js"></script>
 </head>
@@ -17,13 +18,41 @@
 	<div class="header">
 		<div class="header-top">
 			<h1 class="brand-slogan"><a href="#"><span class="sr-only">착한믿음/환경을 건강하게, 사람을 행복하게/The Life Care Company</span></a></h1>
-			<ul class="quick-access">
-				<li class="quick-search"><a href="#"><span class="sr-only">검색</span></a></li>
-				<li class="quick-folder"><a href="#"><span class="sr-only">폴더</span></a></li>
+			<ul class="quick-access"><!-- 추가 20170818 -->
+				<li class="quick-search">
+					<a href="#"><span class="sr-only">검색</span></a>
+					<div class="search-box">
+						<div class="selectbox">
+							<strong class="selectbox-value">통합검색</strong>
+							<select id="companyCode" onchange="selectboxEvent(this);">
+								<option>통합검색</option>
+								<option>직원검색</option>
+							</select>
+						</div>
+						<div class="search-input">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+				</li>
+				<li class="quick-folder"><a href="#"><span class="sr-only">팝업관리</span><span class="badge-unit">1</span></a></li>
 				<li class="quick-help"><a href="#"><span class="sr-only">도움말</span></a></li>
 				<li class="quick-configuration"><a href="#"><span class="sr-only">환경설정</span></a></li>
-				<li class="quick-user"><a href="#" style="background-image:url('../images/temp/user.jpg')"></a></li>
-			</ul>
+				<li class="quick-user">
+					<a href="#" style="background-image:url('../images/temp/user2.jpg')"></a>
+					<div class="user-box">
+						<div class="user-image" style="background-image:url('../images/temp/user2.jpg')"></div>
+						<ul class="user-account">
+							<li class="user-name"><strong>강태성</strong>님</li>
+							<li>ICT전략실 정보관리팀</li>
+							<li class="my-information">
+								<a href="#" class="link-my-info">개인정보변경</a>
+								<a href="#" class="btn btn-sm">로그아웃</a>
+							</li>
+						</ul>
+						<a href="#" class="btn-close"></a>
+					</div>
+				</li>
+			</ul><!-- 추가 //end -->
 		</div>
 		<div class="header-bottom">
 			<div class="quick-link">
@@ -50,23 +79,55 @@
 							<li><a href="#">문서수발신</a></li>
 						</ul>
 					</li>
-					<li><a href="#">게시판</a></li>
+					<li>
+						<a href="#">게시판</a>
+						<ul class="menu-child">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">집안통신</a></li>
+						</ul>
+					</li>
 					<li><a href="#">팀룸</a></li>
-					<li><a href="#">업무지원</a></li>
+					<li>
+						<a href="#">업무지원</a>
+						<ul class="menu-child">
+							<li><a href="#">업무지원</a></li>
+							<li><a href="#">윤리경영</a></li>
+							<li><a href="#">자원관리</a></li>
+							<li><a href="#">문서HUB</a></li>
+						</ul>
+					</li>
 					<li><a href="#">통합문서</a></li>
 					<li><a href="#">Co-Work</a></li>
 				</ul>
-				<div class="all-menu">
+				<div class="all-menu"><!-- 추가 20170818 -->
 					<a href="#" class="btn-all-menu"><span class="sr-only">전체메뉴</span></a>
 					<div class="all-menu-box">
-						<ul>
-							<li><a href="#">메뉴</a></li>
-							<li><a href="#">메뉴</a></li>
-							<li><a href="#">메뉴</a></li>
-							<li><a href="#">메뉴</a></li>
+						<ul class="all-menu-list">
+							<li>
+								<a href="#">메일</a>
+								<ul>
+									<li class="current"><a href="#">수신메일</a></li>
+									<li><a href="#">발신메일</a></li>
+									<li><a href="#">안읽은메일</a></li>
+									<li><a href="#">중요메일</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">전자결재</a>
+								<ul>
+									<li><a href="#">개인결제</a></li>
+									<li><a href="#">문서수발신</a></li>
+								</ul>
+							</li>
+							<li><a href="#">게시판</a></li>
+							<li><a href="#">팀룸</a></li>
+							<li><a href="#">업무지원</a></li>
+							<li><a href="#">통합문서</a></li>
+							<li><a href="#">Co-Work</a></li>
 						</ul>
+						<a href="#" class="btn-close"></a>
 					</div>
-				</div>
+				</div><!-- 추가 //end -->
 			</div>
 		</div>
 	</div>
