@@ -136,6 +136,7 @@ table {
     line-height: 0;
     color: transparent;
     vertical-align: middle;
+    font-style: normal;
 }
 .icon-company {
     width: 19px;
@@ -177,6 +178,14 @@ table {
     width: 19px;
     height: 19px;
     background-position: -320px -80px;
+}
+.icon-emergency {
+    padding: 0 3px;
+    background: #1eb3e9;
+    font-size: 11px;
+    line-height: 1.37;
+    color: #fff;
+    vertical-align: baseline;
 }
 [class^="badge-"] {
     display: inline-block;
@@ -486,6 +495,9 @@ body {
 }
 .quick-access li.quick-help a {
     background-position: -360px 0;
+}
+.quick-access li.quick-administrator a {
+    background-position: -400px -200px;
 }
 .quick-access li.quick-configuration a {
     background-position: -400px 0;
