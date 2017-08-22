@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>메일</title>
+    <link rel="stylesheet" href="../css/style.css">
+	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+</head>
+<body class="mail">
+<div class="content">
+	<div class="mail-content">
+		<!-- 메일 메뉴 -->
+		<div class="mail-left">
+			<div class="mail-left-head">
+				<h2 class="sub-title">메일</h2>
+				<div class="btn-block-group">
+					<div class="outer"><a href="#" class="btn btn-primary">메일쓰기</a></div>
+					<div class="outer"><a href="#" class="btn btn-primary">내게쓰기</a></div>
+				</div>
+				<div class="mail-type">
+					<h3 class="sr-only">메일 모아보기</h3>
+					<a href="#" class="unread"><i class="unread-count">999+</i>안읽음</a>
+					<a href="#" class="important"><i class="icon-important"></i>중요</a>
+					<a href="#" class="attach"><i class="icon-attach"></i>첨부</a>
+				</div>
+			</div>
+			<!-- 메일 트리 메뉴 -->
+			<div class="mail-left-body">메일 트리 메뉴 영역</div>
+			<!-- 메일 트리 메뉴 //end -->
+			<div class="mail-left-foot">
+				<div class="btn-block-group">
+					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-set-sm"></i>환경설정</a></div>
+					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-document"></i>개인주소록</a></div>
+				</div>
+			</div>
+		</div>
+		<!-- 메일 메뉴 //end -->
+		<!-- 메일 리스트 //end -->
+		<div class="mail-right">
+			<div class="mail-right-inner">
+				<!-- Mail Head -->
+				<div class="mail-head">
+					<div class="mail-head-btn">
+						<div class="checkbox-box">
+							<input type="checkbox">
+						</div>
+						<div class="btn-group">
+							<div class="outer"><a href="#" class="btn">삭제</a></div>
+							<div class="outer"><a href="#" class="btn">완전삭제</a></div>
+						</div>
+						<a href="#" class="btn">메일이동</a>
+						<a href="#" class="btn">읽음</a>
+						<a href="#" class="btn">중요</a>
+						<div class="selectbox">
+							<strong class="selectbox-value">안읽음표시</strong>
+							<select onchange="selectboxEvent(this);">
+								<option>안읽음표시</option>
+							</select>
+						</div>
+						<div class="btn-group preview-type">
+							<div class="outer"><a href="#" class="btn type-list selected"><span class="sr-only">메일 목록만 보기</span></a></div>
+							<div class="outer"><a href="#" class="btn type-vertical"><span class="sr-only">상하 분할로 보기</span></a></div>
+							<div class="outer"><a href="#" class="btn type-horizontal"><span class="sr-only">좌우 분할로 보기</span></a></div>
+						</div>
+					</div>
+					<div class="mail-head-search">
+						<div class="search-box">
+							<div class="selectbox">
+								<strong class="selectbox-value">상세</strong>
+								<select onchange="selectboxEvent(this);">
+									<option>상세</option>
+									<option>전체</option>
+								</select>
+							</div>
+							<div class="search-input">
+								<input type="text" class="form-control">
+							</div>
+						<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- Mail Head //end -->
+				<!-- Mail Body -->
+				<div class="mail-body mail-view">메일 리스트 영역</div>
+				<!-- Mail Body //end -->
+			</div>
+		</div>
+		<!-- 메일 리스트 //end -->
+	</div>
+</div>
+</body>
+</html>
