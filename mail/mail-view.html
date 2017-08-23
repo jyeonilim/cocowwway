@@ -11,6 +11,17 @@
 	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            var mailScroll = (function () {
+                var contentHeight = $('.mail-content').height(),
+                    headHeight = $('.mail-head').outerHeight();
+                $('.mail-view').height(contentHeight-headHeight);
+            });
+            $(document).ready(mailScroll);
+            $(window).resize(mailScroll);
+        });
+	</script>
 </head>
 <body class="mail">
 <div class="content">
@@ -31,7 +42,7 @@
 				</div>
 			</div>
 			<!-- 메일 트리 메뉴 -->
-			<div class="mail-left-body">메일 트리 메뉴 영역</div>
+			<div class="mail-left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
 			<!-- 메일 트리 메뉴 //end -->
 			<div class="mail-left-foot">
 				<div class="btn-block-group">
@@ -41,33 +52,35 @@
 			</div>
 		</div>
 		<!-- 메일 메뉴 //end -->
-		<!-- 메일 리스트 //end -->
+		<!-- 메일 상세보기 //end -->
 		<div class="mail-right">
 			<div class="mail-right-inner">
 				<!-- Mail Head -->
-				<div class="mail-head">
+				<div class="mail-head mail-head-view">
 					<div class="mail-head-btn">
-						<div class="checkbox-box">
-							<input type="checkbox">
+						<a href="#" class="btn">전달</a>
+						<div class="btn-group">
+							<div class="outer"><a href="#" class="btn">답장</a></div>
+							<div class="outer"><a href="#" class="btn">전체답장</a></div>
 						</div>
 						<div class="btn-group">
 							<div class="outer"><a href="#" class="btn">삭제</a></div>
 							<div class="outer"><a href="#" class="btn">완전삭제</a></div>
+							<div class="outer"><a href="#" class="btn">첨부삭제</a></div>
 						</div>
-						<a href="#" class="btn">메일이동</a>
-						<a href="#" class="btn">읽음</a>
-						<a href="#" class="btn">중요</a>
+						<a href="#" class="btn">스팸신고</a>
 						<div class="selectbox">
-							<strong class="selectbox-value">안읽음표시</strong>
+							<strong class="selectbox-value">기타기능</strong>
 							<select onchange="selectboxEvent(this);">
-								<option>안읽음표시</option>
+								<option>기타기능</option>
 							</select>
 						</div>
-						<div class="btn-group preview-type">
-							<div class="outer"><a href="#" class="btn type-list selected"><span class="sr-only">메일 목록만 보기</span></a></div>
-							<div class="outer"><a href="#" class="btn type-vertical"><span class="sr-only">상하 분할로 보기</span></a></div>
-							<div class="outer"><a href="#" class="btn type-horizontal"><span class="sr-only">좌우 분할로 보기</span></a></div>
+						<div class="btn-group">
+							<div class="outer"><a href="#" class="btn">목록</a></div>
+							<div class="outer"><a href="#" class="btn btn-arrow-prev"><span class="sr-only">이전 메일 보기</span></a></div>
+							<div class="outer"><a href="#" class="btn btn-arrow-next"><span class="sr-only">다음 메일 보기</span></a></div>
 						</div>
+						<a href="#" class="btn btn-print"><span class="sr-only">메일 내용 프린트 하기</span></a>
 					</div>
 					<div class="mail-head-search">
 						<div class="search-box">
@@ -87,11 +100,11 @@
 				</div>
 				<!-- Mail Head //end -->
 				<!-- Mail Body -->
-				<div class="mail-body mail-view">메일 리스트 영역</div>
+				<div class="mail-body mail-view">메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br></div>
 				<!-- Mail Body //end -->
 			</div>
 		</div>
-		<!-- 메일 리스트 //end -->
+		<!-- 메일 상세보기 //end -->
 	</div>
 </div>
 </body>

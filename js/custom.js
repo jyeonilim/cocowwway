@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     // Content Scroll
     var contentScroll = (function () {
-        var windowHeight = $(window).height();
-        var headHeight = $('.header').outerHeight();
-        var footHeight = $('.footer').outerHeight();
+        var windowHeight = $(window).height(),
+            headHeight = $('.header').outerHeight(),
+            footHeight = $('.footer').outerHeight();
         $('.iframe-content').height(windowHeight-(headHeight+footHeight));
         $('.content').height(windowHeight);
     });
@@ -13,26 +13,13 @@ $(document).ready(function() {
 
     // Mail Left Scroll
     var mailLeftScroll = (function () {
-        var contentHeight = $('.mail-content').height();
-        var headHeight = $('.mail-left-head').outerHeight();
-        var footHeight = $('.mail-left-foot').outerHeight();
+        var contentHeight = $('.mail-content').height(),
+            headHeight = $('.mail-left-head').outerHeight(),
+            footHeight = $('.mail-left-foot').outerHeight()
         $('.mail-left-body').height(contentHeight-(headHeight+footHeight));
     });
     $(document).ready(mailLeftScroll);
     $(window).resize(mailLeftScroll);
-    // Mail Content Scroll
-    var mailScroll = (function () {
-        var contentHeight = $('.mail-content').height();
-        var headHeight = $('.mail-head').outerHeight();
-        var footHeight = $('.mail-paging').outerHeight();
-        $('.mail-list').height(contentHeight-(headHeight+footHeight));
-        $('.mail-list-horizontal .preview-content').height(contentHeight-headHeight);
-        $('.mail-list-vertical .mail-list').height(contentHeight/3);
-        var vListHeight = $('.mail-list-wrap').outerHeight();
-        $('.mail-list-vertical .preview-content').height(contentHeight-(headHeight+vListHeight+3));
-    });
-    $(document).ready(mailScroll);
-    $(window).resize(mailScroll);
 
     $('.quick-search a').on('click',function () {
         $(this).toggleClass('active');

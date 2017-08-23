@@ -11,6 +11,23 @@
 	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+			var mailScroll = (function () {
+				var contentHeight = $('.mail-content').height(),
+					headHeight = $('.mail-head').outerHeight(),
+					footHeight = $('.mail-paging').outerHeight();
+				$('.mail-list').height(contentHeight-(headHeight+footHeight));
+				$('.mail-list-type.horizontal .preview-content').height(contentHeight-headHeight);
+
+				$('.mail-list-type.vertical .mail-list').height(contentHeight/3);
+				var vListHeight = $('.mail-list-type.vertical .mail-list-wrap').outerHeight();
+				$('.mail-list-type.vertical .preview-content').height(contentHeight-(headHeight+vListHeight));
+			});
+			$(document).ready(mailScroll);
+			$(window).resize(mailScroll);
+        });
+	</script>
 </head>
 <body class="mail">
 <div class="content">
@@ -31,7 +48,7 @@
 				</div>
 			</div>
 			<!-- 메일 트리 메뉴 -->
-			<div class="mail-left-body">메일 트리 메뉴 영역</div>
+			<div class="mail-left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
 			<!-- 메일 트리 메뉴 //end -->
 			<div class="mail-left-foot">
 				<div class="btn-block-group">
@@ -64,6 +81,7 @@
 							</select>
 						</div>
 						<div class="btn-group preview-type">
+							<!-- [D] 해당 분할 보기 선택시 selected 클래스 추가 -->
 							<div class="outer"><a href="#" class="btn type-list selected"><span class="sr-only">메일 목록만 보기</span></a></div>
 							<div class="outer"><a href="#" class="btn type-vertical"><span class="sr-only">상하 분할로 보기</span></a></div>
 							<div class="outer"><a href="#" class="btn type-horizontal"><span class="sr-only">좌우 분할로 보기</span></a></div>
@@ -88,11 +106,15 @@
 				<!-- Mail Head //end -->
 				<!-- Mail Body -->
 				<div class="mail-body">
-					<!-- 기본 목록 -->
-					<div class="mail-list-normal">
+					<!-- 메일 목록 -->
+					<!-- [D] 목록 분할 시 각각 해당하는 클래스 추가
+						기본 목록 : normal
+					 	상하 분할 목록 : vertical
+					 	좌우 분할 목록 : horizontal -->
+					<div class="mail-list-type normal">
 						<div class="mail-list-wrap">
 							<!-- List -->
-							<div class="mail-list">메일 리스트 영역</div>
+							<div class="mail-list">메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br>메일 리스트 영역<br></div>
 							<!-- List //end -->
 							<!-- Paging -->
 							<div class="mail-paging">
@@ -102,52 +124,14 @@
 							</div>
 							<!-- Paging //end -->
 						</div>
+						<div class="mail-preview">
+							<div class="split-move-bar"></div>
+							<!-- View -->
+							<div class="preview-content">메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br></div>
+							<!-- View //end -->
+						</div>
 					</div>
-					<!-- 기본 목록 -->
-					<!-- 상하 분할 목록 -->
-					<!--<div class="mail-list-vertical">-->
-						<!--<div class="mail-list-wrap">-->
-							<!--&lt;!&ndash; List &ndash;&gt;-->
-							<!--<div class="mail-list">메일 리스트 영역</div>-->
-							<!--&lt;!&ndash; List //end &ndash;&gt;-->
-							<!--&lt;!&ndash; Paging &ndash;&gt;-->
-							<!--<div class="mail-paging">-->
-								<!--<div class="paging">-->
-									<!--페이지 네비게이션 영역-->
-								<!--</div>-->
-							<!--</div>-->
-							<!--&lt;!&ndash; Paging //end &ndash;&gt;-->
-						<!--</div>-->
-						<!--<div class="mail-preview">-->
-							<!--<div class="split-move-bar"></div>-->
-							<!--&lt;!&ndash; View &ndash;&gt;-->
-							<!--<div class="preview-content">메일 리스트 영역</div>-->
-							<!--&lt;!&ndash; View //end &ndash;&gt;-->
-						<!--</div>-->
-					<!--</div>-->
-					<!-- 상하 분할 목록 //end -->
-					<!-- 좌우 분할 목록 -->
-					<!--<div class="mail-list-horizontal">-->
-						<!--<div class="mail-list-wrap">-->
-							<!--&lt;!&ndash; List &ndash;&gt;-->
-							<!--<div class="mail-list">메일 리스트 영역</div>-->
-							<!--&lt;!&ndash; List //end &ndash;&gt;-->
-							<!--&lt;!&ndash; Paging &ndash;&gt;-->
-							<!--<div class="mail-paging">-->
-								<!--<div class="paging">-->
-									<!--페이지 네비게이션 영역-->
-								<!--</div>-->
-							<!--</div>-->
-							<!--&lt;!&ndash; Paging //end &ndash;&gt;-->
-						<!--</div>-->
-						<!--<div class="mail-preview">-->
-							<!--<div class="split-move-bar"></div>-->
-							<!--&lt;!&ndash; View &ndash;&gt;-->
-							<!--<div class="preview-content">메일 리스트 영역</div>-->
-							<!--&lt;!&ndash; View //end &ndash;&gt;-->
-						<!--</div>-->
-					<!--</div>-->
-					<!-- 좌우 분할 목록 //end -->
+					<!-- 메일 목록 -->
 				</div>
 				<!-- Mail Body //end -->
 			</div>
