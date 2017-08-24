@@ -2050,7 +2050,7 @@ body {
     border: 1px solid #dee3eb;
     background-color: #fff;
 }
-.mail-left-body, .mail-list, .preview-content, .mail-view {
+.mail-left-body, .mail-list, .preview-content, .mail-view, .mail-form {
     overflow: hidden;
     overflow-y: auto;
 }
@@ -2245,6 +2245,12 @@ body {
 }
 .mail-head-view .mail-head-search .search-box .search-input .form-control {
     width: 80px;
+}
+.mail-head-form .mail-head-search .search-box {
+    width: 230px;
+}
+.mail-head-form .mail-head-search .search-box .search-input .form-control {
+    width: 120px;
 }
 /* Mail List - Preview Type */
 .mail-paging {
