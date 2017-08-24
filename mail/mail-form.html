@@ -84,38 +84,67 @@
 				<!-- Mail Head //end -->
 				<!-- Mail Body -->
 				<div class="mail-body mail-form">
-					<div class="mail-form-item">
-						<table>
-							<tbody>
-							<tr>
-								<th>
-									<strong>받는사람</strong>
-									<span>
-										<input type="checkbox" id="checkMe">
-										<label for="checkMe">나에게</label>
-									</span>
-								</th>
-								<td>
-									<textarea cols="20" rows="1"></textarea>
-								</td>
-								<td><a href="#" class="btn btn-sm">주소록</a></td>
-							</tr>
-							<tr>
-								<th></th>
-								<td></td>
-							</tr>
-							<tr>
-								<th></th>
-								<td></td>
-							</tr>
-							<tr>
-								<th></th>
-								<td></td>
-							</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="editor-frame"></div>
+					<ul class="mail-form-item">
+						<li>
+							<div class="mail-item">
+								<strong class="item-label">받는사람</strong>
+								<span>
+									<input type="checkbox" id="checkMe">
+									<label for="checkMe">나에게</label>
+								</span>
+							</div>
+							<div class="mail-input">
+								<label for="to" class="sr-only">받는사람 주소 입력</label>
+								<textarea class="form-control" id="to"></textarea>
+								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+							</div>
+						</li>
+						<li>
+							<div class="mail-item">
+								<strong class="item-label">참조</strong>
+								<a href="#"><span class="sr-only">비밀참조 보기</span></a>
+							</div>
+							<div class="mail-input">
+								<label for="cc" class="sr-only">참조 주소 입력</label>
+								<textarea class="form-control" id="cc"></textarea>
+								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+							</div>
+						</li>
+						<li>
+							<div class="mail-item">
+								<strong class="item-label">비밀참조</strong>
+							</div>
+							<div class="mail-input">
+								<label for="bcc" class="sr-only">비밀참조 주소 입력</label>
+								<textarea class="form-control" id="bcc"></textarea>
+								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+							</div>
+						</li>
+						<li>
+							<div class="mail-item">
+								<strong class="item-label">제목</strong>
+								<span>
+									<input type="checkbox" id="checkImportant">
+									<label for="checkImportant">중요</label>
+								</span>
+							</div>
+							<div class="mail-input">
+								<label for="subject" class="sr-only">제목 입력</label>
+								<input type="text" class="form-control" id="subject">
+							</div>
+						</li>
+						<li>
+							<div class="mail-item">
+								<strong class="item-label">파일첨부</strong>
+								<a href="#"><span class="sr-only">파일첨부 열기</span></a>
+							</div>
+							<div class="mail-input">
+								<div></div>
+								<div>파일첨부 영역</div>
+							</div>
+						</li>
+					</ul>
+					<div class="editor-frame">메일 에디터 영역</div>
 				</div>
 				<!-- Mail Body //end -->
 			</div>

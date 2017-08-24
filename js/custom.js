@@ -130,6 +130,10 @@ $(document).ready(function() {
         hide: {duration: 100}
     });
 
+    $(".mail-input textarea.form-control").on('keydown keyup', function () {
+        $(this).height(1).height( $(this).prop('scrollHeight')+12 );
+    });
+
 });
 
 // Select Box
