@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <title>메일</title>
     <link rel="stylesheet" href="../css/style.css">
-	<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
@@ -15,13 +15,13 @@
         $(document).ready(function() {
 			var mailScroll = (function () {
 				var contentHeight = $('.mail-content').height(),
-					headHeight = $('.mail-head').outerHeight(),
-					footHeight = $('.mail-paging').outerHeight();
+					headHeight = $('.mail-head').outerHeight(true),
+					footHeight = $('.mail-paging').outerHeight(true);
 				$('.mail-list').height(contentHeight-(headHeight+footHeight));
 				$('.mail-list-type.horizontal .preview-content').height(contentHeight-headHeight);
 
 				$('.mail-list-type.vertical .mail-list').height(contentHeight/3);
-				var vListHeight = $('.mail-list-type.vertical .mail-list-wrap').outerHeight();
+				var vListHeight = $('.mail-list-type.vertical .mail-list-wrap').outerHeight(true);
 				$('.mail-list-type.vertical .preview-content').height(contentHeight-(headHeight+vListHeight));
 			});
 			$(document).ready(mailScroll);
