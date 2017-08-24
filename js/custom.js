@@ -14,8 +14,8 @@ $(document).ready(function() {
     // Mail Left Scroll
     var mailLeftScroll = (function () {
         var contentHeight = $('.mail-content').height(),
-            headHeight = $('.mail-left-head').outerHeight(),
-            footHeight = $('.mail-left-foot').outerHeight()
+            headHeight = $('.mail-left-head').outerHeight(true),
+            footHeight = $('.mail-left-foot').outerHeight(true);
         $('.mail-left-body').height(contentHeight-(headHeight+footHeight));
     });
     $(document).ready(mailLeftScroll);

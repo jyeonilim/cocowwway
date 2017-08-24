@@ -2065,6 +2065,7 @@ body {
     overflow-y: auto;
 }
 .mail-left-head {
+    height: 166px;
     padding: 12px 12px 0;
 }
 .mail-left-head .btn-block-group {
@@ -2325,6 +2326,7 @@ body {
     font-size: 12px;
 }
 .mail-input textarea.form-control {
+    height: 21px;
     min-height: 21px;
     padding: 10px;
 }

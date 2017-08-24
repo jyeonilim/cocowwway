@@ -8,14 +8,14 @@
     <title>메일</title>
     <link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/-jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
 	<script type="text/javascript">
         $(document).ready(function() {
             var mailScroll = (function () {
                 var contentHeight = $('.mail-content').height(),
-                    headHeight = $('.mail-head').outerHeight();
+                    headHeight = $('.mail-head').outerHeight(true);
                 $('.mail-form').height(contentHeight-headHeight);
             });
             $(document).ready(mailScroll);
@@ -95,7 +95,7 @@
 							</div>
 							<div class="mail-input">
 								<label for="to" class="sr-only">받는사람 주소 입력</label>
-								<textarea class="form-control" id="to"></textarea>
+								<textarea class="form-control" cols="1" id="to"></textarea>
 								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 							</div>
 						</li>
