@@ -2,9 +2,9 @@ $(document).ready(function() {
 
     // Content Scroll
     var contentScroll = (function () {
-        var windowHeight = $(window).height(),
-            headHeight = $('.header').outerHeight(),
-            footHeight = $('.footer').outerHeight();
+        var windowHeight = $(window).height();
+        var headHeight = $('.header').outerHeight(true);
+        var footHeight = $('.footer').outerHeight(true);
         $('.iframe-content').height(windowHeight-(headHeight+footHeight));
         $('.content').height(windowHeight);
     });
