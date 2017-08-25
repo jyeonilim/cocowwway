@@ -917,10 +917,6 @@ body {
     height: 24px;
     background: url("../images/brand-logo.png") no-repeat 50% 0;
 }
-.login .btn {
-    font-size: 14px;
-    line-height: 2.29;
-}
 .login .form-control {
     height: 49px;
     padding: 0;
@@ -978,6 +974,10 @@ body {
     position: absolute;
     top: 13px;
     left: 11px;
+}
+.login-help .btn, .setup-file .btn {
+    font-size: 14px;
+    line-height: 2.29;
 }
 .login-help {
     padding: 8px 0 22px;
