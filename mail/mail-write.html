@@ -8,7 +8,7 @@
     <title>메일</title>
     <link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/-jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
 	<script type="text/javascript">
@@ -85,8 +85,8 @@
 				<!-- Mail Body -->
 				<div class="mail-body mail-form">
 					<ul class="mail-form-item">
-						<li>
-							<div class="mail-item">
+						<li class="mail-item">
+							<div class="mail-label">
 								<strong class="item-label">받는사람</strong>
 								<span>
 									<input type="checkbox" id="checkMe">
@@ -94,53 +94,52 @@
 								</span>
 							</div>
 							<div class="mail-input">
+								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 								<label for="to" class="sr-only">받는사람 주소 입력</label>
 								<textarea class="form-control" cols="1" id="to"></textarea>
-								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 							</div>
 						</li>
-						<li>
-							<div class="mail-item">
+						<li class="mail-item">
+							<div class="mail-label">
 								<strong class="item-label">참조</strong>
-								<a href="#"><span class="sr-only">비밀참조 보기</span></a>
+								<a href="#" class="btn-hidden-view bcc-view"><span class="sr-only">비밀참조 보기</span></a>
 							</div>
 							<div class="mail-input">
+								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 								<label for="cc" class="sr-only">참조 주소 입력</label>
 								<textarea class="form-control" id="cc"></textarea>
-								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 							</div>
 						</li>
-						<li>
-							<div class="mail-item">
+						<li class="mail-item mail-form-bcc">
+							<div class="mail-label">
 								<strong class="item-label">비밀참조</strong>
 							</div>
 							<div class="mail-input">
+								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 								<label for="bcc" class="sr-only">비밀참조 주소 입력</label>
 								<textarea class="form-control" id="bcc"></textarea>
-								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 							</div>
 						</li>
-						<li>
-							<div class="mail-item">
+						<li class="mail-item">
+							<div class="mail-label">
 								<strong class="item-label">제목</strong>
 								<span>
 									<input type="checkbox" id="checkImportant">
 									<label for="checkImportant">중요</label>
 								</span>
 							</div>
-							<div class="mail-input">
+							<div class="mail-input mail-input-wrap">
 								<label for="subject" class="sr-only">제목 입력</label>
 								<input type="text" class="form-control" id="subject">
 							</div>
 						</li>
-						<li>
-							<div class="mail-item">
+						<li class="mail-item">
+							<div class="mail-label">
 								<strong class="item-label">파일첨부</strong>
-								<a href="#"><span class="sr-only">파일첨부 열기</span></a>
+								<a href="#" class="btn-hidden-view attach-view"><span class="sr-only">파일첨부 열기</span></a>
 							</div>
-							<div class="mail-input">
-								<div></div>
-								<div>파일첨부 영역</div>
+							<div class="mail-input mail-input-wrap">
+								<div class="mail-form-attach">파일첨부 영역</div>
 							</div>
 						</li>
 					</ul>

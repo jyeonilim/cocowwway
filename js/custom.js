@@ -130,8 +130,13 @@ $(document).ready(function() {
         hide: {duration: 100}
     });
 
-    $(".mail-input textarea.form-control").on('keydown keyup', function () {
-        $(this).height(1).height( $(this).prop('scrollHeight')+12 );
+    $('.btn-hidden-view.bcc-view').on('click', function () {
+        $(this).toggleClass('on');
+        $('.mail-form-bcc').toggleClass('on');
+    });
+    $('.btn-hidden-view.attach-view').on('click', function () {
+        $(this).toggleClass('on');
+        $('.mail-form-attach').toggleClass('on');
     });
 
 });

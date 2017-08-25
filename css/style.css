@@ -294,7 +294,7 @@ table {
     border: 1px solid #009ddc;
     color: #009ddc;
 }
-.btn-primary:hover {
+.btn-outline-primary:hover {
     color: #009ddc;
 }
 .btn-block {
@@ -340,10 +340,11 @@ table {
     Form
     *******************************************/
 .form-control {
+    display: block;
     width: 100%;
     padding: 0 20px;
     border: 1px solid #e8e8e8;
-    font: 13px 'NotoSansKR', sans-serif;
+    font: 13px/1.85 'NotoSansKR', sans-serif;
     color: #666;
 }
 .form-control::placeholder {
@@ -2306,29 +2307,99 @@ body {
     border-right: 1px solid #e5e5e5;
     cursor: ew-resize;
 }
-/* 메일 폼 */
-.mail-form-item li {
+/* Mail Form */
+.mail-form-item {
+     padding: 13px;
+ }
+.mail-item {
     display: table;
     width: 100%;
+    min-height: 34px;
+    padding: 4px 0;
 }
-.mail-form-item li > .mail-item, .mail-form-item li > .mail-input {
+.mail-item > .mail-label,
+.mail-item > .mail-input {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 }
-.mail-item {
+.mail-item > .mail-label {
+    padding-top: 3px;
+}
+.btn-hidden-view {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ddd;
+}
+.btn-hidden-view:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 3px solid #666;
+    content: '';
+}
+.btn-hidden-view.on:before {
+    border-top: 0;
+    border-bottom: 3px solid #666;
+}
+.mail-label {
     width: 133px;
 }
-.mail-item .item-label {
-    width: 60px;
+.mail-label .item-label {
+    display: inline-block;
+    width: 70px;
+    font-weight: 400;
+    color: #000;
+}
+.mail-label input[type=checkbox] {
+    vertical-align: -2px;
+}
+.mail-input {
+    padding-right: 51px;
 }
 .mail-input .form-control {
+    height: 26px;
     padding: 0 10px;
-    font-size: 12px;
+    outline: none;
+}
+.mail-input .form-control:focus {
+    border-color: #00a7e4;
 }
 .mail-input textarea.form-control {
-    height: 21px;
-    min-height: 21px;
-    padding: 10px;
+    height: 26px;
+    resize: vertical;
+}
+.mail-input .btn {
+    float: right;
+    margin: 2px -51px 0 0;
+}
+.mail-input-wrap {
+    padding-right: 0;
+}
+.mail-form-bcc {
+    display: none;
+}
+.mail-form-bcc.on {
+    display: table;
+}
+.mail-form-attach {
+    display: none;
+    min-height: 26px;
+    border: 1px solid #e8e8e8;
+}
+.mail-form-attach.on {
+    display: block;
+}
+.editor-frame {
+    padding: 0 13px;
 }
 
 /**********************************************
