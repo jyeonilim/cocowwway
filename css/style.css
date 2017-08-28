@@ -1744,7 +1744,8 @@ body {
     left: 0;
     border-top: 1px solid #e8e8e8;
 }
-.convenience-search.schedule-search .form-control {
+.convenience-search .form-control {
+    display: inline-block;
     width: 208px;
     margin-left: 2px;
 }
