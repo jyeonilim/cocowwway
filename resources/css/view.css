@@ -1,0 +1,45 @@
+/**********************************************
+    View
+    *******************************************/
+.mail-paging {
+    height: 58px;
+    border-top: 1px solid #e5e5e5;
+}
+.mail-list-wrap + .mail-preview {
+    position: relative;
+    display: none;
+}
+.mail-list-type.vertical .mail-list-wrap + .mail-preview,
+.mail-list-type.horizontal .mail-list-wrap + .mail-preview {
+    display: block;
+}
+.mail-list-type.vertical .split-move-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: n-resize;
+}
+.mail-list-type.horizontal {
+    overflow: hidden;
+}
+.mail-list-type.horizontal .mail-list-wrap, .mail-list-type.horizontal .mail-list-wrap + .mail-preview {
+    float: left;
+    width: 50%;
+}
+.mail-list-type.horizontal .mail-list-wrap + .mail-preview {
+    padding-left: 3px;
+}
+.mail-list-type.horizontal .split-move-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    cursor: ew-resize;
+}

@@ -1,0 +1,232 @@
+/**********************************************
+    Login
+    *******************************************/
+.login {
+    position: absolute;
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-width: 386px;
+}
+.login-in {
+    display: table-cell;
+    padding-top: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.login-box {
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    margin: 12px 0 11px;
+    padding: 0 10px;
+    text-align: left;
+}
+.login .brand-logo {
+    width: 100%;
+    height: 24px;
+    background: url("../images/brand-logo.png") no-repeat 50% 0;
+}
+.login .form-control {
+    height: 49px;
+    padding: 0;
+    border: 0;
+    font-size: 15px;
+    line-height: 3.26;
+    color: #a7a9ac;
+}
+.login .checkbox .checkbox-label {
+    font: 14px 'NotoSansKR', sans-serif;
+    color: #444;
+}
+.login .checkbox .checkbox-display {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin-right: 6px;
+    background-image: url(../images/form-checkbox.png);
+    vertical-align: top;
+}
+.login .checkbox input[type="checkbox"]:checked ~ .checkbox-display {
+    background-image: url(../images/form-checkbox-checked.png);
+}
+.login .selectbox {
+    width: 100%;
+    border: 0;
+}
+.login .selectbox select {
+    min-height: 30px;
+}
+.login .selectbox .selectbox-value {
+    padding-left: 0;
+    font-size: 15px;
+    line-height: 3.26;
+    color: #a7a9ac;
+}
+.login .selectbox .selectbox-value:after {
+    width: 35px;
+    height: 49px;
+    background-position: -148px 23px;
+}
+.login-input {
+    padding: 0 12px;
+    border: 1px solid #e0e0e0;
+}
+.login-input li {
+    position: relative;
+    padding-left: 40px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.login-input li:last-child {
+    border-bottom: 0;
+}
+.login-input li .form-label {
+    position: absolute;
+    top: 13px;
+    left: 11px;
+}
+.login-help .btn, .setup-file .btn {
+    font-size: 14px;
+    line-height: 2.29;
+}
+.login-help {
+    padding: 8px 0 22px;
+}
+.login-help .checkbox {
+    float: left;
+    padding-top: 7px;
+}
+.login-help .btn-box {
+    float: right;
+}
+.login-help .btn-box .btn-password-reset {
+    background-color: #fcfcfc;
+}
+.login-help .btn-box .btn-help {
+    background-color: #f8f8f8;
+}
+.login-bottom:before {
+    display: inline-block;
+    width: 100%;
+    max-width: 840px;
+    height: 1px;
+    background-image:
+        linear-gradient(
+            to right,
+            #fff, #ddd, #fff
+        );
+    content: '';
+}
+.slogan {
+    padding: 24px 10px 20px;
+}
+.slogan-text {
+    position: relative;
+    display: inline-block;
+    padding-left: 51px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    text-align: left;
+    vertical-align: middle;
+}
+.slogan-text:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 45px;
+    height: 63px;
+    margin-top: -10px;
+    background: url("../images/sprite-icon.png") no-repeat 0 -40px;
+    vertical-align: middle;
+    content: '';
+}
+.slogan p {
+    color: #7c7b81;
+}
+.slogan span {
+    font-family: 'HelveticaRounded', sans-serif;
+    color: #009fdb;
+}
+.setup-file {}
+.setup-file .title {
+    display: inline-block;
+    width: 100%;
+    max-width: 385px;
+    padding-left: 10px;
+    font-size: 15px;
+    color: #575757;
+    text-align: left;
+}
+.setup-file .btn-box {
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #eff1f4;
+}
+.setup-file .btn-box .btn {
+    background-color: transparent;
+}
+.uc-setup-wrap {
+    position: relative;
+    display: inline-block;
+}
+.uc-setup {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    width: 160px;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 11px;
+    text-align: left;
+}
+.uc-setup .btn-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 0 3px;
+    border: 1px solid #000;
+    font-weight: 700;
+    color: #000;
+}
+.uc-setup ul li:before {
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    vertical-align: 3px;
+    content: '';
+}
+.uc-setup ul li a {
+    color: #009fdb;
+    text-decoration: underline;
+}
+/* 로그아웃 */
+.logout {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 80px 0;
+    border-top: 1px solid #e8e8e8;
+}
+.logout strong {
+    padding-left: 35px;
+    background: url("../images/sprite-icon.png") no-repeat -440px -72px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #4d4d4f;
+}
+.logout p {
+    margin-top: 4px;
+    font-size: 16px;
+    color: #6d6e71;
+}
+.logout p.site-help-text {
+    margin-top: 35px;
+    color: #a7a9ac;
+}
