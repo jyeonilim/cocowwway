@@ -114,6 +114,21 @@
     width: 100px;
     text-align: right;
 }
+.user-profile-box:before {
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.user-profile-box.reverse {
+    -webkit-box-shadow: -3px -2px 5px -2px #eaecef;
+    -moz-box-shadow: -3px -2px 5px -2px #eaecef;
+    box-shadow: -3px -2px 5px -2px #eaecef;
+}
+.user-profile-box.reverse:before {
+    top: auto;
+    bottom: -6px;
+    background-position: -280px -160px;
+}
 .user-profile-box .user-account {
     margin-top: -75px;
 }
@@ -170,28 +185,35 @@
     top: -45px;
     right: 0;
 }
-.btn-board-more a {
+.btn-board-more > a {
+    position: relative;
     float: left;
     width: 44px;
     height: 44px;
     border-left: 1px solid #ebeef3;
-    line-height: 49px;
+    line-height: 44px;
     text-align: center;
 }
-.btn-board-more a:after {
+.btn-board-more .board-prev:after, .btn-board-more .board-next:after, .btn-board-more .board-refresh:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     display: inline-block;
     width: 8px;
     height: 15px;
     background: url("../images/sprite-icon.png") no-repeat 0 0;
     content: '';
 }
-.btn-board-more a.board-prev:after {
+.btn-board-more .board-prev:after {
     background-position: -80px -40px;
 }
-.btn-board-more a.board-next:after {
+.btn-board-more .board-next:after {
     background-position: -120px -40px;
 }
-.btn-board-more a.board-refresh:after {
+.btn-board-more .board-refresh:after {
     width: 15px;
     background-position: -160px -40px;
 }

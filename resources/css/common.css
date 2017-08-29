@@ -133,6 +133,7 @@ table {
 [class^="icon-"] {
     display: inline-block;
     background: url("../images/sprite-icon.png") repeat 0 0;
+    font-size: 0;
     line-height: 0;
     color: transparent;
     vertical-align: middle;
@@ -194,6 +195,7 @@ table {
     width: 22px;
     height: 15px;
     background: url("../images/sprite-icon.png") repeat 0 0;
+    font-size: 0;
     line-height: 0;
     font-style: normal;
     color: transparent;
@@ -350,7 +352,7 @@ table {
     Form
     *******************************************/
 .form-control {
-    display: block;
+    display: inline-block;
     width: 100%;
     padding: 0 20px;
     border: 1px solid #e8e8e8;
@@ -418,27 +420,27 @@ textarea.form-control {
     cursor: pointer;
 }
 /*.checkbox .checkbox-display {*/
-    /*position: relative;*/
-    /*display: inline-block;*/
-    /*margin-right: 12px;*/
-    /*vertical-align: top;*/
+/*position: relative;*/
+/*display: inline-block;*/
+/*margin-right: 12px;*/
+/*vertical-align: top;*/
 /*}*/
 /*.checkbox .checkbox-label {*/
-    /*font: 20px 'NotoSansKR', sans-serif;*/
-    /*color: #898989;*/
+/*font: 20px 'NotoSansKR', sans-serif;*/
+/*color: #898989;*/
 /*}*/
 .checkbox input[type="checkbox"]:checked ~ .checkbox-display,
 .checkbox input[type="checkbox"]:checked ~ .checkbox-label {
     transition: all 0.3s ease;
 }
 /*.checkbox .checkbox-display {*/
-    /*width: 23px;*/
-    /*height: 23px;*/
-    /*background-image: url(../images/form-checkbox.png);*/
-    /*vertical-align: text-bottom;*/
+/*width: 23px;*/
+/*height: 23px;*/
+/*background-image: url(../images/form-checkbox.png);*/
+/*vertical-align: text-bottom;*/
 /*}*/
 /*.checkbox input[type="checkbox"]:checked ~ .checkbox-display {*/
-    /*background-image: url(../images/form-checkbox-checked.png);*/
+/*background-image: url(../images/form-checkbox-checked.png);*/
 /*}*/
 
 /**********************************************
@@ -476,7 +478,7 @@ a, a:hover {
     text-decoration: none;
 }
 /*img, .image img {*/
-    /*width: 100%;*/
+/*width: 100%;*/
 /*}*/
 button {
     border: 0;
@@ -715,7 +717,7 @@ body {
     font-size: 13px;
     line-height: 2.16;
 }
-/* Menu */
+/* 메인메뉴 */
 .magamenu {
     text-align: center;
 }
