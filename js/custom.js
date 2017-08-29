@@ -121,6 +121,10 @@ $(document).ready(function() {
         }
     });
 
+    $('.board-list .author').on('click', function () {
+        $('.user-profile-box').addClass('show').position();
+    });
+
     $('.schedule-board-list a').tooltip({
         content: function() {
             return $(this).attr('title');
@@ -155,8 +159,8 @@ function selectboxEvent(target) {
 //     $this.show();
 //     return false;
 // }
-// function layerClose(layer) {
-//     var $this = $(layer);
-//     $this.parent().parent('.modalWrap').hide();
-//     return false;
-// }
+function layerClose(layer) {
+    var $this = $(layer);
+    $this.parent('.layer-wrap').removeClass('show');
+    return false;
+}

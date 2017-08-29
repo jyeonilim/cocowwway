@@ -512,6 +512,18 @@ body {
     font-size: 18px;
     color: #00a7e4;
 }
+.layer-box {
+    display: none;
+    position: absolute;
+    border: 1px solid #e7eaf0;
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 5px -2px #eaecef;
+    -moz-box-shadow: 1px 2px 5px -2px #eaecef;
+    box-shadow: 1px 2px 5px -2px #eaecef;
+    font-size: 14px;
+    text-align: left;
+}
 
 /**********************************************
     Header
@@ -620,7 +632,7 @@ body {
     right: -17px;
     z-index: 10;
     width: 300px;
-    padding: 10px;
+    /*padding: 10px;*/
     border: 1px solid #e7eaf0;
     border-radius: 2px;
     background-color: #fff;
@@ -656,6 +668,7 @@ body {
     float: left;
     width: 75px;
     height: 75px;
+    margin: 10px;
     border-radius: 50%;
     background-color: #dee3eb;
     background-size: cover;
@@ -663,8 +676,8 @@ body {
 .user-box .user-account {
     float: left;
     width: 100%;
-    margin-top: -75px;
-    padding: 8px 0 0 85px;
+    margin-top: -85px;
+    padding: 8px 0 0 95px;
     font-size: 13px;
     font-family: 'NanumGothic', sans-serif;
     color: #8a8a8a;
@@ -686,6 +699,7 @@ body {
 }
 .user-box .user-account .my-information .btn {
     float: right;
+    margin-right: 10px;
 }
 .header-bottom {
     position: relative;
@@ -1242,10 +1256,59 @@ body {
 .board-list li .author {
     width: 70px;
     text-align: right;
+    cursor: pointer;
 }
 .board-list li .date {
     width: 100px;
     text-align: right;
+}
+.user-profile-box .user-account {
+    margin-top: -75px;
+}
+.user-profile-box .user-account-link {
+    overflow: hidden;
+    width: 100%;
+    padding: 5px 8px 3px;
+    border-top: 1px solid #ebebeb;
+    background-color: #f7f7f9;
+}
+.user-profile-box .user-account-link > li {
+    float: left;
+    width: 40px;
+    text-align: center;
+}
+.user-profile-box .user-account-link > li a {
+    font-size: 12px;
+    color: #505050;
+}
+.user-profile-box .user-account-link > li a:before {
+    display: block;
+    width: 24px;
+    height: 23px;
+    margin: 0 auto;
+    background: url("../images/sprite-icon.png") no-repeat 0 0;
+    content: '';
+}
+.user-profile-box .user-account-link > li.info a:before {
+    background-position: 0 -160px;
+}
+.user-profile-box .user-account-link > li.mail a:before {
+    background-position: -40px -160px;
+}
+.user-profile-box .user-account-link > li.talk a:before {
+    background-position: -80px -160px;
+}
+.user-profile-box .user-account-link > li.company a:before {
+    background-position: -120px -160px;
+}
+.user-profile-box .user-account-link > li.cellphone a:before {
+    background-position: -160px -160px;
+}
+.user-profile-box .user-account-link > li.message a:before {
+    background-position: -200px -160px;
+}
+.user-profile-box .user-account-link > li.sns a:before {
+    background-position: -240px -160px;
 }
 .tab-panel {
     position: relative;
@@ -1878,32 +1941,32 @@ body {
     height: 40px;
     margin: 0 auto 6px;
     border-radius: 50%;
-    background: #e7eaf0 url("../images/sprite-icon.png") no-repeat 0 0;
+    background: #e7eaf0 url("../images/sprite-quick-icon.png") no-repeat 0 0;
     content: '';
 }
 .my-quick-list li.work-quick1 a:before { /*영업*/
-     background-position: 5px -155px;
+     background-position: 0 0;
 }
 .my-quick-list li.work-quick2 a:before { /*경영지원*/
-    background-position: -35px -155px;
+    background-position: -50px 0;
 }
 .my-quick-list li.work-quick3 a:before { /*혁신포탈*/
-    background-position: -75px -155px;
+    background-position: -100px 0;
 }
 .my-quick-list li.work-quick4 a:before { /*웹전표*/
-    background-position: -115px -155px;
+    background-position: -150px 0;
 }
 .my-quick-list li.work-quick5 a:before { /*법무서비스*/
-    background-position: -155px -155px;
+    background-position: -200px 0;
 }
 .my-quick-list li.work-quick6 a:before { /*출장*/
-    background-position: -195px -155px;
+    background-position: -250px 0;
 }
 .my-quick-list li.work-quick7 a:before { /*총무*/
-    background-position: -235px -155px;
+    background-position: -300px 0;
 }
 .my-quick-list li.work-quick8 a:before { /*규정관리*/
-    background-position: -275px -155px;
+    background-position: -350px 0;
 }
 .my-quick-list .need-login:after {
     position: absolute;
