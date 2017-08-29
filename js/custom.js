@@ -122,7 +122,20 @@ $(document).ready(function() {
     });
 
     $('.board-list .author').on('click', function () {
-        $('.user-profile-box').addClass('show').position();
+        var target = $('.user-profile-box'),
+            offset = $(this).offset(),
+            windowHeight = $(window).height(),
+            boxHeight = $(target).outerHeight(true);
+        $(target).removeClass('reverse show');
+        $(target).addClass('show').css({'display':'block','top':offset.top+25,'left':offset.left-98});
+        if(offset.top+boxHeight>windowHeight) {
+            $(target).addClass('reverse').css({'top':offset.top-155});
+        }
+        $('.content').scroll(function() {
+            $(target).fadeOut(300, function() {
+                $( this ).removeClass('show');
+            });
+        });
     });
 
     $('.schedule-board-list a').tooltip({
@@ -161,6 +174,6 @@ function selectboxEvent(target) {
 // }
 function layerClose(layer) {
     var $this = $(layer);
-    $this.parent('.layer-wrap').removeClass('show');
+    $this.parent('.layer-wrap').hide();
     return false;
 }
