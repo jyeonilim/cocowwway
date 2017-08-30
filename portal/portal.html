@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../resources/css/common.css">
     <link rel="stylesheet" href="../resources/css/portal.css">
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
-	<script type="text/javascript" src="../resources/js/-jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../resources/js/csscommon.js"></script>
 </head>
@@ -796,13 +796,13 @@
 							</ul>
 							<div class="tab-content">
 								<div class="tab-panel" id="schedule-tab1-1">
-									<ul class="schedule-board-list">
-										<li><a href="#" title="<span>중국어</span>시간 : 08:00~08:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>08:00~08:30</span> 중국어</a></li>
-										<li><a href="#" title="<span>업체미팅</span>시간 : 09:30~10:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>09:30~10:30</span> 업체미팅</a></li>
-										<li><a href="#" title="<span>상품기획1팀보고</span>시간 : 11:00~11:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
-										<li><a href="#" title="<span>지사방문</span>시간 : 14:00~15:00<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>14:00~15:00</span> 지사방문</a></li>
-										<li><a href="#" title="<span>상품기획1팀보고</span>시간 : 11:00~11:30<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
-										<li><a href="#" title="<span>지사방문</span>시간 : 14:00~15:00<br>장소 : 5층 회의실<br>내용 : 내용없음"><span>14:00~15:00</span> 지사방문</a></li>
+									<ul class="schedule-board-list tooltip">
+										<li><a href="#"><span>08:00~08:30</span> 중국어</a></li>
+										<li><a href="#"><span>09:30~10:30</span> 업체미팅</a></li>
+										<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+										<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+										<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+										<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
 									</ul>
 								</div>
 								<div class="tab-panel" id="schedule-tab1-2"></div>
@@ -865,7 +865,17 @@
 			</ul>
 			<a href="#" class="btn-close" onclick="layerClose(this);"></a>
 		</div>
-		<!-- 사용자 정보 레이어 -->
+		<!-- 사용자 정보 레이어 //end -->
+		<!-- 일정 툴팁 -->
+		<div class="layer-wrap tooltip-box">
+			<span>중국어</span>
+			<ul>
+				<li>시간 : 08:00~08:30</li>
+				<li>장소 : 5층 회의실</li>
+				<li>내용 : 내용없음</li>
+			</ul>
+		</div>
+		<!-- 일정 툴팁 //end -->
 	</div>
 </div>
 </body>

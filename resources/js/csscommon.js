@@ -123,9 +123,18 @@ $(document).ready(function() {
         }
         $('.content').scroll(function() {
             $(target).fadeOut(300, function() {
-                $( this ).removeClass('show');
+                $(this).removeClass('show');
             });
         });
+    });
+
+    // Tooltip
+    $('.tooltip a').on('mouseover',function() {
+        var target = $('.tooltip-box'),
+            offset = $(this).offset();
+        $(target).stop(true,true).fadeIn(300).css({'top':offset.top+25,'left':offset.left-14});
+    }).on('mouseleave',function() {
+        $('.tooltip-box').fadeOut(300);
     });
 
     // Left Tree Scroll

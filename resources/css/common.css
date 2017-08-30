@@ -679,7 +679,7 @@ body {
     float: left;
     width: 100%;
     margin-top: -85px;
-    padding: 8px 0 0 95px;
+    padding: 8px 10px 8px 95px;
     font-size: 13px;
     font-family: 'NanumGothic', sans-serif;
     color: #8a8a8a;
@@ -701,7 +701,6 @@ body {
 }
 .user-box .user-account .my-information .btn {
     float: right;
-    margin-right: 10px;
 }
 .header-bottom {
     position: relative;
