@@ -119,18 +119,10 @@
     right: 0;
     margin: auto;
 }
-.user-profile-box.reverse {
-    -webkit-box-shadow: -3px -2px 5px -2px #eaecef;
-    -moz-box-shadow: -3px -2px 5px -2px #eaecef;
-    box-shadow: -3px -2px 5px -2px #eaecef;
-}
 .user-profile-box.reverse:before {
     top: auto;
     bottom: -6px;
     background-position: -280px -160px;
-}
-.user-profile-box .user-account {
-    margin-top: -75px;
 }
 .user-account-link {
     overflow: hidden;

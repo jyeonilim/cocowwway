@@ -666,7 +666,7 @@ body {
     height: 13px;
     background: url("../images/sprite-icon.png") no-repeat 0 -120px;
 }
-.user-box .user-image {
+.user-image {
     float: left;
     width: 75px;
     height: 75px;
@@ -675,7 +675,7 @@ body {
     background-color: #dee3eb;
     background-size: cover;
 }
-.user-box .user-account {
+.user-account {
     float: left;
     width: 100%;
     margin-top: -85px;
@@ -684,22 +684,22 @@ body {
     font-family: 'NanumGothic', sans-serif;
     color: #8a8a8a;
 }
-.user-box .user-account .user-name {
+.user-account .user-name {
     margin-bottom: 7px;
     font-size: 15px;
 }
-.user-box .user-account .user-name strong {
+.user-account .user-name strong {
     color: #1f1f1f;
 }
-.user-box .user-account .my-information {
+.user-account .my-information {
     overflow: hidden;
     margin-top: 7px;
 }
-.user-box .user-account .my-information .link-my-info {
+.user-account .my-information .link-my-info {
     float: left;
     color: #00a7e4;
 }
-.user-box .user-account .my-information .btn {
+.user-account .my-information .btn {
     float: right;
 }
 .header-bottom {
