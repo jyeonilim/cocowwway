@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>로그인</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/login.css">
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/csscommon.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <div class="login login-mini">
+            <div class="login-in">
+                <h1 class="brand-logo"><span class="sr-only">COWAY</span></h1>
+                <div class="login-box">
+                    <ul class="login-input">
+                        <li>
+                            <label for="companyCode" class="form-label"><i class="icon-company"></i></label>
+                            <div class="selectbox">
+                                <strong class="selectbox-value">코웨이</strong>
+                                <select id="companyCode" onchange="selectboxEvent(this);">
+                                    <option>코웨이</option>
+                                    <option>코웨이엔텍</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <label for="userID" class="form-label"><i class="icon-user"></i></label>
+                            <input type="text" id="userID" class="form-control" placeholder="아이디를 입력하세요">
+                        </li>
+                        <li>
+                            <label for="userPassword" class="form-label"><i class="icon-lock"></i></label>
+                            <input type="password" id="userPassword" class="form-control" placeholder="비밀번호를 입력하세요">
+                        </li>
+                    </ul>
+                    <div class="login-help clearfix">
+                        <div class="checkbox">
+                            <input type="checkbox" id="saveID" name="saveID">
+                            <label for="saveID" class="checkbox-display"></label>
+                            <label for="saveID" class="checkbox-label">ID저장하기</label>
+                        </div>
+                        <div class="btn-box">
+                            <a href="#" class="btn btn-password-reset">비밀번호초기화</a>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-lg btn-primary btn-block">로그인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -230,3 +230,7 @@
     margin-top: 35px;
     color: #a7a9ac;
 }
+/* Login mini */
+.login-mini .login-box {
+    max-width: 400px;
+}
