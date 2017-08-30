@@ -11,25 +11,27 @@
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
-    <script type="text/javascript" src="../resources/js/csscommon.js"></script>
+	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
 	<script type="text/javascript">
         $(document).ready(function() {
-            var mailScroll = (function () {
-                var contentHeight = $('.mail-content').height(),
-                    headHeight = $('.mail-head').outerHeight(true);
-                $('.mail-form').height(contentHeight-headHeight);
+            var contentScroll = (function () {
+                var contentHeight = $('.content-inner').height(),
+                    headHeight = $('.form-head').outerHeight(true);
+                console.log(contentHeight);
+                console.log(headHeight);
+                $('.form-body').height(contentHeight-headHeight);
             });
-            $(document).ready(mailScroll);
-            $(window).resize(mailScroll);
+            $(document).ready(contentScroll);
+            $(window).resize(contentScroll);
         });
 	</script>
 </head>
-<body class="mail">
+<body>
 <div class="content">
-	<div class="mail-content">
+	<div class="content-inner">
 		<!-- 메일 메뉴 -->
-		<div class="mail-left">
-			<div class="mail-left-head">
+		<div class="left">
+			<div class="left-head">
 				<h2 class="sub-title">메일</h2>
 				<div class="btn-block-group">
 					<div class="outer"><a href="#" class="btn btn-primary">메일쓰기</a></div>
@@ -43,9 +45,9 @@
 				</div>
 			</div>
 			<!-- 메일 트리 메뉴 -->
-			<div class="mail-left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
+			<div class="left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
 			<!-- 메일 트리 메뉴 //end -->
-			<div class="mail-left-foot">
+			<div class="left-foot">
 				<div class="btn-block-group">
 					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-set-sm"></i>환경설정</a></div>
 					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-document"></i>개인주소록</a></div>
@@ -54,11 +56,11 @@
 		</div>
 		<!-- 메일 메뉴 //end -->
 		<!-- 메일 상세보기 //end -->
-		<div class="mail-right">
-			<div class="mail-right-inner">
+		<div class="form">
+			<div class="form-inner">
 				<!-- Mail Head -->
-				<div class="mail-head mail-head-form">
-					<div class="mail-head-btn">
+				<div class="form-head">
+					<div class="form-head-btn">
 						<a href="#" class="btn">발송</a>
 						<a href="#" class="btn">예약발송</a>
 						<a href="#" class="btn">저장</a>
@@ -66,7 +68,7 @@
 						<a href="#" class="btn">A4 size</a>
 						<a href="#" class="btn">닫기</a>
 					</div>
-					<div class="mail-head-search">
+					<div class="form-head-search">
 						<div class="search-box">
 							<div class="selectbox">
 								<strong class="selectbox-value">상세</strong>
@@ -84,67 +86,67 @@
 				</div>
 				<!-- Mail Head //end -->
 				<!-- Mail Body -->
-				<div class="mail-body mail-form">
-					<ul class="mail-form-item">
-						<li class="mail-item">
-							<div class="mail-label">
-								<strong class="item-label">받는사람</strong>
+				<div class="form-body">
+					<ul class="form-item">
+						<li class="item">
+							<div class="item-label">
+								<strong class="label">받는사람</strong>
 								<span>
 									<input type="checkbox" id="checkMe">
 									<label for="checkMe">나에게</label>
 								</span>
 							</div>
-							<div class="mail-input">
+							<div class="item-input">
 								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 								<label for="to" class="sr-only">받는사람 주소 입력</label>
 								<textarea class="form-control" cols="1" id="to"></textarea>
 							</div>
 						</li>
-						<li class="mail-item">
-							<div class="mail-label">
-								<strong class="item-label">참조</strong>
+						<li class="item">
+							<div class="item-label">
+								<strong class="label">참조</strong>
 								<a href="#" class="btn-hidden-view bcc-view"><span class="sr-only">비밀참조 보기</span></a>
 							</div>
-							<div class="mail-input">
+							<div class="item-input">
 								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 								<label for="cc" class="sr-only">참조 주소 입력</label>
 								<textarea class="form-control" id="cc"></textarea>
 							</div>
 						</li>
-						<li class="mail-item mail-form-bcc">
-							<div class="mail-label">
-								<strong class="item-label">비밀참조</strong>
+						<li class="item item-bcc">
+							<div class="item-label">
+								<strong class="label">비밀참조</strong>
 							</div>
-							<div class="mail-input">
+							<div class="item-input">
 								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
 								<label for="bcc" class="sr-only">비밀참조 주소 입력</label>
 								<textarea class="form-control" id="bcc"></textarea>
 							</div>
 						</li>
-						<li class="mail-item">
-							<div class="mail-label">
-								<strong class="item-label">제목</strong>
+						<li class="item">
+							<div class="item-label">
+								<strong class="label">제목</strong>
 								<span>
 									<input type="checkbox" id="checkImportant">
 									<label for="checkImportant">중요</label>
 								</span>
 							</div>
-							<div class="mail-input mail-input-wrap">
+							<div class="item-input item-input-wrap">
 								<label for="subject" class="sr-only">제목 입력</label>
 								<input type="text" class="form-control" id="subject">
 							</div>
 						</li>
-						<li class="mail-item">
-							<div class="mail-label">
-								<strong class="item-label">파일첨부</strong>
+						<li class="item">
+							<div class="item-label">
+								<strong class="label">파일첨부</strong>
 								<a href="#" class="btn-hidden-view attach-view"><span class="sr-only">파일첨부 열기</span></a>
 							</div>
-							<div class="mail-input mail-input-wrap">
-								<div class="mail-form-attach">파일첨부 영역</div>
+							<div class="item-input item-input-wrap">
+								<div class="attach-box">파일첨부 영역</div>
 							</div>
 						</li>
 					</ul>
-					<div class="editor-frame">메일 에디터 영역</div>
+					<div class="form-content">메일 에디터 영역</div>
 				</div>
 				<!-- Mail Body //end -->
 			</div>

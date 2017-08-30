@@ -1,21 +1,159 @@
 /**********************************************
     Form
     *******************************************/
-.mail-form-item {
+.content-inner {
+    height: 100%;
+    padding: 16px 18px;
+    background-color: #f2f4f7;
+    box-sizing: border-box;
+}
+.content-inner:before, .content-inner:after {
+    content: '';
+    display: table;
+}
+.content-inner:after {
+    clear: both;
+}
+.selectbox .selectbox-value:after {
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #949494;
+}
+.form-body {
+    overflow: hidden;
+    overflow-y: auto;
+}
+.form {
+    float: left;
+    width: 100%;
+    margin-left: -252px;
+    padding-left: 272px;
+}
+.form-inner {
+    border: 1px solid #dee3eb;
+    background-color: #fff;
+}
+/* Header */
+.form-head {
+    padding: 13px 10px 11px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.form-head:before, .form-head:after {
+    display: table;
+    content: '';
+}
+.form-head:after {
+    clear: both;
+}
+.form-head-btn {
+    float: left;
+}
+.form-head-btn > * {
+    float: left;
+    margin-right: 5px;
+}
+.form-head-btn > *:last-child {
+    margin-right: 0;
+}
+.form-head-btn .checkbox-box {
+    padding: 7px 10px 6px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+}
+.form-head-btn .selectbox .selectbox-value {
+    padding: 0 20px 0 8px;
+    line-height: 2.47;
+    color: #444;
+}
+.btn-arrow-prev, .btn-arrow-next {
+    position: relative;
+    width: 34px;
+    height: 34px;
+}
+.btn-arrow-prev:before, .btn-arrow-next:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: '';
+}
+.btn-arrow-prev:before {
+    border-bottom: 6px solid #00a7e4;
+}
+.btn-arrow-next:before {
+    border-top: 6px solid #00a7e4;
+}
+.btn-print:before {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background: url("../images/sprite-icon.png") no-repeat -400px -280px;
+    vertical-align: -1px;
+    content: '';
+}
+.form-head-search {
+    float: right;
+}
+.form-head-search .search-box {
+    position: static;
+    display: block;
+    width: 230px;
+    height: 34px;
+}
+.form-head-search .search-box .selectbox .selectbox-value {
+    padding: 0 30px 0 15px;
+    font-size: 13px;
+    line-height: 2.47;
+}
+.form-head-search .search-box .selectbox .selectbox-value:after {
+    right: 12px;
+    border-top-color: #494949;
+}
+.form-head-search .search-box .search-input .form-control {
+    width: 120px;
+    height: 32px;
+}
+.form-head-search .search-box .btn-search {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: 7px 0 0 11px;
+    background: url("../images/sprite-icon.png") no-repeat -440px -200px;
+    vertical-align: middle;
+}
+
+.selectbox .selectbox-value:after {
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #949494;
+}
+.form-item {
      padding: 13px;
  }
-.mail-item {
+.item {
     display: table;
     width: 100%;
     min-height: 34px;
     padding: 4px 0;
 }
-.mail-item > .mail-label,
-.mail-item > .mail-input {
+.item > .item-label,
+.item > .item-input {
     display: table-cell;
     vertical-align: top;
 }
-.mail-item > .mail-label {
+.item > .item-label {
     padding-top: 3px;
 }
 .btn-hidden-view {
@@ -43,52 +181,52 @@
     border-top: 0;
     border-bottom: 3px solid #666;
 }
-.mail-label {
+.item-label {
     width: 133px;
 }
-.mail-label .item-label {
+.item-label .label {
     display: inline-block;
     width: 70px;
     font-weight: 400;
     color: #000;
 }
-.mail-label input[type=checkbox] {
+.item-label input[type=checkbox] {
     vertical-align: -2px;
 }
-.mail-input {
+.item-input {
     padding-right: 51px;
 }
-.mail-input .form-control {
+.item-input .form-control {
     height: 26px;
     padding: 0 10px;
     outline: none;
 }
-.mail-input .form-control:focus {
+.item-input .form-control:focus {
     border-color: #00a7e4;
 }
-.mail-input textarea.form-control {
+.item-input textarea.form-control {
     height: 26px;
     resize: vertical;
 }
-.mail-input .btn {
+.item-input .btn {
     float: right;
     margin: 2px -51px 0 0;
 }
-.mail-input-wrap {
+.item-input-wrap {
     padding-right: 0;
 }
-.mail-form-bcc {
+.item-bcc {
     display: none;
 }
-.mail-form-bcc.on {
+.item-bcc.on {
     display: table;
 }
-.mail-form-attach {
+.attach-box {
     display: none;
     min-height: 26px;
     border: 1px solid #e8e8e8;
 }
-.mail-form-attach.on {
+.attach-box.on {
     display: block;
 }
 .editor-frame {

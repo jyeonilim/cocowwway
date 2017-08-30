@@ -14,22 +14,22 @@
     <script type="text/javascript" src="../resources/js/csscommon.js"></script>
 	<script type="text/javascript">
         $(document).ready(function() {
-            var mailScroll = (function () {
-                var contentHeight = $('.mail-content').height(),
-                    headHeight = $('.mail-head').outerHeight(true);
-                $('.mail-view').height(contentHeight-headHeight);
+            var contentScroll = (function () {
+                var contentHeight = $('.content-inner').height(),
+                    headHeight = $('.view-head').outerHeight(true);
+                $('.preview-content').height(contentHeight-headHeight);
             });
-            $(document).ready(mailScroll);
-            $(window).resize(mailScroll);
+            $(document).ready(contentScroll);
+            $(window).resize(contentScroll);
         });
 	</script>
 </head>
-<body class="mail">
+<body class="">
 <div class="content">
-	<div class="mail-content">
+	<div class="content-inner">
 		<!-- 메일 메뉴 -->
-		<div class="mail-left">
-			<div class="mail-left-head">
+		<div class="left">
+			<div class="left-head">
 				<h2 class="sub-title">메일</h2>
 				<div class="btn-block-group">
 					<div class="outer"><a href="#" class="btn btn-primary">메일쓰기</a></div>
@@ -43,9 +43,9 @@
 				</div>
 			</div>
 			<!-- 메일 트리 메뉴 -->
-			<div class="mail-left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
+			<div class="left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
 			<!-- 메일 트리 메뉴 //end -->
-			<div class="mail-left-foot">
+			<div class="left-foot">
 				<div class="btn-block-group">
 					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-set-sm"></i>환경설정</a></div>
 					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-document"></i>개인주소록</a></div>
@@ -54,11 +54,11 @@
 		</div>
 		<!-- 메일 메뉴 //end -->
 		<!-- 메일 상세보기 //end -->
-		<div class="mail-right">
-			<div class="mail-right-inner">
+		<div class="view">
+			<div class="view-inner">
 				<!-- Mail Head -->
-				<div class="mail-head mail-head-view">
-					<div class="mail-head-btn">
+				<div class="view-head">
+					<div class="view-head-btn">
 						<a href="#" class="btn">전달</a>
 						<div class="btn-group">
 							<div class="outer"><a href="#" class="btn">답장</a></div>
@@ -83,7 +83,7 @@
 						</div>
 						<a href="#" class="btn btn-print"><span class="sr-only">메일 내용 프린트 하기</span></a>
 					</div>
-					<div class="mail-head-search">
+					<div class="view-head-search">
 						<div class="search-box">
 							<div class="selectbox">
 								<strong class="selectbox-value">상세</strong>
@@ -101,7 +101,9 @@
 				</div>
 				<!-- Mail Head //end -->
 				<!-- Mail Body -->
-				<div class="mail-body mail-view">메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br></div>
+				<div class="view-body">
+					<div class="preview-content">메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br>메일 상세보기 영역<br></div>
+				</div>
 				<!-- Mail Body //end -->
 			</div>
 		</div>

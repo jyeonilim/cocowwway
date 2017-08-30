@@ -11,16 +11,6 @@ $(document).ready(function() {
     $(document).ready(contentScroll);
     $(window).resize(contentScroll);
 
-    // Mail Left Scroll
-    var mailLeftScroll = (function () {
-        var contentHeight = $('.mail-content').height(),
-            headHeight = $('.mail-left-head').outerHeight(true),
-            footHeight = $('.mail-left-foot').outerHeight(true);
-        $('.mail-left-body').height(contentHeight-(headHeight+footHeight));
-    });
-    $(document).ready(mailLeftScroll);
-    $(window).resize(mailLeftScroll);
-
     $('.quick-search a').on('click',function () {
         $(this).toggleClass('active');
         $('.search-box').toggleClass('show');
@@ -138,22 +128,23 @@ $(document).ready(function() {
         });
     });
 
-    $('.schedule-board-list a').tooltip({
-        content: function() {
-            return $(this).attr('title');
-        },
-        position: {my: 'left-14 top+8'},
-        show: {duration: 100},
-        hide: {duration: 100}
+    // Left Tree Scroll
+    var leftScroll = (function () {
+        var contentHeight = $('.content-inner').height(),
+            headHeight = $('.left-head').outerHeight(true),
+            footHeight = $('.left-foot').outerHeight(true);
+        $('.left-body').height(contentHeight-(headHeight+footHeight));
     });
+    $(document).ready(leftScroll);
+    $(window).resize(leftScroll);
 
     $('.btn-hidden-view.bcc-view').on('click', function () {
         $(this).toggleClass('on');
-        $('.mail-form-bcc').toggleClass('on');
+        $('.item-bcc').toggleClass('on');
     });
     $('.btn-hidden-view.attach-view').on('click', function () {
         $(this).toggleClass('on');
-        $('.mail-form-attach').toggleClass('on');
+        $('.attach-box').toggleClass('on');
     });
 
 });
