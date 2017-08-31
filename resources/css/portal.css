@@ -888,6 +888,7 @@
 }
 .schedule-box .tab-panel {
     overflow: hidden;
+    overflow-y: auto;
     height: 182px;
     padding: 7px 15px;
 }
@@ -925,8 +926,15 @@
     font-weight: 500;
     vertical-align: middle;
 }
-.schedule-divide .divide-label + .schedule-board-list {
+.schedule-divide .divide-label + .divide-content {
     display: table-cell;
+}
+.schedule-divide .schedule-board-list {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 60px;
+    margin: -3px -15px -3px 0;
+    padding: 3px 15px 3px 0;
 }
 .schedule-divide .schedule-board-list li {
     padding: 0;
@@ -988,6 +996,7 @@
     position: absolute;
     top: -6px;
     left: 28px;
+    right: auto;
     z-index: 11;
     width: 11px;
     height: 6px;

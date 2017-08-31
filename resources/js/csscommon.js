@@ -138,16 +138,14 @@ $(document).ready(function() {
     $('.tooltip a').on('mouseover',function() {
         var target = $('.tooltip-box'),
             offset = $(this).offset();
-        $(target).stop(true,true).fadeIn(300).css({'top':offset.top+25,'left':offset.left-14});
+        $(target).stop(true,true).fadeIn(300).css({'top':offset.top+25,'left':offset.left-14,'width':300});
     }).on('mouseleave',function() {
         $('.tooltip-box').fadeOut(300);
     });
 
     $('.schedule-divide .tooltip a').on('mouseover',function() {
         $('.tooltip-box').css('width',250);
-    }).on('mouseleave',function() {
-        $('.tooltip-box').css('width',300);
-    });
+    })
 
     // Left Tree Scroll
     var leftScroll = (function () {
