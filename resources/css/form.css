@@ -1,19 +1,6 @@
 /**********************************************
     Form
     *******************************************/
-.content-inner {
-    height: 100%;
-    padding: 16px 18px;
-    background-color: #f2f4f7;
-    box-sizing: border-box;
-}
-.content-inner:before, .content-inner:after {
-    content: '';
-    display: table;
-}
-.content-inner:after {
-    clear: both;
-}
 .selectbox .selectbox-value:after {
     right: 7px;
     width: 0;
