@@ -22,19 +22,19 @@
         <thead>
         <tr>
             <th>화면</th>
-            <th>파일경로</th>
+            <th colspan="2">파일경로</th>
             <th></th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <td><a href="layout/outer.html">header/footer</a></td>
-            <td><a href="layout/outer.html">outer.html</a></td>
+            <td colspan="2"><a href="layout/outer.html">outer.html</a></td>
             <td class="left"></td>
         </tr>
         <tr>
             <td><a href="login/login.html">로그인</a></td>
-            <td><a href="login/login.html">login.html</a></td>
+            <td colspan="2"><a href="login/login.html">login.html</a></td>
             <td class="left">
                 <ul class="notify-list">
                     <li><a href="login/logout.html">[로그아웃] logout.html</a></li>
@@ -44,19 +44,22 @@
         </tr>
         <tr>
             <td><a href="portal/portal.html">포탈</a></td>
-            <td><a href="portal/portal.html">portal.html</a></td>
+            <td colspan="2"><a href="portal/portal.html">portal.html</a></td>
             <td class="left"></td>
         </tr>
         <tr>
-            <td><a href="mail/mail-list.html">메일</a></td>
-            <td>
-                <ul class="notify-list">
-                    <li><a href="mail/mail-list.html">[목록] mail-list.html</a></li>
-                    <li><a href="mail/mail-view.html">[보기] mail-view.html</a></li>
-                    <li><a href="mail/mail-write.html">[쓰기] mail-write.html</a></li>
-                </ul>
-            </td>
-            <td class="left"></td>
+            <td rowspan="3">메일</td>
+            <td><a href="mail/mail-list.html">목록</a></td>
+            <td><a href="mail/mail-list.html">mail-list.html</a></td>
+            <td rowspan="3" class="left"></td>
+        </tr>
+        <tr>
+            <td><a href="mail/mail-view.html">상세보기</a></td>
+            <td><a href="mail/mail-view.html">mail-view.html</a></td>
+        </tr>
+        <tr>
+            <td><a href="mail/mail-write.html">쓰기</a></td>
+            <td><a href="mail/mail-write.html">mail-write.html</a></td>
         </tr>
         </tbody>
     </table>
