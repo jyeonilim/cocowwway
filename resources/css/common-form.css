@@ -267,8 +267,7 @@ table {
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     background-color: #fff;
-    font-size: 13px;
-    line-height: 2.47;
+    font: 13px/2.47 'NotoSansKR', sans-serif;
     color: #444;
     text-align: center;
     vertical-align: middle;
@@ -1029,11 +1028,24 @@ body {
 /**********************************************
     View/List - Left
     *******************************************/
+.content-inner {
+    height: 100%;
+    padding: 16px 18px;
+    background-color: #f2f4f7;
+    box-sizing: border-box;
+}
+.content-inner:before, .content-inner:after {
+    content: '';
+    display: table;
+}
+.content-inner:after {
+    clear: both;
+}
 .left {
     position: relative;
     z-index: 11;
-    float: left;
-    width: 252px;
+    width: 100%;
+    height: 100%;
     padding-bottom: 57px;
     border: 1px solid #dee3eb;
     background-color: #fff;
@@ -1108,6 +1120,17 @@ body {
 }
 .left-foot .icon-document {
     vertical-align: -3px;
+}
+
+/* dhtmlx 스타일 변경 */
+#tree_sample table {
+    width: 100%;
+}
+#tree_sample span.standartTreeRow {
+    width: 100% !important;
+}
+#tree_sample .standartTreeRow {
+    font-family: 'NotoSansKR', sans-serif;
 }
 
 /**********************************************
