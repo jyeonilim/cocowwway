@@ -220,7 +220,7 @@ table {
     width: 14px;
     height: 14px;
     background-position: -440px -120px;
-    vertical-align: 7px;
+    vertical-align: 12px;
 }
 .badge-unit {
     position: absolute;
@@ -514,7 +514,7 @@ body {
     font-size: 18px;
     color: #00a7e4;
 }
-.layer-box {
+.layer-wrap {
     display: none;
     position: absolute;
     border: 1px solid #e7eaf0;
@@ -525,6 +525,35 @@ body {
     box-shadow: 1px 2px 5px -2px #eaecef;
     font-size: 14px;
     text-align: left;
+}
+.layer-wrap:before {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    width: 11px;
+    height: 6px;
+    margin: auto;
+    background: url("../images/sprite-icon.png") no-repeat -320px -160px;
+    content: '';
+}
+.layer-wrap.reverse:before {
+    top: auto;
+    bottom: -6px;
+    background-position: -280px -160px;
+}
+.layer-wrap.open {
+    display: block;
+}
+.layer-wrap .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    width: 13px;
+    height: 13px;
+    background: url("../images/sprite-icon.png") no-repeat 0 -120px;
 }
 
 /**********************************************
@@ -912,6 +941,89 @@ body {
 }
 .footer-menu li a {
     color: #5e5e5e;
+}
+/* 결재작성 레이어 */
+.write-approval {
+    position: relative;
+}
+.write-approval-box {
+    position: absolute;
+    bottom: 30px;
+    left: -72px;
+    width: 360px;
+}
+.write-approval-box:before {
+    left: 110px;
+    right: auto;
+}
+.write-approval-box:before, .write-approval-box:after {
+    display: table;
+    content: '';
+}
+.write-approval-box:after {
+    clear: both;
+}
+.write-approval-box .icon-set {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+}
+.write-approval-box .btn-close {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+}
+.write-approval-box .document-title {
+    display: block;
+    padding: 4px 15px 6px;
+    border-bottom: 1px solid #e6e9f0;
+    font-weight: 500;
+    color: #313131;
+}
+.write-approval-box dl {
+    float: left;
+    margin: 10px 0;
+    padding: 0 15px;
+    font-size: 13px;
+}
+.write-approval-box .document-default {
+    width: 40%;
+    border-right: 1px solid #e6e9f0;
+}
+.write-approval-box .document-user {
+    width: 60%;
+}
+.write-approval-box dt {
+    margin-bottom: 6px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #e6e9f0;
+    color: #313131;
+    text-align: center;
+}
+.write-approval-box dd {
+    padding: 2px 0;
+    font-weight: 200;
+    color: #787878;
+}
+.write-approval-box dd a:hover {
+    color: #00a7e4;
+}
+.write-approval-box .no-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.write-approval-box .no-content span {
+    position: absolute;
+    top: 68px;
+    bottom: 0;
+    left: 40%;
+    right: 0;
+    height: 19px;
+    margin: auto;
+    text-align: center;
 }
 
 /**********************************************

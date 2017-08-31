@@ -122,7 +122,7 @@
 .user-profile-box.reverse:before {
     top: auto;
     bottom: -6px;
-    background-position: -280px -160px;
+    background-position: -280px -200px;
 }
 .user-account-link {
     overflow: hidden;
@@ -186,7 +186,7 @@
     line-height: 44px;
     text-align: center;
 }
-.btn-board-more .board-prev:after, .btn-board-more .board-next:after, .btn-board-more .board-refresh:after {
+.btn-board-more .board-prev:after, .btn-board-more .board-next:after, .btn-board-more .board-refresh:after, .btn-board-more .board-more:after {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -208,6 +208,10 @@
 .btn-board-more .board-refresh:after {
     width: 15px;
     background-position: -160px -40px;
+}
+.btn-board-more .board-more:after {
+    width: 15px;
+    background-position: -400px -80px;
 }
 /* 이벤트 */
 .schedule-wrap {
@@ -859,7 +863,7 @@
 .my-quick-option .btn-set {
     float: right;
 }
-/*CEO 및 본부 일정*/
+/* 일정관리 */
 .schedule-box {}
 .schedule-box .tabs {
     overflow: hidden;
@@ -902,6 +906,31 @@
     background-color: #918f8f;
     vertical-align: 3px;
     content: '';
+}
+.schedule-divide {
+    margin: -7px -15px;
+}
+.schedule-divide > li {
+    display: table;
+    width: 100%;
+    padding: 3px 15px;
+    border-top: 1px solid #ebeef3;
+}
+.schedule-divide > li:first-child {
+    border-top: 0;
+}
+.schedule-divide .divide-label {
+    display: table-cell;
+    width: 50px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+.schedule-divide .divide-label + .schedule-board-list {
+    display: table-cell;
+}
+.schedule-divide .schedule-board-list li {
+    padding: 0;
+    font-weight: 200;
 }
 .btn-schedule {
     position: absolute;

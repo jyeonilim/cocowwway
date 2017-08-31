@@ -146,7 +146,33 @@
 		</ul>
 		<ul class="footer-menu">
 			<li><a href="#">메일쓰기</a></li>
-			<li><a href="#">결재작성</a></li>
+			<li class="write-approval">
+				<a href="#">결재작성</a>
+				<!-- 결재작성 레이어 --><!-- 20170831 추가 -->
+				<div class="layer-wrap reverse write-approval-box">
+					<strong class="document-title">문서</strong>
+					<dl class="document-default">
+						<dt>기본문서</dt>
+						<dd><a href="#">공지작성</a></dd>
+						<dd><a href="#">기안작성</a></dd>
+						<dd><a href="#">집안통신작성</a></dd>
+						<dd><a href="#">업무협조전작성</a></dd>
+						<dd><a href="#">회의록작성</a></dd>
+					</dl>
+					<dl class="document-user">
+						<dt>개인문서</dt>
+						<dd><a href="#">공지작성</a></dd>
+						<dd><a href="#">기안작성</a></dd>
+						<dd><a href="#">집안통신작성</a></dd>
+						<dd><a href="#">업무협조전작성</a></dd>
+						<dd><a href="#">회의록작성</a></dd>
+						<!--<dd class="no-content"><span>등록된 문서가 없습니다.</span></dd>-->
+					</dl>
+					<a href="#" class="icon-set"><span class="sr-only">환경설정</span></a>
+					<a href="#" class="btn-close" onclick="layerClose(this);"><span class="sr-only">닫기</span></a>
+				</div>
+				<!-- 결재작성 레이어 //end --><!-- 20170831 추가 //end -->
+			</li>
 			<li><a href="#">언론제보</a></li>
 			<li><a href="#">회사정보</a></li>
 			<li><a href="#">조직정보</a></li>

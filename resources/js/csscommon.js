@@ -63,6 +63,12 @@ $(document).ready(function() {
         return false;
     });
 
+    // 푸터 하단 결재작성 레이어 띄우기
+    $('.write-approval > a').on('click',function () {
+        $('.write-approval-box').toggleClass('show');
+        return false;
+    });
+
     // Tab
     $('.tabs').each(function() {
         var $active, $content, $links = $(this).find('a');
@@ -117,7 +123,7 @@ $(document).ready(function() {
             windowHeight = $(window).height(),
             boxHeight = $(target).outerHeight(true);
         $(target).removeClass('reverse show');
-        $(target).addClass('show').css({'display':'block','top':offset.top+25,'left':offset.left-98});
+        $(target).addClass('show').css({'top':offset.top+25,'left':offset.left-98});
         if(offset.top+boxHeight>windowHeight) {
             $(target).addClass('reverse').css({'top':offset.top-155});
         }
@@ -135,6 +141,12 @@ $(document).ready(function() {
         $(target).stop(true,true).fadeIn(300).css({'top':offset.top+25,'left':offset.left-14});
     }).on('mouseleave',function() {
         $('.tooltip-box').fadeOut(300);
+    });
+
+    $('.schedule-divide .tooltip a').on('mouseover',function() {
+        $('.tooltip-box').css('width',250);
+    }).on('mouseleave',function() {
+        $('.tooltip-box').css('width',300);
     });
 
     // Left Tree Scroll
@@ -174,6 +186,6 @@ function selectboxEvent(target) {
 // }
 function layerClose(layer) {
     var $this = $(layer);
-    $this.parent('.layer-wrap').hide();
+    $this.parent('.layer-wrap').removeClass('show');
     return false;
 }
