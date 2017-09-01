@@ -16,6 +16,8 @@
 .view {
     float: left;
     width: 100%;
+    margin-left: -252px;
+    padding-left: 272px;
 }
 .view-inner {
     border: 1px solid #dee3eb;
@@ -183,9 +185,4 @@
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
     cursor: ew-resize;
-}
-
-/**/
-.containerTableStyle table {
-    width: 100%;
 }

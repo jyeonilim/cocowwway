@@ -1044,8 +1044,8 @@ body {
 .left {
     position: relative;
     z-index: 11;
-    float: left;
-    width: 252px;
+    width: 100%;
+    height: 100%;
     padding-bottom: 57px;
     border: 1px solid #dee3eb;
     background-color: #fff;
@@ -1120,6 +1120,17 @@ body {
 }
 .left-foot .icon-document {
     vertical-align: -3px;
+}
+
+/* dhtmlx 스타일 변경 */
+#tree_sample table {
+    width: 100%;
+}
+#tree_sample span.standartTreeRow {
+    width: 100% !important;
+}
+#tree_sample .standartTreeRow {
+    font-family: 'NotoSansKR', sans-serif;
 }
 
 /**********************************************
