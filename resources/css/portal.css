@@ -47,6 +47,7 @@
     color: #000;
 }
 .portal-board .tab-panel .tabs {
+    height: 34px;
     padding: 5px 20px 8px;
     background-color: #f7f7f9;
 }
@@ -76,12 +77,15 @@
 .board-list li > * {
     display: table-cell;
 }
-.board-list li .subject {
+.board-list li .subject, .board-list li .author {
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal !important;
+}
+.board-list li .subject {
+    padding-right: 10px;
 }
 .board-list li .subject:before {
     display: inline-block;
@@ -106,12 +110,16 @@
     color: #737373;
 }
 .board-list li .author {
-    width: 70px;
+    width: 90px;
     text-align: right;
     cursor: pointer;
 }
 .board-list li .date {
     width: 100px;
+    text-align: right;
+}
+.board-list li .size {
+    width: 70px;
     text-align: right;
 }
 .user-profile-box:before {
@@ -908,6 +916,9 @@
     vertical-align: 3px;
     content: '';
 }
+.schedule-board-list li small {
+    color: #ee761d;
+}
 .schedule-divide {
     margin: -7px -15px;
 }
@@ -1003,9 +1014,66 @@
     background: url("../images/sprite-icon.png") no-repeat -320px -160px;
     content: '';
 }
+.tooltip-box.reverse:before {
+    top: auto;
+    bottom: -6px;
+    background-position: -280px -160px;
+}
 .tooltip-box span {
     display: block;
     margin: 0 -7px 10px;
     padding: 0 7px 7px;
     border-bottom: 1px solid #dbe0e4;
+}
+
+/**********************************************
+    Work
+    *******************************************/
+.portal-schedule-detail .tab-panel {
+    height: 450px;
+}
+.schedule-detail-wrap {}
+.schedule-detail-wrap:before, .schedule-detail-wrap:after {
+    display: table;
+    content: '';
+}
+.schedule-detail-wrap:after {
+    clear: both;
+}
+.schedule-detail-wrap > li {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    border-left: 1px solid #e5e9ef;
+}
+.schedule-detail-wrap > li:nth-child(3n+1) {
+    border-left: 0;
+}
+.schedule-detail-wrap .schedule-register {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/sprite-icon.png") no-repeat -360px -80px;
+}
+.schedule-detail-title {
+    padding: 10px 0 8px;
+    background-color: #f2f4f7;
+    text-align: center;
+}
+.schedule-detail-title .selectbox {
+    margin-left: 5px;
+}
+.schedule-detail-title .selectbox-value {
+    width: 74px;
+    padding: 0 25px 0 10px;
+    background-color: #f2f4f7;
+}
+.schedule-detail-content {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 181px;
+    padding: 6px 15px;
 }

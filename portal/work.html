@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>포탈</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/portal.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+    <script type="text/javascript" src="../resources/js/csscommon.js"></script>
+</head>
+<body class="portal">
+<div class="content">
+	<div class="portal-content">
+		<div class="column-left">
+			<!-- work 문서 포틀릿 -->
+			<div class="portlet-box portal-board">
+				<ul class="tabs">
+					<li class="tab"><a href="#board-tab1">메일</a></li>
+					<li class="tab"><a href="#board-tab2">전자결재</a></li>
+					<li class="tab"><a href="#board-tab3">Co-Work</a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- 메일 -->
+					<div class="tab-panel" id="board-tab1">
+						<div class="portal-notice">
+							<ul class="tabs">
+								<li class="tab"><a href="#board-tab1-1">안읽은 메일</a></li>
+								<li class="tab"><a href="#board-tab1-2">수신메일</a></li>
+								<li class="tab"><a href="#board-tab1-3">발신메일</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-panel" id="board-tab1-1">
+									<ul class="board-list">
+										<li>
+											<p class="subject today">
+												<a href="#">FW: Re : 메일 본문 꺠지는 오류</a>
+											</p>
+											<span class="author">성영걸</span>
+											<span class="date">2017.07.04</span>
+											<span class="size">0.3MB</span>
+										</li>
+										<li>
+											<p class="subject today">
+												<a href="#">[코웨이] 메신저 대화 오류</a>
+											</p>
+											<span class="author">김용석</span>
+											<span class="date">2017.07.04</span>
+											<span class="size">0.1MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">코웨이 웹하드 안내</a>
+											</p>
+											<span class="author">sjkim외 1명</span>
+											<span class="date">2017.07.04</span>
+											<span class="size">0.1MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">긴급설치 요청의 건입니다.</a>
+											</p>
+											<span class="author">kjy외 1명</span>
+											<span class="date">2017.07.03</span>
+											<span class="size">4.4MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">(강태성) 8월 교통비 사용 내역</a>
+											</p>
+											<span class="author">이래교</span>
+											<span class="date">2017.07.03</span>
+											<span class="size">0.1MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">메일 본문 깨지는 오류</a>
+											</p>
+											<span class="author">이승현</span>
+											<span class="date">2017.06.30</span>
+											<span class="size">0.2MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">RE: 전달: [써트코리아] *.coway.com Nginx용 인증서 및 설치매뉴얼입니다.</a>
+											</p>
+											<span class="author">한수현</span>
+											<span class="date">2017.06.29</span>
+											<span class="size">0.2MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">일정공유의 건 일정공유일정공유일정공유일정공유일정공유일정공유일정공유일정공유일정공유일정공유</a>
+											</p>
+											<span class="author">조현식</span>
+											<span class="date">2017.06.26</span>
+											<span class="size">6.1MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">[알림] 특수계정 생성 신청이 처리되었습니다.</a>
+											</p>
+											<span class="author">관리자</span>
+											<span class="date">2017.06.29</span>
+											<span class="size">2.1MB</span>
+										</li>
+										<li>
+											<p class="subject">
+												<a href="#">[새롬뉴스레터] 새로운 소식을 한눈에, Biz Time-Line</a>
+											</p>
+											<span class="author">새롬정보시스템새롬정보시스템</span>
+											<span class="date">2017.06.26</span>
+											<span class="size">8MB</span>
+										</li>
+									</ul>
+								</div>
+								<div class="tab-panel" id="board-tab1-2">
+									수신메일
+								</div>
+								<div class="tab-panel" id="board-tab1-3">
+									발신메일
+								</div>
+							</div>
+							<div class="btn-board-more">
+								<a href="#" class="board-more"><span class="sr-only">목록 더보기</span></a>
+								<a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
+								<a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
+								<a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
+							</div>
+						</div>
+					</div>
+					<!-- 메일 //end -->
+					<!-- 전자결재 -->
+					<div class="tab-panel" id="board-tab2">
+						<div class="portal-notice">
+							<ul class="tabs">
+								<li class="tab"><a href="#board-tab2-1">미결함</a></li>
+								<li class="tab"><a href="#board-tab2-2">기안함</a></li>
+								<li class="tab"><a href="#board-tab2-3">상신함</a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-panel" id="board-tab2-1">
+									미결함
+								</div>
+								<div class="tab-panel" id="board-tab2-2">
+									기안함
+								</div>
+								<div class="tab-panel" id="board-tab2-3">
+									상신함
+								</div>
+							</div>
+							<div class="btn-board-more">
+								<a href="#" class="board-more"><span class="sr-only">목록 더보기</span></a>
+								<a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
+								<a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
+								<a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
+							</div>
+						</div>
+					</div>
+					<!-- 전자결재 //end -->
+					<!-- Co-Work -->
+					<div class="tab-panel" id="board-tab3">
+						<div class="portal-notice">
+							<ul class="tabs">
+								<li class="tab"><a href="#board-tab3-1"></a></li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-panel" id="board-tab3-1">
+									Co-Work
+								</div>
+							</div>
+							<div class="btn-board-more">
+								<a href="#" class="board-more"><span class="sr-only">목록 더보기</span></a>
+								<a href="#" class="board-prev"><span class="sr-only">이전 목록</span></a>
+								<a href="#" class="board-next"><span class="sr-only">다음 목록</span></a>
+								<a href="#" class="board-refresh"><span class="sr-only">목록 새로고침</span></a>
+							</div>
+						</div>
+					</div>
+					<!-- Co-Work //end -->
+				</div>
+			</div>
+			<!-- work 문서 포틀릿 //end -->
+			<!-- 상세일정 포틀릿 -->
+			<div class="portlet-box portal-schedule-detail">
+				<ul class="tabs">
+					<li class="tab"><a href="#schedule-detail-tab1">개인일정</a></li>
+					<li class="tab"><a href="#schedule-detail-tab2">부서일정</a></li>
+					<li class="tab"><a href="#schedule-detail-tab3">RI파트</a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- 개인일정 -->
+					<div class="tab-panel" id="schedule-detail-tab1">
+						<ul class="schedule-detail-wrap">
+							<li>
+								<dl>
+									<dt class="schedule-detail-title">
+										08.29(화)
+										<div class="selectbox">
+											<strong class="selectbox-value">시간</strong>
+											<select onchange="selectboxEvent(this);">
+												<option>시간</option>
+												<option>작성자</option>
+											</select>
+										</div>
+									</dt>
+									<dd class="schedule-detail-content">
+										<ul class="schedule-board-list tooltip">
+											<li><a href="#"><span>08:00~08:30</span> <small>[회의]</small>중국어</a></li>
+											<li><a href="#"><span>09:30~10:30</span> <small>[미팅]</small>업체미팅</a></li>
+											<li><a href="#"><span>11:00~11:30</span> <small>[미팅]</small>상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> <small>[미팅]</small>지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> <small>[세미나]</small>상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> <small>[회의]</small>지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> <small>[회의]</small>상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> <small>[미팅]</small>지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> <small>[세미나]</small>상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> <small>[회의]</small>지사방문</a></li>
+										</ul>
+									</dd>
+								</dl>
+								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+							</li>
+							<li>
+								<dl>
+									<dt class="schedule-detail-title">
+										08.29(화)
+										<div class="selectbox">
+											<strong class="selectbox-value">시간</strong>
+											<select onchange="selectboxEvent(this);">
+												<option>시간</option>
+												<option>작성자</option>
+											</select>
+										</div>
+									</dt>
+									<dd class="schedule-detail-content">
+										<ul class="schedule-board-list tooltip">
+											<li><a href="#"><span>08:00~08:30</span> 중국어</a></li>
+											<li><a href="#"><span>09:30~10:30</span> 업체미팅</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+										</ul>
+									</dd>
+								</dl>
+								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+							</li>
+							<li>
+								<dl>
+									<dt class="schedule-detail-title">
+										08.29(화)
+										<div class="selectbox">
+											<strong class="selectbox-value">시간</strong>
+											<select onchange="selectboxEvent(this);">
+												<option>시간</option>
+												<option>작성자</option>
+											</select>
+										</div>
+									</dt>
+									<dd class="schedule-detail-content">
+										<ul class="schedule-board-list tooltip">
+											<li><a href="#"><span>08:00~08:30</span> 중국어</a></li>
+											<li><a href="#"><span>09:30~10:30</span> 업체미팅</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+										</ul>
+									</dd>
+								</dl>
+								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+							</li>
+							<li>
+								<dl>
+									<dt class="schedule-detail-title">
+										08.29(화)
+										<div class="selectbox">
+											<strong class="selectbox-value">시간</strong>
+											<select onchange="selectboxEvent(this);">
+												<option>시간</option>
+												<option>작성자</option>
+											</select>
+										</div>
+									</dt>
+									<dd class="schedule-detail-content">
+										<ul class="schedule-board-list tooltip">
+											<li><a href="#"><span>08:00~08:30</span> <small>[회의]</small>중국어</a></li>
+											<li><a href="#"><span>09:30~10:30</span> <small>[미팅]</small>업체미팅</a></li>
+											<li><a href="#"><span>11:00~11:30</span> <small>[미팅]</small>상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> <small>[미팅]</small>지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> <small>[세미나]</small>상품기획1팀보고</a></li>
+										</ul>
+									</dd>
+								</dl>
+								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+							</li>
+							<li>
+								<dl>
+									<dt class="schedule-detail-title">
+										08.29(화)
+										<div class="selectbox">
+											<strong class="selectbox-value">시간</strong>
+											<select onchange="selectboxEvent(this);">
+												<option>시간</option>
+												<option>작성자</option>
+											</select>
+										</div>
+									</dt>
+									<dd class="schedule-detail-content"></dd>
+								</dl>
+								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+							</li>
+							<li>
+								<dl>
+									<dt class="schedule-detail-title">
+										08.29(화)
+										<div class="selectbox">
+											<strong class="selectbox-value">시간</strong>
+											<select onchange="selectboxEvent(this);">
+												<option>시간</option>
+												<option>작성자</option>
+											</select>
+										</div>
+									</dt>
+									<dd class="schedule-detail-content">
+										<ul class="schedule-board-list tooltip">
+											<li><a href="#"><span>08:00~08:30</span> 중국어</a></li>
+											<li><a href="#"><span>09:30~10:30</span> 업체미팅</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+											<li><a href="#"><span>11:00~11:30</span> 상품기획1팀보고</a></li>
+											<li><a href="#"><span>14:00~15:00</span> 지사방문</a></li>
+										</ul>
+									</dd>
+								</dl>
+								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- 개인일정 //end -->
+					<!-- 부서일정 -->
+					<div class="tab-panel" id="schedule-detail-tab2">
+						부서일정
+					</div>
+					<!-- 부서일정 //end -->
+					<!-- RI파트 -->
+					<div class="tab-panel" id="schedule-detail-tab3">
+						RI파트
+					</div>
+					<!-- RI파트 //end -->
+				</div>
+			</div>
+			<!-- 상세일정 포틀릿 //end -->
+		</div>
+		<div class="column-right">
+			<!-- 편리정보 -->
+			<div class="portlet-box user-information">
+				<div class="profile">
+					<div class="private">
+						<span class="user-name">
+							<strong>강태성</strong>님
+						</span>
+						<span>ICT전략실 정보관리팀</span>
+					</div>
+				</div>
+				<ul class="user-service">
+					<li class="service-item1">
+						<a href="#">메일</a>
+						<span class="item-count"><em>24</em></span>
+					</li>
+					<li class="service-item2">
+						<a href="#">결재</a>
+						<span class="item-count"><em>8</em></span>
+					</li>
+					<li class="service-item3">
+						<a href="#">수발신</a>
+						<span class="item-count"><em>11</em></span>
+					</li>
+					<li class="service-item4">
+						<a href="#">E-HR</a>
+						<span class="item-count"><em>7</em></span>
+					</li>
+					<li class="service-item5">
+						<a href="#">연차</a>
+						<span class="item-count"><em>NaN</em></span>
+					</li>
+					<li class="service-item6">
+						<a href="#">사회공헌</a>
+						<span class="item-count"><em>999</em></span>
+					</li>
+				</ul>
+				<div class="user-convenience">
+					<div class="convenience-head">
+						<ul class="convenience-tab tabs">
+							<li class="tab"><a href="#convenience-tab1">전자결재</a></li>
+							<li class="tab"><a href="#convenience-tab2">일정</a></li>
+							<li class="tab"><a href="#convenience-tab3">담당검색</a></li>
+							<li class="tab"><a href="#convenience-tab4">Co-Work</a></li>
+							<li class="tab"><a href="#convenience-tab5">주식</a></li>
+							<li class="tab"><a href="#convenience-tab6">환율</a></li>
+						</ul>
+						<a class="slide-arrow slide-prev" href="#">&lt;</a>
+						<a class="slide-arrow slide-next" href="#">&gt;</a>
+					</div>
+					<div class="tab-content">
+						<!-- 전자결재 -->
+						<div class="tab-panel" id="convenience-tab1">
+							<ul class="approval-list">
+								<li>
+									<i class="badge-report">상신</i>
+									<a href="#">STAF Fallow Up 교육 결재</a>
+									<p>
+										<span>기안 유수영/환경경영팀</span>
+										<small>07/04</small>
+									</p>
+								</li>
+								<li>
+									<i class="badge-pendency">미결</i>
+									<a href="#">자기선언문 발행의 건</a>
+									<p>
+										<span>기안 유수영/환경경영팀</span>
+										<small>06/30</small>
+									</p>
+								</li>
+								<li>
+									<i class="badge-return">반려</i>
+									<a href="#">HP-06EN 자기선언문 발행의건 발행의건 발행의건 발행의건 발행의건</a>
+									<p>
+										<span>기안 유수영/환경경영팀</span>
+										<small>06/23</small>
+									</p>
+								</li>
+								<li>
+									<i class="badge-approve">승인</i>
+									<a href="#">예산변동 : 부서</a>
+									<p>
+										<span>기안 유수영/환경경영팀</span>
+										<small>06/23</small>
+									</p>
+								</li>
+								<li>
+									<i class="badge-progress">진행</i>
+									<a href="#">결재문서입니다.</a>
+									<p>
+										<span>기안 유수영/환경경영팀</span>
+										<small>06/23</small>
+									</p>
+								</li>
+							</ul>
+							<!-- [D] 등록된 문서가 없을 경우 -->
+							<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
+						</div>
+						<!-- 전자결재 //end -->
+						<!-- 일정 -->
+						<div class="tab-panel" id="convenience-tab2">
+							<div class="convenience-schedule-head">
+								<strong>2017.08.18 (금)</strong>
+								<a href="#" class="btn-prev"><span class="sr-only">이전</span></a>
+								<a href="#" class="btn-next"><span class="sr-only">다음</span></a>
+								<a href="#" class="btn-register"><span class="sr-only">등록</span></a>
+							</div>
+							<ul class="dot-list convenience-schedule-list">
+								<li><a href="#">10:00~11:00 신상품 제품 리뷰</a></li>
+								<li><a href="#">13:00~14:00 대구 지사장 본사 내방</a></li>
+								<li><a href="#">15:30~16:30 1회용품 안쓰기 캠페인 관계자 미팅</a></li>
+								<li><a href="#">17:00~18:00 대구 지사장 본사 내방</a></li>
+							</ul>
+							<!-- [D] 일정이 없을 경우 -->
+							<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
+							<div class="convenience-search schedule-search">
+								<div class="selectbox">
+									<strong class="selectbox-value">13</strong>
+									<select onchange="selectboxEvent(this);">
+										<option>13</option>
+										<option>14</option>
+									</select>
+								</div>
+								<input type="text" class="form-control">
+								<a href="#" class="btn-search"><span class="sr-only">일정 검색</span></a>
+							</div>
+						</div>
+						<!-- 일정 //end -->
+						<!-- 담당검색 -->
+						<div class="tab-panel" id="convenience-tab3">
+							<div class="convenience-search worker-search">
+								<input type="text" class="form-control">
+								<a href="#" class="btn-search"><span class="sr-only">담당 검색</span></a>
+							</div>
+							<p class="convenience-search-result-text">총 <span>16</span>명이 검색 되었습니다.</p>
+							<ul class="convenience-search-result-list">
+								<li>
+									<a href="#">
+										<span>김이현</span>
+										<span>043-250-0251</span>
+										<span><em>전산</em>업무</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>김창준</span>
+										<span>059-0000</span>
+										<span><em>전산</em>지원</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>도현주</span>
+										<span>054-473-7301</span>
+										<span><em>전산</em>업무</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>박진영</span>
+										<span>062-710-6519</span>
+										<span><em>전산</em>,행정,교육,회계</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>박현진</span>
+										<span>031-294-4188</span>
+										<span>행정/<em>전산</em>업무</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>김이현</span>
+										<span>043-250-0251</span>
+										<span><em>전산</em>업무</span>
+									</a>
+								</li>
+							</ul>
+							<!-- [D] 등록된 문서가 없을 경우 -->
+							<!--<p class="no-content">검색결과가 없습니다.</p>-->
+						</div>
+						<!-- 담당검색 //end -->
+						<!-- Co-Work -->
+						<div class="tab-panel" id="convenience-tab4">
+							<ul class="dot-list convenience-cowork-list">
+								<li>
+									<a href="#">
+										<span class="work-title">그룹웨어 고도화</span>
+										<p class="worker">나민욱</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="work-title">결제시스템 업데이트</span>
+										<p class="worker">문현일, 강태성</p>
+									</a>
+								</li>
+							</ul>
+							<!-- [D] 등록된 문서가 없을 경우 -->
+							<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
+						</div>
+						<!-- Co-Work //end -->
+						<!-- 주식 -->
+						<div class="tab-panel" id="convenience-tab5">
+							<div class="stock">
+								<div class="stock-inner">주식</div>
+							</div>
+						</div>
+						<!-- 주식 //end -->
+						<!-- 환율 -->
+						<div class="tab-panel" id="convenience-tab6">
+							<div class="exchange">
+								<!--<iframe src="http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/16959_0.html" scrolling="no"></iframe>-->
+							</div>
+						</div>
+						<!-- 환율 //end -->
+					</div>
+				</div>
+			</div>
+			<!-- 편리정보 //end -->
+			<!-- 업무지원 -->
+			<div class="portlet-box work-support">
+				<ul class="tabs">
+					<li class="tab"><a href="#work-tab1">HUB 목록</a></li>
+					<li class="tab"><a href="#work-tab2">회의 목록</a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- HUB 목록 -->
+					<div class="tab-panel" id="work-tab1">
+
+					</div>
+					<!-- HUB 목록 //end -->
+					<!-- 회의 목록 -->
+					<div class="tab-panel" id="work-tab2">
+						회의 목록
+					</div>
+					<!-- 회의 목록 //end -->
+				</div>
+			</div>
+			<!-- 업무지원 //end -->
+			<!-- 요청받은 일정 -->
+			<div class="portlet-box schedule-information">
+				<ul class="tabs">
+					<li class="tab"><a href="#schedule-tab1">요청받은 일정</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-panel" id="schedule-tab1">
+						요청받은 일정
+					</div>
+				</div>
+				<div class="btn-schedule">
+					<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+					<a href="#" class="schedule-more"><span class="sr-only">일정 더보기</span></a>
+				</div>
+			</div>
+			<!-- 요청받은 일정 //end -->
+		</div>
+		<!-- 사용자 정보 레이어 -->
+		<div class="layer-wrap user-box user-profile-box">
+			<div class="user-image" style="background-image:url('../resources/images/temp/user2.jpg')"></div>
+			<ul class="user-account">
+				<li class="user-name"><strong>강태성</strong>님</li>
+				<li>ICT전략실 정보관리팀</li>
+			</ul>
+			<ul class="user-account-link">
+				<li class="info"><a href="#">정보</a></li>
+				<li class="mail"><a href="#">메일</a></li>
+				<li class="talk"><a href="#">대화</a></li>
+				<li class="company"><a href="#">회사</a></li>
+				<li class="cellphone"><a href="#">휴대폰</a></li>
+				<li class="message"><a href="#">쪽지</a></li>
+				<li class="sns"><a href="#">SNS</a></li>
+			</ul>
+			<a href="#" class="btn-close" onclick="layerClose(this);"></a>
+		</div>
+		<!-- 사용자 정보 레이어 //end -->
+		<!-- 일정 툴팁 -->
+		<div class="layer-wrap tooltip-box">
+			<span>중국어</span>
+			<ul>
+				<li>시간 : 08:00~08:30</li>
+				<li>장소 : 5층 회의실</li>
+				<li>내용 : 내용없음</li>
+			</ul>
+		</div>
+		<!-- 일정 툴팁 //end -->
+	</div>
+</div>
+</body>
+</html>

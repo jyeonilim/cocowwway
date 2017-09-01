@@ -123,9 +123,9 @@ $(document).ready(function() {
             windowHeight = $(window).height(),
             boxHeight = $(target).outerHeight(true);
         $(target).removeClass('reverse show');
-        $(target).addClass('show').css({'top':offset.top+25,'left':offset.left-98});
+        $(target).addClass('show').css({'top':offset.top+25,'left':offset.left-78});
         if(offset.top+boxHeight>windowHeight) {
-            $(target).addClass('reverse').css({'top':offset.top-155});
+            $(target).addClass('reverse').css({'top':offset.top-(boxHeight+5)});
         }
         $('.content').scroll(function() {
             $(target).fadeOut(300, function() {
@@ -137,15 +137,20 @@ $(document).ready(function() {
     // Tooltip
     $('.tooltip a').on('mouseover',function() {
         var target = $('.tooltip-box'),
-            offset = $(this).offset();
+            offset = $(this).offset(),
+            windowHeight = $(window).height(),
+            boxHeight = $(target).outerHeight(true);
+        $(target).removeClass('reverse');
         $(target).stop(true,true).fadeIn(300).css({'top':offset.top+25,'left':offset.left-14,'width':300});
+        if(offset.top+boxHeight>windowHeight) {
+            $(target).addClass('reverse').css({'top':offset.top-(boxHeight+5)});
+        }
     }).on('mouseleave',function() {
         $('.tooltip-box').fadeOut(300);
     });
-
     $('.schedule-divide .tooltip a').on('mouseover',function() {
         $('.tooltip-box').css('width',250);
-    })
+    });
 
     // Left Tree Scroll
     var leftScroll = (function () {
