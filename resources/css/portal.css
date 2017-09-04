@@ -32,6 +32,16 @@
     background-color: #fff;
     border: 1px solid #dee3eb;
 }
+.no-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 19px;
+    margin: auto;
+    text-align: center;
+}
 .column-left .tabs {
     padding: 12px 15px 10px;
 }
@@ -47,6 +57,7 @@
     color: #000;
 }
 .portal-board .tab-panel .tabs {
+    height: 34px;
     padding: 5px 20px 8px;
     background-color: #f7f7f9;
 }
@@ -76,12 +87,15 @@
 .board-list li > * {
     display: table-cell;
 }
-.board-list li .subject {
+.board-list li .subject, .board-list li .author {
     overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal !important;
+}
+.board-list li .subject {
+    padding-right: 10px;
 }
 .board-list li .subject:before {
     display: inline-block;
@@ -106,12 +120,16 @@
     color: #737373;
 }
 .board-list li .author {
-    width: 70px;
+    width: 90px;
     text-align: right;
     cursor: pointer;
 }
 .board-list li .date {
     width: 100px;
+    text-align: right;
+}
+.board-list li .size {
+    width: 70px;
     text-align: right;
 }
 .user-profile-box {
@@ -545,13 +563,16 @@
     display: block;
     width: auto;
     height: 34px;
-    padding: 7px 0 8px;
+    padding: 7px 18px 8px 0;
     text-align: center;
 }
 .tabs.convenience-tab .tab a {
-    padding: 0 18px 0 0;
-    border-bottom: 0;
+    /*padding: 0 18px 0 0;*/
+    /*border-bottom: 0;*/
     color: #666;
+}
+.tabs.convenience-tab .tab a.active {
+    padding-bottom: 5px;
 }
 .slide-arrow {
     position: absolute;
@@ -1063,6 +1084,9 @@
     vertical-align: 3px;
     content: '';
 }
+.schedule-board-list li small {
+    color: #ee761d;
+}
 .schedule-divide {
     margin: -7px -15px;
 }
@@ -1158,9 +1182,97 @@
     background: url("../images/sprite-icon.png") no-repeat -320px -160px;
     content: '';
 }
+.tooltip-box.reverse:before {
+    top: auto;
+    bottom: -6px;
+    background-position: -280px -160px;
+}
 .tooltip-box span {
     display: block;
     margin: 0 -7px 10px;
     padding: 0 7px 7px;
     border-bottom: 1px solid #dbe0e4;
+}
+
+/**********************************************
+    Work
+    *******************************************/
+.portal-schedule-detail {
+    position: relative;
+}
+.portal-schedule-detail .btn-board-more {
+    top: 0;
+}
+.portal-schedule-detail .tab-panel {
+    height: 450px;
+}
+.schedule-detail-wrap {}
+.schedule-detail-wrap:before, .schedule-detail-wrap:after {
+    display: table;
+    content: '';
+}
+.schedule-detail-wrap:after {
+    clear: both;
+}
+.schedule-detail-wrap > li {
+    position: relative;
+    float: left;
+    width: 33.33%;
+    border-left: 1px solid #e5e9ef;
+}
+.schedule-detail-wrap > li:nth-child(3n+1) {
+    border-left: 0;
+}
+.schedule-detail-wrap .schedule-register {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+.schedule-detail-title {
+    padding: 10px 0 8px;
+    background-color: #f2f4f7;
+    font: 700 14px 'NanumGothic', sans-serif;
+    color: #000;
+    text-align: center;
+}
+.schedule-detail-title .selectbox {
+    margin-left: 5px;
+}
+.schedule-detail-title .selectbox-value {
+    width: 74px;
+    background-color: #f2f4f7;
+}
+.schedule-detail-content {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 181px;
+    padding: 6px 15px;
+}
+/* HUB/회의 목록, 요청받은 일정 */
+.work-schedule {
+    position: relative;
+}
+.work-schedule .tab-panel {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 139px;
+    padding: 7px 16px;
+}
+.work-schedule-list li {
+    overflow: hidden;
+    padding: 3px 0;
+}
+.work-schedule-list li small {
+    float: right;
+    font-size: 11px;
+    color: #7d7d7d;
+}
+.request-option {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.request-option .selectbox {
+    width: 74px;
+    margin-right: 9px;
 }
