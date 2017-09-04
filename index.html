@@ -3,77 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>작업리스트</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./resources/css/common.css">
     <style type="text/css">
         .work-list{font-family:NotoSansKR,sans-serif;letter-spacing:0}
         .work-list .title{margin:20px 0 30px;font-weight:700;font-size:25px;text-align:center}
         .work-list a:hover{color:#004689;text-decoration:underline}
         .table{width:100%;border-collapse:collapse;border:1px solid #e1e1e1;border-top:2px solid #009ddc}
-        .table td,.table th{padding:10px 0;border:1px solid #e1e1e1;font-size:13px;vertical-align:middle}
-        .table thead th{background-color:rgba(0,157,220,.03);font-size:14px}
+        .table td,.table th{padding:10px 0;border:1px solid #e1e1e1;font-weight:400;font-size:13px;vertical-align:middle}
+        .table thead th{background-color:rgba(0,157,220,.03);font-weight:500;font-size:14px}
         .table td{font:300 13px NotoSansKR,sans-serif;text-align:center}
-        .table td.left{padding-left:15px;text-align:left}
+        /*.table td.left{padding-left:15px;text-align:left}*/
     </style>
 </head>
 <body>
-<div id="wrap" class="work-list">
+<div class="work-list">
     <h1 class="title">코웨이 퍼블리싱 리스트</h1>
     <table class="table">
         <thead>
         <tr>
-            <th>화면</th>
-            <th colspan="2">파일경로</th>
-            <th></th>
+            <th colspan="2">화면</th>
+            <th>파일경로</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <th colspan="2"><a href="layout/outer.html">header/footer</a></th>
-            <td><a href="layout/outer.html">outer.html</a></td>
-            <td class="left"></td>
+            <td><a href="layout/outer.html">layout/outer.html</a></td>
         </tr>
         <tr>
             <th rowspan="3">로그인</th>
             <td><a href="login/login.html">로그인</a></td>
-            <td><a href="login/login.html">login.html</a></td>
-            <td rowspan="3" class="left">
+            <td><a href="login/login.html">login/login.html</a></td>
+            <!--<td rowspan="3" class="left">-->
                 <!--<ul class="notify-list">-->
                     <!--<li><a href="#"></a></li>-->
                     <!--<li><a href="#"></a></li>-->
                 <!--</ul>-->
-            </td>
+            <!--</td>-->
         </tr>
         <tr>
             <td><a href="login/logout.html">로그아웃</a></td>
-            <td><a href="login/logout.html">logout.html</a></td>
+            <td><a href="login/logout.html">login/logout.html</a></td>
         </tr>
         <tr>
             <td><a href="login/login-mini.html">작은 로그인</a></td>
-            <td><a href="login/login-mini.html">login-mini.html</a></td>
+            <td><a href="login/login-mini.html">login/login-mini.html</a></td>
         </tr>
         <tr>
             <th rowspan="2">포탈</th>
             <td><a href="portal/portal.html">포탈</a></td>
-            <td><a href="portal/portal.html">portal.html</a></td>
-            <td rowspan="2" class="left"></td>
+            <td><a href="portal/portal.html">portal/portal.html</a></td>
+            <!--<td rowspan="2" class="left"></td>-->
         </tr>
         <tr>
             <td><a href="portal/work.html">Work</a></td>
-            <td><a href="portal/work.html">work.html</a></td>
+            <td><a href="portal/work.html">portal/work.html</a></td>
         </tr>
         <tr>
             <th rowspan="3">메일</th>
             <td><a href="mail/mail-list.html">목록</a></td>
-            <td><a href="mail/mail-list.html">mail-list.html</a></td>
-            <td rowspan="3" class="left"></td>
+            <td><a href="mail/mail-list.html">mail/mail-list.html</a></td>
+            <!--<td rowspan="3" class="left"></td>-->
         </tr>
         <tr>
             <td><a href="mail/mail-view.html">상세보기</a></td>
-            <td><a href="mail/mail-view.html">mail-view.html</a></td>
+            <td><a href="mail/mail-view.html">mail/mail-view.html</a></td>
         </tr>
         <tr>
             <td><a href="mail/mail-write.html">쓰기</a></td>
-            <td><a href="mail/mail-write.html">mail-write.html</a></td>
+            <td><a href="mail/mail-write.html">mail/mail-write.html</a></td>
         </tr>
         </tbody>
     </table>
