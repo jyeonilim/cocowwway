@@ -1126,13 +1126,13 @@ body {
 }
 
 /* dhtmlx 스타일 변경 */
-#tree_sample table {
+#tree_area table {
     width: 100%;
 }
-#tree_sample span.standartTreeRow {
+#tree_area span.standartTreeRow {
     width: 100% !important;
 }
-#tree_sample .standartTreeRow {
+#tree_area .standartTreeRow {
     font-family: 'NotoSansKR', sans-serif;
 }
 
