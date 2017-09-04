@@ -32,6 +32,16 @@
     background-color: #fff;
     border: 1px solid #dee3eb;
 }
+.no-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 19px;
+    margin: auto;
+    text-align: center;
+}
 .column-left .tabs {
     padding: 12px 15px 10px;
 }
@@ -532,13 +542,16 @@
     display: block;
     width: auto;
     height: 34px;
-    padding: 7px 0 8px;
+    padding: 7px 18px 8px 0;
     text-align: center;
 }
 .tabs.convenience-tab .tab a {
-    padding: 0 18px 0 0;
-    border-bottom: 0;
+    /*padding: 0 18px 0 0;*/
+    /*border-bottom: 0;*/
     color: #666;
+}
+.tabs.convenience-tab .tab a.active {
+    padding-bottom: 5px;
 }
 .slide-arrow {
     position: absolute;
@@ -1029,6 +1042,12 @@
 /**********************************************
     Work
     *******************************************/
+.portal-schedule-detail {
+    position: relative;
+}
+.portal-schedule-detail .btn-board-more {
+    top: 0;
+}
 .portal-schedule-detail .tab-panel {
     height: 450px;
 }
@@ -1053,14 +1072,12 @@
     position: absolute;
     top: 13px;
     right: 15px;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url("../images/sprite-icon.png") no-repeat -360px -80px;
 }
 .schedule-detail-title {
     padding: 10px 0 8px;
     background-color: #f2f4f7;
+    font: 700 14px 'NanumGothic', sans-serif;
+    color: #000;
     text-align: center;
 }
 .schedule-detail-title .selectbox {
@@ -1068,7 +1085,6 @@
 }
 .schedule-detail-title .selectbox-value {
     width: 74px;
-    padding: 0 25px 0 10px;
     background-color: #f2f4f7;
 }
 .schedule-detail-content {
@@ -1076,4 +1092,32 @@
     overflow-y: auto;
     height: 181px;
     padding: 6px 15px;
+}
+/* HUB/회의 목록, 요청받은 일정 */
+.work-schedule {
+    position: relative;
+}
+.work-schedule .tab-panel {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 139px;
+    padding: 7px 16px;
+}
+.work-schedule-list li {
+    overflow: hidden;
+    padding: 3px 0;
+}
+.work-schedule-list li small {
+    float: right;
+    font-size: 11px;
+    color: #7d7d7d;
+}
+.request-option {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.request-option .selectbox {
+    width: 74px;
+    margin-right: 9px;
 }

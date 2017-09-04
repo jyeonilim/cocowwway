@@ -180,6 +180,11 @@ table {
     height: 19px;
     background-position: -320px -80px;
 }
+.icon-register {
+    width: 16px;
+    height: 16px;
+    background-position: -360px -80px;
+}
 .icon-set-sm {
     width: 14px;
     height: 14px;
@@ -384,7 +389,7 @@ textarea.form-control {
 }
 .selectbox .selectbox-value {
     display: block;
-    padding: 0 35px 0 15px;
+    padding: 0 25px 0 10px;
     background-color: #fff;
     font-weight: 400;
     line-height: 1.85;

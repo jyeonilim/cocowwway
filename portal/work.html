@@ -38,7 +38,7 @@
 									<ul class="board-list">
 										<li>
 											<p class="subject today">
-												<a href="#">FW: Re : 메일 본문 꺠지는 오류</a>
+												<a href="#">FW: Re : 메일 본문 깨지는 오류</a>
 											</p>
 											<span class="author">성영걸</span>
 											<span class="date">2017.07.04</span>
@@ -117,12 +117,13 @@
 											<span class="size">8MB</span>
 										</li>
 									</ul>
+									<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
 								</div>
 								<div class="tab-panel" id="board-tab1-2">
-									수신메일
+									<p class="no-content">등록된 문서가 없습니다.</p>
 								</div>
 								<div class="tab-panel" id="board-tab1-3">
-									발신메일
+									<p class="no-content">등록된 문서가 없습니다.</p>
 								</div>
 							</div>
 							<div class="btn-board-more">
@@ -223,7 +224,7 @@
 										</ul>
 									</dd>
 								</dl>
-								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+								<a href="#" class="schedule-register"><i class="icon-register">일정 등록</i></a>
 							</li>
 							<li>
 								<dl>
@@ -252,7 +253,7 @@
 										</ul>
 									</dd>
 								</dl>
-								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+								<a href="#" class="schedule-register"><i class="icon-register">일정 등록</i></a>
 							</li>
 							<li>
 								<dl>
@@ -281,7 +282,7 @@
 										</ul>
 									</dd>
 								</dl>
-								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+								<a href="#" class="schedule-register"><i class="icon-register">일정 등록</i></a>
 							</li>
 							<li>
 								<dl>
@@ -305,7 +306,7 @@
 										</ul>
 									</dd>
 								</dl>
-								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+								<a href="#" class="schedule-register"><i class="icon-register">일정 등록</i></a>
 							</li>
 							<li>
 								<dl>
@@ -321,7 +322,7 @@
 									</dt>
 									<dd class="schedule-detail-content"></dd>
 								</dl>
-								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+								<a href="#" class="schedule-register"><i class="icon-register">일정 등록</i></a>
 							</li>
 							<li>
 								<dl>
@@ -346,7 +347,7 @@
 										</ul>
 									</dd>
 								</dl>
-								<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
+								<a href="#" class="schedule-register"><i class="icon-register">일정 등록</i></a>
 							</li>
 						</ul>
 					</div>
@@ -361,6 +362,10 @@
 						RI파트
 					</div>
 					<!-- RI파트 //end -->
+				</div>
+				<div class="btn-board-more">
+					<a href="#"><i class="icon-register">일정 등록</i></a>
+					<a href="#"><i class="icon-set">환경설정</i></a>
 				</div>
 			</div>
 			<!-- 상세일정 포틀릿 //end -->
@@ -586,8 +591,8 @@
 				</div>
 			</div>
 			<!-- 편리정보 //end -->
-			<!-- 업무지원 -->
-			<div class="portlet-box work-support">
+			<!-- HUB/회의 목록 -->
+			<div class="portlet-box work-schedule">
 				<ul class="tabs">
 					<li class="tab"><a href="#work-tab1">HUB 목록</a></li>
 					<li class="tab"><a href="#work-tab2">회의 목록</a></li>
@@ -595,30 +600,44 @@
 				<div class="tab-content">
 					<!-- HUB 목록 -->
 					<div class="tab-panel" id="work-tab1">
-
+						<ul class="dot-list work-schedule-list">
+							<li><a href="#"><span>정보관리팀 주간보고</span><small>09/04</small></a></li>
+							<li><a href="#"><span>정보관리팀 주간보고</span><small>09/04</small></a></li>
+							<li><a href="#"><span>정보관리팀 주간보고</span><small>09/04</small></a></li>
+						</ul>
+						<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
 					</div>
 					<!-- HUB 목록 //end -->
 					<!-- 회의 목록 -->
 					<div class="tab-panel" id="work-tab2">
-						회의 목록
+						<p class="no-content">등록된 문서가 없습니다.</p>
 					</div>
 					<!-- 회의 목록 //end -->
 				</div>
 			</div>
-			<!-- 업무지원 //end -->
+			<!-- HUB/회의 목록 //end -->
 			<!-- 요청받은 일정 -->
-			<div class="portlet-box schedule-information">
+			<div class="portlet-box work-schedule">
 				<ul class="tabs">
 					<li class="tab"><a href="#schedule-tab1">요청받은 일정</a></li>
 				</ul>
 				<div class="tab-content">
 					<div class="tab-panel" id="schedule-tab1">
-						요청받은 일정
+						<ul class="dot-list work-schedule-list">
+							<li><a href="#"><span>[코웨이] 메신저 대화 오류</span><small>09/04</small></a></li>
+						</ul>
+						<!--<p class="no-content">등록된 문서가 없습니다.</p>-->
 					</div>
 				</div>
-				<div class="btn-schedule">
-					<a href="#" class="schedule-register"><span class="sr-only">일정 등록</span></a>
-					<a href="#" class="schedule-more"><span class="sr-only">일정 더보기</span></a>
+				<div class="request-option">
+					<div class="selectbox">
+						<strong class="selectbox-value">대기</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>대기</option>
+							<option>옵션</option>
+						</select>
+					</div>
+					<a href="#" class="btn-set"><i class="icon-set">환경설정</i></a>
 				</div>
 			</div>
 			<!-- 요청받은 일정 //end -->
