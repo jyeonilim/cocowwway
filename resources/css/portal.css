@@ -114,6 +114,9 @@
     width: 100px;
     text-align: right;
 }
+.user-profile-box {
+    width: 100%;
+}
 .user-profile-box:before {
     left: 0;
     right: 0;
@@ -125,16 +128,22 @@
     background-position: -280px -200px;
 }
 .user-account-link {
-    overflow: hidden;
-    width: 100%;
+    display: inline-block;
     padding: 5px 8px 3px;
     border-top: 1px solid #ebebeb;
     background-color: #f7f7f9;
+    font-size: 0;
 }
 .user-account-link > li {
-    float: left;
-    width: 40px;
+    display: inline-block;
+    width: 37px;
     text-align: center;
+}
+.user-account-link > li.mail-search, .user-account-link > li.all-reply {
+    width: 47px;
+}
+.user-account-link > li.add-address {
+    width: 57px;
 }
 .user-account-link > li a {
     font-size: 12px;
@@ -142,8 +151,8 @@
 }
 .user-account-link > li a:before {
     display: block;
-    width: 24px;
-    height: 23px;
+    width: 30px;
+    height: 24px;
     margin: 0 auto;
     background: url("../images/sprite-icon.png") no-repeat 0 0;
     content: '';
@@ -168,6 +177,18 @@
 }
 .user-account-link > li.sns a:before {
     background-position: -240px -160px;
+}
+.user-account-link > li.mail-search a:before {
+    background-position: 0 -200px;
+}
+.user-account-link > li.reply a:before {
+    background-position: -40px -200px;
+}
+.user-account-link > li.all-reply a:before {
+    background-position: -80px -200px;
+}
+.user-account-link > li.add-address a:before {
+    background-position: -120px -200px;
 }
 .tab-panel {
     position: relative;
@@ -814,30 +835,164 @@
     background: #e7eaf0 url("../images/sprite-quick-icon.png") no-repeat 0 0;
     content: '';
 }
-.my-quick-list li.work-quick1 a:before { /*영업*/
+.my-quick-list li.work-quick1 a:before { /*법무관리*/
      background-position: 0 0;
 }
-.my-quick-list li.work-quick2 a:before { /*경영지원*/
+.my-quick-list li.work-quick2 a:before { /*윤리제보*/
     background-position: -50px 0;
 }
-.my-quick-list li.work-quick3 a:before { /*혁신포탈*/
+.my-quick-list li.work-quick3 a:before { /*상상오션*/
     background-position: -100px 0;
 }
-.my-quick-list li.work-quick4 a:before { /*웹전표*/
+.my-quick-list li.work-quick4 a:before { /*지식오션*/
     background-position: -150px 0;
 }
-.my-quick-list li.work-quick5 a:before { /*법무서비스*/
+.my-quick-list li.work-quick5 a:before { /*프로세스포탈*/
     background-position: -200px 0;
 }
-.my-quick-list li.work-quick6 a:before { /*출장*/
+.my-quick-list li.work-quick6 a:before { /*I.Q.BLUE*/
     background-position: -250px 0;
 }
-.my-quick-list li.work-quick7 a:before { /*총무*/
+.my-quick-list li.work-quick7 a:before { /*상생포탈*/
     background-position: -300px 0;
 }
-.my-quick-list li.work-quick8 a:before { /*규정관리*/
+.my-quick-list li.work-quick8 a:before { /*수처리경영관리*/
     background-position: -350px 0;
 }
+.my-quick-list li.work-quick9 a:before { /*스마트헬프*/
+    background-position: -400px 0;
+}
+.my-quick-list li.work-quick10 a:before { /*CICS*/
+    background-position: -450px 0;
+}
+
+.my-quick-list li.work-quick11 a:before { /*CM비즈링*/
+    background-position: 0 -50px;
+}
+.my-quick-list li.work-quick12 a:before { /*C Library*/
+    background-position: -50px -50px;
+}
+.my-quick-list li.work-quick13 a:before { /*신의눈*/
+    background-position: -100px -50px;
+}
+.my-quick-list li.work-quick14 a:before { /*영업정보*/
+    background-position: -150px -50px;
+}
+.my-quick-list li.work-quick15 a:before { /*과정관리*/
+    background-position: -200px -50px;
+}
+.my-quick-list li.work-quick16 a:before { /*소리숲*/
+    background-position: -250px -50px;
+}
+.my-quick-list li.work-quick17 a:before { /*홈케어과정관리*/
+    background-position: -300px -50px;
+}
+.my-quick-list li.work-quick18 a:before { /*BIS*/
+    background-position: -350px -50px;
+}
+.my-quick-list li.work-quick19 a:before { /*러닝센터*/
+    background-position: -400px -50px;
+}
+.my-quick-list li.work-quick20 a:before { /*코웨e-캠퍼스*/
+    background-position: -450px -50px;
+}
+
+.my-quick-list li.work-quick21 a:before { /*복지몰*/
+    background-position: 0 -50px;
+}
+.my-quick-list li.work-quick22 a:before { /*고충상담*/
+    background-position: -50px -50px;
+}
+.my-quick-list li.work-quick23 a:before { /*하트콘*/
+    background-position: -100px -50px;
+}
+.my-quick-list li.work-quick24 a:before { /*웹전표처리*/
+    background-position: -150px -50px;
+}
+.my-quick-list li.work-quick25 a:before { /*IR*/
+    background-position: -200px -50px;
+}
+.my-quick-list li.work-quick26 a:before { /*경영지원*/
+    background-position: -250px -50px;
+}
+.my-quick-list li.work-quick27 a:before { /*재무정보*/
+    background-position: -300px -50px;
+}
+.my-quick-list li.work-quick28 a:before { /*총무지원*/
+    background-position: -350px -50px;
+}
+.my-quick-list li.work-quick29 a:before { /*직원몰*/
+    background-position: -400px -50px;
+}
+.my-quick-list li.work-quick30 a:before { /*KMRO*/
+    background-position: -450px -50px;
+}
+
+.my-quick-list li.work-quick31 a:before { /*출장시스템*/
+    background-position: 0 -50px;
+}
+.my-quick-list li.work-quick32 a:before { /*레드캡투어*/
+    background-position: -50px -50px;
+}
+.my-quick-list li.work-quick33 a:before { /*Q-TAS*/
+    background-position: -100px -50px;
+}
+.my-quick-list li.work-quick34 a:before { /*해외사용환경맵시스템*/
+    background-position: -150px -50px;
+}
+.my-quick-list li.work-quick35 a:before { /*OCMS*/
+    background-position: -200px -50px;
+}
+.my-quick-list li.work-quick36 a:before { /*FMEA*/
+    background-position: -250px -50px;
+}
+.my-quick-list li.work-quick37 a:before { /*뉴스스크랩*/
+    background-position: -300px -50px;
+}
+.my-quick-list li.work-quick38 a:before { /*방송홍보자료실*/
+    background-position: -350px -50px;
+}
+.my-quick-list li.work-quick39 a:before { /*코러스*/
+    background-position: -400px -50px;
+}
+.my-quick-list li.work-quick40 a:before { /*사회공헌*/
+    background-position: -450px -50px;
+}
+
+.my-quick-list li.work-quick41 a:before { /*대외협회 및 기관관리*/
+    background-position: 0 -50px;
+}
+.my-quick-list li.work-quick42 a:before { /*PR자료집*/
+    background-position: -50px -50px;
+}
+.my-quick-list li.work-quick43 a:before { /*홍보요청서*/
+    background-position: -100px -50px;
+}
+.my-quick-list li.work-quick44 a:before { /*언론제보시스템*/
+    background-position: -150px -50px;
+}
+.my-quick-list li.work-quick45 a:before { /*ESH*/
+    background-position: -200px -50px;
+}
+.my-quick-list li.work-quick46 a:before { /*웹팩스*/
+    background-position: -250px -50px;
+}
+.my-quick-list li.work-quick47 a:before { /*스캔서버*/
+    background-position: -300px -50px;
+}
+.my-quick-list li.work-quick48 a:before { /*보안인증센터*/
+    background-position: -350px -50px;
+}
+.my-quick-list li.work-quick49 a:before { /*정보보호포탈*/
+    background-position: -400px -50px;
+}
+.my-quick-list li.work-quick50 a:before { /*웹하드*/
+    background-position: -450px -50px;
+}
+.my-quick-list li.work-quick51 a:before { /*정보보호제보시스템*/
+    background-position: -450px -50px;
+}
+
 .my-quick-list .need-login:after {
     position: absolute;
     top: 10px;

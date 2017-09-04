@@ -123,14 +123,16 @@ $(document).ready(function() {
             windowHeight = $(window).height(),
             boxHeight = $(target).outerHeight(true);
         $(target).removeClass('reverse show');
-        $(target).addClass('show').css({'top':offset.top+25,'left':offset.left-98});
+        $(target).addClass('show');
+        var itemWidth = $('.user-account-link').outerWidth(true);
+        $(target).css({'top':offset.top+25,'left':offset.left+50,'width':itemWidth+2,'margin-left':-itemWidth/2});
         if(offset.top+boxHeight>windowHeight) {
             $(target).addClass('reverse').css({'top':offset.top-155});
         }
         $('.content').scroll(function() {
-            $(target).fadeOut(300, function() {
-                $(this).removeClass('show');
-            });
+            // $(target).fadeOut(300, function() {
+                $(target).removeClass('show');
+            // });
         });
     });
 
