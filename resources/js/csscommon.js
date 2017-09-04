@@ -125,7 +125,7 @@ $(document).ready(function() {
         $(target).removeClass('reverse show');
         $(target).addClass('show');
         var itemWidth = $('.user-account-link').outerWidth(true);
-        $(target).css({'top':offset.top+25,'left':offset.left+50,'width':itemWidth+2,'margin-left':-itemWidth/2});
+        $(target).css({'top':offset.top+25,'left':offset.left+70,'width':itemWidth+2,'margin-left':-itemWidth/2});
         if(offset.top+boxHeight>windowHeight) {
             $(target).addClass('reverse').css({'top':offset.top-(boxHeight+5)});
         }
