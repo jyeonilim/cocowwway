@@ -720,6 +720,9 @@ body {
     margin-bottom: 7px;
     font-size: 15px;
 }
+.user-account .user-name #DismyName {
+    vertical-align: sub;
+}
 .user-account .user-name strong {
     color: #1f1f1f;
 }

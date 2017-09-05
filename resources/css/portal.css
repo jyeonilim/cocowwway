@@ -132,7 +132,7 @@
     width: 70px;
     text-align: right;
 }
-.user-profile-box {
+.user-profile-box, .user-profile-box iframe {
     width: 100%;
 }
 .user-profile-box:before {
