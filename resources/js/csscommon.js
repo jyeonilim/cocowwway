@@ -158,8 +158,13 @@ $(document).ready(function() {
     var leftScroll = (function () {
         var contentHeight = $('.content-inner').height(),
             headHeight = $('.left-head').outerHeight(true),
-            footHeight = $('.left-foot').outerHeight(true);
-        $('.left-body').height(contentHeight-(headHeight+footHeight));
+            footHeight = $('.left-foot').outerHeight(true),
+            hasMail = $('.left-head div').hasClass('mail-type');
+        if(hasMail===true) {
+            $('.left-body').height(contentHeight-((headHeight+5)+footHeight));
+        } else  {
+            $('.left-body').height(contentHeight-((headHeight+3)+footHeight));
+        }
     });
     $(document).ready(leftScroll);
     $(window).resize(leftScroll);

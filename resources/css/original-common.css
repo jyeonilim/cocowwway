@@ -509,6 +509,7 @@ body {
     Common
     *******************************************/
 .sub-title {
+    padding-bottom: 8px;
     font-weight: 500;
     font-size: 18px;
     color: #00a7e4;
@@ -1055,16 +1056,12 @@ body {
     overflow-y: auto;
 }
 .left-head {
-    height: 166px;
     padding: 12px 12px 0;
-}
-.left-head .btn-block-group {
-    margin-top: 8px;
+    border-bottom: 1px solid #dee3eb;
 }
 .mail-type {
     margin: 10px -12px 0;
     border-top: 1px solid #dee3eb;
-    border-bottom: 1px solid #dee3eb;
     font-size: 0;
 }
 .mail-type a {
