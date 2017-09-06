@@ -65,7 +65,7 @@ $(document).ready(function() {
 
     // 푸터 하단 결재작성 레이어 띄우기
     $('.write-approval > a').on('click',function () {
-        $('.write-approval-box').toggleClass('show');
+        $('.write-approval-box').toggle();
         return false;
     });
 
@@ -118,21 +118,18 @@ $(document).ready(function() {
     });
 
     $('.board-list .author').on('click', function () {
-        var target = $('.user-profile-box'),
+        var $target = $('.user-profile-box'),
             offset = $(this).offset(),
             windowHeight = $(window).height(),
-            boxHeight = $(target).outerHeight(true);
-        $(target).removeClass('reverse show');
-        $(target).addClass('show');
+            boxHeight = $target.outerHeight(true);
+        $target.removeClass('reverse').show();
         var itemWidth = $('.user-account-link').outerWidth(true);
-        $(target).css({'top':offset.top+25,'left':offset.left+70,'width':itemWidth+2,'margin-left':-itemWidth/2});
+        $target.css({'top':offset.top+25,'left':offset.left+70,'width':itemWidth+2,'margin-left':-itemWidth/2});
         if(offset.top+boxHeight>windowHeight) {
-            $(target).addClass('reverse').css({'top':offset.top-(boxHeight+5)});
+            $target.addClass('reverse').css({'top':offset.top-(boxHeight+5)});
         }
         $('.content').scroll(function() {
-            // $(target).fadeOut(300, function() {
-                $(target).removeClass('show');
-            // });
+            $target.fadeOut(300);
         });
     });
 
@@ -196,6 +193,6 @@ function selectboxEvent(target) {
 // }
 function layerClose(layer) {
     var $this = $(layer);
-    $this.parent('.layer-wrap').removeClass('show');
+    $this.parent('.layer-wrap').hide();
     return false;
 }
