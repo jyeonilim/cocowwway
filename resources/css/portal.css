@@ -1248,7 +1248,7 @@
 .schedule-detail-title {
     padding: 10px 0 8px;
     background-color: #f2f4f7;
-    font: 700 14px 'NanumGothic', sans-serif;
+    font: 700 14px/1.93 'NanumGothic', sans-serif;
     color: #000;
     text-align: center;
 }
@@ -1256,7 +1256,7 @@
     margin-left: 5px;
 }
 .schedule-detail-title .selectbox-value {
-    width: 74px;
+    width: 80px;
     background-color: #f2f4f7;
 }
 .schedule-detail-content {
