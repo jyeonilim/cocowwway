@@ -159,8 +159,10 @@ $(document).ready(function() {
             hasMail = $('.left-head div').hasClass('mail-type');
         if(hasMail===true) {
             $('.left-body').height(contentHeight-((headHeight+5)+footHeight));
+            $("#tree_area").height($('.left-body').height());
         } else  {
             $('.left-body').height(contentHeight-((headHeight+3)+footHeight));
+            $("#tree_area").height($('.left-body').height());
         }
     });
     $(document).ready(leftScroll);
