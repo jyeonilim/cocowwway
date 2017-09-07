@@ -126,22 +126,18 @@
     border-right: 4px solid transparent;
     border-top: 6px solid #949494;
 }
+.form-item-wrap {
+    padding: 13px;
+}
 .form-item {
-     padding: 13px;
- }
-.item {
-    display: table;
     width: 100%;
-    min-height: 34px;
-    padding: 4px 0;
 }
 .item > .item-label,
 .item > .item-input {
-    display: table-cell;
     vertical-align: top;
 }
 .item > .item-label {
-    padding-top: 3px;
+    padding-top: 7px;
 }
 .btn-hidden-view {
     position: relative;
@@ -181,7 +177,7 @@
     vertical-align: -2px;
 }
 .item-input {
-    padding-right: 51px;
+    padding: 4px 51px 4px 0;
 }
 .item-input .form-control {
     height: 26px;
@@ -192,6 +188,7 @@
     border-color: #00a7e4;
 }
 .item-input textarea.form-control {
+    display: block;
     height: 26px;
     resize: vertical;
 }
@@ -206,7 +203,7 @@
     display: none;
 }
 .item-bcc.on {
-    display: table;
+    display: table-row;
 }
 .attach-box {
     display: none;

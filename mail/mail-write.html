@@ -17,8 +17,6 @@
             var contentScroll = (function () {
                 var contentHeight = $('.content-inner').height(),
                     headHeight = $('.form-head').outerHeight(true);
-                console.log(contentHeight);
-                console.log(headHeight);
                 $('.form-body').height(contentHeight-headHeight);
             });
             $(document).ready(contentScroll);
@@ -87,65 +85,67 @@
 				<!-- Mail Head //end -->
 				<!-- Mail Body -->
 				<div class="form-body">
-					<ul class="form-item">
-						<li class="item">
-							<div class="item-label">
-								<strong class="label">받는사람</strong>
-								<span>
-									<input type="checkbox" id="checkMe">
-									<label for="checkMe">나에게</label>
-								</span>
-							</div>
-							<div class="item-input">
-								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
-								<label for="to" class="sr-only">받는사람 주소 입력</label>
-								<textarea class="form-control" cols="1" id="to"></textarea>
-							</div>
-						</li>
-						<li class="item">
-							<div class="item-label">
-								<strong class="label">참조</strong>
-								<a href="#" class="btn-hidden-view bcc-view"><span class="sr-only">비밀참조 보기</span></a>
-							</div>
-							<div class="item-input">
-								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
-								<label for="cc" class="sr-only">참조 주소 입력</label>
-								<textarea class="form-control" id="cc"></textarea>
-							</div>
-						</li>
-						<li class="item item-bcc">
-							<div class="item-label">
-								<strong class="label">비밀참조</strong>
-							</div>
-							<div class="item-input">
-								<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
-								<label for="bcc" class="sr-only">비밀참조 주소 입력</label>
-								<textarea class="form-control" id="bcc"></textarea>
-							</div>
-						</li>
-						<li class="item">
-							<div class="item-label">
-								<strong class="label">제목</strong>
-								<span>
-									<input type="checkbox" id="checkImportant">
-									<label for="checkImportant">중요</label>
-								</span>
-							</div>
-							<div class="item-input item-input-wrap">
-								<label for="subject" class="sr-only">제목 입력</label>
-								<input type="text" class="form-control" id="subject">
-							</div>
-						</li>
-						<li class="item">
-							<div class="item-label">
-								<strong class="label">파일첨부</strong>
-								<a href="#" class="btn-hidden-view attach-view"><span class="sr-only">파일첨부 열기</span></a>
-							</div>
-							<div class="item-input item-input-wrap">
-								<div class="attach-box">파일첨부 영역</div>
-							</div>
-						</li>
-					</ul>
+					<div class="form-item-wrap">
+						<table class="form-item">
+							<tr class="item">
+								<td class="item-label">
+									<strong class="label">받는사람</strong>
+									<span>
+										<input type="checkbox" id="checkMe">
+										<label for="checkMe">나에게</label>
+									</span>
+								</td>
+								<td class="item-input">
+									<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+									<label for="to" class="sr-only">받는사람 주소 입력</label>
+									<textarea class="form-control" cols="1" id="to"></textarea>
+								</td>
+							</tr>
+							<tr class="item">
+								<td class="item-label">
+									<strong class="label">참조</strong>
+									<a href="#" class="btn-hidden-view bcc-view"><span class="sr-only">비밀참조 보기</span></a>
+								</td>
+								<td class="item-input">
+									<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+									<label for="cc" class="sr-only">참조 주소 입력</label>
+									<textarea class="form-control" id="cc"></textarea>
+								</td>
+							</tr>
+							<tr class="item item-bcc">
+								<td class="item-label">
+									<strong class="label">비밀참조</strong>
+								</td>
+								<td class="item-input">
+									<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+									<label for="bcc" class="sr-only">비밀참조 주소 입력</label>
+									<textarea class="form-control" id="bcc"></textarea>
+								</td>
+							</tr>
+							<tr class="item">
+								<td class="item-label">
+									<strong class="label">제목</strong>
+									<span>
+										<input type="checkbox" id="checkImportant">
+										<label for="checkImportant">중요</label>
+									</span>
+								</td>
+								<td class="item-input item-input-wrap">
+									<label for="subject" class="sr-only">제목 입력</label>
+									<input type="text" class="form-control" id="subject">
+								</td>
+							</tr>
+							<tr class="item">
+								<td class="item-label">
+									<strong class="label">파일첨부</strong>
+									<a href="#" class="btn-hidden-view attach-view"><span class="sr-only">파일첨부 열기</span></a>
+								</td>
+								<td class="item-input item-input-wrap">
+									<div class="attach-box">파일첨부 영역</div>
+								</td>
+							</tr>
+						</table>
+					</div>
 					<div class="form-content">메일 에디터 영역</div>
 				</div>
 				<!-- Mail Body //end -->
