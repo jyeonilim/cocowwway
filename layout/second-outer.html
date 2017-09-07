@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>코웨이</title>
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/second-common.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $(".menu > li > a").on({
+                'mouseenter focusin': function() {
+                    var hasMenu = $(this).closest('li').hasClass('menu-child-after');
+                    if (hasMenu === true) {
+                        $('.menu-child-after-box').show();
+                    } else {
+                        $('.menu-child-after-box').hide();
+                    }
+                },
+                'focusout mouseleave': function() {
+                    $(this).siblings('.menu-child').fadeTo(50, 0, function() {
+                        $('.menu-child-after-box').hide();
+                    });
+                }
+            });
+            $(document)
+                .on('mouseleave', '.menu-child.open', function(){
+                    $('.menu-child-after-box').hide();
+                });
+		});
+	</script>
+</head>
+<body class="">
+<div class="wrap">
+	<!-- Header -->
+	<div class="header">
+		<div class="header-top">
+			<h1 class="brand-slogan"><a href="#"><span class="sr-only">착한믿음/환경을 건강하게, 사람을 행복하게/The Life Care Company</span></a></h1>
+			<ul class="quick-access">
+				<li class="quick-search">
+					<a href="#"><span class="sr-only">검색</span></a>
+					<div class="search-box">
+						<div class="selectbox">
+							<strong class="selectbox-value">통합검색</strong>
+							<select id="companyCode" onchange="selectboxEvent(this);">
+								<option>통합검색</option>
+								<option>직원검색</option>
+							</select>
+						</div>
+						<div class="search-input">
+							<input type="text" class="form-control">
+						</div>
+					</div>
+				</li>
+				<li class="quick-folder"><a href="#"><span class="sr-only">팝업관리</span><span class="badge-unit">1<span class="badge-unit-right"></span></span></a></li>
+				<li class="quick-help"><a href="#"><span class="sr-only">도움말</span></a></li>
+				<li class="quick-administrator"><a href="#"><span class="sr-only">관리자</span></a></li>
+				<li class="quick-configuration"><a href="#"><span class="sr-only">환경설정</span></a></li>
+				<li class="quick-user">
+					<a href="#" style="background-image:url('../resources/images/temp/user2.jpg')"><span></span></a>
+					<div class="user-box">
+						<span class="before-arrow"></span>
+						<div class="user-image" style="background-image:url('../resources/images/temp/user2.jpg')"><span></span></div>
+						<ul class="user-account">
+							<li class="user-name"><strong>강태성</strong>님</li>
+							<li>ICT전략실 정보관리팀</li>
+							<li class="my-information">
+								<a href="#" class="link-my-info">개인정보변경</a>
+								<a href="#" class="btn btn-sm">로그아웃</a>
+							</li>
+						</ul>
+						<a href="#" class="btn-close"></a>
+					</div>
+				</li>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<div class="header-bottom">
+			<div class="quick-link">
+				<a href="#" class="btn btn-gray btn-icon-left"><i class="icon-home"></i>HOME</a>
+				<a href="#" class="btn btn-gray btn-icon-left"><i class="icon-monitor"></i>WORK</a>
+			</div>
+			<div class="magamenu">
+				<h2 class="sr-only">메인메뉴</h2>
+				<!-- [D] 해당 메뉴 선택시 .menu > li 에 current 클래스 추가 -->
+				<ul class="menu">
+					<li class="current">
+						<a href="#">메일</a>
+						<ul class="menu-child">
+							<li><a href="#">수신메일</a></li>
+							<li><a href="#">발신메일</a></li>
+							<li><a href="#">안읽은메일</a></li>
+							<li><a href="#">중요메일</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">전자결재</a>
+						<ul class="menu-child">
+							<li><a href="#">개인결재</a></li>
+							<li><a href="#">문서수발신</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">게시판</a>
+						<ul class="menu-child">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">집안통신</a></li>
+						</ul>
+					</li>
+					<li><a href="#">팀룸</a></li>
+					<li>
+						<a href="#">업무지원</a>
+						<ul class="menu-child">
+							<li><a href="#">업무지원</a></li>
+							<li><a href="#">윤리경영</a></li>
+							<li><a href="#">자원관리</a></li>
+							<li><a href="#">문서HUB</a></li>
+						</ul>
+					</li>
+					<li><a href="#">통합문서</a></li>
+					<li><a href="#">Co-Work</a></li>
+				</ul>
+				<div class="all-menu">
+					<a href="#" class="btn-all-menu"><span class="sr-only">전체메뉴</span></a>
+					<div class="all-menu-box">
+						<span class="before-arrow"></span>
+						<ul class="all-menu-list">
+							<li class="first">
+								<a href="#">메일</a>
+								<ul>
+									<li class="current"><a href="#">수신메일</a></li>
+									<li><a href="#">발신메일</a></li>
+									<li><a href="#">안읽은메일</a></li>
+									<li><a href="#">중요메일</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">전자결재</a>
+								<ul>
+									<li><a href="#">개인결제</a></li>
+									<li><a href="#">문서수발신</a></li>
+								</ul>
+							</li>
+							<li><a href="#">게시판</a></li>
+							<li><a href="#">팀룸</a></li>
+							<li><a href="#">업무지원</a></li>
+							<li><a href="#">통합문서</a></li>
+							<li class="last"><a href="#">Co-Work</a></li>
+						</ul>
+						<a href="#" class="btn-close"></a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="menu-child-after-box"></div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Header //end -->
+	<!-- Content -->
+		<iframe class="iframe-content" src="../portal/work.html"></iframe>
+	<!-- Content //end -->
+	<!-- Footer -->
+	<div class="footer">
+		<a href="#" class="footer-brand-logo"><span class="sr-only">COWAY</span></a>
+		<ul class="footer-notice">
+			<li><span class="category">[새소식]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
+			<li><span class="category">[2]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
+			<li><span class="category">[3]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
+		</ul>
+		<ul class="footer-menu">
+			<li class="first"><a href="#">메일쓰기</a></li>
+			<li class="write-approval">
+				<a href="#">결재작성</a>
+				<!-- 결재작성 레이어 -->
+				<div class="layer-wrap reverse write-approval-box">
+					<span class="before-arrow"></span>
+					<div class="document-title-box">
+						<strong class="document-title">문서</strong>
+						<a href="#" class="icon-set"><span class="sr-only">환경설정</span></a>
+						<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
+					</div>
+					<dl class="document-default">
+						<dt>기본문서</dt>
+						<dd><a href="#">공지작성</a></dd>
+						<dd><a href="#">기안작성</a></dd>
+						<dd><a href="#">집안통신작성</a></dd>
+						<dd><a href="#">업무협조전작성</a></dd>
+						<dd><a href="#">회의록작성</a></dd>
+					</dl>
+					<dl class="document-user">
+						<dt>개인문서</dt>
+						<dd><a href="#">공지작성</a></dd>
+						<dd><a href="#">기안작성</a></dd>
+						<dd><a href="#">집안통신작성</a></dd>
+						<dd><a href="#">업무협조전작성</a></dd>
+						<dd><a href="#">회의록작성</a></dd>
+						<!--<dd class="no-content"><span>등록된 문서가 없습니다.</span></dd>-->
+					</dl>
+				</div>
+				<!-- 결재작성 레이어 //end -->
+			</li>
+			<li><a href="#">언론제보</a></li>
+			<li><a href="#">회사정보</a></li>
+			<li><a href="#">조직정보</a></li>
+			<li><a href="#">윤리제보</a></li>
+		</ul>
+	</div>
+	<!-- Footer //end -->
+</div>
+</body>
+</html>

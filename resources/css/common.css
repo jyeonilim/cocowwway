@@ -132,7 +132,7 @@ table {
     *******************************************/
 [class^="icon-"] {
     display: inline-block;
-    background: url("../images/sprite-icon.png") repeat 0 0;
+    background: url("../images/sprite-icon.png") no-repeat 0 0;
     font-size: 0;
     line-height: 0;
     color: transparent;

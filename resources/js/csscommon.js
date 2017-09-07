@@ -193,6 +193,6 @@ function selectboxEvent(target) {
 // }
 function layerClose(layer) {
     var $this = $(layer);
-    $this.parent('.layer-wrap').hide();
+    $this.closest('.layer-wrap').hide();
     return false;
 }
