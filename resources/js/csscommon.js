@@ -105,6 +105,20 @@ $(document).ready(function() {
         auto: false
     });
 
+    //업무지원
+    $('.work-support-head li').on('click',function () {
+        var $this = $(this);
+        $this.parent().children().removeClass('active');
+        $this.addClass('active');
+    });
+    $(document).mouseup(function (e) {
+        if(!$('.my-quick-box').is(e.target)&&$('.my-quick-box').has(e.target).length===0) {
+            $('.work-support-head li').removeClass('active')
+            $('.work-support-head li:first-child').addClass('active');
+            $('.my-quick-box').hide();
+        }
+    });
+
     // 하단 공지사항
     $('.footer-notice').carouFredSel({
         direction: 'up',

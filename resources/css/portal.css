@@ -808,6 +808,30 @@
     text-align: center;
 }
 /* MY QUICK */
+.work-support .work-support-head {
+    width: 100%;
+    padding: 10px 3px;
+    border-bottom: 1px solid #dee3eb;
+}
+.work-support .work-support-head li {
+    display: inline-block;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.work-support .work-support-head  li a {
+    padding-bottom: 7px;
+    font-weight: 300;
+    font-size: 13px;
+    color: #101010;
+}
+.work-support .work-support-head  li.active a {
+    border-bottom: 3px solid #00a7e4;
+    color: #00a7e4;
+}
+.work-support .work-support-content {
+    position: relative;
+    height: 357px;
+}
 .my-quick-list:before, .my-quick-list:after {
     content: "";
     display: table;
@@ -816,13 +840,21 @@
 .my-quick-list li {
     position: relative;
     float: left;
-    width: 25%;
+    width: 79.5px;
     border-bottom: 1px solid #e8e8e8;
     border-left: 1px solid #e8e8e8;
     text-align: center;
 }
 .my-quick-list li:nth-child(4n+1) {
     border-left: 0;
+}
+.my-quick-list li:last-child {
+    width: 80.5px;
+    border-right: 1px solid #e8e8e8;
+}
+.my-quick-list li:nth-child(4n+4) {
+    width: 79.5px;
+    border-right: 0;
 }
 .my-quick-list li a {
     display: block;
@@ -836,15 +868,13 @@
     white-space: nowrap;
     word-wrap: normal !important;
 }
-.work-support .tab-panel {
-    height: 357px;
-}
 .my-quick-box {
+    display: none;
     position: absolute;
     top: -1px;
     right: -1px;
     z-index: 10;
-    width: 800px;
+    width: 798px;
     border: 1px solid #e8e8e8;
     background-color: #fff;
     -webkit-box-shadow: -3px 2px 8px -2px #eaecef;
@@ -852,19 +882,20 @@
     box-shadow: -3px 2px 8px -2px #eaecef;
 }
 .my-quick-box li {
-    width: 10%;
+    width: 79.6px;
 }
-.my-quick-box li:nth-child(4n+1) {
+.my-quick-box li:nth-child(4n+1), .my-quick-box li:nth-child(4n+4) {
     border-left: 1px solid #e8e8e8;
 }
 .my-quick-box li:nth-child(10n+1) {
     border-left: 0;
 }
 .my-quick-box li:last-child {
-    width: 10.1%;
+    width: 80.6px;
     border-right: 1px solid #e8e8e8;
 }
 .my-quick-box li:nth-child(10n) {
+    width: 79.6px;
     border-right: 0;
 }
 /* MY QUICK ICON */
@@ -1030,7 +1061,6 @@
 .my-quick-list li.work-quick51 a:before { /*정보보호제보시스템*/
     background-position: 0 -250px;
 }
-
 .my-quick-list .need-login:after {
     position: absolute;
     top: 10px;
@@ -1038,11 +1068,12 @@
 }
 .my-quick-option {
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     left: 0;
     width: 100%;
     padding: 10px 15px;
     border-top: 1px solid #e8e8e8;
+    background-color: #fff;
 }
 .my-quick-option span {
     float: left;
