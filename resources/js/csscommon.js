@@ -133,7 +133,7 @@ $(document).ready(function() {
         });
     });
 
-    // Layer외 영역 클릭시 닫힘
+    // 레이어 이외 영역 클릭시 닫힘
     $(document).mouseup(function (e) {
         if(!$('.layer-wrap').is(e.target)&&$('.layer-wrap').has(e.target).length===0) {
             $('.layer-wrap').hide();
