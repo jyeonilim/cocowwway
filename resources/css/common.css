@@ -522,6 +522,7 @@ body {
 .layer-wrap {
     display: none;
     position: absolute;
+    z-index: 10;
     border: 1px solid #e7eaf0;
     border-radius: 2px;
     background-color: #fff;
@@ -662,43 +663,13 @@ body {
     border: 0;
 }
 .user-box {
-    display: none;
-    position: absolute;
     top: 53px;
     right: -17px;
-    z-index: 10;
     width: 300px;
-    /*padding: 10px;*/
-    border: 1px solid #e7eaf0;
-    border-radius: 2px;
-    background-color: #fff;
-    -webkit-box-shadow: 1px 2px 5px -2px #eaecef;
-    -moz-box-shadow: 1px 2px 5px -2px #eaecef;
-    box-shadow: 1px 2px 5px -2px #eaecef;
-    font-size: 14px;
-    text-align: left;
 }
 .user-box:before {
-    position: absolute;
-    top: -6px;
+    left: auto;
     right: 32px;
-    z-index: 11;
-    width: 11px;
-    height: 6px;
-    background: url("../images/sprite-icon.png") no-repeat -320px -160px;
-    content: '';
-}
-.user-box.open {
-    display: block;
-}
-.user-box .btn-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    width: 13px;
-    height: 13px;
-    background: url("../images/sprite-icon.png") no-repeat 0 -120px;
 }
 .user-image {
     float: left;
@@ -826,43 +797,14 @@ body {
     content: '';
 }
 .all-menu-box {
-    display: none;
-    position: absolute;
     top: 37px;
     right: -160px;
-    z-index: 10;
     width: 760px;
     padding: 30px 30px 15px;
-    border: 1px solid #e7eaf0;
-    border-radius: 2px;
-    background-color: #fff;
-    -webkit-box-shadow: 1px 2px 5px -2px #eaecef;
-    -moz-box-shadow: 1px 2px 5px -2px #eaecef;
-    box-shadow: 1px 2px 5px -2px #eaecef;
-    font-size: 14px;
-    text-align: left;
 }
 .all-menu-box:before {
-    position: absolute;
-    top: -6px;
+    left: auto;
     right: 162px;
-    z-index: 11;
-    width: 11px;
-    height: 6px;
-    background: url("../images/sprite-icon.png") no-repeat -320px -160px;
-    content: '';
-}
-.all-menu-box.open {
-    display: block;
-}
-.all-menu-box .btn-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    width: 13px;
-    height: 13px;
-    background: url("../images/sprite-icon.png") no-repeat 0 -120px;
 }
 .all-menu-list  > li {
     display: inline-block;

@@ -17,11 +17,11 @@ $(document).ready(function() {
         return false;
     });
     $('.quick-user a').on('click',function () {
-        $('.user-box').toggleClass('open');
+        $('.user-box').toggle();
         return false;
     });
     $('.user-box .btn-close').on('click',function () {
-        $('.user-box').removeClass('open');
+        $('.user-box').hide();
         return false;
     });
 
@@ -55,11 +55,11 @@ $(document).ready(function() {
             $(this).parent().removeClass('menu-child-after');
         });
     $('.btn-all-menu').on('click',function () {
-        $('.all-menu-box').toggleClass('open');
+        $('.all-menu-box').toggle();
         return false;
     });
     $('.all-menu .btn-close').on('click',function () {
-        $('.all-menu-box').removeClass('open');
+        $('.all-menu-box').hide();
         return false;
     });
 
@@ -131,6 +131,13 @@ $(document).ready(function() {
         $('.content').scroll(function() {
             $target.fadeOut(300);
         });
+    });
+
+    // Layer외 영역 클릭시 닫힘
+    $(document).mouseup(function (e) {
+        if(!$('.layer-wrap').is(e.target)&&$('.layer-wrap').has(e.target).length===0) {
+            $('.layer-wrap').hide();
+        }
     });
 
     // Tooltip
