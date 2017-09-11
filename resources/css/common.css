@@ -1136,6 +1136,10 @@ body {
 #tree_area table {
     width: 100%;
 }
+.selectedTreeRow {
+    background-color: transparent !important;
+    color: #00a7e4 !important;
+}
 #tree_area .standartTreeRow, #tree_area .selectedTreeRow {
     font-family: 'NotoSansKR', sans-serif;
     padding-right: 5px;
@@ -1143,9 +1147,6 @@ body {
 #tree_area span.standartTreeRow, #tree_area span.selectedTreeRow {
     width: 100% !important;
     padding-right: 0 !important;
-}
-.selectedTreeRow {
-    background-color: #00a7e4 !important;
 }
 
 /**********************************************
