@@ -122,11 +122,16 @@
 .quick-access li.quick-user .user-account .my-information {
     margin-top: 7px;
     _margin-top: 5px;
+    zoom: 1;
 }
-.quick-access li.quick-user .user-account .my-information a {
+.quick-access li.quick-user .user-account .my-information a,
+.quick-access li.quick-user .user-account .my-information a span {
     width: auto;
     height: auto;
     background: transparent none;
+}
+.quick-access li.quick-user .user-account .my-information a span {
+    position: relative;
 }
 .header-bottom {
     z-index: 10;
