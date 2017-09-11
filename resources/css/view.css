@@ -1,6 +1,19 @@
 /**********************************************
     View
     *******************************************/
+.content-inner {
+    height: 100%;
+    padding: 16px 18px;
+    background-color: #f2f4f7;
+    box-sizing: border-box;
+}
+.content-inner:before, .content-inner:after {
+    content: '';
+    display: table;
+}
+.content-inner:after {
+    clear: both;
+}
 .selectbox .selectbox-value:after {
     right: 7px;
     width: 0;
@@ -185,7 +198,69 @@
     cursor: ew-resize;
 }
 
-/**/
+/**********************************************
+    dhtmlx Custom
+    *******************************************/
+body {
+    margin: 0 !important;
+}
+select, div, form, a:link {
+    font-family: 'NotoSansKR', sans-serif;
+}
 .containerTableStyle table {
     width: 100%;
+}
+div.gridbox_dhx_terrace.gridbox table.obj {
+    width: 100% !important;
+}
+div.gridbox_dhx_terrace.gridbox,
+div.gridbox table.obj tr:last-child td {
+    border-bottom: 0;
+}
+div.gridbox_dhx_terrace.gridbox .xhdr {
+    border-bottom-color: #f1f1f1;
+}
+div.gridbox_dhx_terrace.gridbox table.hdr td {
+    background-color: #f8f8f8;
+}
+div.gridbox_dhx_terrace.gridbox table.obj tr td {
+    border-color: #e5e5e5;
+}
+/* paging */
+#pagingArea > div {
+    position: relative;
+    width: 100% !important;
+    border-top: 1px solid #e5e5e5;
+}
+.dhx_pline {
+    width: 100% !important;
+    margin: 15px 0 0;
+    text-align: center;
+}
+.dhx_pline div {
+    display: inline-block;
+}
+.dhx_page {
+    border-radius: 0;
+    background-color: #ccc;
+
+}
+div.dhx_page_active {
+    background-color: #ccc;
+    font-weight: 400;
+    color: #ee761d;
+}
+.dhx_page div {
+    border-radius: 0;
+    background-color: #fff;
+    font-family: 'NotoSansKR', sans-serif;
+}
+.dhx_pager_info {
+    margin: 20px 10px 10px;
+}
+.dhx_pager_info > div {
+    font-weight: 200;
+    font-family: 'NotoSansKR', sans-serif;
+    color: #000;
+    letter-spacing: .5px;
 }

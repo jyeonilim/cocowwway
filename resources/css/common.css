@@ -1072,15 +1072,23 @@ body {
     vertical-align: -3px;
 }
 
-/* dhtmlx 스타일 변경 */
+/**********************************************
+    dhtmlx Custom
+    *******************************************/
 #tree_area table {
     width: 100%;
 }
-#tree_area span.standartTreeRow {
-    width: 100% !important;
+.selectedTreeRow {
+    background-color: transparent !important;
+    color: #00a7e4 !important;
 }
-#tree_area .standartTreeRow {
+#tree_area .standartTreeRow, #tree_area .selectedTreeRow {
     font-family: 'NotoSansKR', sans-serif;
+    padding-right: 5px;
+}
+#tree_area span.standartTreeRow, #tree_area span.selectedTreeRow {
+    width: 100% !important;
+    padding-right: 0 !important;
 }
 
 /**********************************************

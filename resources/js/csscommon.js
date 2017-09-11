@@ -172,6 +172,7 @@ $(document).ready(function() {
         $('.tooltip-box').css('width',250);
     });
 
+    $('.left').parent('.content-inner').css('padding-right',0);
     // Left Tree Scroll
     var leftScroll = (function () {
         var contentHeight = $('.content-inner').height(),
