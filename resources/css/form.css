@@ -143,88 +143,67 @@ body {
 }
 .form-item {
     width: 100%;
+    border-bottom: 1px solid #e2e2e2;
 }
-.item > .item-label,
-.item > .item-input {
-    vertical-align: top;
+.item-label, .item-input,
+.form-item th, .form-item td {
+    border-top: 1px solid #f1f1f1;
 }
-.item > .item-label {
-    padding-top: 7px;
+.item-input, .form-item td {
+    padding: 4px 0 4px 10px;
 }
-.btn-hidden-view {
-    position: relative;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #ddd;
-}
-.btn-hidden-view:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0;
-    height: 0;
-    border-left: 3px solid transparent;
-    border-right: 3px solid transparent;
-    border-top: 3px solid #666;
-    content: '';
-}
-.btn-hidden-view.on:before {
-    border-top: 0;
-    border-bottom: 3px solid #666;
-}
-.item-label {
+.form-item td.item-label, .form-item th {
     width: 133px;
+    padding-left: 0;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.form-item tr:first-child .item-label, .form-item tr:first-child .item-input,
+.form-item tr:first-child th, .form-item tr:first-child td {
+    border-top: 1px solid #e2e2e2;
 }
 .item-label .label {
     display: inline-block;
     width: 70px;
     font-weight: 400;
+    line-height: 26px;
     color: #000;
+}
+.item-input input[type=radio] {
+    vertical-align: middle;
+}
+.item-input input {
+     height: 26px;
+     padding: 0 10px;
+     outline: none;
+ }
+.item-input .form-control:focus, .item-input  #DisSubject input:focus {
+    border-color: #00a7e4;
+    outline: none;
 }
 .item-label input[type=checkbox] {
     vertical-align: -2px;
 }
-.item-input {
-    padding: 4px 51px 4px 0;
-}
-.item-input .form-control {
+select {
+    display: inline-block;
     height: 26px;
-    padding: 0 10px;
-    outline: none;
+    border: 1px solid #e0e0e0 !important;
 }
-.item-input .form-control:focus {
-    border-color: #00a7e4;
+.form-content {
+    padding: 0 13px 13px;
 }
-.item-input textarea.form-control {
-    display: block;
-    height: 26px;
-    resize: vertical;
+
+/**********************************************
+    dhtmlx Custom
+    *******************************************/
+#AttachMgrTd {
+    font-weight: 400;
+    color: #000;
 }
-.item-input .btn {
-    float: right;
-    margin: 2px -51px 0 0;
+#embedControlAttachMgr {
+    padding: 0;
+    background-color: #fff;
 }
-.item-input-wrap {
-    padding-right: 0;
-}
-.item-bcc {
-    display: none;
-}
-.item-bcc.on {
-    display: table-row;
-}
-.attach-box {
-    display: none;
-    min-height: 26px;
-    border: 1px solid #e8e8e8;
-}
-.attach-box.on {
-    display: block;
-}
-.editor-frame {
-    padding: 0 13px;
+#attmWrite {
+    margin: 5px 0 0 !important;
 }
