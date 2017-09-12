@@ -1043,7 +1043,7 @@ body {
     clear: both;
 }
 .left {
-    position: relative;
+    position: absolute;
     z-index: 11;
     float: left;
     width: 252px;

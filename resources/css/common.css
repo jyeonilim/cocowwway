@@ -519,6 +519,13 @@ body {
     font-size: 18px;
     color: #00a7e4;
 }
+.page-title {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3c3c3c;
+}
 .layer-wrap {
     display: none;
     position: absolute;
@@ -832,6 +839,34 @@ body {
 }
 .all-menu-list ul > li > a:hover, .all-menu-list ul > li.current > a {
     color: #00a7e4;
+}
+
+/* Second Menu (Page Menu) */
+.page-menu {
+    display: table;
+    width: 100%;
+    padding: 0 7px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #f3f6fa;
+}
+.page-menu li {
+    display: table-cell;
+    text-align: center;
+}
+.page-menu li a {
+    display: inline-block;
+    padding: 10px 0 7px;
+    color: #666;
+}
+.page-menu li.current a, .page-menu li a:hover {
+    border-bottom: 3px solid #00a7e4;
+    color: #00a7e4;
+}
+.page-content {
+    overflow-y: auto;
+}
+.page-content-inner {
+    padding: 10px 15px;
 }
 
 /**********************************************

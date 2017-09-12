@@ -5,9 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<title>코웨이</title>
+	<title>메일발신정보설정</title>
 	<link rel="stylesheet" href="../resources/css/common.css">
-	<link rel="stylesheet" href="../resources/css/form.css">
+	<link rel="stylesheet" href="../resources/css/view.css">
+	<link rel="stylesheet" href="../resources/css/original-common.css">
+	<link rel="stylesheet" href="../resources/css/original-view.css">
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
@@ -43,9 +45,9 @@
 		</div>
 		<!-- 메일 메뉴 //end -->
 		<!-- 메일 리스트 -->
-		<div>
-			<h3>환경설정</h3>
-			<ul>
+		<div class="mail-configuration">
+			<h3 class="page-title">환경설정</h3>
+			<ul class="page-menu">
 				<li><a href="#">메일함설정</a></li>
 				<li><a href="#">미리보기설정</a></li>
 				<li><a href="#">폴더설정</a></li>
@@ -55,36 +57,40 @@
 				<li><a href="#">그룹주소록</a></li>
 				<li><a href="#">개인템플릿</a></li>
 				<li><a href="#">답장머릿말설정</a></li>
-				<li><a href="#">메일발신정보설정</a></li>
+				<li class="current"><a href="#">메일발신정보설정</a></li>
 			</ul>
-			<div>
-				<div></div>
-				<table>
-					<tr>
-						<th>등록정보</th>
-						<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017.09.07 09:19:08)</td>
-					</tr>
-					<tr>
-						<th>발신구분</th>
-						<td>
-							<label>
-								<input type="radio"> 국문
-							</label>
-							<label>
-								<input type="radio"> 영문
-							</label>
-						</td>
-					</tr>
-					<tr>
-						<th>영어이름</th>
-						<td>
-							<input type="text">
-						</td>
-					</tr>
-				</table>
-				<p>발신인명을 영문으로 설정시, 메일 발송시 발신인명이 영문으로 설정된 이름으로 발송됩니다.<br>
-					발신인명을 영문으로 설정시, 영어이름을 지정하셔야 합니다.<br>
-					<span>10~15분 경과후, 메일 발신명 정보 설정이 반영됩니다.</span></p>
+			<div class="page-content">
+				<div class="page-content-inner">
+					<div>
+						<a href="#" class="btn">설정저장</a>
+					</div>
+					<table class="form-item">
+						<tr>
+							<th>등록정보</th>
+							<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017.09.07 09:19:08)</td>
+						</tr>
+						<tr>
+							<th>발신구분</th>
+							<td>
+								<label>
+									<input type="radio"> 국문
+								</label>
+								<label>
+									<input type="radio"> 영문
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th>영어이름</th>
+							<td>
+								<input type="text">
+							</td>
+						</tr>
+					</table>
+					<p>발신인명을 영문으로 설정시, 메일 발송시 발신인명이 영문으로 설정된 이름으로 발송됩니다.<br>
+						발신인명을 영문으로 설정시, 영어이름을 지정하셔야 합니다.<br>
+						<span>10~15분 경과후, 메일 발신명 정보 설정이 반영됩니다.</span></p>
+				</div>
 			</div>
 		</div>
 		<!-- 메일 리스트 //end -->

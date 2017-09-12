@@ -172,7 +172,7 @@ $(document).ready(function() {
         $('.tooltip-box').css('width',250);
     });
 
-    $('.left').parent('.content-inner').css('padding-right',0);
+    // $('.left').parent('.content-inner').css('padding-right',0); //서버에서만 사용 개발 소스 입히면서 남아있는 패딩때문에
     // Left Tree Scroll
     var leftScroll = (function () {
         var contentHeight = $('.content-inner').height(),
@@ -189,6 +189,16 @@ $(document).ready(function() {
     });
     $(document).ready(leftScroll);
     $(window).resize(leftScroll);
+
+    // 메일 환경설정 컨텐츠 스크롤
+    var mailConfigScroll = (function () {
+        var contentHeight = $('.mail-configuration').outerHeight(true),
+            titleHeight = $('.page-title').outerHeight(true),
+            menuHeight = $('.page-menu').outerHeight(true);
+        $('.page-content').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
+    });
+    $(document).ready(mailConfigScroll);
+    $(window).resize(mailConfigScroll);
 
     $('.btn-hidden-view.bcc-view').on('click', function () {
         $(this).toggleClass('on');

@@ -142,6 +142,7 @@ body {
     padding: 13px;
 }
 .form-item {
+    border-collapse: collapse;
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
 }
