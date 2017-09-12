@@ -1,3 +1,6 @@
+body {
+    font-family: 'NanumGothic', sans-serif;
+}
 .clearfix {
     clear: both;
 }
