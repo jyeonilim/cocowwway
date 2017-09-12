@@ -568,6 +568,13 @@ body {
     height: 13px;
     background: url("../images/sprite-icon.png") no-repeat 0 -120px;
 }
+.note {
+    font-weight: 200;
+    color: #222;
+}
+.text-important {
+    color: #ee761d;
+}
 
 /**********************************************
     Header

@@ -186,14 +186,3 @@
     border-right: 1px solid #e5e5e5;
     cursor: ew-resize;
 }
-
-/**********************************************
-    Mail Configuration
-    *******************************************/
-.mail-configuration {
-    /*float: left;*/
-    /*width: 100%;*/
-    margin-left: 272px;
-    border: 1px solid #dee3eb;
-    background-color: #fff;
-}
