@@ -399,8 +399,11 @@
     margin-left: 7px;
     color: #ee761d;
 }
-.schedule-content .no-content {
+.schedule-content .selected-schedule-list li.no-content {
     padding-left: 405px;
+}
+.schedule-content .selected-schedule-list li.no-content:before {
+    display: none;
 }
 .portal-theme .tab a:before {
     display: inline-block;
