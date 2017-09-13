@@ -1,8 +1,11 @@
 /**********************************************
     Form
     *******************************************/
+body {
+    overflow-y: auto;
+}
 .content-inner {
-    height: 100%;
+    height: auto;
     padding: 16px 18px;
     background-color: #f2f4f7;
     box-sizing: border-box;
@@ -14,12 +17,6 @@
 .content-inner:after {
     clear: both;
 }
-body {
-    overflow-y: auto;
-}
-.content-inner {
-    height: auto;
-}
 .selectbox .selectbox-value:after {
     right: 7px;
     width: 0;
@@ -27,6 +24,75 @@ body {
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 6px solid #949494;
+}
+/* Table */
+.table {
+    width: 100%;
+    border-bottom: 1px solid #e2e2e2;
+}
+.table th, .table td {
+    border-top: 1px solid #f1f1f1;
+}
+.table tr:first-child th, .table tr:first-child td {
+    border-top: 1px solid #e2e2e2;
+}
+.table th {
+    width: 133px;
+    padding: 4px 0;
+    background-color: #f8f8f8;
+    font-weight: 400;
+    color: #000;
+    vertical-align: middle;
+}
+.table th.th-row {
+    border-right: 1px solid #f1f1f1;
+}
+.table th.image-row {
+    background-color: #fff;
+    vertical-align: top;
+}
+.table thead th {
+    padding: 7px 0;
+}
+.table td {
+    padding: 4px 10px;
+}
+.table .label {
+    display: inline-block;
+    width: 70px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #000;
+}
+.table input[type=radio] {
+    vertical-align: middle;
+}
+.table input[type=text] {
+    height: 26px;
+    padding: 0 10px;
+    outline: none;
+}
+.table .form-control:focus, .table  #DisSubject input:focus {
+    border-color: #00a7e4;
+    outline: none;
+}
+.table input[type=checkbox] {
+    vertical-align: -2px;
+}
+td.add-btn-address {
+    padding-right: 61px;
+}
+.add-btn-address .btn {
+    float: right;
+    margin: 2px -51px 0 0;
+}
+.add-btn-address textarea.form-control {
+    display: block;
+    height: 26px;
+    resize: vertical;
+}
+td.center {
+    text-align: center;
 }
 .form {
     width: 100%;
@@ -141,6 +207,7 @@ body {
 .form-item-wrap {
     padding: 13px;
 }
+/**/
 .form-item {
     width: 100%;
     border-bottom: 1px solid #e2e2e2;
@@ -184,6 +251,7 @@ body {
 .item-label input[type=checkbox] {
     vertical-align: -2px;
 }
+/**/
 select {
     display: inline-block;
     height: 26px;
