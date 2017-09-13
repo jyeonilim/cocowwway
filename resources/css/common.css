@@ -350,7 +350,9 @@ table {
     width: 100%;
     padding: 0;
 }
-
+.btn-align-right {
+    text-align: right;
+}
 
 /**********************************************
     Form
