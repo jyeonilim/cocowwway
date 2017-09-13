@@ -145,7 +145,7 @@
     bottom: -6px;
     background-position: -280px -200px;
 }
-.user-profile-box .user-account-link {
+.user-account + .user-account-link {
     border-top: 1px solid #ebebeb;
     background-color: #f7f7f9;
     padding: 5px 8px 3px;
