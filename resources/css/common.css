@@ -643,6 +643,18 @@ body {
     height: 31px;
     background: url("../images/brand-slogan.png") no-repeat 0 0;
 }
+.brand-slogan.ci-coway a {
+    background-image: url("../images/ci_coway.png");
+}
+.brand-slogan.ci-w {
+    margin-top: 0;
+}
+.brand-slogan.ci-w a {
+    width: 170px;
+    height: 48px;
+    background-image: url("../images/ci_w.png");
+    background-size: 170px 48px;
+}
 .quick-access {
     float: right;
 }
