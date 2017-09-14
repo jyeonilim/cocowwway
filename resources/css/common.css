@@ -353,6 +353,9 @@ table {
 .btn-align-top {
     margin-bottom: 10px;
 }
+.btn-align-right {
+    text-align: right;
+}
 
 /**********************************************
     Form

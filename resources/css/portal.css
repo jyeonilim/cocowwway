@@ -145,11 +145,13 @@
     bottom: -6px;
     background-position: -280px -200px;
 }
-.user-account-link {
-    display: inline-block;
-    padding: 5px 8px 3px;
+.user-account + .user-account-link {
     border-top: 1px solid #ebebeb;
     background-color: #f7f7f9;
+    padding: 5px 8px 3px;
+}
+.user-account-link {
+    display: inline-block;
     font-size: 0;
 }
 .user-account-link > li {
@@ -398,6 +400,12 @@
 .schedule-content .selected-schedule-list span {
     margin-left: 7px;
     color: #ee761d;
+}
+.schedule-content .selected-schedule-list li.no-content {
+    padding-left: 405px;
+}
+.schedule-content .selected-schedule-list li.no-content:before {
+    display: none;
 }
 .portal-theme .tab a:before {
     display: inline-block;

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>메일</title>
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/form.css">
+	<link rel="stylesheet" href="../resources/css/mail_form.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
+</head>
+<body>
+<div class="content">
+	<div class="content-inner">
+		<!-- Table -->
+		<div class="form">
+			<div class="form-inner">
+				<!-- Table Head -->
+				<div class="form-head">
+					<div class="form-head-btn">
+						<a href="#" class="btn">발송</a>
+						<a href="#" class="btn">예약발송</a>
+						<a href="#" class="btn">저장</a>
+						<a href="#" class="btn">양식함</a>
+						<a href="#" class="btn">A4 size</a>
+						<a href="#" class="btn">닫기</a>
+					</div>
+					<div class="form-head-search">
+						<div class="search-box">
+							<div class="selectbox">
+								<strong class="selectbox-value">상세</strong>
+								<select onchange="selectboxEvent(this);">
+									<option>상세</option>
+									<option>전체</option>
+								</select>
+							</div>
+							<div class="search-input">
+								<input type="text" class="form-control">
+							</div>
+						<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- Table Head //end -->
+				<!-- Table Body -->
+				<div class="form-body">
+					<div class="form-item-wrap">
+
+						<table class="table">
+							<tbody>
+							<tr>
+								<th rowspan="6" class="th-row image-row"><img src="../resources/images/temp/user2.jpg"></th>
+								<th>이름</th>
+								<td>홍보팀</td>
+							</tr>
+							<tr>
+								<th>이름</th>
+								<td>홍보팀</td>
+							</tr>
+							<tr>
+								<th>E-Mail</th>
+								<td>coway@coway.co.kr</td>
+							</tr>
+							<tr>
+								<th>부서</th>
+								<td>코웨이 경영관리본부 커뮤니케이션실 홍보팀</td>
+							</tr>
+							<tr>
+								<th>직책</th>
+								<td>특수계정</td>
+							</tr>
+							<tr>
+								<th>직위</th>
+								<td>특수계정</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<table class="table">
+							<tbody>
+							<tr>
+								<th>이름</th>
+								<td>홍보팀</td>
+							</tr>
+							<tr>
+								<th>E-Mail</th>
+								<td>coway@coway.co.kr</td>
+							</tr>
+							<tr>
+								<th>부서</th>
+								<td>코웨이 경영관리본부 커뮤니케이션실 홍보팀</td>
+							</tr>
+							<tr>
+								<th>직책</th>
+								<td>특수계정</td>
+							</tr>
+							<tr>
+								<th>직위</th>
+								<td>특수계정</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<table class="table">
+							<tbody>
+							<tr>
+								<th>
+									<strong class="label">받는사람</strong>
+									<span>
+										<input type="checkbox" id="checkMe">
+										<label for="checkMe">나에게</label>
+									</span>
+								</th>
+								<td class="add-btn-address">
+									<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+									<label for="to" class="sr-only">받는사람 주소 입력</label>
+									<textarea class="form-control" cols="1" id="to"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<strong class="label">참조</strong>
+									<a href="#" class="btn-hidden-view bcc-view"><span class="sr-only">비밀참조 보기</span></a>
+								</th>
+								<td class="add-btn-address">
+									<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+									<label for="cc" class="sr-only">참조 주소 입력</label>
+									<textarea class="form-control" id="cc"></textarea>
+								</td>
+							</tr>
+							<tr class="item-bcc">
+								<th>
+									<strong class="label">비밀참조</strong>
+								</th>
+								<td class="add-btn-address">
+									<a href="#" class="btn btn-sm btn-outline-primary">주소록</a>
+									<label for="cc" class="sr-only">참조 주소 입력</label>
+									<textarea class="form-control" id="bcc"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<strong class="label">제목</strong>
+									<span>
+										<input type="checkbox" id="checkImportant">
+										<label for="checkImportant">중요</label>
+									</span>
+								</th>
+								<td>
+									<label for="subject" class="sr-only">제목 입력</label>
+									<input type="text" class="form-control" id="subject">
+								</td>
+							</tr>
+							<tr>
+								<th>
+									<strong class="label">파일첨부</strong>
+									<a href="#" class="btn-hidden-view attach-view"><span class="sr-only">파일첨부 열기</span></a>
+								</th>
+								<td>
+									<div class="attach-box">파일첨부 영역</div>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<table class="table">
+							<thead>
+							<tr>
+								<th>이름</th>
+								<th>E-Mail</th>
+								<th>부서</th>
+								<th>직책</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td class="center">홍보팀</td>
+								<td class="center">coway@coway.co.kr</td>
+								<td>코웨이 경영관리본부 커뮤니케이션실 홍보팀</td>
+								<td class="center">특수계정</td>
+							</tr>
+							<tr>
+								<td class="center">홍보팀</td>
+								<td class="center">coway@coway.co.kr</td>
+								<td>코웨이 경영관리본부 커뮤니케이션실 홍보팀</td>
+								<td class="center">특수계정</td>
+							</tr>
+							<tr>
+								<td class="center">홍보팀</td>
+								<td class="center">coway@coway.co.kr</td>
+								<td>코웨이 경영관리본부 커뮤니케이션실 홍보팀</td>
+								<td class="center">특수계정</td>
+							</tr>
+							<tr>
+								<td class="center">홍보팀</td>
+								<td class="center">coway@coway.co.kr</td>
+								<td>코웨이 경영관리본부 커뮤니케이션실 홍보팀</td>
+								<td class="center">특수계정</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+				<!-- Table Body //end -->
+			</div>
+		</div>
+		<!-- Table //end -->
+	</div>
+</div>
+</body>
+</html>

@@ -1,12 +1,18 @@
+body, .btn {
+    font-family: 'NanumGothic', sans-serif;
+}
 .clearfix {
     clear: both;
+}
+.wrap {
+    width:expression(document.body.clientWidth < 1200? "1200px": "auto" );
 }
 .icon-home, .icon-monitor, .icon-set {
     background-image: url("../images/sprite-icon.png");
     font-size: 0;
     line-height: 0;
     color: transparent;
-    vertical-align: middle;
+    vertical-align: middle !important;
     font-style: normal;
 }
 .before-arrow {
@@ -51,10 +57,14 @@
     _height: 23px;
 }
 .quick-access li.quick-user a {
+    overflow: hidden;
     width: 48px;
     height: 48px;
-    background-color: #dee3eb;
-    background-position: 50%;
+    background: #dee3eb none;
+}
+.quick-access li.quick-user a img {
+    width: 100%;
+    vertical-align: middle;
 }
 .quick-access li.quick-user a span {
     position: absolute;
@@ -96,9 +106,13 @@
     background: transparent url(../images/sprite-icon.png) no-repeat 0 -120px;
 }
 .quick-access li.quick-user .user-image {
+    overflow: hidden;
     position: relative;
-    background-color: #dee3eb;
-    background-position: 50%;
+    width: 75px;
+    height: 75px;
+}
+.quick-access li.quick-user .user-image img {
+    width: 100%;
 }
 .quick-access li.quick-user .user-image span {
     position: absolute;
@@ -122,11 +136,16 @@
 .quick-access li.quick-user .user-account .my-information {
     margin-top: 7px;
     _margin-top: 5px;
+    zoom: 1;
 }
-.quick-access li.quick-user .user-account .my-information a {
+.quick-access li.quick-user .user-account .my-information a,
+.quick-access li.quick-user .user-account .my-information a span {
     width: auto;
     height: auto;
     background: transparent none;
+}
+.quick-access li.quick-user .user-account .my-information a span {
+    position: relative;
 }
 .header-bottom {
     z-index: 10;
@@ -136,8 +155,8 @@
 .magamenu {
     position: relative;
     z-index: 11;
-    width: 832px;
-    _width: 900px;
+    display: inline-block;
+    _width: 830px;
     margin: 0 auto;
 }
 .quick-link .btn {
@@ -158,7 +177,8 @@
 }
 .menu li a {
     display: block;
-    padding: 16px 30px 17px;
+    padding: 19px 30px;
+    _padding: 20px 30px 16px;
     font-weight: 300;
     font-size: 16px;
     color: #000;
@@ -170,7 +190,7 @@
     display: none;
 }
 .menu li .menu-child {
-    top: 57px;
+    top: 60px;
     width: 650px;
     padding-top: 13px;
 }
@@ -185,7 +205,6 @@
     /*display: block;*/
     position: absolute;
     top: 57px;
-    _top: 52px;
     left: 0;
     z-index: 10;
     width: 100%;
@@ -198,7 +217,7 @@
 }
 .all-menu {
     float: left;
-    margin-top: 17px;
+    margin-top: 21px;
     padding-left: 30px;
     border-left: 1px solid #dfdfdf;
 }
@@ -207,7 +226,7 @@
     text-align: right;
 }
 .all-menu-box {
-    _top: 31px;
+    top: 36px;
 }
 .all-menu-box:before {
     display: none;
