@@ -719,14 +719,14 @@
     border-top: 1px solid #e8e8e8;
 }
 .convenience-search.schedule-search .form-control {
-    width: 208px;
+    width: 223px;
     margin-left: 2px;
 }
 .convenience-search.worker-search {
     border-bottom: 1px solid #e8e8e8;
 }
 .convenience-search.worker-search .form-control {
-    width: 270px;
+    width: 277px;
     margin-left: 0;
 }
 .convenience-search.worker-search .btn-search {
@@ -1221,20 +1221,20 @@
 }
 .tooltip-box {
     display: none;
-    position: absolute;
     z-index: 9999;
     width: 300px;
     padding: 7px;
     border: 1px solid #dbe0e4;
     border-radius: 2px;
-    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 5px -2px #eaecef;
+    -moz-box-shadow: 1px 2px 5px -2px #eaecef;
+    box-shadow: 1px 2px 5px -2px #eaecef;
     font-size: 12px;
 }
 .tooltip-box:before {
     position: absolute;
     top: -6px;
     left: 28px;
-    right: auto;
     z-index: 11;
     width: 11px;
     height: 6px;

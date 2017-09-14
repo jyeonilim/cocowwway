@@ -508,53 +508,6 @@ body {
 /**********************************************
     Common
     *******************************************/
-.sub-title {
-    padding-bottom: 8px;
-    font-weight: 500;
-    font-size: 18px;
-    color: #00a7e4;
-}
-.layer-wrap {
-    display: none;
-    position: absolute;
-    border: 1px solid #e7eaf0;
-    border-radius: 2px;
-    background-color: #fff;
-    -webkit-box-shadow: 1px 2px 5px -2px #eaecef;
-    -moz-box-shadow: 1px 2px 5px -2px #eaecef;
-    box-shadow: 1px 2px 5px -2px #eaecef;
-    font-size: 14px;
-    text-align: left;
-}
-.layer-wrap:before {
-    position: absolute;
-    top: -6px;
-    left: 0;
-    right: 0;
-    z-index: 11;
-    width: 11px;
-    height: 6px;
-    margin: auto;
-    background: url("../images/sprite-icon.png") no-repeat -320px -160px;
-    content: '';
-}
-.layer-wrap.reverse:before {
-    top: auto;
-    bottom: -6px;
-    background-position: -280px -160px;
-}
-.layer-wrap.open {
-    display: block;
-}
-.layer-wrap .btn-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    width: 13px;
-    height: 13px;
-    background: url("../images/sprite-icon.png") no-repeat 0 -120px;
-}
 
 /**********************************************
     Header

@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<title>메일발신정보설정</title>
+	<title>폴더설정</title>
 	<link rel="stylesheet" href="../resources/css/common.css">
 	<link rel="stylesheet" href="../resources/css/form.css">
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
@@ -49,54 +49,106 @@
 			<ul class="page-menu">
 				<li><a href="#">메일함설정</a></li>
 				<li><a href="#">미리보기설정</a></li>
-				<li><a href="#">폴더설정</a></li>
+				<li class="current"><a href="#">폴더설정</a></li>
 				<li><a href="#">메일분류</a></li>
 				<li><a href="#">서명관리</a></li>
 				<li><a href="#">개인주소록</a></li>
 				<li><a href="#">그룹주소록</a></li>
 				<li><a href="#">개인템플릿</a></li>
 				<li><a href="#">답장머릿말설정</a></li>
-				<li class="current"><a href="#">메일발신정보설정</a></li>
+				<li><a href="#">메일발신정보설정</a></li>
 			</ul>
 			<div class="page-content">
 				<div class="page-content-inner">
 					<div class="btn-align-top">
-						<a href="#" class="btn">설정저장</a>
+						<a href="#" class="btn" onclick="layerOpen('.new-folder');">새폴더</a>
 					</div>
 					<table class="table">
+						<thead>
+						<tr class="align-left">
+							<th>폴더명</th>
+							<th>순서</th>
+							<th>작성일</th>
+							<th></th>
+						</tr>
+						</thead>
 						<tbody>
 						<tr>
-							<th>
-								<strong class="label">등록정보</strong>
-							</th>
-							<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017.09.07 09:19:08)</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">발신구분</strong>
-							</th>
+							<td>테스트1</td>
+							<td>001</td>
+							<td>2017.09.08 15:30</td>
 							<td>
-								<label>
-									<input type="radio"> 국문
-								</label>
-								<label>
-									<input type="radio"> 영문
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">영어이름</strong>
-							</th>
-							<td>
-								<input type="text" style="width: 50%;">
+								<a href="#" class="btn btn-sm btn-outline-primary">편집</a>
+								<a href="#" class="btn btn-sm btn-outline-primary">삭제</a>
 							</td>
 						</tr>
 						</tbody>
 					</table>
-					<p class="note">발신인명을 영문으로 설정시, 메일 발송시 발신인명이 영문으로 설정된 이름으로 발송됩니다.<br>
-						발신인명을 영문으로 설정시, 영어이름을 지정하셔야 합니다.<br>
-						<span class="text-important">10~15분 경과후, 메일 발신명 정보 설정이 반영됩니다.</span></p>
+					<!-- Paging -->
+					<div class="paging">
+						<div class="page">←</div>
+						<div class="page active">1</div>
+						<div class="page">2</div>
+						<div class="page">3</div>
+						<div class="page">4</div>
+						<div class="page">5</div>
+						<div class="page">6</div>
+						<div class="page">7</div>
+						<div class="page">8</div>
+						<div class="page">9</div>
+						<div class="page">10</div>
+						<div class="page">→</div>
+					</div>
+					<!-- Paging //end -->
+					<!-- 개인폴더관리 | 새폴더등록 -->
+					<div class="layer-wrap layer new-folder">
+						<div class="layer-inner">
+							<div class="layer-head">
+								<h4 class="title">개인폴더관리<span class="sub-text">새폴더 등록</span></h4>
+							</div>
+							<div class="layer-body">
+								<table class="table">
+									<tbody>
+									<tr>
+										<th><strong class="label">폴더명</strong></th>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<th><strong class="label">정렬순서</strong></th>
+										<td><input type="text" style="width:100px;"></td>
+									</tr>
+									<tr>
+										<th><strong class="label">설명</strong></th>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<th><strong class="label">참고사항</strong></th>
+										<td>
+											<p>※ 폴더를 계층적으로 표시하고 싶다면 폴더명에\\기호를 사용하세요.<br>
+											예) 보고서\\일일업무보고<br><br>
+											※ 메일이 저장되어 있는 폴더는 삭제할 수 없습니다.<br><br>
+											※ 폴더가 삭제되면, 해당 폴더로 이동하도록 설정된 메일자동분류 설정도 삭제됩니다.</p>
+										</td>
+									</tr>
+									<tr>
+										<th><strong class="label">메일분류</strong></th>
+										<td>
+											<label>
+												<input type="checkbox"> 메일분류 설정
+											</label>
+										</td>
+									</tr>
+									</tbody>
+								</table>
+								<div class="btn-align-center">
+									<a href="#" class="btn btn-sm">저장</a>
+									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
+								</div>
+							</div>
+							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
+						</div>
+					</div>
+					<!-- 개인폴더관리 | 새폴더등록 //end -->
 				</div>
 			</div>
 		</div>
