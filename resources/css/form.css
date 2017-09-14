@@ -2,7 +2,7 @@
     Form
     *******************************************/
 .content-inner {
-    height: 100%;
+    height: auto;
     padding: 16px 18px;
     background-color: #f2f4f7;
     box-sizing: border-box;
@@ -17,8 +17,8 @@
 body {
     overflow-y: auto;
 }
-.content-inner {
-    height: auto;
+input[type=radio], input[type=checkbox] {
+    vertical-align: middle;
 }
 .selectbox .selectbox-value:after {
     right: 7px;
@@ -170,9 +170,6 @@ body {
     font-weight: 400;
     line-height: 26px;
     color: #000;
-}
-.item-input input[type=radio] {
-    vertical-align: middle;
 }
 .item-input input {
      height: 26px;
