@@ -219,12 +219,12 @@ function selectboxEvent(target) {
 }
 
 // Layer
-// function layerOpen(layer) {
-//     var $this = $(layer);
-//     // $this.css("top", Math.max(0, $(window).scrollTop() + 50) + "px").show();
-//     $this.show();
-//     return false;
-// }
+function layerOpen(layer) {
+    var $this = $(layer);
+    // $this.css("top", Math.max(0, $(window).scrollTop() + 50) + "px").show();
+    $this.show();
+    return false;
+}
 function layerClose(layer) {
     var $this = $(layer);
     $this.closest('.layer-wrap').hide();
