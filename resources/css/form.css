@@ -35,6 +35,7 @@ input[type=radio], input[type=checkbox] {
 }
 .table th, .table td {
     border-top: 1px solid #f1f1f1;
+    vertical-align: middle;
 }
 .table tr:first-child th, .table tr:first-child td {
     border-top: 1px solid #e2e2e2;
@@ -45,14 +46,12 @@ input[type=radio], input[type=checkbox] {
     background-color: #f8f8f8;
     font-weight: 400;
     color: #000;
-    vertical-align: middle;
 }
 .table th.th-row {
     border-right: 1px solid #f1f1f1;
 }
 .table th.image-row {
     background-color: #fff;
-    vertical-align: top;
 }
 .table thead th {
     padding: 7px 0;
