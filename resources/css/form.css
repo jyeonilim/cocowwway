@@ -17,9 +17,6 @@ body {
 .content-inner:after {
     clear: both;
 }
-input[type=radio], input[type=checkbox] {
-    vertical-align: middle;
-}
 .selectbox .selectbox-value:after {
     right: 7px;
     width: 0;
@@ -68,14 +65,6 @@ input[type=radio], input[type=checkbox] {
     font-weight: 400;
     line-height: 26px;
     color: #000;
-}
-.table input[type=radio] {
-    vertical-align: middle;
-}
-.table input[type=text] {
-    height: 26px;
-    padding: 0 10px;
-    outline: none;
 }
 .table label {
     margin-right: 15px;

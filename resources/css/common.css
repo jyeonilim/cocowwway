@@ -266,7 +266,7 @@ table {
 /**********************************************
     Button
     *******************************************/
-.btn { /*height: 34px;*/
+.btn {/*height: 34px;*/
     display: inline-block;
     padding: 0 10px;
     border: 1px solid #e0e0e0;
@@ -278,15 +278,15 @@ table {
     vertical-align: middle;
     text-decoration: none;
 }
-.btn-sm { /*height: 21px;*/
+.btn-sm {/*height: 21px;*/
     padding: 0 6px;
     font-size: 12px;
     line-height: 1.59;
 }
-.btn-md { /*height: 30px;*/
+.btn-md {/*height: 30px;*/
     line-height: 2.16;
 }
-.btn-lg { /*height: 60px;*/
+.btn-lg {/*height: 60px;*/
     font-size: 22px;
     line-height: 2.64;
 }
@@ -364,7 +364,7 @@ table {
 /**********************************************
     Form
     *******************************************/
-input[type=text],input[type=password],textarea,.form-control {
+input,textarea,.form-control {/*height: 26px;*/
     display: inline-block;
     width: 100%;
     padding: 0 8px;
@@ -372,11 +372,18 @@ input[type=text],input[type=password],textarea,.form-control {
     font: 13px/1.85 'NotoSansKR', sans-serif;
     color: #666;
 }
-input[type=text]::placeholder,input[type=password]::placeholder,.form-control::placeholder {
+input::placeholder,.form-control::placeholder {
     color: #a7a9ac;
 }
 textarea,textarea.form-control {
     height: auto;
+}
+input[type=radio],input[type=checkbox] {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
 }
 /*Selectbox*/
 .selectbox {
