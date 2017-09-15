@@ -156,8 +156,8 @@ body, .btn {
     position: relative;
     z-index: 11;
     display: inline-block;
-    _width: 830px;
-    margin: 0 auto;
+    _display:inline;
+    zoom:1;
 }
 .quick-link .btn {
     _height: 30px;
@@ -267,6 +267,7 @@ body, .btn {
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
     min-width: 1200px;
     margin: auto;
 }
