@@ -17,8 +17,9 @@ body {
 .content-inner:after {
     clear: both;
 }
+/* search selectbox */
 .selectbox .selectbox-value:after {
-    right: 7px;
+    right: 9px;
     width: 0;
     height: 0;
     border-left: 4px solid transparent;
@@ -57,7 +58,13 @@ body {
     border-right: 0;
 }
 .table td {
-    padding: 4px 10px;
+    padding: 4px 7px;
+}
+.table-border th, .table-border td {
+    border-left: 1px solid #e2e2e2;
+}
+.table-border th:first-child, .table-border td:first-child {
+    border-left: 0;
 }
 .table .label {
     display: inline-block;
@@ -95,7 +102,7 @@ td.add-btn-address {
     padding: 7px 10px;
     text-align: left;
 }
-td.center {
+.table .align-center td, td.center {
     text-align: center;
 }
 /* Form Content */
@@ -174,40 +181,10 @@ td.center {
     float: right;
 }
 .form-head-search .search-box {
-    position: static;
-    display: block;
     width: 230px;
-    height: 34px;
 }
-.form-head-search .search-box .selectbox .selectbox-value {
-    padding: 0 30px 0 15px;
-    font-size: 13px;
-    line-height: 2.47;
-}
-.form-head-search .search-box .selectbox .selectbox-value:after {
-    right: 12px;
-    border-top-color: #494949;
-}
-.form-head-search .search-box .search-input .form-control {
-    width: 120px;
-    height: 32px;
-}
-.form-head-search .search-box .btn-search {
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    margin: 7px 0 0 11px;
-    background: url("../images/sprite-icon.png") no-repeat -440px -200px;
-    vertical-align: middle;
-}
-
-.selectbox .selectbox-value:after {
-    right: 7px;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 6px solid #949494;
+.form-head-search .search-input {
+    padding: 0 35px 0 60px;
 }
 .form-item-wrap {
     padding: 13px;
@@ -272,6 +249,37 @@ select {
     height: 100%;
     border: 1px solid #dee3eb;
     background-color: #fff;
+}
+.search-box.search-address .selectbox {
+    width: 84px;
+}
+.search-box.search-address .search-input {
+    padding: 0 35px 0 84px;
+}
+.simple-registration {
+    padding: 6px 7px 0 0;
+}
+.map-address {
+    margin-bottom: 6px;
+}
+.map-address .map {
+    font-weight: 200;
+    font-size: 10px;
+    color: #515151;
+}
+.map-address .map.all {
+    color: #f05b50;
+}
+.map-address .map:before {
+    display: inline-block;
+    width: 1px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: #e5e5e5;
+    content: '';
+}
+.map-address .map:first-child:before {
+    display: none;
 }
 /* Layer */
 .new-folder .layer-inner {

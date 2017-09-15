@@ -1,14 +1,6 @@
 /**********************************************
     Form
     *******************************************/
-.selectbox .selectbox-value:after {
-    right: 7px;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 6px solid #949494;
-}
 .form-body {
     overflow: hidden;
     overflow-y: auto;
@@ -86,45 +78,6 @@
     background: url("../images/sprite-icon.png") no-repeat -400px -280px;
     vertical-align: -1px;
     content: '';
-}
-.form-head-search {
-    float: right;
-}
-.form-head-search .search-box {
-    position: static;
-    display: block;
-    width: 230px;
-    height: 34px;
-}
-.form-head-search .search-box .selectbox .selectbox-value {
-    padding: 0 30px 0 15px;
-    font-size: 13px;
-    line-height: 2.47;
-}
-.form-head-search .search-box .selectbox .selectbox-value:after {
-    right: 12px;
-    border-top-color: #494949;
-}
-.form-head-search .search-box .search-input .form-control {
-    width: 120px;
-    height: 32px;
-}
-.form-head-search .search-box .btn-search {
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    margin: 7px 0 0 11px;
-    background: url("../images/sprite-icon.png") no-repeat -440px -200px;
-    vertical-align: middle;
-}
-
-.selectbox .selectbox-value:after {
-    right: 7px;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 6px solid #949494;
 }
 .form-item-wrap {
     padding: 13px;

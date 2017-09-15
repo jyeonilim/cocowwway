@@ -111,15 +111,6 @@
     background: url("../images/sprite-icon.png") no-repeat -440px -200px;
     vertical-align: middle;
 }
-
-.selectbox .selectbox-value:after {
-    right: 7px;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 6px solid #949494;
-}
 .form-item-wrap {
     padding: 13px;
 }

@@ -364,9 +364,10 @@ table {
 /**********************************************
     Form
     *******************************************/
-input,textarea,.form-control {/*height: 26px;*/
+input,textarea,.form-control {
     display: inline-block;
     width: 100%;
+    height: 26px;
     padding: 0 8px;
     border: 1px solid #e8e8e8;
     font: 13px/1.85 'NotoSansKR', sans-serif;
@@ -424,6 +425,10 @@ input[type=radio],input[type=checkbox] {
     color: transparent;
     vertical-align: middle;
     content: '';
+}
+.selectbox.block {
+    display: block;
+    width: 100%;
 }
 /*Checkbox*/
 .checkbox{
@@ -545,6 +550,33 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #3c3c3c;
+}
+.search-box {
+    position: relative;
+    width: 220px;
+    height: 34px;
+    border: 1px solid #e6e9f0;
+}
+.search-box .selectbox {
+    float: left;
+    border: 0;
+    border-right: 1px solid #e6e9f0;
+}
+.search-box .selectbox .selectbox-value {
+    line-height: 2.47;
+}
+.search-box .search-input .form-control {
+    height: 32px;
+    border: 0;
+}
+.search-box .btn-search {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    width: 19px;
+    height: 19px;
+    background: url("../images/sprite-icon.png") no-repeat -440px -200px;
+    vertical-align: middle;
 }
 .layer-wrap {
     display: none;
@@ -710,32 +742,25 @@ body {
 .quick-search {
     position: relative;
 }
-.search-box {
+.quick-search .search-box {
     display: none;
     position: absolute;
     top: -5px;
     right: -4px;
     width: 360px;
     height: 40px;
-    border: 1px solid #e6e9f0;
 }
-.search-box .selectbox {
-    float: left;
-    border: 0;
-    border-right: 1px solid #e6e9f0;
+.quick-search .search-box.show {
+    display: block;
 }
-.search-box .selectbox .selectbox-value {
+.quick-search .search-box .selectbox .selectbox-value {
     padding: 0 27px 0 6px;
     font-size: 14px;
     line-height: 2.72;
 }
-.search-box .search-input {
-    float: left;
-}
-.search-box .search-input .form-control {
+.quick-search .search-box .search-input .form-control {
     width: 235px;
     height: 38px;
-    border: 0;
 }
 .user-box {
     top: 53px;
@@ -1198,6 +1223,7 @@ body {
     width: 100%;
     padding: 13px 25px;
     border-top: 1px solid #dee3eb;
+    background-color: #fff;
 }
 .left-foot .outer {
     width: 50%;

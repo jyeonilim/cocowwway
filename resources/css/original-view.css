@@ -116,33 +116,6 @@
 .view-head-search {
     float: right;
 }
-.view-head-search .search-box {
-    position: static;
-    display: block;
-    width: 190px;
-    height: 34px;
-}
-.view-head-search .search-box .selectbox .selectbox-value {
-    padding: 0 30px 0 15px;
-    font-size: 13px;
-    line-height: 2.47;
-}
-.view-head-search .search-box .selectbox .selectbox-value:after {
-    right: 12px;
-    border-top-color: #494949;
-}
-.view-head-search .search-box .search-input .form-control {
-    width: 80px;
-    height: 32px;
-}
-.view-head-search .search-box .btn-search {
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    margin: 7px 0 0 11px;
-    background: url("../images/sprite-icon.png") no-repeat -440px -200px;
-    vertical-align: middle;
-}
 
 .view-paging {
     height: 58px;
