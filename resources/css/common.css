@@ -266,14 +266,13 @@ table {
 /**********************************************
     Button
     *******************************************/
-.btn {/*height: 34px;*/
+.btn {
     display: inline-block;
-    margin-left: 5px;
     padding: 0 10px;
     border: 1px solid #e0e0e0;
     border-radius: 2px;
     background-color: #fff;
-    font: 13px/2.47 'NotoSansKR', sans-serif;
+    font: 13px/34px 'NotoSansKR', sans-serif;
     color: #444;
     text-align: center;
     vertical-align: middle;
@@ -282,27 +281,21 @@ table {
 .btn:hover {
     color: #444;
 }
-.btn:first-child {
-    margin-left: 0;
-}
-.btn-sm {/*height: 21px;*/
+.btn-sm {
     padding: 0 6px;
     font-size: 12px;
-    line-height: 1.59;
+    line-height: 21px;
 }
-.btn-md {/*height: 30px;*/
-    line-height: 2.16;
+.btn-md {
+    line-height: 30px;
 }
-.btn-lg {/*height: 60px;*/
+.btn-lg {
     font-size: 22px;
-    line-height: 2.64;
+    line-height: 60px;
 }
 .btn-primary {
     border-color: #009ddc;
     background-color: #009ddc;
-    color: #fff;
-}
-.btn-primary:hover {
     color: #fff;
 }
 .btn-gray {
@@ -310,6 +303,7 @@ table {
     background-color: #959595;
     color: #fff;
 }
+.btn-primary:hover,
 .btn-gray:hover {
     color: #fff;
 }
@@ -386,6 +380,10 @@ input::placeholder,.form-control::placeholder {
 textarea,textarea.form-control {
     height: auto;
 }
+input:focus,textarea:focus,.form-control:focus {
+    border-color: #00a7e4;
+    outline: none;
+}
 input[type=radio],input[type=checkbox] {
     display: inline-block;
     width: auto;
@@ -394,9 +392,15 @@ input[type=radio],input[type=checkbox] {
     border: 0;
     vertical-align: middle;
 }
+.table input[type=checkbox]:focus, .table input[type=radio]:focus {}
 [disabled], [readonly] {
     width: auto;
     height: 26px;
+    background: #eee;
+    color: #999;
+}
+[disabled]:focus, [readonly]:focus {
+    border-color: transparent;
 }
 /*Selectbox*/
 .selectbox {

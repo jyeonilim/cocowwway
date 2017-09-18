@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>그룹주소록</title>
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/form.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
+</head>
+<body class="">
+<div class="content">
+	<div class="content-inner">
+		<!-- 메일 메뉴 -->
+		<div class="left">
+			<div class="left-head">
+				<h2 class="sub-title">메일</h2>
+				<div class="btn-block-group">
+					<div class="outer"><a href="#" class="btn btn-primary">메일쓰기</a></div>
+					<div class="outer"><a href="#" class="btn btn-primary">내게쓰기</a></div>
+				</div>
+				<div class="mail-type">
+					<h3 class="sr-only">메일 모아보기</h3>
+					<a href="#" class="unread"><i class="unread-count">999+</i>안읽음</a>
+					<a href="#" class="important"><i class="icon-important"></i>중요</a>
+					<a href="#" class="attach"><i class="icon-attach"></i>첨부</a>
+				</div>
+			</div>
+			<!-- 메일 트리 메뉴 -->
+			<div class="left-body">메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br>메일 트리 메뉴 영역<br></div>
+			<!-- 메일 트리 메뉴 //end -->
+			<div class="left-foot">
+				<div class="btn-block-group">
+					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-set-sm"></i>환경설정</a></div>
+					<div class="outer"><a href="#" class="btn btn-md btn-icon-left"><i class="icon-document"></i>개인주소록</a></div>
+				</div>
+			</div>
+		</div>
+		<!-- 메일 메뉴 //end -->
+		<!-- 메일 환경설정 -->
+		<div class="border-box">
+			<h3 class="page-title">환경설정</h3>
+			<!-- [D] 해당메뉴 선택시 li에 current 클래스 추가 -->
+			<ul class="page-menu">
+				<li><a href="#">메일함설정</a></li>
+				<li><a href="#">미리보기설정</a></li>
+				<li><a href="#">폴더설정</a></li>
+				<li><a href="#">메일분류</a></li>
+				<li><a href="#">서명관리</a></li>
+				<li><a href="#">개인주소록</a></li>
+				<li class="current"><a href="#">그룹주소록</a></li>
+				<li><a href="#">개인템플릿</a></li>
+				<li><a href="#">답장머릿말설정</a></li>
+				<li><a href="#">메일발신정보설정</a></li>
+			</ul>
+			<div class="page-content mail-configuration">
+				<div class="page-content-inner">
+					<div class="clearfix btn-align-top">
+						<div class="pull-left">
+							<div class="search-box search-address">
+								<div class="selectbox">
+									<strong class="selectbox-value">전체</strong>
+									<select onchange="selectboxEvent(this);">
+										<option>전체</option>
+										<option>이름</option>
+										<option>회사명</option>
+									</select>
+								</div>
+								<div class="search-input">
+									<input type="text" class="form-control">
+								</div>
+								<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
+							</div>
+						</div>
+						<div class="pull-right">
+							<a href="#" class="btn">그룹등록</a>
+							<a href="#" class="btn">삭제</a>
+						</div>
+					</div>
+					<table class="table">
+						<colgroup>
+							<col style="width:4%;">
+							<col style="width:12%;">
+							<col style="width:32%;">
+							<col style="width:20%;">
+							<col style="width:32%;">
+						</colgroup>
+						<thead>
+						<tr>
+							<th><input type="checkbox"></th>
+							<th>이름</th>
+							<th>회사/부서</th>
+							<th>번호</th>
+							<th>홈페이지</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="align-center">
+							<td><input type="checkbox"></td>
+							<td>새롬</td>
+							<td>새롬/SI그룹</td>
+							<td>02-333-2222</td>
+							<td>saerom@saerom.co.kr</td>
+						</tr>
+						<tr class="align-center">
+							<td><input type="checkbox"></td>
+							<td>새롬</td>
+							<td>새롬/SI그룹</td>
+							<td>02-333-2222</td>
+							<td>saerom@saerom.co.kr</td>
+						</tr>
+						<tr>
+							<td colspan="5" class="center">등록된 문서가 없습니다.</td>
+						</tr>
+						</tbody>
+					</table>
+					<!-- Paging -->
+					<div class="paging">
+						<div class="page">←</div>
+						<div class="page active">1</div>
+						<div class="page">2</div>
+						<div class="page">3</div>
+						<div class="page">4</div>
+						<div class="page">5</div>
+						<div class="page">6</div>
+						<div class="page">7</div>
+						<div class="page">8</div>
+						<div class="page">9</div>
+						<div class="page">10</div>
+						<div class="page">→</div>
+					</div>
+					<!-- Paging //end -->
+				</div>
+			</div>
+		</div>
+		<!-- 메일 환경설정 //end -->
+	</div>
+</div>
+</body>
+</html>

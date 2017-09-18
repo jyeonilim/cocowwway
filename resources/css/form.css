@@ -68,20 +68,16 @@ body {
 }
 .table .label {
     display: inline-block;
-    width: 70px;
+    /*width: 70px;*/
     font-weight: 400;
     line-height: 26px;
     color: #000;
 }
 .table label {
-    margin-right: 15px;
+    margin-left: 15px;
 }
-.table label:last-child {
-    margin-right: 0;
-}
-.table .form-control:focus, .table  #DisSubject input:focus {
-    border-color: #00a7e4;
-    outline: none;
+.table label:first-child {
+    margin-left: 0;
 }
 .table input[type=checkbox] {
     vertical-align: -2px;
@@ -99,7 +95,7 @@ td.add-btn-address {
     resize: vertical;
 }
 .table .align-left th {
-    padding: 7px 10px;
+    padding: 7px;
     text-align: left;
 }
 .table .align-center td, td.center {
@@ -226,6 +222,18 @@ td.add-btn-address {
 /**********************************************
     Mail Configuration
     *******************************************/
+/*메일함설정*/
+.btn-mailbox-group .btn-link:before {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #e5e5e5;
+    content: '';
+}
+.btn-mailbox-group .btn-link:first-child:before {
+    display: none;
+}
 .search-box.search-address .selectbox {
     width: 84px;
 }
