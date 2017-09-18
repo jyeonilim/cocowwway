@@ -877,7 +877,7 @@ body {
 }
 .menu > li.menu-child-after:after {
     position: fixed;
-    top: 116px;
+    top: 115px;
     left: 0;
     right: 0;
     z-index: 10;
