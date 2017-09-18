@@ -68,7 +68,6 @@ body {
 }
 .table .label {
     display: inline-block;
-    width: 70px;
     font-weight: 400;
     line-height: 26px;
     color: #000;
@@ -85,13 +84,6 @@ body {
 }
 .table input[type=checkbox] {
     vertical-align: -2px;
-}
-td.add-btn-address {
-    padding-right: 61px;
-}
-.add-btn-address .btn {
-    float: right;
-    margin: 2px -51px 0 0;
 }
 .add-btn-address textarea,.add-btn-address textarea.form-control {
     display: block;
@@ -218,6 +210,7 @@ td.add-btn-address {
 }
 .form-item-wrap {
     padding: 13px;
+    font: 13px 'NotoSansKR',sans-serif;
 }
 .form-content {
     padding: 0 13px 13px;
@@ -281,4 +274,16 @@ select {
 }
 #attmWrite {
     margin: 5px 0 0 !important;
+}
+#attmWrite div {
+    font-family: 'NotoSansKR',sans-serif;
+}
+.attm-w-contain .note .text {
+    line-height: 110px;
+}
+.attm-btn {
+    line-height: 16px !important;
+}
+.attm-w-contain_head .attm-hd._chk {
+    top: 3px
 }
