@@ -44,10 +44,9 @@ td.add-btn-address {
 }
 #DissendName,#DiscopyName {
     width: 100%;
+    padding: 0;
     background-color: #fff;
+    border-color: transparent;
     color: #666;
-}
-#DissendName:focus,#DiscopyName:focus {
-    border-color: #00a7e4;
-    outline: none;
+    resize: vertical;
 }

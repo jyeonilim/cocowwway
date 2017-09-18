@@ -200,7 +200,8 @@ div.gridbox_dhx_terrace.gridbox .xhdr {
     border-bottom-color: #f1f1f1;
 }
 div.gridbox_dhx_terrace.gridbox table.hdr td {
-    background-color: #f8f8f8;
+    background-color: #f8f8f8 !important;
+    vertical-align: middle !important;
 }
 div.gridbox_dhx_terrace.gridbox table.obj tr td {
     border-color: #e5e5e5;

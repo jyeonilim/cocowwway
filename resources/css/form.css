@@ -287,3 +287,14 @@ select {
 .attm-w-contain_head .attm-hd._chk {
     top: 3px
 }
+/*주소록-조직도*/
+.ui-corner-all {
+    border-radius: 0;
+}
+.ui-widget-content {
+    border: 1px solid #ccc;
+    background: linear-gradient(#f2f2f2, #ebebeb);
+}
+.ui-dialog .ui-dialog-title {
+    font:13px 'NotoSansKR', sans-serif;
+}
