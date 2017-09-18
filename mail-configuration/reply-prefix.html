@@ -8,6 +8,8 @@
 	<title>메일발신정보설정</title>
 	<link rel="stylesheet" href="../resources/css/common.css">
 	<link rel="stylesheet" href="../resources/css/form.css">
+	<link rel="stylesheet" href="../resources/css/original-common.css">
+	<link rel="stylesheet" href="../resources/css/original-form.css">
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
@@ -55,8 +57,8 @@
 				<li><a href="#">개인주소록</a></li>
 				<li><a href="#">그룹주소록</a></li>
 				<li><a href="#">개인템플릿</a></li>
-				<li><a href="#">답장머릿말설정</a></li>
-				<li class="current"><a href="#">메일발신정보설정</a></li>
+				<li class="current"><a href="#">답장머릿말설정</a></li>
+				<li><a href="#">메일발신정보설정</a></li>
 			</ul>
 			<div class="page-content mail-configuration">
 				<div class="page-content-inner">
@@ -73,30 +75,21 @@
 						</tr>
 						<tr>
 							<th>
-								<strong class="label">발신구분</strong>
+								<strong class="label">구분</strong>
 							</th>
 							<td>
 								<label>
-									<input type="radio" name="fromOption"> 국문
+									<input type="radio" name="prefixOption"> 국문
 								</label>
 								<label>
-									<input type="radio" name="fromOption"> 영문
+									<input type="radio" name="prefixOption"> 영문
 								</label>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">영어이름</strong>
-							</th>
-							<td>
-								<input type="text" style="width: 50%;">
 							</td>
 						</tr>
 						</tbody>
 					</table>
-					<p class="note">발신인명을 영문으로 설정시, 메일 발송시 발신인명이 영문으로 설정된 이름으로 발송됩니다.<br>
-						발신인명을 영문으로 설정시, 영어이름을 지정하셔야 합니다.<br>
-						<span class="text-important">10~15분 경과후, 메일 발신명 정보 설정이 반영됩니다.</span></p>
+					<p class="note text-important">국문 : 답장, 전체답장, 전달<br>
+						영문 : RE, RE, FW</p>
 				</div>
 			</div>
 		</div>

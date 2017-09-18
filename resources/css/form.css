@@ -269,6 +269,9 @@ td.add-btn-address {
 .new-folder .layer-inner {
     width: 495px;
 }
+.mail-template-form .selectbox-value {
+    width: 110px;
+}
 
 /**********************************************
     dhtmlx Custom

@@ -8,8 +8,6 @@
 	<title>개인템플릿</title>
 	<link rel="stylesheet" href="../resources/css/common.css">
 	<link rel="stylesheet" href="../resources/css/form.css">
-	<link rel="stylesheet" href="../resources/css/original-common.css">
-	<link rel="stylesheet" href="../resources/css/original-form.css">
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
@@ -63,7 +61,7 @@
 			<div class="page-content mail-configuration">
 				<div class="page-content-inner">
 					<div class="btn-align-top">
-						<a href="#" class="btn">새문서</a>
+						<a href="#" class="btn" onclick="layerOpen('.mail-template-form');">새문서</a>
 					</div>
 					<table class="table">
 						<colgroup>
@@ -82,7 +80,7 @@
 						</thead>
 						<tbody>
 						<tr>
-							<td>테스트.1</td>
+							<td><a href="#" onclick="layerOpen('.mail-template-view');">테스트.1</a></td>
 							<td>분류 없음</td>
 							<td>2017-09-06</td>
 							<td>1.7 KB</td>
@@ -105,78 +103,31 @@
 						<div class="page">→</div>
 					</div>
 					<!-- Paging //end -->
-					<!-- 새 메일자동분류 설정 -->
-					<div class="layer-wrap layer new-mail-filter">
+					<!-- 메일양식템플릿 -->
+					<div class="layer-wrap layer mail-template-form">
 						<div class="layer-inner">
 							<div class="layer-head">
-								<h4 class="title">메일 자동분류 설정</h4>
+								<h4 class="title">메일양식템플릿<span class="sub-text">메일양식템플릿</span></h4>
 							</div>
 							<div class="layer-body">
 								<table class="table">
 									<tbody>
 									<tr>
-										<th><strong class="label">등록정보</strong></th>
-										<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017-09-18 10:37:00)</td>
-									</tr>
-									<tr>
-										<th><strong class="label">보낸이주소</strong></th>
+										<th><strong class="label">템플릿 명칭</strong></th>
+										<td><input type="text"></td>
+										<th><strong class="label">분류</strong></th>
 										<td>
-											<input type="text" style="width:250px;">
 											<div class="selectbox">
-												<strong class="selectbox-value">를 포함할 때</strong>
+												<strong class="selectbox-value">분류없음</strong>
 												<select onchange="selectboxEvent(this);">
-													<option>를 포함할 때</option>
-												</select>
-											</div>
-											<label>
-												<input type="checkbox"> 조직도
-											</label>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">메일 제목</strong></th>
-										<td>
-											<input type="text" style="width:250px;">
-											<div class="selectbox">
-												<strong class="selectbox-value">를 포함할 때</strong>
-												<select onchange="selectboxEvent(this);">
-													<option>를 포함할 때</option>
+													<option>분류없음</option>
+													<option>새로운값입력</option>
 												</select>
 											</div>
 										</td>
 									</tr>
 									<tr>
-										<th><strong class="label">이동할 편지함</strong></th>
-										<td>
-											<div class="selectbox">
-												<strong class="selectbox-value">폴더 선택</strong>
-												<select onchange="selectboxEvent(this);">
-													<option>폴더 선택</option>
-													<option>완전삭제</option>
-													<option>휴지통</option>
-												</select>
-											</div>
-											<label>
-												<input type="checkbox"> 새편지함 만들기
-											</label>
-											<input type="text" readonly>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">참고사항</strong></th>
-										<td>
-											<p>※ 메일 자동분류를 설정하기 전에 수신된 메일은 해당되지 않습니다.<br><br>
-												※ 동일한 조건이 저장된 다수의 자동분류설정이 있다면, 자동분류설정 목록에서 맨처음 일치하는 조건에 해당하는 폴더로 이동됩니다.<br><br>
-												※ 적용을 원하지 않는 정보는 입력하지 마십시오. 항목을 모두 입력하는 경우에는 모든 조건을 만족하는 경우에만 자동분류됩니다.</p>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">메일분류</strong></th>
-										<td>
-											<label>
-												<input type="checkbox"> 메일분류 설정
-											</label>
-										</td>
+										<td colspan="4">에디터영역</td>
 									</tr>
 									</tbody>
 								</table>
@@ -188,7 +139,38 @@
 							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
 						</div>
 					</div>
-					<!-- 새 메일자동분류 설정 //end -->
+					<!-- 메일양식템플릿 //end -->
+					<!-- 메일양식템플릿 - 읽기 -->
+					<div class="layer-wrap layer mail-template-view">
+						<div class="layer-inner">
+							<div class="layer-head">
+								<h4 class="title">메일양식템플릿</h4>
+							</div>
+							<div class="layer-body">
+								<table class="table">
+									<tbody>
+									<tr>
+										<th><strong class="label">템플릿 명칭</strong></th>
+										<td>테스트.1</td>
+										<th><strong class="label">분류</strong></th>
+										<td>분류 없음</td>
+									</tr>
+									<tr>
+										<td colspan="4">테스트 입니다.</td>
+									</tr>
+									</tbody>
+								</table>
+								<div class="btn-align-center">
+									<a href="#" class="btn btn-sm">편집</a>
+									<a href="#" class="btn btn-sm">인쇄</a>
+									<a href="#" class="btn btn-sm">삭제</a>
+									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
+								</div>
+							</div>
+							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
+						</div>
+					</div>
+					<!-- 메일양식템플릿 - 읽기 //end -->
 				</div>
 			</div>
 		</div>
