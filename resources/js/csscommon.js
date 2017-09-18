@@ -192,10 +192,10 @@ $(document).ready(function() {
 
     // 메일 환경설정 컨텐츠 스크롤
     var mailConfigScroll = (function () {
-        var contentHeight = $('.mail-configuration').outerHeight(true),
+        var contentHeight = $('.border-box').outerHeight(true),
             titleHeight = $('.page-title').outerHeight(true),
             menuHeight = $('.page-menu').outerHeight(true);
-        $('.page-content').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
+        $('.mail-configuration').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
     });
     $(document).ready(mailConfigScroll);
     $(window).resize(mailConfigScroll);

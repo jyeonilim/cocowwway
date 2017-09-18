@@ -226,11 +226,6 @@ td.add-btn-address {
 /**********************************************
     Mail Configuration
     *******************************************/
-.mail-configuration {
-    height: 100%;
-    border: 1px solid #dee3eb;
-    background-color: #fff;
-}
 .search-box.search-address .selectbox {
     width: 84px;
 }
