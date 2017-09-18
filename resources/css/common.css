@@ -551,6 +551,7 @@ body {
     Common
     *******************************************/
 .border-box {
+    height: 100%;
     border: 1px solid #dee3eb;
     background-color: #fff;
 }
