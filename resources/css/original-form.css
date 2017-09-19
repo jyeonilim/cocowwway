@@ -1,6 +1,9 @@
 /**********************************************
     Form
     *******************************************/
+.content-inner {
+    height: 100%;
+}
 .form-body {
     overflow: hidden;
     overflow-y: auto;
