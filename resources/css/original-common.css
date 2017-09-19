@@ -1,73 +1,10 @@
 /**********************************************
-    View/List - Left
+    View - Left
     *******************************************/
-.content-inner {
-    height: 100%;
-    padding: 16px 18px;
-    background-color: #f2f4f7;
-    box-sizing: border-box;
-}
-.content-inner:before, .content-inner:after {
-    content: '';
-    display: table;
-}
-.content-inner:after {
-    clear: both;
-}
 .left {
     float: left;
     width: 252px;
     padding-bottom: 57px;
     border: 1px solid #dee3eb;
     background-color: #fff;
-}
-.left-body, .mail-form {
-    overflow: hidden;
-    overflow-y: auto;
-}
-.left-head {
-    padding: 12px 12px 0;
-    border-bottom: 1px solid #dee3eb;
-}
-.mail-type {
-    margin: 10px -12px 0;
-    border-top: 1px solid #dee3eb;
-    font-size: 0;
-}
-.mail-type a {
-    display: inline-block;
-    width: 33.33%;
-    padding: 9px 0 7px;
-    border-left: 1px solid #dee3eb;
-    font-size: 13px;
-    text-align: center;
-}
-.mail-type a.unread {
-    border-left: 0;
-}
-.mail-type > a > i {
-    display: block;
-    width: 36px;
-    height: 36px;
-    margin: auto auto 2px;
-    border-radius: 50%;
-    background: #ebebeb none;
-    font: 700 12px/3 'NanumGothic', sans-serif;
-}
-.mail-type .unread-count {
-    color: #00a7e4;
-}
-.mail-type .icon-important:before, .mail-type .icon-attach:before {
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    margin-top: 7px;
-    background: url("../images/sprite-icon.png") no-repeat 0 0;
-    content: '';
-}
-.mail-type .icon-important:before {
-    background-position: -320px -240px;
-}
-.mail-type .icon-attach:before {
-    background-position: -360px -240px;
 }
