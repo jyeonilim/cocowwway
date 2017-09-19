@@ -101,6 +101,11 @@ td.add-btn-address {
 .table .align-center td, td.center {
     text-align: center;
 }
+.table-note {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #ee761d;
+}
 .btn-hidden-view {
     position: relative;
     display: inline-block;
@@ -243,6 +248,23 @@ td.add-btn-address {
 .simple-registration {
     padding: 6px 7px 0 0;
 }
+/*서명관리*/
+.sign-preview {
+    display: none;
+    padding-bottom: 15px;
+}
+.sign-preview .sign-list {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    font-weight: 200;
+    letter-spacing: .5px;
+}
+.sign-preview .sign-list strong {
+    font-weight: 500;
+}
+/*개인주소록*/
 .map-address {
     margin-bottom: 6px;
 }

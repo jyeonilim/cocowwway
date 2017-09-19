@@ -190,16 +190,6 @@ $(document).ready(function() {
     $(document).ready(leftScroll);
     $(window).resize(leftScroll);
 
-    // 메일 환경설정 컨텐츠 스크롤
-    var mailConfigScroll = (function () {
-        var contentHeight = $('.border-box').outerHeight(true),
-            titleHeight = $('.page-title').outerHeight(true),
-            menuHeight = $('.page-menu').outerHeight(true);
-        $('.mail-configuration').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
-    });
-    $(document).ready(mailConfigScroll);
-    $(window).resize(mailConfigScroll);
-
     $('.btn-hidden-view.bcc-view').on('click', function () {
         $(this).toggleClass('on');
         $('.item-bcc').toggleClass('on');
@@ -207,6 +197,22 @@ $(document).ready(function() {
     $('.btn-hidden-view.attach-view').on('click', function () {
         $(this).toggleClass('on');
         $('.attach-box').toggleClass('on');
+    });
+
+    // 메일 환경설정 컨텐츠 스크롤
+    var mailConfigScroll = (function () {
+        var contentHeight = $('.border-box').outerHeight(true),
+            titleHeight = $('.page-title').outerHeight(true),
+            menuHeight = $('.page-menu').outerHeight(true);
+        console.log(contentHeight);
+        $('.mail-configuration').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
+    });
+    $(document).ready(mailConfigScroll);
+    $(window).resize(mailConfigScroll);
+
+    // 메일 환경설정 서명관리 미리보기
+    $('.btn-sign-preview').on('click',function () {
+        $('.sign-preview').toggle();
     });
 
 });
