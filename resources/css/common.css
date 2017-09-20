@@ -303,8 +303,7 @@ table {
     background-color: #959595;
     color: #fff;
 }
-.btn-primary:hover,
-.btn-gray:hover {
+.btn-primary:hover,.btn-gray:hover {
     color: #fff;
 }
 .btn-outline-primary {
@@ -803,7 +802,6 @@ body {
     z-index: 11;
     width: 11px;
     height: 6px;
-    margin: auto;
     background: url("../images/sprite-icon.png") no-repeat -320px -160px;
     content: '';
 }
@@ -1199,6 +1197,9 @@ body {
     padding: 12px 12px 0;
     border-bottom: 1px solid #dee3eb;
 }
+.left-head .btn-block-group {
+    margin-top: 8px;
+}
 .mail-type {
     margin: 10px -12px 0;
     border-top: 1px solid #dee3eb;
@@ -1248,7 +1249,6 @@ body {
     width: 100%;
     padding: 13px 25px;
     border-top: 1px solid #dee3eb;
-    background-color: #fff;
 }
 .left-foot .outer {
     width: 50%;

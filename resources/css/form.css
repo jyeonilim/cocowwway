@@ -54,7 +54,7 @@ body {
 .table th.th-row {
     border-right: 1px solid #f1f1f1;
 }
-.table th.image-row {
+.table th.image-row, .table td.image-row {
     background-color: #fff;
 }
 .table td {
