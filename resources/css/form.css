@@ -129,6 +129,20 @@ body {
     background-color: transparent;
     border-color: #ddd;
 }
+.item-bcc {
+    display: none;
+}
+.item-bcc.on {
+    display: table-row;
+}
+.attach-box {
+    display: none;
+    min-height: 26px;
+    border: 1px solid #e8e8e8;
+}
+.attach-box.on {
+    display: block;
+}
 /* Form Content */
 .form {
     width: 100%;
