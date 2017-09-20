@@ -57,14 +57,22 @@
     margin-right: 0;
 }
 .view-head-btn .checkbox-box {
-    padding: 7px 10px 6px;
+    padding: 6px 10px 9px;
     border: 1px solid #e0e0e0;
     border-radius: 2px;
 }
 .view-head-btn .selectbox .selectbox-value {
     padding: 0 20px 0 8px;
-    line-height: 2.47;
+    line-height: 34px;
     color: #444;
+}
+.btn-display-left:before {
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    background: url("../images/sprite-icon.png") no-repeat -440px -280px;
+    vertical-align: -1px;
+    content: '';
 }
 .preview-type {}
 .preview-type .btn:before {
