@@ -326,11 +326,11 @@ table {
     vertical-align: -1px;
 }
 .btn-group {
-    padding: 0 2px;
+    padding: 0 1px;
 }
 .btn-group .outer {
-    display: inline-block;
-    margin: 0 -2px;
+    float: left;
+    margin: 0 -1px;
 }
 .btn-block-group {
     display: table;

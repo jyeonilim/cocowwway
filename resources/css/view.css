@@ -103,7 +103,7 @@
 .btn-arrow-prev, .btn-arrow-next {
     position: relative;
     width: 34px;
-    height: 34px;
+    height: 36px;
 }
 .btn-arrow-prev:before, .btn-arrow-next:before {
     position: absolute;

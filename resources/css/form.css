@@ -6,8 +6,7 @@ body {
 }
 .content-inner {
     height: auto;
-    /*padding: 16px 18px;*/
-    padding: 0;
+    padding: 16px 18px;
     background-color: #f2f4f7;
     box-sizing: border-box;
 }
@@ -180,13 +179,16 @@ body {
 }
 .form-head-btn .selectbox .selectbox-value {
     padding: 0 20px 0 8px;
-    line-height: 2.47;
+    line-height: 34px;
     color: #444;
+}
+.form-head-btn select {
+    height: 36px !important;
 }
 .btn-arrow-prev, .btn-arrow-next {
     position: relative;
     width: 34px;
-    height: 34px;
+    height: 36px;
 }
 .btn-arrow-prev:before, .btn-arrow-next:before {
     position: absolute;
