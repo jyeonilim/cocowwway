@@ -1,6 +1,10 @@
 /**********************************************
     View
     *******************************************/
+.view-content, .preview-content, .preview {
+    overflow: hidden;
+    overflow-y: auto;
+}
 .view {
     float: left;
     width: 100%;

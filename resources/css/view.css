@@ -24,7 +24,10 @@
 }
 .view-content, .preview-content, .preview {
     overflow: hidden;
-    overflow-y: auto;
+}
+.view-content .objbox, .preview-content .objbox, .preview .objbox {
+    overflow: hidden !important;
+    overflow-y: auto !important;
 }
 .view {
     float: left;
