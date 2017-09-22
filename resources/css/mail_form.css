@@ -1,6 +1,9 @@
 /**********************************************
     Form Mail
     *******************************************/
+.content-inner {
+    height: auto;
+}
 .form-body {
     overflow: hidden;
     overflow-y: auto;
