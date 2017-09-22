@@ -27,32 +27,39 @@ $(document).ready(function() {
 
     // Menu
     $(".menu > li > a").on({
-        'mouseenter focusin': function() {
+        'mouseenter': function(e) {
             var hasMenu = $(this).next().hasClass('menu-child');
             if(hasMenu === true) {
+                e.preventDefault();
                 $(this).closest("li").siblings().find('.open').stop().stop().stop().fadeTo(50, 0, function() {
                     $(this).hide().removeClass('open');
                     $(this).parent().removeClass('menu-child-after');
+                    console.log('1');
                 });
+
                 $(this).siblings('.menu-child').show().addClass('open').stop().stop().fadeTo(100, 1);
                 $(this).parent().addClass('menu-child-after');
+                console.log('너냐');
             }
+            return false;
         },
-        'focusout mouseleave': function() {
+        'mouseleave': function() {
             $(this).siblings('.menu-child').fadeTo(50, 0, function() {
                 $(this).hide().removeClass('open');
                 $(this).parent().removeClass('menu-child-after');
+                console.log('뭐냐');
             });
-
         }
     });
     $(document)
         .on('mouseenter', '.menu-child.open', function(){
             $(this).stop().stop().fadeTo(50, 1);
+            console.log('4');
         })
         .on('mouseleave', '.menu-child.open', function(){
             $(this).fadeTo(50, 0, function(){ $(this).hide().removeClass('open');});
             $(this).parent().removeClass('menu-child-after');
+            console.log('5');
         });
     $('.btn-all-menu').on('click',function () {
         $('.all-menu-box').toggle();
@@ -199,16 +206,20 @@ $(document).ready(function() {
         $('.attach-box').toggleClass('on');
     });
 
-    // 메일 환경설정 컨텐츠 스크롤
-    var mailConfigScroll = (function () {
-        var contentHeight = $('.border-box').outerHeight(true),
+    // 서브페이지 컨텐츠 스크롤
+    var pageScroll = (function () {
+        var hasSubMenu = $('.page-menu').attr('class'),
+            contentHeight = $('.border-box').outerHeight(true),
             titleHeight = $('.page-title').outerHeight(true),
             menuHeight = $('.page-menu').outerHeight(true);
-        console.log(contentHeight);
-        $('.mail-configuration').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
+        if(hasSubMenu === 'page-menu') {
+            $('.page-content').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
+        } else {
+            $('.page-content').height(contentHeight-titleHeight+3);
+        }
     });
-    $(document).ready(mailConfigScroll);
-    $(window).resize(mailConfigScroll);
+    $(document).ready(pageScroll);
+    $(window).resize(pageScroll);
 
     // 메일 환경설정 서명관리 미리보기
     $('.btn-sign-preview').on('click',function () {

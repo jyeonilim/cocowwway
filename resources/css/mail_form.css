@@ -1,14 +1,17 @@
 /**********************************************
     Form Mail
     *******************************************/
-.content-inner {
-    padding: 0;
-}
 .form-body {
     overflow: hidden;
     overflow-y: auto;
 }
-
+.form-inner {
+    border: 1px solid #dee3eb;
+}
+.editorspace {
+    padding: 0 18px;
+    box-sizing: border-box;
+}
 .table {
     border-bottom: 0;
 }
