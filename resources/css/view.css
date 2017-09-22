@@ -140,9 +140,16 @@
 }
 .view-head-search .search-box {
     width: 190px;
+    height: 36px;
+}
+.view-head-search .search-box .selectbox .selectbox-value {
+    line-height: 34px;
 }
 .view-head-search .search-box .search-input {
     padding: 0 35px 0 60px;
+}
+.view-head-search .search-box .search-input .form-control {
+    height: 34px;
 }
 
 .view-paging {
@@ -203,10 +210,6 @@ select, div, form, a:link {
 div.gridbox_dhx_terrace.gridbox table.obj {
     width: 100% !important;
 }
-div.gridbox_dhx_terrace.gridbox,
-div.gridbox table.obj tr:last-child td {
-    border-bottom: 0;
-}
 div.gridbox_dhx_terrace.gridbox .xhdr {
     border-bottom-color: #f1f1f1;
 }
@@ -214,6 +217,8 @@ div.gridbox_dhx_terrace.gridbox table.hdr td {
     background-color: #f8f8f8 !important;
     vertical-align: middle !important;
 }
+div.gridbox_dhx_terrace.gridbox,
+div.gridbox table.obj tr:last-child td,
 div.gridbox_dhx_terrace.gridbox table.obj tr td {
     border-color: #e5e5e5;
 }
@@ -221,6 +226,7 @@ div.gridbox_dhx_terrace.gridbox table.obj tr td {
 #pagingArea > div {
     position: relative;
     width: 100% !important;
+    margin-top: -1px;
     border-top: 1px solid #e5e5e5;
 }
 .dhx_pline {

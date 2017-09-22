@@ -1,11 +1,15 @@
 /**********************************************
     Form
     *******************************************/
-body {
-    overflow-y: auto;
+body,.content {
+     overflow-y: auto;
+ }
+.win_form .content-inner {
+    height: auto;
+    padding: 0;
 }
 .content-inner {
-    height: auto;
+    /*height: 100%;*/
     padding: 16px 18px;
     background-color: #f2f4f7;
     box-sizing: border-box;
@@ -347,4 +351,8 @@ select {
 }
 .ui-dialog .ui-dialog-title {
     font:13px 'NotoSansKR', sans-serif;
+}
+/*ㄷ*/
+#bodylist {
+    overflow: hidden !important;
 }

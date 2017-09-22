@@ -8,10 +8,6 @@
 .form-inner {
     border: 1px solid #dee3eb;
 }
-.editorspace {
-    padding: 0 18px;
-    box-sizing: border-box;
-}
 .table {
     border-bottom: 0;
 }
@@ -40,7 +36,23 @@ td.add-btn-address {
 .add-btn-address .btn:nth-of-type(2) {
     margin-right: -91px;
 }
+
+/**********************************************
+    dhtmlx Custom
+    *******************************************/
+/*메일폼 에디터 영역*/
+#editorarea {
+    margin-top: -18px;
+    padding: 0 18px;
+}
 /*수신인 표시*/
+#img4Title {
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 5px 4px 0 0;
+    background: url('../emate/codebase/imgs/dhxwins_skyblue/dhxwins_icon.gif') no-repeat 0 0;
+}
 #starDisplay,
 #DismyName img {
     vertical-align:middle

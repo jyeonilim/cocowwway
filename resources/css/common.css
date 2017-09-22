@@ -534,7 +534,10 @@ button {
 /**********************************************
     Layout
     *******************************************/
-body {
+html,body {
+    height: 100%;
+}
+body,.content {
     overflow-y: hidden;
 }
 .wrap {
@@ -567,6 +570,7 @@ body {
     Common
     *******************************************/
 .border-box {
+    overflow: hidden;
     height: 100%;
     border: 1px solid #dee3eb;
     background-color: #fff;
@@ -953,6 +957,7 @@ body {
     -moz-box-shadow: 1px 2px 5px -2px #eaecef;
     box-shadow: 1px 2px 5px -2px #eaecef;
     font-size: 14px;
+    text-align: left;
 }
 .all-menu-box:before {
     position: absolute;
@@ -1270,9 +1275,13 @@ body {
     background-color: transparent !important;
     color: #00a7e4 !important;
 }
+.standartTreeImage {
+    vertical-align: middle;
+}
 #tree_area .standartTreeRow, #tree_area .selectedTreeRow {
-    font-family: 'NotoSansKR', sans-serif;
     padding-right: 5px;
+    font-family: 'NotoSansKR', sans-serif;
+    vertical-align: middle;
 }
 #tree_area span.standartTreeRow, #tree_area span.selectedTreeRow {
     width: 100% !important;
