@@ -571,6 +571,7 @@ body,.content {
     *******************************************/
 .border-box {
     overflow: hidden;
+    position: relative;
     height: 100%;
     border: 1px solid #dee3eb;
     background-color: #fff;
@@ -686,6 +687,20 @@ body,.content {
     background-color: #e5e5e5;
     vertical-align: middle;
     content: '';
+}
+.page-layer {
+    display: block;
+}
+.page-layer .layer-inner {
+    width: 550px;
+}
+.page-layer .layer-head {
+    border-bottom: 1px solid #e2e2e2;
+    background-color: #f8f8f8;
+}
+.page-layer .layer-body {
+    padding: 35px 0;
+    text-align: center;
 }
 .note {
     margin-top: 10px;
