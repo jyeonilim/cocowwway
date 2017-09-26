@@ -26,6 +26,9 @@
 .table .label {
     width: 75px;
 }
+.table .label ~ label {
+    margin-left: 0;
+}
 td.add-btn-address {
     padding-right: 98px;
 }
