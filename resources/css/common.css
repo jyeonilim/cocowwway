@@ -27,7 +27,7 @@ time, mark, audio, video, input, textarea, select, option {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section, iframe {
     display: block;
 }
 body {
@@ -611,7 +611,6 @@ body,.content {
     overflow-y: auto;
 }
 .iframe-content {
-    display: block;
     width: 100%;
     height: 100%;
 }
@@ -1012,6 +1011,7 @@ body,.content {
 .user-account {
     min-height: 95px;
     padding: 18px 10px 8px 95px;
+    background-color: #fff;
     font-size: 13px;
     font-family: 'NanumGothic', sans-serif;
     color: #8a8a8a;
