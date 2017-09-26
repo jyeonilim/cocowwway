@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>월간 일정</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <link rel="stylesheet" href="../resources/css/view.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+    <script type="text/javascript" src="../resources/js/csscommon.js"></script>
+</head>
+<body class="">
+<div class="content">
+	<div class="content-inner">
+		<!-- 일정관리 좌측영역 -->
+		<div class="left">
+			<div class="left-head">
+				<h2 class="sub-title">일정관리</h2>
+			</div>
+			<div class="schedule-wrap">
+				<div class="calendar">
+					<div class="calendar-head">
+						<div class="selectbox">
+							<strong class="selectbox-value">2017</strong>
+							<select onchange="selectboxEvent(this);">
+								<option>2017</option>
+								<option>2016</option>
+							</select>
+						</div>
+						<div class="selectbox">
+							<strong class="selectbox-value">09</strong>
+							<select onchange="selectboxEvent(this);">
+								<option>09</option>
+								<option>08</option>
+							</select>
+						</div>
+						<a id="btn_prev" href="#" class="btn_prev"><span class="sr-only">이전</span></a>
+						<a id="btn_next" href="#" class="btn_next"><span class="sr-only">다음</span></a>
+					</div>
+					<table class="calendar-body">
+						<thead>
+						<tr>
+							<th class="sun">일</th>
+							<th>월</th>
+							<th>화</th>
+							<th>수</th>
+							<th>목</th>
+							<th>금</th>
+							<th class="sat">토</th>
+						</tr>
+						</thead>
+						<tbody id="dispcalendar">
+						<tr>
+							<td class="not sun" style="cursor: pointer;">
+								<span class="day">30</span>
+							</td>
+							<td class="not" style="cursor: pointer;">
+								<span class="day">31</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">1</span>
+							</td>
+							<td class="todo" style="cursor: pointer;">
+								<span class="day">2</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">3</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">4</span>
+							</td>
+							<td class="sat" style="cursor: pointer;">
+								<span class="day">5</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="sun" style="cursor: pointer;">
+								<span class="day">6</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">7</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">8</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">9</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">10</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">11</span>
+							</td>
+							<td class="sat" style="cursor: pointer;">
+								<span class="day">12</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="sun" style="cursor: pointer;">
+								<span class="day">13</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">14</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">15</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">16</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">17</span>
+							</td>
+							<td class="today" style="cursor: pointer;">
+								<span class="day">18</span>
+							</td>
+							<td class="sat" style="cursor: pointer;">
+								<span class="day">19</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="sun" style="cursor: pointer;">
+								<span class="day">20</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">21</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">22</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">23</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">24</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">25</span>
+							</td>
+							<td class="sat" style="cursor: pointer;">
+								<span class="day">26</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="sun" style="cursor: pointer;">
+								<span class="day">27</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">28</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">29</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">30</span>
+							</td>
+							<td class="" style="cursor: pointer;">
+								<span class="day">31</span>
+							</td>
+							<td class="not" style="cursor: pointer;">
+								<span class="day">1</span>
+							</td>
+							<td class="not sat" style="cursor: pointer;">
+								<span class="day">2</span>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<a href="#" class="btn btn-sm btn-outline-primary">오늘</a>
+			</div>
+		</div>
+		<!-- 일정관리 좌측영역 //end -->
+	</div>
+</div>
+</body>
+</html>
