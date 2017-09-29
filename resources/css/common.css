@@ -643,10 +643,10 @@ body,.content {
     border-bottom: 1px solid #e5e5e5;
 }
 .sub-title {
-    padding-bottom: 8px;
+    padding-bottom: 10px;
     font-weight: 500;
-    font-size: 18px;
-    color: #00a7e4;
+    font-size: 20px;
+    color: #000;
 }
 .page-title {
     padding: 15px 20px;
@@ -1425,7 +1425,7 @@ body,.content {
     border-bottom: 1px solid #dee3eb;
 }
 .left-head .btn-block-group {
-    margin-top: 8px;
+    margin-top: 2px;
 }
 .mail-type {
     margin: 10px -12px 0;
