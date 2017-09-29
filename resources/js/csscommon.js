@@ -223,6 +223,21 @@ $(document).ready(function() {
     $(document).ready(pageScroll);
     $(window).resize(pageScroll);
 
+    // 메일 환경설정 스크롤 메뉴
+    $('.page-menu').carouFredSel({
+        responsive: true,
+        scroll: {
+            items: 1,
+            duration: 300
+        },
+        items: {
+            visible: 8
+        },
+        prev: '.slide-prev',
+        next: '.slide-next',
+        auto: false
+    });
+
     // 메일 환경설정 서명관리 미리보기
     $('.btn-sign-preview').on('click',function () {
         $('.sign-preview').toggle();
