@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>일간 일정</title>
+    <link rel="stylesheet" href="../resources/css/common.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+    <script type="text/javascript" src="../resources/js/csscommon.js"></script>
+</head>
+<body class="">
+<div class="content">
+	<div class="content-inner">
+		<!-- 일정관리 우측영역 -->
+		<div class="border-box">
+			<h3 class="page-title">개인 일정<span class="sub-text">일간 일정</span></h3>
+			<div class="page-content">
+				<div class="calendar-wrap daily">
+					<div class="add-quick-register">
+						<div class="selectbox">
+							<strong class="selectbox-value">시간</strong>
+							<select onchange="selectboxEvent(this);">
+								<option>시간</option>
+								<option>01</option>
+								<option>02</option>
+							</select>
+						</div>
+						<input type="text" placeholder="일정을 입력하세요">
+						<a href="#" class="btn">등록</a>
+					</div>
+					<div class="calendar-head clearfix">
+						<div class="pull-left">
+							<div class="btn-group">
+								<div class="outer"><a href="#" class="btn btn-primary">일간</a></div>
+								<div class="outer"><a href="#" class="btn">주간</a></div>
+								<div class="outer"><a href="#" class="btn">월간</a></div>
+							</div>
+						</div>
+						<div class="pull-right">
+							<a href="#" class="btn">일정작성</a>
+						</div>
+						<div class="select-month">
+							<div class="selectbox">
+								<strong class="selectbox-value">2017</strong>
+								<select onchange="selectboxEvent(this);">
+									<option>2017</option>
+									<option>2016</option>
+								</select>
+							</div>
+							<div class="selectbox">
+								<strong class="selectbox-value">09</strong>
+								<select onchange="selectboxEvent(this);">
+									<option>09</option>
+									<option>08</option>
+								</select>
+							</div>
+							<a href="#" class="btn_prev"><span class="sr-only">이전</span></a>
+							<a href="#" class="btn_next"><span class="sr-only">다음</span></a>
+						</div>
+					</div>
+					<table class="table calendar-board">
+						<tbody>
+						<tr>
+							<th>이전일정</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">
+								<em>오전</em>6시
+							</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">7시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">8시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">9시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">10시</th>
+							<td class="is-schedule"><a href="#">업체미팅</a></td>
+						</tr>
+						<tr>
+							<th class="time">11시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">
+								<em>오후</em>12시
+							</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">1시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">2시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">3시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">4시</th>
+							<td class="is-schedule"><a href="#">상품기획팀 회의</a></td>
+						</tr>
+						<tr>
+							<th class="time">5시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">6시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">7시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">8시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">9시</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th class="time">이후일정</th>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- 일정관리 우측영역 //end -->
+	</div>
+</div>
+</body>
+</html>

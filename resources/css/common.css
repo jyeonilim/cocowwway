@@ -417,7 +417,7 @@ input[type=radio],input[type=checkbox] {
     left: 0;
     width: 100%;
     height: 100%;
-    min-height: 26px;
+    /*min-height: 26px;*/
     opacity: 0;
     cursor: pointer;
 }
@@ -681,7 +681,10 @@ body,.content {
 .search-box .selectbox .selectbox-value {
     line-height: 2.47;
 }
-.search-box .search-input .form-control {
+.search-box .search-input {
+    padding: 0 35px 0 60px;
+}
+.search-box .search-input .form-control, .search-box .search-input input {
     height: 32px;
     border: 0;
 }
@@ -1471,10 +1474,9 @@ body,.content {
     margin: 8px 11px 0 0;
 }
 /*일정관리 우측영역*/
-.task-calendar-wrap {
+.calendar-wrap {
     height: 100%;
-    /*padding: 0 13px 63px;*/
-    padding: 0 13px 58px;
+    padding: 0 13px;
 }
 .calendar-head {
     padding: 10px 0;
@@ -1500,55 +1502,50 @@ body,.content {
 .select-month .btn_next {
     right: -40px;
 }
-.task-calendar {
+.calendar-board-head {
+    height: 34px;
+    border-bottom: 0;
+}
+.calendar-board {
+    table-layout: fixed;
     height: 100%;
     border-bottom: 0;
 }
-.task-calendar th {
-    height: 34px;
+.calendar-board th {
+    color: #616161;
 }
-.task-calendar td  {
-    overflow: hidden;
-    width: 14.29%;
-    height: 20%;
+.calendar-board td  {
     padding: 4px 0 0 7px;
     border-left: 1px solid #f1f1f1;
     font-weight: 500;
     color: #8c8c8c;
     vertical-align: top;
 }
-.task-calendar td:first-child {
+.calendar-board td:first-child {
     border-left: 0;
 }
-.task-calendar .sun {
+.calendar-board .sun {
     color: #e3394b;
 }
-.task-calendar .sat {
+.calendar-board .sat {
     color: #00bebb;
 }
-/*.task-calendar td.past {*/
+/*.calendar-board td.past {*/
     /*color: #c3c3c3;*/
 /*}*/
-/*.task-calendar .sat.past {*/
+/*.calendar-board .sat.past {*/
     /*color: #f7aac1;*/
 /*}*/
-.task-calendar .past {
+.calendar-board .past {
     opacity: .5;
 }
-.task-calendar .today {
+.calendar-board .today, .calendar-board .is-schedule {
     background-color: #f2f4f7;
 }
-.task-list-wrap {
+.schedule-list-wrap {
     overflow-y: auto;
-    height: 70%;
-    margin: 5px 0;
 }
-.task-list {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-}
-.task-list a {
+.schedule-list a {
     display: block;
     font-weight: 200;
     color: #616161;
@@ -1557,6 +1554,76 @@ body,.content {
     -o-text-overflow: ellipsis;
     white-space: nowrap;
     word-wrap: normal !important;
+}
+.monthly  {
+    padding-bottom: 93px;
+}
+.monthly .calendar-board td  {
+    width: 14.29%;
+    height: 20%;
+}
+.weekly, .daily {
+    padding-bottom: 75px;
+}
+.weekly .calendar-board, .daily .calendar-board {
+    border-bottom: 1px solid #e2e2e2;
+}
+.weekly .calendar-board th  {
+    width: 90px;
+    vertical-align: top;
+}
+.weekly .calendar-board td  {
+    height: 50%;
+    padding: 0;
+}
+.weekly .calendar-board th .btn-add {
+    display: block;
+}
+.weekly .schedule-list-wrap .schedule-list {
+    padding: 5px;
+}
+.weekly .calendar-board .table {
+    border: 0;
+}
+.daily {}
+.add-quick-register {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+.add-quick-register .selectbox {
+    overflow: hidden;
+    height: 36px;
+    margin-right: -5px;
+    vertical-align: middle;
+}
+.add-quick-register .selectbox .selectbox-value {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    line-height: 34px;
+}
+.add-quick-register input {
+    width: auto;
+    height: 36px;
+    vertical-align: middle;
+}
+.daily .table th {
+    width: 90px;
+}
+.daily .table th.time {
+    padding-right: 13px;
+    text-align: right;
+}
+.daily .table th.time em {
+    float: left;
+    padding-left: 15px;
+    font-style: normal;
+}
+.daily .table td {
+    padding: 4px 7px;
+    font-weight: 200;
+    vertical-align: middle;
 }
 
 /**********************************************

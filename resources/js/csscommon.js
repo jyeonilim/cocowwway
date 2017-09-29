@@ -209,14 +209,16 @@ $(document).ready(function() {
     // 서브페이지 컨텐츠 스크롤
     var pageScroll = (function () {
         var hasSubMenu = $('.page-menu').attr('class'),
+            windowHeight = $(window).height(),
             contentHeight = $('.border-box').outerHeight(true),
             titleHeight = $('.page-title').outerHeight(true),
             menuHeight = $('.page-menu').outerHeight(true);
         if(hasSubMenu === 'page-menu') {
-            $('.page-content').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
+            $('.iframe-content').height(contentHeight-((titleHeight+3)+(menuHeight+2)));
         } else {
             $('.page-content').height(contentHeight-titleHeight+3);
         }
+        $('.mail-configuration').height(windowHeight);
     });
     $(document).ready(pageScroll);
     $(window).resize(pageScroll);
@@ -225,6 +227,20 @@ $(document).ready(function() {
     $('.btn-sign-preview').on('click',function () {
         $('.sign-preview').toggle();
     });
+
+    // 일정관리 스크롤
+    var calendarScroll = (function () {
+        var hasWeekly = $('.calendar-wrap').hasClass('weekly'),
+            calendarHeight = $('.calendar-wrap').height();
+        if(hasWeekly === true) {
+            $('.schedule-list-wrap').height((calendarHeight/2)-1);
+            $('.sat+td .schedule-list-wrap,.sun+td .schedule-list-wrap').height((calendarHeight/4)-1);
+        } else {
+            $('.schedule-list-wrap').height((calendarHeight/5)-20);
+        }
+    });
+    $(document).ready(calendarScroll);
+    $(window).resize(calendarScroll);
 
 });
 

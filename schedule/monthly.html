@@ -7,7 +7,6 @@
     <meta name="keywords" content="">
     <title>월간 일정</title>
     <link rel="stylesheet" href="../resources/css/common.css">
-    <link rel="stylesheet" href="../resources/css/view.css">
 	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
@@ -20,7 +19,7 @@
 		<div class="border-box">
 			<h3 class="page-title">팀 일정<span class="sub-text">월간 일정</span></h3>
 			<div class="page-content">
-				<div class="task-calendar-wrap">
+				<div class="calendar-wrap monthly">
 					<div class="calendar-head clearfix">
 						<div class="pull-right">
 							<div class="btn-group">
@@ -28,7 +27,7 @@
 								<div class="outer"><a href="#" class="btn">주간</a></div>
 								<div class="outer"><a href="#" class="btn btn-primary">월간</a></div>
 							</div>
-							<a href="#" class="btn">일정삭성</a>
+							<a href="#" class="btn">일정작성</a>
 							<a href="#" class="btn">인쇄</a>
 							<a href="#" class="btn">북마크</a>
 						</div>
@@ -54,8 +53,8 @@
 							<a href="#" class="btn_next"><span class="sr-only">다음</span></a>
 						</div>
 					</div>
-					<table class="table task-calendar">
-						<thead>
+					<table class="table calendar-board-head">
+						<tbody>
 						<tr>
 							<th class="sun">일</th>
 							<th>월</th>
@@ -65,7 +64,9 @@
 							<th>금</th>
 							<th class="sat">토</th>
 						</tr>
-						</thead>
+						</tbody>
+					</table>
+					<table class="table calendar-board">
 						<tbody>
 						<tr>
 							<td class="sun past">27</td>
@@ -92,8 +93,8 @@
 							<td>13</td>
 							<td>14</td>
 							<td class="today">15
-								<div class="task-list-wrap">
-									<ul class="task-list">
+								<div class="schedule-list-wrap">
+									<ul class="schedule-list">
 										<li><a href="#">09:30 업체미팅</a></li>
 										<li><a href="#">11:00 상품기획1팀상품기획1팀</a></li>
 										<li><a href="#">13:00 상품기획1팀</a></li>
@@ -104,7 +105,15 @@
 						</tr>
 						<tr>
 							<td class="sun">17</td>
-							<td>18</td>
+							<td>18
+								<div class="schedule-list-wrap">
+									<ul class="schedule-list">
+										<li><a href="#">09:30 업체미팅</a></li>
+										<li><a href="#">11:00 상품기획1팀상품기획1팀</a></li>
+										<li><a href="#">13:00 상품기획1팀</a></li>
+									</ul>
+								</div>
+							</td>
 							<td>19</td>
 							<td>20</td>
 							<td>21</td>
