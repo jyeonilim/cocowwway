@@ -1,0 +1,72 @@
+/**********************************************
+    설문조사
+    *******************************************/
+.survey {
+    overflow-y: auto;
+    height: 100%;
+    background-color: #fff;
+}
+.section {
+    padding: 13px 13px 0;
+}
+.survey .title {
+    padding: 37px 0 17px;
+    font: 700 26px 'NanumGothic', sans-serif;
+    color: #4d4d4f;
+    text-align: center;
+}
+.survey .second-title {
+    padding: 13px;
+    border-bottom: 1px solid #e8e8e8;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0057c3;
+}
+.point-blue {
+    color: #006bd9;
+}
+.point-orange {
+    color: #fa5d07;
+}
+.survey-info {
+    padding: 13px;
+    background-color: #f3f8fd;
+    font-size: 15px;
+}
+.survey-guide {
+    padding: 13px;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: 0 4px 0 #f6f6f6;
+    font-size: 15px;
+}
+.survey-list li {
+     padding-bottom: 13px;
+}
+.survey-list-border {
+    padding: 13px;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: 0 4px 0 #f6f6f6;
+    font-size: 14px;
+    color: #5a5e62;
+}
+.survey-list-border li {
+    padding-bottom: 28px;
+}
+.survey-list-border li:last-child {
+    padding-bottom: 18px;
+}
+.survey-content .answer-box {
+    margin-top: 8px;
+}
+.survey-footer {
+    padding: 15px 0 25px;
+    font-size: 16px;
+    text-align: center;
+}
+.survey-footer p {
+    margin-bottom: 15px;
+}
+.survey-footer .btn {
+    padding: 0 30px;
+    line-height: 40px;
+}
