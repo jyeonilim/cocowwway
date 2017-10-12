@@ -4,8 +4,14 @@
 body,.content {
      overflow-y: auto;
  }
+body.win_form {
+    background-color: #fff;
+}
+body.win_form .content {
+    overflow: hidden;
+}
 .win_form .content-inner {
-    height: auto;
+    height: 100%;
     padding: 0;
 }
 .content-inner {
