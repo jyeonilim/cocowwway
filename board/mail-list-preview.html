@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>메일</title>
+
+	<link rel=stylesheet type="text/css" href="http://pdevelop.coway.com/resources/emate/codebase/emate.css"></link>
+	<link rel=stylesheet type="text/css" href="http://pdevelop.coway.com/resources/emate/emateGrid/codebase/skins/emategrid_dhx_terrace.css"></link>
+	<link rel=stylesheet type="text/css" href="http://pdevelop.coway.com/resources/emate/ematePopup/codebase/skins/ematepopup_dhx_terrace.css"></link>
+	<link rel=stylesheet type="text/css" href="../resources/css/common.css">
+	<link rel=stylesheet type="text/css" href="../resources/css/view.css">
+
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://pdevelop.coway.com/resources/emate/emateCommon/codebase/ematecommon.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://pdevelop.coway.com/resources/emate/emateGrid/codebase/emategrid.js"></script>
+	<script language="JavaScript" type="text/javascript" src="http://pdevelop.coway.com/resources/emate/emateTreeGrid/codebase/ematetreegrid.js"></script>
+	<script language="JavaScript" type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+	<script language="JavaScript" type="text/javascript" src="../resources/js/csscommon.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+			var contentScroll = (function () {
+				var contentHeight = $('.content-inner').height(),
+					headHeight = $('.view-head').outerHeight(true),
+					footHeight = $('.view-paging').outerHeight(true);
+				$('.view-content').height(contentHeight-(headHeight+footHeight));
+			});
+			$(document).ready(contentScroll);
+			$(window).resize(contentScroll);
+        });
+	</script>
+</head>
+<body class="">
+<div class="content">
+	<div class="content-inner">
+		<!-- 메일 리스트 //end -->
+		<div class="view">
+			<div class="view-inner">
+				<!-- Mail Head -->
+				<div class="view-head">
+					<div class="view-head-btn">
+						<a href="#" class="btn btn-display-left"><span class="sr-only">좌측메뉴표시/표시안함</span></a>
+						<div class="checkbox-box">
+							<input type="checkbox">
+						</div>
+						<div class="btn-group">
+							<div class="outer"><a href="#" class="btn">삭제</a></div>
+							<div class="outer"><a href="#" class="btn">완전삭제</a></div>
+						</div>
+						<a href="#" class="btn">메일이동</a>
+						<a href="#" class="btn">읽음</a>
+						<a href="#" class="btn">중요</a>
+						<div class="selectbox">
+							<strong class="selectbox-value">안읽음표시</strong>
+							<select onchange="selectboxEvent(this);">
+								<option>안읽음표시</option>
+							</select>
+						</div>
+						<div class="btn-group preview-type">
+							<!-- [D] 해당 분할 보기 선택시 selected 클래스 추가 -->
+							<div class="outer"><a href="#" class="btn type-list selected"><span class="sr-only">메일 목록만 보기</span></a></div>
+							<div class="outer"><a href="#" class="btn type-vertical"><span class="sr-only">상하 분할로 보기</span></a></div>
+							<div class="outer"><a href="#" class="btn type-horizontal"><span class="sr-only">좌우 분할로 보기</span></a></div>
+						</div>
+					</div>
+					<div class="view-head-search">
+						<div class="search-box">
+							<div class="selectbox">
+								<strong class="selectbox-value">상세</strong>
+								<select onchange="selectboxEvent(this);">
+									<option>상세</option>
+									<option>전체</option>
+								</select>
+							</div>
+							<div class="search-input">
+								<input type="text" class="form-control">
+							</div>
+						<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- Mail Head //end -->
+				<!-- Mail Body -->
+				<div class="view-body">
+					<!-- 메일 목록 -->
+					<!-- [D] 목록 분할 시 각각 해당하는 클래스 추가
+						기본 목록 : normal
+					 	상하 분할 목록 : vertical
+					 	좌우 분할 목록 : horizontal -->
+					<div class="view-type normal">
+						<div class="view-content-wrap">
+							<!-- List -->
+							<div class="view-content">
+								<div id="divBody" class=" gridbox gridbox_dhx_terrace isModern" style="width: 100%; height: 450px; cursor: default; border-top-width: 0; border-right-width: 0; border-left-width: 0;">
+									<div class="xhdr" style="width: 100%; height: 36px; overflow: hidden; position: relative;">
+										<div class="dhxgrid_sort_desc" style="display: none; position: absolute;"></div>
+										<table cellpadding="0" cellspacing="0" class="hdr" style="width: 100%; table-layout: fixed; margin-right: 20px; padding-right: 20px;">
+											<tbody>
+											<tr style="height: auto;">
+												<th style="height: 0; width: 26px;"></th>
+												<th style="height: 0; width: 27px;"></th>
+												<th style="height: 0; width: 36px;"></th>
+												<th style="height: 0; width: 44px;"></th>
+												<th style="height: 0; width: 99px;"></th>
+												<th style="height: 0; width: 455px;"></th>
+												<th style="height: 0; width: 99px;"></th>
+												<th style="height: 0; width: 72px;"></th>
+												<th style="height: 0; width: 35px;"></th>
+											</tr>
+											<tr>
+												<td style="text-align: center;">
+													<div class="hdrcell"><img src="http://pdevelop.coway.com/resources/emate/emateGrid/codebase/imgs/dhxgrid_terrace/item_chk0.gif"></div>
+												</td>
+												<td style="text-align: center; cursor: default;">
+													<div class="hdrcell"><img src="http://pdevelop.coway.com/lib/common.img/ico_star.gif" title="중요메일 가기"></div>
+												</td>
+												<td style="text-align: center; cursor: e-resize;">
+													<div class="hdrcell"><img src="http://pdevelop.coway.com/lib/common.img/ico_mail_close.gif" title="안읽은메일 가기"></div>
+												</td>
+												<td style="text-align: center; cursor: default;">
+													<div class="hdrcell"><img src="http://pdevelop.coway.com/icons/ico_mail_file.gif" border="0" align="absmiddle"><img src="http://pdevelop.coway.com/icons/dblsort.gif"></div>
+												</td>
+												<td style="text-align: left; cursor: default;">
+													<div class="hdrcell">발신인<img src="http://pdevelop.coway.com/icons/dblsort.gif"></div>
+												</td>
+												<td style="text-align: left; cursor: default;">
+													<div class="hdrcell">제목<img src="http://pdevelop.coway.com/icons/dblsort.gif"></div>
+												</td>
+												<td style="text-align: left;">
+													<div class="hdrcell">수신일<img src="http://pdevelop.coway.com/icons/dblsort.gif"></div>
+												</td>
+												<td style="text-align: right;">
+													<div class="hdrcell">크기<img src="http://pdevelop.coway.com/icons/dblsort.gif"></div>
+												</td>
+												<td style="text-align: left; font-weight: bold;">
+													<div class="hdrcell"></div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="objbox" style="width: 100%; overflow-x: auto; overflow-y: hidden; height: 466px;">
+										<table cellpadding="0" cellspacing="0" class="obj" style="width: 893px; table-layout: fixed;">
+											<tbody>
+											<tr style="height: auto;">
+												<th style="height: 0; width: 26px;"></th>
+												<th style="height: 0; width: 27px;"></th>
+												<th style="height: 0; width: 36px;"></th>
+												<th style="height: 0; width: 44px;"></th>
+												<th style="height: 0; width: 99px;"></th>
+												<th style="height: 0; width: 455px;"></th>
+												<th style="height: 0; width: 99px;"></th>
+												<th style="height: 0; width: 72px;"></th>
+												<th style="height: 0; width: 35px;"></th>
+											</tr>
+											<tr class=" ev_dhx_terrace rowselected">
+												<td align="center" valign="middle" bgcolor="white" style="vertical-align: middle;"><img src="http://pdevelop.coway.com/resources/emate/emateGrid/codebase/imgs/dhxgrid_terrace/item_chk0.gif"></td>
+												<td align="center" valign="middle" bgcolor="white" class="" title=""><span><img src="http://pdevelop.coway.com/lib/common.img/ico_uistar.gif" border="0"></span></td>
+												<td align="center" valign="middle" bgcolor="white" class=""><span><img src="http://pdevelop.coway.com/lib/common.img/ico_mail_open.gif" border="0" title="읽은 메일"></span></td>
+												<td align="center" valign="middle" bgcolor="white" class="" title="&nbsp;">&nbsp;</td>
+												<td align="left" valign="middle" bgcolor="white" class=""><span>나민욱</span></td>
+												<td align="left" valign="middle" bgcolor="white" class="cellselected">
+													<a href="#none"><span>[통보] '그룹웨어가 새롭게 리뉴얼 되었습니다.' Ticker가 승인되었습니다.</span></a><span>&nbsp;</span><a href="#none"><img src="http://pdevelop.coway.com/resources/images/ico_glass.png"></a><span>&nbsp;&nbsp;</span><a href="#none"><img src="http://pdevelop.coway.com/resources/images/ico_view.png"></a>
+												</td>
+												<td align="left" valign="middle" bgcolor="white">09-20 09:35</td>
+												<td align="right" valign="middle" bgcolor="white"><span>2.6</span></td>
+												<td align="left" valign="middle" bgcolor="white" style="padding-right:20px;">KB</td>
+											</tr>
+											<tr class=" ev_dhx_terrace">
+												<td align="center" valign="middle" bgcolor="white" style="vertical-align: middle;"><img src="http://pdevelop.coway.com/resources/emate/emateGrid/codebase/imgs/dhxgrid_terrace/item_chk0.gif"></td>
+												<td align="center" valign="middle" bgcolor="white" class="" title=""><span><img src="http://pdevelop.coway.com/lib/common.img/ico_uistar.gif" border="0"></span></td>
+												<td align="center" valign="middle" bgcolor="white" class=""><span><img src="http://pdevelop.coway.com/lib/common.img/ico_mail_open.gif" border="0" title="읽은 메일"></span></td>
+												<td align="center" valign="middle" bgcolor="white" class="" title="&nbsp;">&nbsp;</td>
+												<td align="left" valign="middle" bgcolor="white" class=""><span>나민욱</span></td>
+												<td align="left" valign="middle" bgcolor="white">
+													<a href="#none"><span>[통보] '그룹웨어가 새롭게 리뉴얼 되었습니다.' Ticker가 승인되었습니다.</span></a><span>&nbsp;</span><a href="#none"><img src="http://pdevelop.coway.com/resources/images/ico_glass.png"></a><span>&nbsp;&nbsp;</span><a href="#none"><img src="http://pdevelop.coway.com/resources/images/ico_view.png"></a>
+												</td>
+												<td align="left" valign="middle" bgcolor="white">09-20 09:35</td>
+												<td align="right" valign="middle" bgcolor="white"><span>2.6</span></td>
+												<td align="left" valign="middle" bgcolor="white" style="padding-right:20px;">KB</td>
+											</tr>
+											<tr class=" ev_dhx_terrace">
+												<td align="center" valign="middle" bgcolor="white" style="vertical-align: middle;"><img src="http://pdevelop.coway.com/resources/emate/emateGrid/codebase/imgs/dhxgrid_terrace/item_chk0.gif"></td>
+												<td align="center" valign="middle" bgcolor="white" class="" title=""><span><img src="http://pdevelop.coway.com/lib/common.img/ico_uistar.gif" border="0"></span></td>
+												<td align="center" valign="middle" bgcolor="white" class=""><span><img src="http://pdevelop.coway.com/lib/common.img/ico_mail_open.gif" border="0" title="읽은 메일"></span></td>
+												<td align="center" valign="middle" bgcolor="white" class="" title="&nbsp;">&nbsp;</td>
+												<td align="left" valign="middle" bgcolor="white" class=""><span>나민욱</span></td>
+												<td align="left" valign="middle" bgcolor="white">
+													<a href="#none"><span>[통보] '그룹웨어가 새롭게 리뉴얼 되었습니다.' Ticker가 승인되었습니다.</span></a><span>&nbsp;</span><a href="#none"><img src="http://pdevelop.coway.com/resources/images/ico_glass.png"></a><span>&nbsp;&nbsp;</span><a href="#none"><img src="http://pdevelop.coway.com/resources/images/ico_view.png"></a>
+												</td>
+												<td align="left" valign="middle" bgcolor="white">09-20 09:35</td>
+												<td align="right" valign="middle" bgcolor="white"><span>2.6</span></td>
+												<td align="left" valign="middle" bgcolor="white" style="padding-right:20px;">KB</td>
+											</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- List //end -->
+							<!-- Paging -->
+							<div class="view-paging">
+								<div class="paging">
+									페이지 네비게이션 영역
+								</div>
+							</div>
+							<!-- Paging //end -->
+						</div>
+						<div class="view-preview">
+							<div class="split-move-bar"></div>
+							<!-- View -->
+							<div class="preview-content">메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br>메일 미리보기 영역<br></div>
+							<!-- View //end -->
+						</div>
+					</div>
+					<!-- 메일 목록 -->
+				</div>
+				<!-- Mail Body //end -->
+			</div>
+		</div>
+		<!-- 메일 리스트 //end -->
+		<!-- 자동 분류 기능 레이어 -->
+		<div class="layer-wrap preview">
+			<div class="user-image" style="background-image:url('../resources/images/temp/user2.jpg')"></div>
+			<ul class="user-account">
+				<li class="user-name"><strong>강태성</strong>님</li>
+				<li>ICT전략실 정보관리팀</li>
+			</ul>
+			<ul class="user-account-link">
+				<li class="info"><a href="#">정보</a></li>
+				<li class="mail"><a href="#">메일</a></li>
+				<li class="talk"><a href="#">대화</a></li>
+				<li class="company"><a href="#">회사</a></li>
+				<li class="cellphone"><a href="#">휴대폰</a></li>
+				<li class="message"><a href="#">쪽지</a></li>
+				<li class="sns"><a href="#">SNS</a></li>
+				<li class="mail-search"><a href="#">메일검색</a></li>
+				<li class="reply"><a href="#">답장</a></li>
+				<li class="all-reply"><a href="#">전체답장</a></li>
+				<li class="add-address"><a href="#">주소록추가</a></li>
+			</ul>
+			<a href="#" class="btn-close" onclick="layerClose(this);"></a>
+		</div>
+		<!-- 자동 분류 기능 레이어 //end -->
+	</div>
+</div>
+</body>
+</html>
