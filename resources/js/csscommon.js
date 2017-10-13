@@ -240,7 +240,7 @@ $(document).ready(function() {
 
     // 메일 환경설정 서명관리 미리보기
     $('.btn-sign-preview').on('click',function () {
-        $('.sign-preview').toggle();
+        $('.sign-preview').show();
     });
 
     // 일정관리 스크롤
