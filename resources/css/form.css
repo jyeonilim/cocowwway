@@ -1,31 +1,19 @@
 /**********************************************
     Form
     *******************************************/
-body,.content {
+.content {
      overflow-y: auto;
  }
 body.win_form {
+    overflow-y: auto;
     background-color: #fff;
 }
 body.win_form .content {
     overflow: hidden;
 }
-.win_form .content-inner {
+body.win_form .content-inner {
     height: 100%;
     padding: 0;
-}
-.content-inner {
-    /*height: 100%;*/
-    padding: 16px 18px;
-    background-color: #f2f4f7;
-    box-sizing: border-box;
-}
-.content-inner:before, .content-inner:after {
-    content: '';
-    display: table;
-}
-.content-inner:after {
-    clear: both;
 }
 /* searchbox selectbox arrow */
 .selectbox .selectbox-value:after {
@@ -298,7 +286,9 @@ select {
 .ui-dialog .ui-dialog-title {
     font:13px 'NotoSansKR', sans-serif;
 }
-/*ㄷ*/
 #bodylist {
     overflow: hidden !important;
+}
+#dispbody iframe body {
+    overflow-x: hidden;
 }
