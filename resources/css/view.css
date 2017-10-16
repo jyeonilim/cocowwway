@@ -27,7 +27,6 @@
 /* Header */
 .view-head {
     padding: 13px 10px 11px;
-    border-bottom: 1px solid #e5e5e5;
 }
 .view-head:before, .view-head:after {
     display: table;
@@ -138,7 +137,9 @@
 .view-head-search .search-box .search-input .form-control {
     height: 34px;
 }
-
+.view-body {
+    border-top: 1px solid #e5e5e5;
+}
 .view-paging {
     height: 58px;
     border-top: 1px solid #e5e5e5;
