@@ -55,6 +55,9 @@
     line-height: 34px;
     color: #444;
 }
+.view-head-btn .selectbox:hover .selectbox-value {
+    background-color: #f1f2f2;
+}
 .btn-display-left:before {
     display: inline-block;
     width: 16px;

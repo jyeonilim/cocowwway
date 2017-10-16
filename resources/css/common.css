@@ -280,6 +280,7 @@ table {
 }
 .btn:hover {
     color: #444;
+    background-color: #f1f2f2;
 }
 .btn-sm {
     padding: 0 6px;
@@ -293,24 +294,22 @@ table {
     font-size: 22px;
     line-height: 60px;
 }
-.btn-primary {
+.btn-primary,
+.btn-primary:hover {
     border-color: #009ddc;
     background-color: #009ddc;
     color: #fff;
 }
-.btn-gray {
+.btn-gray,
+.btn-gray:hover {
     border-color: #959595;
     background-color: #959595;
     color: #fff;
 }
-.btn-primary:hover,.btn-gray:hover {
-    color: #fff;
-}
-.btn-outline-primary {
-    border: 1px solid #009ddc;
-    color: #009ddc;
-}
+.btn-outline-primary,
 .btn-outline-primary:hover {
+    border: 1px solid #009ddc;
+    background-color: #fff;
     color: #009ddc;
 }
 .btn-block {
