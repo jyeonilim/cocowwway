@@ -179,7 +179,7 @@ $(document).ready(function() {
         $('.tooltip-box').css('width',250);
     });
 
-    // $('.left').parent('.content-inner').css('padding-right',0); //서버에서만 사용 개발 소스 입히면서 남아있는 패딩때문에
+    $('.left').parent('.content-inner').css('padding-right',0);
     // Left Tree Scroll
     var leftScroll = (function () {
         var contentHeight = $('.content-inner').height(),
@@ -222,6 +222,13 @@ $(document).ready(function() {
     });
     $(document).ready(pageScroll);
     $(window).resize(pageScroll);
+
+    // 메일 내용 미리보기 레이어 띄우기
+    $('.preview-mail').on('click', function () {
+        var $target = $('.layer-preview-mail'),
+            offset = $(this).offset();
+        $target.show().css({'top':offset.top+25,'left':offset.left-200});
+    });
 
     // 메일 환경설정 스크롤 메뉴
     $('.page-menu').carouFredSel({

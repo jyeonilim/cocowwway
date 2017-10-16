@@ -182,6 +182,11 @@
     border-right: 1px solid #e5e5e5;
     cursor: ew-resize;
 }
+/* 메일 자동분류 기능 레이어 */
+.layer-preview-mail {
+    width: 400px;
+    padding: 13px 13px 5px;
+}
 
 /**********************************************
     dhtmlx Custom
