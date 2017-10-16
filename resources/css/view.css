@@ -204,10 +204,12 @@ div.gridbox_dhx_terrace.gridbox table.hdr td {
     background-color: #f8f8f8 !important;
     vertical-align: middle !important;
 }
-div.gridbox_dhx_terrace.gridbox,
 div.gridbox table.obj tr:last-child td,
 div.gridbox_dhx_terrace.gridbox table.obj tr td {
     border-color: #e5e5e5;
+}
+div.gridbox_dhx_terrace.gridbox {
+    border-bottom:0;
 }
 /* paging */
 #pagingArea > div {
