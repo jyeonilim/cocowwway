@@ -163,6 +163,10 @@ body.win_form .content-inner {
 .form-head-search .search-input {
     padding: 0 35px 0 60px;
 }
+.form-body {
+    overflow: hidden;
+    overflow-y: auto;
+}
 .form-item-wrap {
     padding: 13px;
     font: 13px 'NotoSansKR',sans-serif;

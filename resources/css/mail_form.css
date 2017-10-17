@@ -1,10 +1,6 @@
 /**********************************************
     Form Mail
     *******************************************/
-.form-body {
-    overflow: hidden;
-    overflow-y: auto;
-}
 .form-inner {
     border: 1px solid #dee3eb;
 }
