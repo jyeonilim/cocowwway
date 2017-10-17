@@ -1,9 +1,9 @@
 /**********************************************
     Form
     *******************************************/
-.content {
-     overflow-y: auto;
- }
+/*.content {*/
+     /*overflow-y: auto;*/
+/*}*/
 body.win_form {
     overflow-y: auto;
     background-color: #fff;
