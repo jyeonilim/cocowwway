@@ -176,37 +176,31 @@
 .uc-setup {
     display: none;
     position: absolute;
-    top: -5px;
+    top: -6px;
     left: 100%;
     width: 160px;
     padding: 5px;
-    border: 1px solid #000;
+    /*border: 1px solid #000;*/
     background-color: #fff;
     font-size: 11px;
     text-align: left;
 }
-.uc-setup .btn-close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    padding: 0 3px;
-    border: 1px solid #000;
-    font-weight: 700;
-    color: #000;
+.uc-setup-title {
+    display: block;
+    padding: 4px 15px 6px 5px;
+    border-bottom: 1px solid #e6e9f0;
+    font-weight: 500;
+    color: #313131;
 }
-.uc-setup ul li:before {
-    display: inline-block;
-    width: 2px;
-    height: 2px;
-    margin-right: 5px;
-    border-radius: 50%;
-    background-color: #000;
-    vertical-align: 3px;
-    content: '';
+.uc-setup ul {
+    margin-top: 5px;
 }
 .uc-setup ul li a {
-    color: #009fdb;
-    text-decoration: underline;
+    padding: 2px 5px;
+    color: #787878;
+}
+.uc-setup ul li a:hover {
+    color: #00a7e4;
 }
 /* 로그아웃 */
 .logout {
