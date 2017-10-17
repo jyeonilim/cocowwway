@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea, select, option {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, iframe {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**********************************************
+    Typography
+    *******************************************/
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/NotoSansKR-Regular.woff2) format('woff2'),
+    url(../font/NotoSansKR-Regular.woff) format('woff'),
+    url(../font/NotoSansKR-Regular.otf) format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/NotoSansKR-Bold.woff2) format('woff2'),
+    url(../font/NotoSansKR-Bold.woff) format('woff'),
+    url(../font/NotoSansKR-Bold.otf) format('opentype');
+}
+
+/**********************************************
+    common
+    *******************************************/
+body {
+    font-family:'NotoSansKR',sans-serif;
+    font-size:12px;
+    line-height:18px;
+    color:#444;
+}
+
+/**********************************************
+    Button
+    *******************************************/
+.btn {
+    display: inline-block;
+    padding: 0 9px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background-color: #fff;
+    font: 13px/34px 'NotoSansKR', sans-serif;
+    color: #444;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.btn:hover {
+    color: #444;
+}
+.btn-sm {
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+/**********************************************
+    Form
+    *******************************************/
+input,textarea,select {
+    display: inline-block;
+    width: 100%;
+    height: 23px;
+    padding: 0 8px;
+    border: 1px solid #e8e8e8;
+    font: 13px/23px 'NotoSansKR', sans-serif;
+    color: #666;
+    vertical-align: middle;
+}
+
+/**********************************************
+    Table
+    *******************************************/
+.table {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+}
+.table th, .table td {
+    border-top: 1px solid #f1f1f1;
+    vertical-align: middle;
+}
+.table th {
+    padding: 4px 0;
+    border-right: 1px solid #ebebeb;
+    background-color: #f8f8f8;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+}
+.table td {
+    padding: 4px 7px;
+}
+.table-border th, .table-border td {
+    border-left: 1px solid #e2e2e2;
+}
+.table-border th:first-child, .table-border td:first-child {
+    border-left: 0;
+}
+
+.title {
+    margin: 20px 0 15px;
+    font-size: 20px;
+}
+.text_a {
+    padding: 10px;
+    background: #f4f4f4;
+    font-size: 12px;
+    line-height: 18px;
+    color: #797979;
+}
+.w150 {
+    width: 150px;
+}
