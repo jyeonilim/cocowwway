@@ -965,7 +965,7 @@ body,.content {
     position: relative;
 }
 .quick-search .search-box {
-    display: none;
+    /*display: none;*/
     position: absolute;
     top: -5px;
     right: -4px;
@@ -1243,13 +1243,6 @@ body,.content {
 .page-menu-wrap .slide-arrow {
     line-height: 30px;
 }
-/*
-.page-content {
-    overflow-y: auto;
-}
-.page-content-inner {
-    padding: 10px 15px;
-}*/
 
 /**********************************************
     Footer

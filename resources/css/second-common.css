@@ -203,7 +203,6 @@ body, .btn {
 /* 메인메뉴 2뎁스 배경 */
 .header-bottom .menu-child-after-box {
     display: none;
-    /*display: block;*/
     position: absolute;
     top: 57px;
     left: 0;

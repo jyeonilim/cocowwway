@@ -213,6 +213,11 @@ div.gridbox_dhx_terrace.gridbox table.hdr td {
     background-color: #f8f8f8 !important;
     vertical-align: middle !important;
 }
+div.gridbox_dhx_terrace.gridbox table.obj tr.rowselected,
+div.gridbox_dhx_terrace.gridbox table.obj tr.rowselected td,
+div.gridbox_dhx_terrace.gridbox table.obj tr.rowselected td.cellselected {
+    background-color: #f5f6f9;
+}
 div.gridbox table.obj tr:last-child td,
 div.gridbox_dhx_terrace.gridbox table.obj tr td {
     border-color: #e5e5e5;
