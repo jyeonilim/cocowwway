@@ -54,6 +54,7 @@ body, .btn {
     _padding-top: 8px;
 }
 .quick-access li.quick-search .search-input .form-control {
+    width: 230px;
     _height: 23px;
 }
 .quick-access li.quick-user a {
