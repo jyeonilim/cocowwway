@@ -1,9 +1,6 @@
 /**********************************************
     Form Mail
     *******************************************/
-.content-inner {
-    height: auto;
-}
 .form-body {
     overflow: hidden;
     overflow-y: auto;
@@ -46,11 +43,6 @@ td.add-btn-address {
 /**********************************************
     dhtmlx Custom
     *******************************************/
-/*메일폼 에디터 영역*/
-#editorarea {
-    margin-top: -18px;
-    padding: 0 18px;
-}
 /*수신인 표시*/
 #img4Title {
     float: left;
