@@ -1419,6 +1419,9 @@ body,.content {
     padding: 12px 12px 0;
     border-bottom: 1px solid #dee3eb;
 }
+.left-head > .btn {
+    margin-bottom: 10px;
+}
 .left-head .btn-block-group {
     margin-top: 2px;
 }
