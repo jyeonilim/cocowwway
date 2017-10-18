@@ -790,6 +790,9 @@ body,.content {
 .text-important {
     color: #ee761d;
 }
+.text-blue-point {
+    color: #006bd9;
+}
 /* Calendar */
 .schedule-wrap:before, .schedule-wrap:after {
     content: "";
@@ -1703,6 +1706,26 @@ body,.content {
 #tree_area span.standartTreeRow, #tree_area span.selectedTreeRow {
     width: 100% !important;
     padding-right: 0 !important;
+}
+
+/**********************************************
+    정보보호서약서
+    *******************************************/
+.open-form {
+    overflow-y: auto;
+    background-color: #fff;
+}
+.open-form .page-title {
+    font-weight: 700;
+    font-size: 20px;
+}
+.open-form-box {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #f3f8fd;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
 }
 
 /**********************************************

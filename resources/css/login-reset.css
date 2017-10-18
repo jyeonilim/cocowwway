@@ -148,6 +148,14 @@ input,textarea,select {
     margin: 20px 0 15px;
     font-size: 20px;
 }
+.title2 {
+    margin: 5px 0 20px;
+    padding: 13px;
+    border-bottom: 1px solid #e8e8e8;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0057c3;
+}
 .text_a {
     padding: 10px;
     background: #f4f4f4;
@@ -157,4 +165,13 @@ input,textarea,select {
 }
 .w150 {
     width: 150px;
+}
+.box {
+    width: 554px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f3f8fd;
+}
+.point-orange {
+    color: #fa5d07;
 }
