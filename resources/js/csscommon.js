@@ -258,7 +258,14 @@ $(document).ready(function() {
             $('.schedule-list-wrap').height((calendarHeight/2)-1);
             $('.sat+td .schedule-list-wrap,.sun+td .schedule-list-wrap').height((calendarHeight/4)-1);
         } else {
-            $('.schedule-list-wrap').height((calendarHeight/5)-20);
+            var lineLength = $('.calendar-board tr').length;
+            if(lineLength === 5) {
+                $('.monthly .calendar-board td').height(15+'%');
+                $('.schedule-list-wrap').height((calendarHeight/5)-24);
+            } else if(lineLength === 6) {
+                $('.monthly .calendar-board td').height(11.6+'%');
+                $('.schedule-list-wrap').height((calendarHeight/6)-24);
+            }
         }
     });
     $(document).ready(calendarScroll);

@@ -965,7 +965,7 @@ body,.content {
     position: relative;
 }
 .quick-search .search-box {
-    /*display: none;*/
+    display: none;
     position: absolute;
     top: -5px;
     right: -4px;
@@ -1506,16 +1506,26 @@ body,.content {
 .left .calendar-head .btn_next {
     right: 20px;
 }
-.left .schedule-wrap .btn {
-    float: right;
-    margin: 8px 11px 0 0;
+.left .calendar-body th {
+    padding: 7px 0;
+}
+.left .calendar-body td {
+    padding: 5px 0;
+}
+.left .calendar-body tbody tr:first-child td {
+    padding-top: 10px;
+}
+.schedule-option {
+    overflow: hidden;
+    padding: 8px 11px;
+    border-bottom: 1px solid #e9e9e9;
 }
 /*일정관리 우측영역*/
 .calendar-wrap {
     height: 100%;
     padding: 0 13px;
 }
-.calendar-head {
+.calendar-wrap .calendar-head {
     padding: 10px 0;
 }
 .select-month {
@@ -1561,9 +1571,11 @@ body,.content {
 .calendar-board td:first-child {
     border-left: 0;
 }
+.calendar-board-head .sun,
 .calendar-board .sun {
     color: #e3394b;
 }
+.calendar-board-head .sat,
 .calendar-board .sat {
     color: #00bebb;
 }
@@ -1573,8 +1585,13 @@ body,.content {
 /*.calendar-board .sat.past {*/
     /*color: #f7aac1;*/
 /*}*/
-.calendar-board .past {
+.calendar-board .not {
     opacity: .5;
+}
+.calendar-board .holiday {
+    float: right;
+    padding-right: 7px;
+    color: #e3394b;
 }
 .calendar-board .today, .calendar-board .is-schedule {
     background-color: #f2f4f7;
@@ -1595,9 +1612,9 @@ body,.content {
 .monthly  {
     padding-bottom: 93px;
 }
+.monthly .calendar-board-head th,
 .monthly .calendar-board td  {
     width: 14.29%;
-    height: 20%;
 }
 .weekly, .daily {
     padding-bottom: 75px;
