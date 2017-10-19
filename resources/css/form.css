@@ -123,37 +123,22 @@ body.win_form .content-inner {
 .form-head-btn select {
     height: 36px !important;
 }
-.btn-arrow-prev, .btn-arrow-next {
-    position: relative;
-    width: 34px;
-    height: 36px;
-}
-.btn-arrow-prev:before, .btn-arrow-next:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    margin: auto;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    content: '';
-}
-.btn-arrow-prev:before {
-    border-bottom: 6px solid #00a7e4;
-}
-.btn-arrow-next:before {
-    border-top: 6px solid #00a7e4;
-}
-.btn-print:before {
+.btn-icon:before {
     display: inline-block;
-    width: 14px;
-    height: 13px;
-    background: url("../images/sprite-icon.png") no-repeat -400px -280px;
-    vertical-align: -1px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/sprite-icon.png") no-repeat 0 0;
+    vertical-align: -2px;
     content: '';
+}
+.btn-icon.fold:before {
+    background-position: -280px -320px;
+}
+.btn-icon.unfold:before {
+    background-position: -280px -360px;
+}
+.btn-icon.window:before {
+    background-position: -440px -320px;
 }
 .form-head-search {
     float: right;
@@ -166,11 +151,11 @@ body.win_form .content-inner {
     overflow-y: auto;
 }
 .form-item-wrap {
-    padding: 13px;
+    padding: 13px 13px 0;
     font: 13px 'NotoSansKR',sans-serif;
 }
 .form-content {
-    padding: 0 13px 13px;
+    padding: 13px;
 }
 
 /**********************************************

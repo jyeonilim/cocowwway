@@ -223,6 +223,18 @@ $(document).ready(function() {
     $(document).ready(pageScroll);
     $(window).resize(pageScroll);
 
+    // 메일 상단 접기/펼치기
+    $('.btn-icon.fold').on('click',function () {
+        var $this = $(this);
+        $this.toggleClass('unfold');
+        $('.form-item-wrap').toggle();
+        if ($this.is('.unfold')) {
+            $this.children('span').text('메일상단 펼치기');
+        } else {
+            $this.children('span').text('메일상단 접기');
+        }
+    });
+
     // 메일 내용 미리보기 레이어 띄우기
     $('.preview-mail').on('click', function () {
         var $target = $('.layer-preview-mail'),
