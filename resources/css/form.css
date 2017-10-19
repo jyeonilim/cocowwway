@@ -157,11 +157,8 @@ body.win_form .content-inner {
 .form-head-search {
     float: right;
 }
-.form-head-search .search-box {
-    width: 230px;
-}
 .form-head-search .search-input {
-    max-width: 137px;
+    max-width: 120px;
 }
 .form-body {
     overflow: hidden;
