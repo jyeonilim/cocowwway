@@ -225,6 +225,9 @@ div.gridbox_dhx_terrace.gridbox table.obj tr td {
 div.gridbox_dhx_terrace.gridbox {
     border-bottom:0;
 }
+div.gridbox_dhx_terrace.gridbox table.obj tr td .treegrid_cell img {
+    vertical-align: middle;
+}
 /* paging */
 #pagingArea > div {
     position: relative;
@@ -251,6 +254,7 @@ div.dhx_page_active {
     color: #ee761d;
 }
 .dhx_page div {
+    width: 24px !important;
     border-radius: 0;
     background-color: #fff;
     font-family: 'NotoSansKR', sans-serif;
