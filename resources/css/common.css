@@ -1646,6 +1646,9 @@ body,.content {
 .weekly .calendar-board th .btn-add {
     display: block;
 }
+.weekly .calendar-board th .btn-add:hover {
+    color: #009ddc;
+}
 .weekly .schedule-list-wrap .schedule-list {
     padding: 5px;
 }
