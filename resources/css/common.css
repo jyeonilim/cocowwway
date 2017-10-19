@@ -1536,7 +1536,7 @@ body,.content {
 }
 .select-month {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     left: 50%;
     margin-left: -72px;
 }
@@ -1547,6 +1547,7 @@ body,.content {
 .select-month .btn_prev, .select-month .btn_next {
     width: 35px;
     height: 36px;
+    font-size: 13px;
     line-height: 34px;
 }
 .select-month .btn_prev {
@@ -1624,6 +1625,12 @@ body,.content {
 }
 .weekly, .daily {
     padding-bottom: 75px;
+}
+.weekly .calendar-head .select-month,
+.daily .calendar-head .select-month {
+    padding: 0 8px;
+    font-size: 16px;
+    line-height: 36px;
 }
 .weekly .calendar-board, .daily .calendar-board {
     border-bottom: 1px solid #e2e2e2;
