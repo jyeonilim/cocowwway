@@ -161,7 +161,7 @@ body.win_form .content-inner {
     width: 230px;
 }
 .form-head-search .search-input {
-    padding: 0 35px 0 60px;
+    max-width: 137px;
 }
 .form-body {
     overflow: hidden;
@@ -189,12 +189,6 @@ body.win_form .content-inner {
 }
 .btn-mailbox-group .btn-link:first-child:before {
     display: none;
-}
-.search-box.search-address .selectbox {
-    width: 84px;
-}
-.search-box.search-address .search-input {
-    padding: 0 35px 0 84px;
 }
 .simple-registration {
     padding: 6px 7px 0 0;

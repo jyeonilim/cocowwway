@@ -135,7 +135,7 @@
     line-height: 34px;
 }
 .view-head-search .search-box .search-input {
-    padding: 0 35px 0 60px;
+    max-width: 95px;
 }
 .view-head-search .search-box .search-input .form-control {
     height: 34px;

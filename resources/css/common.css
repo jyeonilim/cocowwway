@@ -669,8 +669,8 @@ body,.content {
     content: '';
 }
 .search-box {
+    display: inline-block;
     position: relative;
-    width: 220px;
     height: 34px;
     border: 1px solid #e6e9f0;
 }
@@ -683,16 +683,16 @@ body,.content {
     line-height: 2.47;
 }
 .search-box .search-input {
-    padding: 0 35px 0 60px;
+    float: left;
+    max-width: 125px;
 }
 .search-box .search-input .form-control, .search-box .search-input input {
     height: 32px;
     border: 0;
 }
 .search-box .btn-search {
-    position: absolute;
-    top: 7px;
-    right: 10px;
+    float: left;
+    margin: 7px 6px;
     width: 19px;
     height: 19px;
     background: url("../images/sprite-icon.png") no-repeat -440px -200px;

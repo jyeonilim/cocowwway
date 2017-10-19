@@ -13,21 +13,70 @@
 	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
     <script type="text/javascript" src="../resources/js/csscommon.js"></script>
 	<script type="text/javascript">
-        $(document).ready(function() {
-			var contentScroll = (function () {
-				var contentHeight = $('.content-inner').height(),
-					headHeight = $('.view-head').outerHeight(true),
-					footHeight = $('.view-paging').outerHeight(true);
-				$('.view-content').height(contentHeight-(headHeight+footHeight));
-				$('.view-type.horizontal .preview-content').height(contentHeight-headHeight);
 
-				$('.view-type.vertical .view-content').height(contentHeight/3);
-				var viewHeight = $('.view-type.vertical .view-content-wrap').outerHeight(true);
-				$('.view-type.vertical .preview-content').height(contentHeight-(headHeight+viewHeight));
-			});
-			$(document).ready(contentScroll);
-			$(window).resize(contentScroll);
-        });
+        function changePreviewIcon(pkind){
+            $('.preview-type .outer a').removeClass('selected');
+            var previewobj;
+            switch (pkind) {
+                case "":
+                case "0" :
+                    previewobj = $('.type-list');
+                    break;
+                case "1" :
+                    previewobj = $('.type-vertical');
+                    break;
+                case "2" :
+                    previewobj = $('.type-horizontal');
+                    break;
+            	}
+            previewobj.addClass('selected');
+        }
+
+//        $(document).ready(function() {
+//            $(".preview-type a.type-list").on('click',function () {
+//                var contentScroll = (function () {
+//                    var contentHeight = $('.content-inner').height(),
+//                        headHeight = $('.view-head').outerHeight(true),
+//                        footHeight = $('.view-paging').outerHeight(true);
+//                    $('.view-content').height(contentHeight-(headHeight+footHeight));
+//                });
+//                $(document).ready(contentScroll);
+//                $(window).resize(contentScroll);
+//            });
+//            $(".preview-type a.type-vertical").on('click',function () {
+//                var contentScroll = (function () {
+//                    var contentHeight = $('.content-inner').height(),
+//                        headHeight = $('.view-head').outerHeight(true);
+//                    $('.view-type.vertical .view-content').height(contentHeight/3);
+//                    var viewHeight = $('.view-type.vertical .view-content-wrap').outerHeight(true);
+//                    $('.view-type.vertical .preview-content').height(contentHeight-(headHeight+viewHeight));
+//                });
+//                $(document).ready(contentScroll);
+//                $(window).resize(contentScroll);
+//            });
+//            $(".preview-type a.type-horizontal").on('click',function () {
+//                var contentScroll = (function () {
+//                    var contentHeight = $('.content-inner').height(),
+//                        headHeight = $('.view-head').outerHeight(true);
+//                    $('.view-type.horizontal .preview-content').height(contentHeight-headHeight);
+//                });
+//                $(document).ready(contentScroll);
+//                $(window).resize(contentScroll);
+//            });
+////			var contentScroll = (function () {
+////				var contentHeight = $('.content-inner').height(),
+////					headHeight = $('.view-head').outerHeight(true),
+////					footHeight = $('.view-paging').outerHeight(true);
+////				$('.view-content').height(contentHeight-(headHeight+footHeight));
+////				$('.view-type.horizontal .preview-content').height(contentHeight-headHeight);
+////
+////				$('.view-type.vertical .view-content').height(contentHeight/3);
+////				var viewHeight = $('.view-type.vertical .view-content-wrap').outerHeight(true);
+////				$('.view-type.vertical .preview-content').height(contentHeight-(headHeight+viewHeight));
+////			});
+////			$(document).ready(contentScroll);
+////			$(window).resize(contentScroll);
+//        });
 	</script>
 </head>
 <body class="">
