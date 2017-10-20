@@ -223,6 +223,18 @@ $(document).ready(function() {
     $(document).ready(pageScroll);
     $(window).resize(pageScroll);
 
+    // 메일 상단 내게쓰기 토글
+    $('.change-write-mode').on('click',function () {
+        var $this = $(this);
+        $('.form-item-wrap tr:nth-child(1),.form-item-wrap tr:nth-child(2)').toggle();
+        $this.toggleClass('write-mail');
+        if ($this.is('.write-mail')) {
+            $this.text('메일쓰기');
+        } else {
+            $this.text('내게쓰기');
+        }
+    });
+
     // 메일 상단 접기/펼치기
     $('.btn-icon.fold').on('click',function () {
         var $this = $(this);

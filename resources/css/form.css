@@ -172,6 +172,18 @@ body.win_form .content-inner {
 .btn-icon.window:before {
     background-position: -440px -320px;
 }
+.change-write-mode,
+.change-write-mode:hover {
+    margin-left: 4px;
+    line-height: 36px;
+    color: #00a7e4;
+}
+.change-write-mode:before {
+    width: 10px;
+    height: 12px;
+    margin-right: 3px;
+    background-position: -440px -360px;
+}
 .form-head-search {
     float: right;
 }
