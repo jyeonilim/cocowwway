@@ -123,6 +123,38 @@ body.win_form .content-inner {
 .form-head-btn select {
     height: 36px !important;
 }
+.btn-arrow-prev, .btn-arrow-next {
+    position: relative;
+    width: 34px;
+    height: 36px;
+}
+.btn-arrow-prev:before, .btn-arrow-next:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    content: '';
+}
+.btn-arrow-prev:before {
+    border-bottom: 6px solid #00a7e4;
+}
+.btn-arrow-next:before {
+    border-top: 6px solid #00a7e4;
+}
+.btn-print:before {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background: url("../images/sprite-icon.png") no-repeat -400px -280px;
+    vertical-align: -1px;
+    content: '';
+}
 .btn-icon:before {
     display: inline-block;
     width: 15px;
