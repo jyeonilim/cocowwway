@@ -1531,6 +1531,9 @@ body,.content {
     height: 100%;
     padding: 0 13px;
 }
+.calendar-wrap .holiday {
+    color: #e3394b;
+}
 .calendar-wrap .calendar-head {
     padding: 10px 0;
 }
@@ -1598,7 +1601,6 @@ body,.content {
 .calendar-board .holiday {
     float: right;
     padding-right: 7px;
-    color: #e3394b;
 }
 .calendar-board .today, .calendar-board .is-schedule {
     background-color: #f2f4f7;
