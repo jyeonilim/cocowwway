@@ -1531,8 +1531,12 @@ body,.content {
     height: 100%;
     padding: 0 13px;
 }
-.calendar-wrap .holiday {
+.calendar-wrap .holiday,
+.calendar-wrap .sun {
     color: #e3394b;
+}
+.calendar-wrap .sat {
+    color: #00bebb;
 }
 .calendar-wrap .calendar-head {
     padding: 10px 0;
@@ -1580,14 +1584,6 @@ body,.content {
 }
 .calendar-board td:first-child {
     border-left: 0;
-}
-.calendar-board-head .sun,
-.calendar-board .sun {
-    color: #e3394b;
-}
-.calendar-board-head .sat,
-.calendar-board .sat {
-    color: #00bebb;
 }
 /*.calendar-board td.past {*/
     /*color: #c3c3c3;*/
