@@ -237,7 +237,7 @@ div.gridbox_dhx_terrace.gridbox table.obj tr td .treegrid_cell img {
 }
 .dhx_pline {
     width: 100% !important;
-    margin: 15px 0 -9px;
+    margin: 12px 0 -8px;
     text-align: center;
 }
 .dhx_pline div {
@@ -246,7 +246,6 @@ div.gridbox_dhx_terrace.gridbox table.obj tr td .treegrid_cell img {
 .dhx_page {
     border-radius: 0;
     background-color: #ccc;
-
 }
 div.dhx_page_active {
     background-color: #ccc;
@@ -260,11 +259,16 @@ div.dhx_page_active {
     font-family: 'NotoSansKR', sans-serif;
 }
 .dhx_pager_info {
-    margin: 20px 10px 10px;
+    position: static;
+    float: right;
+    padding-right: 13px;
 }
 .dhx_pager_info > div {
     font-weight: 200;
     font-family: 'NotoSansKR', sans-serif;
     color: #000;
     letter-spacing: .5px;
+}
+.dhx_pline + .dhx_pager_info {
+    margin-top: -18px;
 }
