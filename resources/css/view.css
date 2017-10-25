@@ -222,6 +222,13 @@ div.gridbox table.obj tr:last-child td,
 div.gridbox_dhx_terrace.gridbox table.obj tr td {
     border-color: #e5e5e5;
 }
+div.gridbox_dhx_terrace.gridbox table.obj tr td.msender_menu {
+    border-width: 1px;
+    background-color: #fff;
+}
+div.gridbox_dhx_terrace.gridbox table.obj tr td.msender_menu a {
+    word-break: break-all;
+}
 div.gridbox_dhx_terrace.gridbox {
     border-bottom:0;
 }
@@ -271,4 +278,7 @@ div.dhx_page_active {
 }
 .dhx_pline + .dhx_pager_info {
     margin-top: -18px;
+}
+td.msender_menu {
+    border: 1px solid red !important;
 }
