@@ -114,9 +114,13 @@ $(document).ready(function() {
 
     //업무지원
     $('.work-support-head li').on('click',function () {
-        var $this = $(this);
+        var $this = $(this),
+            quickMenu = $('.work-support-head li:nth-child(2)');
         $this.parent().children().removeClass('active');
         $this.addClass('active');
+        if(quickMenu.is('.active')) {
+            $('.my-quick-box').show();
+        }
     });
     $(document).mouseup(function (e) {
         if(!$('.my-quick-box').is(e.target)&&$('.my-quick-box').has(e.target).length===0) {
