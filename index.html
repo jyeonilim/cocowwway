@@ -13,6 +13,7 @@
         .table td,.table th{width:auto;padding:10px 0;border:1px solid #e1e1e1;font-weight:400;font-size:13px;vertical-align:middle}
         .table thead th{background-color:rgba(0,157,220,.03);font-weight:500;font-size:14px}
         .table td{font:300 13px NotoSansKR,sans-serif;text-align:center}
+        .table td:last-child{padding-left:15px;text-align:left;}
     </style>
 </head>
 <body>
@@ -21,148 +22,158 @@
     <table class="table">
         <thead>
         <tr>
-            <th colspan="2">화면</th>
+            <th colspan="3">화면</th>
             <th>파일경로</th>
         </tr>
         </thead>
         <tbody>
         <tr>
             <th rowspan="2"><a href="layout/outer.html">header/footer</a></th>
-            <td></td>
+            <td colspan="2"></td>
             <td><a href="layout/outer.html">layout/outer.html</a></td>
         </tr>
         <tr>
-            <td><a href="layout/second-outer.html">호환성보기용</a></td>
+            <td colspan="2"><a href="layout/second-outer.html">호환성보기용</a></td>
             <td><a href="layout/second-outer.html">layout/second-outer.html</a></td>
         </tr>
         <tr>
             <th rowspan="3">로그인</th>
-            <td><a href="login/login.html">로그인</a></td>
+            <td colspan="2"><a href="login/login.html">로그인</a></td>
             <td><a href="login/login.html">login/login.html</a></td>
-            <!--<td rowspan="3" class="left">-->
-                <!--<ul class="notify-list">-->
-                    <!--<li><a href="#"></a></li>-->
-                    <!--<li><a href="#"></a></li>-->
-                <!--</ul>-->
-            <!--</td>-->
         </tr>
         <tr>
-            <td><a href="login/logout.html">로그아웃</a></td>
+            <td colspan="2"><a href="login/logout.html">로그아웃</a></td>
             <td><a href="login/logout.html">login/logout.html</a></td>
         </tr>
         <tr>
-            <td><a href="login/login-mini.html">작은 로그인</a></td>
+            <td colspan="2"><a href="login/login-mini.html">미니 로그인</a></td>
             <td><a href="login/login-mini.html">login/login-mini.html</a></td>
         </tr>
         <tr>
             <th rowspan="4">포탈</th>
-            <td><a href="portal/portal.html">포탈</a></td>
+            <td colspan="2"><a href="portal/portal.html">포탈</a></td>
             <td><a href="portal/portal.html">portal/portal.html</a></td>
-            <!--<td rowspan="2" class="left"></td>-->
         </tr>
         <tr>
-            <td><a href="portal/work.html">Work</a></td>
+            <td colspan="2"><a href="portal/work.html">Work</a></td>
             <td><a href="portal/work.html">portal/work.html</a></td>
         </tr>
         <tr>
-            <td><a href="portal/portlet-out-re.html">코웨이 테마 포틀릿에 내용없는 경우</a></td>
+            <td colspan="2"><a href="portal/portlet-out-re.html">코웨이 테마 포틀릿에 내용없는 경우</a></td>
             <td><a href="portal/portlet-out-re.html">portal/portlet-out-re.html</a></td>
         </tr>
         <tr>
-            <td><a href="portal/complete.html">환경설정 수정완료</a></td>
+            <td colspan="2"><a href="portal/complete.html">환경설정 수정완료</a></td>
             <td><a href="portal/complete.html">portal/complete.html</a></td>
         </tr>
         <tr>
-            <th rowspan="4">메일/게시판</th>
-            <td><a href="board/left.html">좌측 트리메뉴</a></td>
+            <th rowspan="8">메일/게시판</th>
+            <td colspan="2"><a href="board/left.html">좌측 트리메뉴</a></td>
             <td><a href="board/left.html">mail/left.html</a></td>
-            <!--<td rowspan="3" class="left"></td>-->
         </tr>
         <tr>
-            <td><a href="board/mail-list.html">목록</a></td>
+            <td rowspan="2">목록</td>
+            <td><a href="board/mail-list.html">메일</a></td>
             <td><a href="board/mail-list.html">mail/mail-list.html</a></td>
         </tr>
         <tr>
-            <td><a href="board/mail-view.html">상세보기</a></td>
+            <td><a href="board/mail-list-preview-layer.html">메일 내용 미리보기 레이어</a>(코웨이 내부에서 확인가능)</td>
+            <td><a href="board/mail-list-preview-layer.html">board/mail-list-preview-layer.html</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="board/mail-view.html">상세보기</a></td>
             <td><a href="board/mail-view.html">mail/mail-view.html</a></td>
         </tr>
         <tr>
-            <td><a href="board/mail-write.html">쓰기</a></td>
+            <td colspan="2"><a href="board/mail-write.html">쓰기</a></td>
             <td><a href="board/mail-write.html">mail/mail-write.html</a></td>
         </tr>
         <tr>
+            <td rowspan="3">게시판</td>
+            <td><a href="board/board.html">가이드</a></td>
+            <td><a href="board/board.html">board/board.html</a></td>
+        </tr>
+        <tr>
+            <td><a href="board/board-reply.html">하단 리플</a></td>
+            <td><a href="board/board-reply.html">board/board-reply.html</a></td>
+        </tr>
+        <tr>
+            <td><a href="board/board-notice.html">상단 슬라이드 공지사항</a></td>
+            <td><a href="board/board-notice.html">board/board-notice.html</a></td>
+        </tr>
+        <tr>
             <th rowspan="11">메일 환경설정</th>
-            <td><a href="mail-configuration/left.html">좌측 트리메뉴</a></td>
+            <td colspan="2"><a href="mail-configuration/left.html">좌측 트리메뉴</a></td>
             <td><a href="mail-configuration/left.html">mail-configuration/left.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/mailbox.html">메일함설정</a></td>
+            <td colspan="2"><a href="mail-configuration/mailbox.html">메일함설정</a></td>
             <td><a href="mail-configuration/mailbox.html">mail-configuration/mailbox.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/preview.html">미리보기 설정</a></td>
+            <td colspan="2"><a href="mail-configuration/preview.html">미리보기 설정</a></td>
             <td><a href="mail-configuration/preview.html">mail-configuration/preview.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/folder.html">폴더설정</a></td>
+            <td colspan="2"><a href="mail-configuration/folder.html">폴더설정</a></td>
             <td><a href="mail-configuration/folder.html">mail-configuration/folder.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/mail-filter.html">메일분류</a></td>
+            <td colspan="2"><a href="mail-configuration/mail-filter.html">메일분류</a></td>
             <td><a href="mail-configuration/mail-filter.html">mail-configuration/mail-filter.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/sign.html">서명관리</a></td>
+            <td colspan="2"><a href="mail-configuration/sign.html">서명관리</a></td>
             <td><a href="mail-configuration/sign.html">mail-configuration/sign.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/personal-address.html">개인주소록</a></td>
+            <td colspan="2"><a href="mail-configuration/personal-address.html">개인주소록</a></td>
             <td><a href="mail-configuration/personal-address.html">mail-configuration/personal-address.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/group-address.html">그룹주소록</a></td>
+            <td colspan="2"><a href="mail-configuration/group-address.html">그룹주소록</a></td>
             <td><a href="mail-configuration/group-address.html">mail-configuration/group-address.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/personal-template.html">개인템플릿</a></td>
+            <td colspan="2"><a href="mail-configuration/personal-template.html">개인템플릿</a></td>
             <td><a href="mail-configuration/personal-template.html">mail-configuration/personal-template.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/reply-prefix.html">답장 머릿말 설정</a></td>
+            <td colspan="2"><a href="mail-configuration/reply-prefix.html">답장 머릿말 설정</a></td>
             <td><a href="mail-configuration/reply-prefix.html">mail-configuration/reply-prefix.html</a></td>
         </tr>
         <tr>
-            <td><a href="mail-configuration/send-information.html">메일발신정보 설정</a></td>
+            <td colspan="2"><a href="mail-configuration/send-information.html">메일발신정보 설정</a></td>
             <td><a href="mail-configuration/send-information.html">mail-configuration/send-information.html</a></td>
         </tr>
         <tr>
             <th rowspan="4">일정관리</th>
-            <td><a href="schedule/left.html">좌측 미니 캘린더</a></td>
+            <td colspan="2"><a href="schedule/left.html">좌측 미니 캘린더</a></td>
             <td><a href="schedule/left.html">schedule/left.html</a></td>
         </tr>
         <tr>
-            <td><a href="schedule/monthly.html">월간</a></td>
+            <td colspan="2"><a href="schedule/monthly.html">월간</a></td>
             <td><a href="schedule/monthly.html">schedule/monthly.html</a></td>
         </tr>
         <tr>
-            <td><a href="schedule/weekly.html">주간</a></td>
+            <td colspan="2"><a href="schedule/weekly.html">주간</a></td>
             <td><a href="schedule/weekly.html">schedule/weekly.html</a></td>
         </tr>
         <tr>
-            <td><a href="schedule/daily.html">일간</a></td>
+            <td colspan="2"><a href="schedule/daily.html">일간</a></td>
             <td><a href="schedule/daily.html">schedule/daily.html</a></td>
         </tr>
         <tr>
             <th rowspan="3">설문조사</th>
-            <td><a href="survey/survey1.html">설문조사1</a></td>
+            <td colspan="2"><a href="survey/survey1.html">설문조사1</a></td>
             <td><a href="survey/survey1.html">survey/survey1.html</a></td>
         </tr>
         <tr>
-            <td><a href="survey/survey2-1.html">설문조사2-1</a></td>
+            <td colspan="2"><a href="survey/survey2-1.html">설문조사2-1</a></td>
             <td><a href="survey/survey2-1.html">survey/survey2-1.html</a></td>
         </tr>
         <tr>
-            <td><a href="survey/survey2-2.html">설문조사2-2</a></td>
+            <td colspan="2"><a href="survey/survey2-2.html">설문조사2-2</a></td>
             <td><a href="survey/survey2-2.html">survey/survey2-2.html</a></td>
         </tr>
         </tbody>
