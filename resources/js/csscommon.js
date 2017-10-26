@@ -295,6 +295,18 @@ $(document).ready(function() {
     $(document).ready(calendarScroll);
     $(window).resize(calendarScroll);
 
+    // 게시판 공지사항 롤링
+    $('.slide-notice').carouFredSel({
+        direction: 'up',
+        align: 'center',
+        visible: 1,
+        play: true,
+        scroll: {
+            pauseOnHover: true,
+            easing: 'swing'
+        }
+    });
+
 });
 
 // Select Box

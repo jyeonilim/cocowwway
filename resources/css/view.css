@@ -191,6 +191,27 @@
     padding: 13px 13px 5px;
 }
 
+/*게시판 상단 롤링 공지사항*/
+.head-notice-area {
+    overflow: hidden;
+    margin-bottom: 13px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.head-notice-area .notice-text,
+.head-notice-area .slide-notice {
+    float: left;
+}
+.head-notice-area .notice-text:after {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 12px 0 10px;
+    background-color: #efefef;
+    vertical-align: -1px;
+    content: '';
+}
+
 /**********************************************
     dhtmlx Custom
     *******************************************/

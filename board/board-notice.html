@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>메일</title>
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/view.css">
+	<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.carouFredSel.js"></script>
+	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            var contentScroll = (function () {
+                var contentHeight = $('.content-inner').height(),
+                    headHeight = $('.view-head').outerHeight(true),
+                    footHeight = $('.view-paging').outerHeight(true);
+                $('.view-content').height(contentHeight-(headHeight+footHeight));
+            });
+            $(document).ready(contentScroll);
+            $(window).resize(contentScroll);
+        });
+	</script>
+</head>
+<body>
+<div class="content">
+	<div class="content-inner">
+		<!-- Table -->
+		<div class="view">
+			<div class="view-inner">
+				<!-- Table Head -->
+				<div class="view-head">
+					<div class="head-notice-area">
+						<span class="notice-text text-blue-point">공지사항</span>
+						<ul class="slide-notice">
+							<li><span class="category">[새소식]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
+							<li><span class="category">[2]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
+							<li><span class="category">[3]</span> 그룹웨어가 새롭게 리뉴얼 되었습니다.</li>
+						</ul>
+					</div>
+					<div class="view-head-btn">
+						<a href="#" class="btn">발송</a>
+						<a href="#" class="btn">예약발송</a>
+						<a href="#" class="btn">저장</a>
+						<a href="#" class="btn">양식함</a>
+						<a href="#" class="btn">A4 size</a>
+						<a href="#" class="btn">닫기</a>
+					</div>
+					<div class="view-head-search">
+						<div class="search-box">
+							<div class="selectbox">
+								<strong class="selectbox-value">상세</strong>
+								<select onchange="selectboxEvent(this);">
+									<option>상세</option>
+									<option>전체</option>
+								</select>
+							</div>
+							<div class="search-input">
+								<input type="text" class="form-control">
+							</div>
+						<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- Table Head //end -->
+				<!-- Table Body -->
+				<div class="view-body">
+					<div class="view-content-wrap">
+						<!-- List -->
+						<div class="view-content">리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br>리스트 영역<br></div>
+						<!-- List //end -->
+						<!-- Paging -->
+						<div class="view-paging">
+							<div class="paging">
+								페이지 네비게이션 영역
+							</div>
+						</div>
+						<!-- Paging //end -->
+					</div>
+				</div>
+				<!-- Table Body //end -->
+			</div>
+		</div>
+		<!-- Table //end -->
+	</div>
+</div>
+</body>
+</html>
