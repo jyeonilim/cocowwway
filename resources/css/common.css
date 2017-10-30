@@ -1429,11 +1429,13 @@ body,.content {
     margin-top: 2px;
 }
 .mail-type {
+    overflow: hidden;
     margin: 10px -12px 0;
     border-top: 1px solid #dee3eb;
     font-size: 0;
 }
 .mail-type a {
+    float: left;
     display: inline-block;
     width: 33.33%;
     padding: 9px 0 7px;

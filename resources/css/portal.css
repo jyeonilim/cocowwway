@@ -393,6 +393,7 @@
     text-align: center;
 }
 .user-service li a {
+    display: block;
     font-family: 'NanumGothic', sans-serif;
     color: #787878;
 }
@@ -429,7 +430,7 @@
     border-top: 4px solid #ee761d;
     content: '';
 }
-.user-service li:before {
+.user-service li a:before {
     display: block;
     width: 30px;
     height: 30px;
@@ -437,22 +438,22 @@
     background: url("../images/sprite-icon.png") no-repeat 0 0;
     content: '';
 }
-.user-service li.service-item1:before {
+.user-service li.service-item1 a:before {
     background-position: -240px -40px;
 }
-.user-service li.service-item2:before {
+.user-service li.service-item2 a:before {
     background-position: -280px -40px;
 }
-.user-service li.service-item3:before {
+.user-service li.service-item3 a:before {
     background-position: -320px -40px;
 }
-.user-service li.service-item4:before {
+.user-service li.service-item4 a:before {
     background-position: -360px -40px;
 }
-.user-service li.service-item5:before {
+.user-service li.service-item5 a:before {
     background-position: -400px -40px;
 }
-.user-service li.service-item6:before {
+.user-service li.service-item6 a:before {
     background-position: -440px -40px;
 }
 .column-right .tabs {
@@ -986,8 +987,8 @@
     left: 0;
     width: 100%;
     padding: 10px 15px;
-    border-top: 1px solid #e8e8e8;
 }
+@-moz-document url-prefix(){.my-quick-option {padding: 11px 15px 8px;}}
 .my-quick-option span {
     float: left;
 }

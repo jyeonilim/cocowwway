@@ -14,199 +14,173 @@
 	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
 </head>
 <body class="">
-<div class="content">
-	<div class="content-inner">
-		<!-- 메일 환경설정 -->
-		<div class="border-box">
-			<h3 class="page-title">환경설정</h3>
-			<!-- [D] 해당메뉴 선택시 li에 current 클래스 추가 -->
-			<div class="page-menu-wrap">
-				<ul class="page-menu">
-					<li><a href="#">메일함설정</a></li>
-					<li><a href="#">미리보기설정</a></li>
-					<li><a href="#">폴더설정</a></li>
-					<li class="current"><a href="#">메일분류</a></li>
-					<li><a href="#">서명관리</a></li>
-					<li><a href="#">개인주소록</a></li>
-					<li><a href="#">그룹주소록</a></li>
-					<li><a href="#">개인템플릿</a></li>
-					<li><a href="#">답장머릿말설정</a></li>
-					<li><a href="#">메일발신정보설정</a></li>
-				</ul>
-				<a class="slide-arrow slide-prev" href="#">&lt;</a>
-				<a class="slide-arrow slide-next" href="#">&gt;</a>
-			</div>
-			<div class="page-content">
-				<div class="page-content-inner">
-					<div class="btn-align-top">
-						<a href="#" class="btn" onclick="layerOpen('.new-mail-filter');">새 메일자동분류 설정</a>
-					</div>
+<div class="page-content mail-configuration">
+	<div class="page-content-inner">
+		<div class="btn-align-top">
+			<a href="#" class="btn" onclick="layerOpen('.new-mail-filter');">새 메일자동분류 설정</a>
+		</div>
+		<table class="table">
+			<thead>
+			<tr class="align-left">
+				<th>메일 규칙</th>
+				<th>순서</th>
+				<th>작성일</th>
+				<th></th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><a href="#" onclick="layerOpen('.new-mail-filter-view');">발신인이 「aaaa@saerom.co.kr」 ==> 「테스트.1」로 이동</a></td>
+				<td>001</td>
+				<td>2017-09-06 09:17</td>
+				<td>
+					<a href="#" class="btn btn-sm btn-outline-primary">편집</a>
+					<a href="#" class="btn btn-sm btn-outline-primary">삭제</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<!-- Paging -->
+		<div class="paging">
+			<div class="page" title="첫 페이지로">←</div>
+			<div class="page active">1</div>
+			<div class="page">2</div>
+			<div class="page">3</div>
+			<div class="page">4</div>
+			<div class="page">5</div>
+			<div class="page">6</div>
+			<div class="page">7</div>
+			<div class="page">8</div>
+			<div class="page">9</div>
+			<div class="page">10</div>
+			<div class="page" title="끝 페이지로">→</div>
+		</div>
+		<!-- Paging //end -->
+		<!-- 새 메일자동분류 설정 -->
+		<div class="layer-wrap layer new-mail-filter">
+			<div class="layer-inner">
+				<div class="layer-head">
+					<h4 class="title">메일 자동분류 설정</h4>
+				</div>
+				<div class="layer-body">
 					<table class="table">
-						<thead>
-						<tr class="align-left">
-							<th>메일 규칙</th>
-							<th>순서</th>
-							<th>작성일</th>
-							<th></th>
-						</tr>
-						</thead>
 						<tbody>
 						<tr>
-							<td><a href="#" onclick="layerOpen('.new-mail-filter-view');">발신인이 「aaaa@saerom.co.kr」 ==> 「테스트.1」로 이동</a></td>
-							<td>001</td>
-							<td>2017-09-06 09:17</td>
+							<th><strong class="label">등록정보</strong></th>
+							<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017-09-18 10:37:00)</td>
+						</tr>
+						<tr>
+							<th><strong class="label">보낸이주소</strong></th>
 							<td>
-								<a href="#" class="btn btn-sm btn-outline-primary">편집</a>
-								<a href="#" class="btn btn-sm btn-outline-primary">삭제</a>
+								<input type="text" style="width:250px;">
+								<div class="selectbox">
+									<strong class="selectbox-value">를 포함할 때</strong>
+									<select onchange="selectboxEvent(this);">
+										<option>를 포함할 때</option>
+									</select>
+								</div>
+								<label>
+									<input type="checkbox"> 조직도
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th><strong class="label">메일 제목</strong></th>
+							<td>
+								<input type="text" style="width:250px;">
+								<div class="selectbox">
+									<strong class="selectbox-value">를 포함할 때</strong>
+									<select onchange="selectboxEvent(this);">
+										<option>를 포함할 때</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><strong class="label">이동할 편지함</strong></th>
+							<td>
+								<div class="selectbox">
+									<strong class="selectbox-value">폴더 선택</strong>
+									<select onchange="selectboxEvent(this);">
+										<option>폴더 선택</option>
+										<option>완전삭제</option>
+										<option>휴지통</option>
+									</select>
+								</div>
+								<label>
+									<input type="checkbox"> 새편지함 만들기
+								</label>
+								<input type="text" readonly>
+							</td>
+						</tr>
+						<tr>
+							<th><strong class="label">참고사항</strong></th>
+							<td>
+								<p>※ 메일 자동분류를 설정하기 전에 수신된 메일은 해당되지 않습니다.<br><br>
+								※ 동일한 조건이 저장된 다수의 자동분류설정이 있다면, 자동분류설정 목록에서 맨처음 일치하는 조건에 해당하는 폴더로 이동됩니다.<br><br>
+								※ 적용을 원하지 않는 정보는 입력하지 마십시오. 항목을 모두 입력하는 경우에는 모든 조건을 만족하는 경우에만 자동분류됩니다.</p>
+							</td>
+						</tr>
+						<tr>
+							<th><strong class="label">메일분류</strong></th>
+							<td>
+								<label>
+									<input type="checkbox"> 메일분류 설정
+								</label>
 							</td>
 						</tr>
 						</tbody>
 					</table>
-					<!-- Paging -->
-					<div class="paging">
-						<div class="page">←</div>
-						<div class="page active">1</div>
-						<div class="page">2</div>
-						<div class="page">3</div>
-						<div class="page">4</div>
-						<div class="page">5</div>
-						<div class="page">6</div>
-						<div class="page">7</div>
-						<div class="page">8</div>
-						<div class="page">9</div>
-						<div class="page">10</div>
-						<div class="page">→</div>
+					<div class="btn-align-center">
+						<a href="#" class="btn btn-sm">저장</a>
+						<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
 					</div>
-					<!-- Paging //end -->
-					<!-- 새 메일자동분류 설정 -->
-					<div class="layer-wrap layer new-mail-filter">
-						<div class="layer-inner">
-							<div class="layer-head">
-								<h4 class="title">메일 자동분류 설정</h4>
-							</div>
-							<div class="layer-body">
-								<table class="table">
-									<tbody>
-									<tr>
-										<th><strong class="label">등록정보</strong></th>
-										<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017-09-18 10:37:00)</td>
-									</tr>
-									<tr>
-										<th><strong class="label">보낸이주소</strong></th>
-										<td>
-											<input type="text" style="width:250px;">
-											<div class="selectbox">
-												<strong class="selectbox-value">를 포함할 때</strong>
-												<select onchange="selectboxEvent(this);">
-													<option>를 포함할 때</option>
-												</select>
-											</div>
-											<label>
-												<input type="checkbox"> 조직도
-											</label>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">메일 제목</strong></th>
-										<td>
-											<input type="text" style="width:250px;">
-											<div class="selectbox">
-												<strong class="selectbox-value">를 포함할 때</strong>
-												<select onchange="selectboxEvent(this);">
-													<option>를 포함할 때</option>
-												</select>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">이동할 편지함</strong></th>
-										<td>
-											<div class="selectbox">
-												<strong class="selectbox-value">폴더 선택</strong>
-												<select onchange="selectboxEvent(this);">
-													<option>폴더 선택</option>
-													<option>완전삭제</option>
-													<option>휴지통</option>
-												</select>
-											</div>
-											<label>
-												<input type="checkbox"> 새편지함 만들기
-											</label>
-											<input type="text" readonly>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">참고사항</strong></th>
-										<td>
-											<p>※ 메일 자동분류를 설정하기 전에 수신된 메일은 해당되지 않습니다.<br><br>
-											※ 동일한 조건이 저장된 다수의 자동분류설정이 있다면, 자동분류설정 목록에서 맨처음 일치하는 조건에 해당하는 폴더로 이동됩니다.<br><br>
-											※ 적용을 원하지 않는 정보는 입력하지 마십시오. 항목을 모두 입력하는 경우에는 모든 조건을 만족하는 경우에만 자동분류됩니다.</p>
-										</td>
-									</tr>
-									<tr>
-										<th><strong class="label">메일분류</strong></th>
-										<td>
-											<label>
-												<input type="checkbox"> 메일분류 설정
-											</label>
-										</td>
-									</tr>
-									</tbody>
-								</table>
-								<div class="btn-align-center">
-									<a href="#" class="btn btn-sm">저장</a>
-									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
-								</div>
-							</div>
-							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
-						</div>
-					</div>
-					<!-- 새 메일자동분류 설정 //end -->
-					<!-- 새 메일자동분류 설정 - 읽기 -->
-					<div class="layer-wrap layer new-mail-filter-view">
-						<div class="layer-inner">
-							<div class="layer-head">
-								<h4 class="title">메일 자동분류 설정</h4>
-							</div>
-							<div class="layer-body">
-								<table class="table">
-									<tbody>
-									<tr>
-										<th><strong class="label">등록정보</strong></th>
-										<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017-09-18 10:37:00)</td>
-									</tr>
-									<tr>
-										<th><strong class="label">보낸이주소</strong></th>
-										<td>aaaa@saerom.co.kr  를 포함할 때</td>
-									</tr>
-									<tr>
-										<th><strong class="label">이동할 편지함</strong></th>
-										<td>테스트.1</td>
-									</tr>
-									<tr>
-										<th><strong class="label">참고사항</strong></th>
-										<td>
-											<p>※ 메일 자동분류를 설정하기 전에 수신된 메일은 해당되지 않습니다.<br><br>
-												※ 동일한 조건이 저장된 다수의 자동분류설정이 있다면, 자동분류설정 목록에서 맨처음 일치하는 조건에 해당하는 폴더로 이동됩니다.<br><br>
-												※ 적용을 원하지 않는 정보는 입력하지 마십시오. 항목을 모두 입력하는 경우에는 모든 조건을 만족하는 경우에만 자동분류됩니다.</p>
-										</td>
-									</tr>
-									</tbody>
-								</table>
-								<div class="btn-align-center">
-									<a href="#" class="btn btn-sm">편집</a>
-									<a href="#" class="btn btn-sm">삭제</a>
-									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
-								</div>
-							</div>
-							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
-						</div>
-					</div>
-					<!-- 새 메일자동분류 설정 - 읽기 //end -->
 				</div>
+				<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
 			</div>
 		</div>
-		<!-- 메일 환경설정 //end -->
+		<!-- 새 메일자동분류 설정 //end -->
+		<!-- 새 메일자동분류 설정 - 읽기 -->
+		<div class="layer-wrap layer new-mail-filter-view">
+			<div class="layer-inner">
+				<div class="layer-head">
+					<h4 class="title">메일 자동분류 설정</h4>
+				</div>
+				<div class="layer-body">
+					<table class="table">
+						<tbody>
+						<tr>
+							<th><strong class="label">등록정보</strong></th>
+							<td>나민욱 파트너/코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트(2017-09-18 10:37:00)</td>
+						</tr>
+						<tr>
+							<th><strong class="label">보낸이주소</strong></th>
+							<td>aaaa@saerom.co.kr  를 포함할 때</td>
+						</tr>
+						<tr>
+							<th><strong class="label">이동할 편지함</strong></th>
+							<td>테스트.1</td>
+						</tr>
+						<tr>
+							<th><strong class="label">참고사항</strong></th>
+							<td>
+								<p>※ 메일 자동분류를 설정하기 전에 수신된 메일은 해당되지 않습니다.<br><br>
+									※ 동일한 조건이 저장된 다수의 자동분류설정이 있다면, 자동분류설정 목록에서 맨처음 일치하는 조건에 해당하는 폴더로 이동됩니다.<br><br>
+									※ 적용을 원하지 않는 정보는 입력하지 마십시오. 항목을 모두 입력하는 경우에는 모든 조건을 만족하는 경우에만 자동분류됩니다.</p>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="btn-align-center">
+						<a href="#" class="btn btn-sm">편집</a>
+						<a href="#" class="btn btn-sm">삭제</a>
+						<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
+					</div>
+				</div>
+				<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
+			</div>
+		</div>
+		<!-- 새 메일자동분류 설정 - 읽기 //end -->
 	</div>
 </div>
 </body>

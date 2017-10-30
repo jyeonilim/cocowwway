@@ -14,145 +14,119 @@
 	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
 </head>
 <body class="">
-<div class="content">
-	<div class="content-inner">
-		<!-- 메일 환경설정 -->
-		<div class="border-box">
-			<h3 class="page-title">환경설정</h3>
-			<!-- [D] 해당메뉴 선택시 li에 current 클래스 추가 -->
-			<div class="page-menu-wrap">
-				<ul class="page-menu">
-					<li><a href="#">메일함설정</a></li>
-					<li><a href="#">미리보기설정</a></li>
-					<li><a href="#">폴더설정</a></li>
-					<li><a href="#">메일분류</a></li>
-					<li><a href="#">서명관리</a></li>
-					<li><a href="#">개인주소록</a></li>
-					<li><a href="#">그룹주소록</a></li>
-					<li class="current"><a href="#">개인템플릿</a></li>
-					<li><a href="#">답장머릿말설정</a></li>
-					<li><a href="#">메일발신정보설정</a></li>
-				</ul>
-				<a class="slide-arrow slide-prev" href="#">&lt;</a>
-				<a class="slide-arrow slide-next" href="#">&gt;</a>
-			</div>
-			<div class="page-content">
-				<div class="page-content-inner">
-					<div class="btn-align-top">
-						<a href="#" class="btn" onclick="layerOpen('.mail-template-form');">새문서</a>
-					</div>
+<div class="page-content mail-configuration">
+	<div class="page-content-inner">
+		<div class="btn-align-top">
+			<a href="#" class="btn" onclick="layerOpen('.mail-template-form');">새문서</a>
+		</div>
+		<table class="table">
+			<colgroup>
+				<col style="width:25%;">
+				<col style="width:40%;">
+				<col style="width:25%;">
+				<col style="width:10%;">
+			</colgroup>
+			<thead>
+			<tr class="align-left">
+				<th>제목</th>
+				<th>분류항목</th>
+				<th>등록일</th>
+				<th>크기</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td><a href="#" onclick="layerOpen('.mail-template-view');">테스트.1</a></td>
+				<td>분류 없음</td>
+				<td>2017-09-06</td>
+				<td>1.7 KB</td>
+			</tr>
+			</tbody>
+		</table>
+		<!-- Paging -->
+		<div class="paging">
+			<div class="page" title="첫 페이지로">←</div>
+			<div class="page active">1</div>
+			<div class="page">2</div>
+			<div class="page">3</div>
+			<div class="page">4</div>
+			<div class="page">5</div>
+			<div class="page">6</div>
+			<div class="page">7</div>
+			<div class="page">8</div>
+			<div class="page">9</div>
+			<div class="page">10</div>
+			<div class="page" title="끝 페이지로">→</div>
+		</div>
+		<!-- Paging //end -->
+		<!-- 메일양식템플릿 -->
+		<div class="layer-wrap layer mail-template-form">
+			<div class="layer-inner">
+				<div class="layer-head">
+					<h4 class="title">메일양식템플릿<span class="sub-text">메일양식템플릿</span></h4>
+				</div>
+				<div class="layer-body">
 					<table class="table">
-						<colgroup>
-							<col style="width:25%;">
-							<col style="width:40%;">
-							<col style="width:25%;">
-							<col style="width:10%;">
-						</colgroup>
-						<thead>
-						<tr class="align-left">
-							<th>제목</th>
-							<th>분류항목</th>
-							<th>등록일</th>
-							<th>크기</th>
-						</tr>
-						</thead>
 						<tbody>
 						<tr>
-							<td><a href="#" onclick="layerOpen('.mail-template-view');">테스트.1</a></td>
-							<td>분류 없음</td>
-							<td>2017-09-06</td>
-							<td>1.7 KB</td>
+							<th><strong class="label">템플릿 명칭</strong></th>
+							<td><input type="text"></td>
+							<th><strong class="label">분류</strong></th>
+							<td>
+								<div class="selectbox">
+									<strong class="selectbox-value">분류없음</strong>
+									<select onchange="selectboxEvent(this);">
+										<option>분류없음</option>
+										<option>새로운값입력</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="4">에디터영역</td>
 						</tr>
 						</tbody>
 					</table>
-					<!-- Paging -->
-					<div class="paging">
-						<div class="page">←</div>
-						<div class="page active">1</div>
-						<div class="page">2</div>
-						<div class="page">3</div>
-						<div class="page">4</div>
-						<div class="page">5</div>
-						<div class="page">6</div>
-						<div class="page">7</div>
-						<div class="page">8</div>
-						<div class="page">9</div>
-						<div class="page">10</div>
-						<div class="page">→</div>
+					<div class="btn-align-center">
+						<a href="#" class="btn btn-sm">저장</a>
+						<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
 					</div>
-					<!-- Paging //end -->
-					<!-- 메일양식템플릿 -->
-					<div class="layer-wrap layer mail-template-form">
-						<div class="layer-inner">
-							<div class="layer-head">
-								<h4 class="title">메일양식템플릿<span class="sub-text">메일양식템플릿</span></h4>
-							</div>
-							<div class="layer-body">
-								<table class="table">
-									<tbody>
-									<tr>
-										<th><strong class="label">템플릿 명칭</strong></th>
-										<td><input type="text"></td>
-										<th><strong class="label">분류</strong></th>
-										<td>
-											<div class="selectbox">
-												<strong class="selectbox-value">분류없음</strong>
-												<select onchange="selectboxEvent(this);">
-													<option>분류없음</option>
-													<option>새로운값입력</option>
-												</select>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="4">에디터영역</td>
-									</tr>
-									</tbody>
-								</table>
-								<div class="btn-align-center">
-									<a href="#" class="btn btn-sm">저장</a>
-									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
-								</div>
-							</div>
-							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
-						</div>
-					</div>
-					<!-- 메일양식템플릿 //end -->
-					<!-- 메일양식템플릿 - 읽기 -->
-					<div class="layer-wrap layer mail-template-view">
-						<div class="layer-inner">
-							<div class="layer-head">
-								<h4 class="title">메일양식템플릿</h4>
-							</div>
-							<div class="layer-body">
-								<table class="table">
-									<tbody>
-									<tr>
-										<th><strong class="label">템플릿 명칭</strong></th>
-										<td>테스트.1</td>
-										<th><strong class="label">분류</strong></th>
-										<td>분류 없음</td>
-									</tr>
-									<tr>
-										<td colspan="4">테스트 입니다.</td>
-									</tr>
-									</tbody>
-								</table>
-								<div class="btn-align-center">
-									<a href="#" class="btn btn-sm">편집</a>
-									<a href="#" class="btn btn-sm">인쇄</a>
-									<a href="#" class="btn btn-sm">삭제</a>
-									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
-								</div>
-							</div>
-							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
-						</div>
-					</div>
-					<!-- 메일양식템플릿 - 읽기 //end -->
 				</div>
+				<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
 			</div>
 		</div>
-		<!-- 메일 환경설정 //end -->
+		<!-- 메일양식템플릿 //end -->
+		<!-- 메일양식템플릿 - 읽기 -->
+		<div class="layer-wrap layer mail-template-view">
+			<div class="layer-inner">
+				<div class="layer-head">
+					<h4 class="title">메일양식템플릿</h4>
+				</div>
+				<div class="layer-body">
+					<table class="table">
+						<tbody>
+						<tr>
+							<th><strong class="label">템플릿 명칭</strong></th>
+							<td>테스트.1</td>
+							<th><strong class="label">분류</strong></th>
+							<td>분류 없음</td>
+						</tr>
+						<tr>
+							<td colspan="4">테스트 입니다.</td>
+						</tr>
+						</tbody>
+					</table>
+					<div class="btn-align-center">
+						<a href="#" class="btn btn-sm">편집</a>
+						<a href="#" class="btn btn-sm">인쇄</a>
+						<a href="#" class="btn btn-sm">삭제</a>
+						<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
+					</div>
+				</div>
+				<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
+			</div>
+		</div>
+		<!-- 메일양식템플릿 - 읽기 //end -->
 	</div>
 </div>
 </body>

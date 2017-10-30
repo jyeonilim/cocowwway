@@ -14,169 +14,143 @@
 	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
 </head>
 <body class="">
-<div class="content">
-	<div class="content-inner">
-		<!-- 메일 환경설정 -->
-		<div class="border-box">
-			<h3 class="page-title">환경설정</h3>
-			<!-- [D] 해당메뉴 선택시 li에 current 클래스 추가 -->
-			<div class="page-menu-wrap">
-				<ul class="page-menu">
-					<li><a href="#">메일함설정</a></li>
-					<li><a href="#">미리보기설정</a></li>
-					<li><a href="#">폴더설정</a></li>
-					<li><a href="#">메일분류</a></li>
-					<li class="current"><a href="#">서명관리</a></li>
-					<li><a href="#">개인주소록</a></li>
-					<li><a href="#">그룹주소록</a></li>
-					<li><a href="#">개인템플릿</a></li>
-					<li><a href="#">답장머릿말설정</a></li>
-					<li><a href="#">메일발신정보설정</a></li>
-				</ul>
-				<a class="slide-arrow slide-prev" href="#">&lt;</a>
-				<a class="slide-arrow slide-next" href="#">&gt;</a>
-			</div>
-			<div class="page-content">
-				<div class="page-content-inner">
-					<div class="btn-align-top">
-						<a href="#" class="btn">저장</a>
-						<a href="#" class="btn btn-sign-preview">미리보기</a>
-						<a href="#" class="btn" onclick="layerOpen('.sign-image-upload');">사인 이미지 업로드</a>
-					</div>
+<div class="page-content mail-configuration">
+	<div class="page-content-inner">
+		<div class="btn-align-top">
+			<a href="#" class="btn">저장</a>
+			<a href="#" class="btn btn-sign-preview">미리보기</a>
+			<a href="#" class="btn" onclick="layerOpen('.sign-image-upload');">사인 이미지 업로드</a>
+		</div>
+		<table class="table">
+			<tbody>
+			<tr>
+				<th>
+					<strong class="label">사용여부</strong>
+				</th>
+				<td colspan="5">
+					<label>
+						<input type="radio" name="isUse" checked> 한글
+					</label>
+					<label>
+						<input type="radio" name="isUse"> 영문
+					</label>
+					<label>
+						<input type="radio" name="isUse"> 사용안함
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<strong class="label">사인이미지</strong>
+				</th>
+				<td colspan="5">
+					<label>
+						<input type="radio" name="isImgUse"> 사용
+					</label>
+					<label>
+						<input type="radio" name="isImgUse" checked> 사용안함
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<strong class="label">이름</strong>
+				</th>
+				<td>
+					<input type="text" value="">
+				</td>
+				<th>
+					<strong class="label">직책</strong>
+				</th>
+				<td colspan="3">
+					<input type="text" value="파트너">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<strong class="label">부서정보</strong>
+				</th>
+				<td colspan="5">
+					<input type="text" value="코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<strong class="label">회사전화</strong>
+				</th>
+				<td>
+					<input type="text" value="02-0000-0000">
+				</td>
+				<th>
+					<strong class="label">Fax</strong>
+				</th>
+				<td>
+					<input type="text" value="02-0000-0000">
+				</td>
+				<th>
+					<strong class="label">휴대전화</strong>
+				</th>
+				<td>
+					<input type="text" value="010-0000-0000">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<strong class="label">이메일</strong>
+				</th>
+				<td colspan="5">
+					<input type="text" value="t1700000@partner.coway.co.kr">
+				</td>
+			</tr>
+			<tr>
+				<th>
+					<strong class="label">회사주소</strong>
+				</th>
+				<td colspan="5">
+					<input type="text" value="000-000 00000 00000 00000">
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<!-- 서명 미리보기 -->
+		<div class="sign-preview">
+			<ul class="sign-list">
+				<li><strong>파트너</strong> 파트너</li>
+				<li>코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트</li>
+				<li><strong>T</strong> : 02-0000-0000 <strong>F</strong> : 02-0000-0000 <strong>M</strong> : 010-9919-9908</li>
+				<li><strong>E</strong> : t1707036@partner.coway.co.kr</li>
+				<li>000-000 0000 0000 0000</li>
+			</ul>
+			<p class="note">* 수신자 및 참조자 외에는 <span class="text-important">전달</span> 또는 <span class="text-important">재전송</span>을 <span class="text-important">금지</span>합니다.</p>
+		</div>
+		<!-- 서명 미리보기 //end -->
+		<!-- 서명관리 -->
+		<div class="layer-wrap layer sign-image-upload">
+			<div class="layer-inner">
+				<div class="layer-head">
+					<h4 class="title">서명관리<span class="sub-text">사인 이미지 업로드</span></h4>
+				</div>
+				<div class="layer-body">
 					<table class="table">
 						<tbody>
 						<tr>
-							<th>
-								<strong class="label">사용여부</strong>
-							</th>
-							<td colspan="5">
-								<label>
-									<input type="radio" name="isUse" checked> 한글
-								</label>
-								<label>
-									<input type="radio" name="isUse"> 영문
-								</label>
-								<label>
-									<input type="radio" name="isUse"> 사용안함
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">사인이미지</strong>
-							</th>
-							<td colspan="5">
-								<label>
-									<input type="radio" name="isImgUse"> 사용
-								</label>
-								<label>
-									<input type="radio" name="isImgUse" checked> 사용안함
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">이름</strong>
-							</th>
+							<th><strong class="label">파일 선택</strong></th>
 							<td>
-								<input type="text" value="">
-							</td>
-							<th>
-								<strong class="label">직책</strong>
-							</th>
-							<td colspan="3">
-								<input type="text" value="파트너">
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">부서정보</strong>
-							</th>
-							<td colspan="5">
-								<input type="text" value="코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트">
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">회사전화</strong>
-							</th>
-							<td>
-								<input type="text" value="02-0000-0000">
-							</td>
-							<th>
-								<strong class="label">Fax</strong>
-							</th>
-							<td>
-								<input type="text" value="02-0000-0000">
-							</td>
-							<th>
-								<strong class="label">휴대전화</strong>
-							</th>
-							<td>
-								<input type="text" value="010-0000-0000">
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">이메일</strong>
-							</th>
-							<td colspan="5">
-								<input type="text" value="t1700000@partner.coway.co.kr">
-							</td>
-						</tr>
-						<tr>
-							<th>
-								<strong class="label">회사주소</strong>
-							</th>
-							<td colspan="5">
-								<input type="text" value="000-000 00000 00000 00000">
+								<input type="file">
+								<p class="table-note">* 사인 이미지로 등록할 이미지 파일만 가능합니다.</p>
 							</td>
 						</tr>
 						</tbody>
 					</table>
-					<!-- 서명 미리보기 -->
-					<div class="sign-preview">
-						<ul class="sign-list">
-							<li><strong>파트너</strong> 파트너</li>
-							<li>코웨이 파트너 IT지원 IT운영센터 그룹웨어 프로젝트</li>
-							<li><strong>T</strong> : 02-0000-0000 <strong>F</strong> : 02-0000-0000 <strong>M</strong> : 010-9919-9908</li>
-							<li><strong>E</strong> : t1707036@partner.coway.co.kr</li>
-							<li>000-000 0000 0000 0000</li>
-						</ul>
-						<p class="note">* 수신자 및 참조자 외에는 <span class="text-important">전달</span> 또는 <span class="text-important">재전송</span>을 <span class="text-important">금지</span>합니다.</p>
+					<div class="btn-align-center">
+						<a href="#" class="btn btn-sm">이미지 업로드</a>
+						<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
 					</div>
-					<!-- 서명 미리보기 //end -->
-					<!-- 서명관리 -->
-					<div class="layer-wrap layer sign-image-upload">
-						<div class="layer-inner">
-							<div class="layer-head">
-								<h4 class="title">서명관리<span class="sub-text">사인 이미지 업로드</span></h4>
-							</div>
-							<div class="layer-body">
-								<table class="table">
-									<tbody>
-									<tr>
-										<th><strong class="label">파일 선택</strong></th>
-										<td>
-											<input type="file">
-											<p class="table-note">* 사인 이미지로 등록할 이미지 파일만 가능합니다.</p>
-										</td>
-									</tr>
-									</tbody>
-								</table>
-								<div class="btn-align-center">
-									<a href="#" class="btn btn-sm">이미지 업로드</a>
-									<a href="#" class="btn btn-sm" onclick="layerClose('.layer-wrap');">닫기</a>
-								</div>
-							</div>
-							<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
-						</div>
-					</div>
-					<!-- 서명관리 //end -->
 				</div>
+				<a href="#" class="btn-close" onclick="layerClose('.layer-wrap');"><span class="sr-only">닫기</span></a>
 			</div>
 		</div>
-		<!-- 메일 환경설정 //end -->
+		<!-- 서명관리 //end -->
 	</div>
 </div>
 </body>

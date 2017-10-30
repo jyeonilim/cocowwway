@@ -14,196 +14,170 @@
 	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
 </head>
 <body class="">
-<div class="content">
-	<div class="content-inner">
-		<!-- 메일 환경설정 -->
-		<div class="border-box">
-			<h3 class="page-title">환경설정</h3>
-			<!-- [D] 해당메뉴 선택시 li에 current 클래스 추가 -->
-			<div class="page-menu-wrap">
-				<ul class="page-menu">
-					<li class="current"><a href="#">메일함설정</a></li>
-					<li><a href="#">미리보기설정</a></li>
-					<li><a href="#">폴더설정</a></li>
-					<li><a href="#">메일분류</a></li>
-					<li><a href="#">서명관리</a></li>
-					<li><a href="#">개인주소록</a></li>
-					<li><a href="#">그룹주소록</a></li>
-					<li><a href="#">개인템플릿</a></li>
-					<li><a href="#">답장머릿말설정</a></li>
-					<li><a href="#">메일발신정보설정</a></li>
-				</ul>
-				<a class="slide-arrow slide-prev" href="#">&lt;</a>
-				<a class="slide-arrow slide-next" href="#">&gt;</a>
-			</div>
-			<div class="page-content">
-				<div class="page-content-inner">
-					<div class="btn-align-top">
-						<a href="#" class="btn">저장</a>
-					</div>
-					<table class="table">
-						<thead>
-						<tr>
-							<th>메일함</th>
-							<th>읽기리스트 수</th>
-							<th>크기</th>
-							<th>관리</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr class="align-center">
-							<td>수신메일함</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>90.81 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						<tr class="align-center">
-							<td>수신메일함-일반메일</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>51.61 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						<tr class="align-center">
-							<td>수신메일함-참조메일</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>39.2 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						<tr class="align-center">
-							<td>수신메일함-알림메일</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>0 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						<tr class="align-center">
-							<td>발신메일함</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>0.01 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						<tr class="align-center">
-							<td>임시보관함</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>0 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						<tr class="align-center">
-							<td>휴지통</td>
-							<td>
-								<div class="selectbox">
-									<strong class="selectbox-value">15개</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>10개</option>
-										<option>15개</option>
-										<option>20개</option>
-									</select>
-								</div>
-							</td>
-							<td>0 MB</td>
-							<td>
-								<div class="btn-mailbox-group">
-									<a href="#" class="btn-link">비우기(전체)</a>
-									<a href="#" class="btn-link">비우기(3개월)</a>
-									<a href="#" class="btn-link">비우기(6개월)</a>
-								</div>
-							</td>
-						</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
+<div class="page-content mail-configuration">
+	<div class="page-content-inner">
+		<div class="btn-align-top">
+			<a href="#" class="btn">저장</a>
 		</div>
-		<!-- 메일 환경설정 //end -->
+		<table class="table">
+			<thead>
+			<tr>
+				<th>메일함</th>
+				<th>읽기리스트 수</th>
+				<th>크기</th>
+				<th>관리</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="align-center">
+				<td>수신메일함</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>90.81 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="align-center">
+				<td>수신메일함-일반메일</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>51.61 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="align-center">
+				<td>수신메일함-참조메일</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>39.2 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="align-center">
+				<td>수신메일함-알림메일</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>0 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="align-center">
+				<td>발신메일함</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>0.01 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="align-center">
+				<td>임시보관함</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>0 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			<tr class="align-center">
+				<td>휴지통</td>
+				<td>
+					<div class="selectbox">
+						<strong class="selectbox-value">15개</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>10개</option>
+							<option>15개</option>
+							<option>20개</option>
+						</select>
+					</div>
+				</td>
+				<td>0 MB</td>
+				<td>
+					<div class="btn-mailbox-group">
+						<a href="#" class="btn-link">비우기(전체)</a>
+						<a href="#" class="btn-link">비우기(3개월)</a>
+						<a href="#" class="btn-link">비우기(6개월)</a>
+					</div>
+				</td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
 </div>
 </body>

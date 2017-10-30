@@ -14,109 +14,83 @@
 	<script type="text/javascript" src="../resources/js/csscommon.js"></script>
 </head>
 <body class="">
-<div class="content">
-	<div class="content-inner">
-		<!-- 메일 환경설정 -->
-		<div class="border-box">
-			<h3 class="page-title">환경설정</h3>
-			<!-- [D] 해당메뉴 선택시 li에 current 클래스 추가 -->
-			<div class="page-menu-wrap">
-				<ul class="page-menu">
-					<li><a href="#">메일함설정</a></li>
-					<li><a href="#">미리보기설정</a></li>
-					<li><a href="#">폴더설정</a></li>
-					<li><a href="#">메일분류</a></li>
-					<li><a href="#">서명관리</a></li>
-					<li><a href="#">개인주소록</a></li>
-					<li class="current"><a href="#">그룹주소록</a></li>
-					<li><a href="#">개인템플릿</a></li>
-					<li><a href="#">답장머릿말설정</a></li>
-					<li><a href="#">메일발신정보설정</a></li>
-				</ul>
-				<a class="slide-arrow slide-prev" href="#">&lt;</a>
-				<a class="slide-arrow slide-next" href="#">&gt;</a>
-			</div>
-			<div class="page-content">
-				<div class="page-content-inner">
-					<div class="clearfix btn-align-top">
-						<div class="pull-left">
-							<div class="search-box search-address">
-								<div class="selectbox">
-									<strong class="selectbox-value">전체</strong>
-									<select onchange="selectboxEvent(this);">
-										<option>전체</option>
-										<option>이름</option>
-										<option>회사명</option>
-									</select>
-								</div>
-								<div class="search-input">
-									<input type="text" class="form-control">
-								</div>
-								<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
-							</div>
-						</div>
-						<div class="pull-right">
-							<a href="#" class="btn">그룹등록</a>
-							<a href="#" class="btn">삭제</a>
-						</div>
+<div class="page-content mail-configuration">
+	<div class="page-content-inner">
+		<div class="clearfix btn-align-top">
+			<div class="pull-left">
+				<div class="search-box search-address">
+					<div class="selectbox">
+						<strong class="selectbox-value">전체</strong>
+						<select onchange="selectboxEvent(this);">
+							<option>전체</option>
+							<option>이름</option>
+							<option>회사명</option>
+						</select>
 					</div>
-					<table class="table">
-						<colgroup>
-							<col style="width:4%;">
-							<col style="width:12%;">
-							<col style="width:32%;">
-							<col style="width:20%;">
-							<col style="width:32%;">
-						</colgroup>
-						<thead>
-						<tr>
-							<th><input type="checkbox"></th>
-							<th>이름</th>
-							<th>회사/부서</th>
-							<th>번호</th>
-							<th>홈페이지</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr class="align-center">
-							<td><input type="checkbox"></td>
-							<td>새롬</td>
-							<td>새롬/SI그룹</td>
-							<td>02-333-2222</td>
-							<td>saerom@saerom.co.kr</td>
-						</tr>
-						<tr class="align-center">
-							<td><input type="checkbox"></td>
-							<td>새롬</td>
-							<td>새롬/SI그룹</td>
-							<td>02-333-2222</td>
-							<td>saerom@saerom.co.kr</td>
-						</tr>
-						<tr>
-							<td colspan="5" class="center">등록된 문서가 없습니다.</td>
-						</tr>
-						</tbody>
-					</table>
-					<!-- Paging -->
-					<div class="paging">
-						<div class="page">←</div>
-						<div class="page active">1</div>
-						<div class="page">2</div>
-						<div class="page">3</div>
-						<div class="page">4</div>
-						<div class="page">5</div>
-						<div class="page">6</div>
-						<div class="page">7</div>
-						<div class="page">8</div>
-						<div class="page">9</div>
-						<div class="page">10</div>
-						<div class="page">→</div>
+					<div class="search-input">
+						<input type="text" class="form-control">
 					</div>
-					<!-- Paging //end -->
+					<a href="#" class="btn-search"><span class="sr-only">검색</span></a>
 				</div>
 			</div>
+			<div class="pull-right">
+				<a href="#" class="btn">그룹등록</a>
+				<a href="#" class="btn">삭제</a>
+			</div>
 		</div>
-		<!-- 메일 환경설정 //end -->
+		<table class="table">
+			<colgroup>
+				<col style="width:4%;">
+				<col style="width:12%;">
+				<col style="width:32%;">
+				<col style="width:20%;">
+				<col style="width:32%;">
+			</colgroup>
+			<thead>
+			<tr>
+				<th><input type="checkbox"></th>
+				<th>이름</th>
+				<th>회사/부서</th>
+				<th>번호</th>
+				<th>홈페이지</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr class="align-center">
+				<td><input type="checkbox"></td>
+				<td>새롬</td>
+				<td>새롬/SI그룹</td>
+				<td>02-333-2222</td>
+				<td>saerom@saerom.co.kr</td>
+			</tr>
+			<tr class="align-center">
+				<td><input type="checkbox"></td>
+				<td>새롬</td>
+				<td>새롬/SI그룹</td>
+				<td>02-333-2222</td>
+				<td>saerom@saerom.co.kr</td>
+			</tr>
+			<tr>
+				<td colspan="5" class="center">등록된 문서가 없습니다.</td>
+			</tr>
+			</tbody>
+		</table>
+		<!-- Paging -->
+		<div class="paging">
+			<div class="page" title="첫 페이지로">←</div>
+			<div class="page active">1</div>
+			<div class="page">2</div>
+			<div class="page">3</div>
+			<div class="page">4</div>
+			<div class="page">5</div>
+			<div class="page">6</div>
+			<div class="page">7</div>
+			<div class="page">8</div>
+			<div class="page">9</div>
+			<div class="page">10</div>
+			<div class="page" title="끝 페이지로">→</div>
+		</div>
+		<!-- Paging //end -->
 	</div>
 </div>
 </body>

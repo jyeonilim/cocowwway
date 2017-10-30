@@ -33,7 +33,6 @@
     padding: 0;
     border: 0;
     font-size: 15px;
-    line-height: 3.26;
     color: #a7a9ac;
 }
 .login .checkbox .checkbox-label {
@@ -151,12 +150,11 @@
     font-family: 'HelveticaRounded', sans-serif;
     color: #009fdb;
 }
-.setup-file {}
 .setup-file .title {
     display: inline-block;
     width: 100%;
     max-width: 385px;
-    padding-left: 10px;
+    padding-left: 19px;
     font-size: 15px;
     color: #575757;
     text-align: left;
