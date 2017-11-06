@@ -1,3 +1,9 @@
+# Codekit's Personal Set & Sass Cache.
+config.codekit
+config.codekit3
+.codekit-cache
+.sass-cache
+
 # Edit Project Files
 .idea
 *.iml
